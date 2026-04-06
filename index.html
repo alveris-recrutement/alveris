@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Alveris — Cabinet de Recrutement France Luxembourg Europe | Executive Search</title>
   <!-- Sécurité -->
-  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;">
+
 <meta name="description" content="Alveris, cabinet de recrutement spécialisé cadres, dirigeants, profils tech et start-up. Expertise France, Luxembourg, Belgique, Suisse. Premiers profils sous 10 jours.">
 <meta name="keywords" content="cabinet recrutement luxembourg, recrutement cadres dirigeants, executive search luxembourg, recrutement tech france, recrutement start-up, chasseur de têtes luxembourg, recrutement finance luxembourg, offres emploi cadres">
 <meta name="author" content="Aurélie Stefanowski — Alveris">
@@ -2457,13 +2457,13 @@ let currentJobIndex = 0;
 function openJob(i){
   currentJobIndex = i;
   const j=jobs[i]; const l=currentLang;
-  document.getElementById('modal-badge').innerHTML=`<span class="job-badge ${j.badge==='Urgent'?'hot':j.badge==='Nouveau'?'new':''}">${j.badge}</span>`;
+  document.getElementById('modal-badge').innerHTML='<span class="job-badge ' + (j.badge==='Urgent'?'hot':j.badge==='Nouveau'?'new':'') + '">' + j.badge + '</span>';
   document.getElementById('modal-title').textContent=j.title[l]||j.title.fr;
   document.getElementById('modal-company').textContent=j.co[l]||j.co.fr;
-  document.getElementById('modal-meta').innerHTML=j.tags.map(t=>`<span class="job-tag">${t}</span>`).join('');
+  document.getElementById('modal-meta').innerHTML=j.tags.map(function(t){ return '<span class="job-tag">' + t + '</span>'; }).join('');
   document.getElementById('modal-desc').textContent=j.desc[l]||j.desc.fr;
-  document.getElementById('modal-profile').innerHTML=(j.profile[l]||j.profile.fr).map(x=>`<li>${x}</li>`).join('');
-  document.getElementById('modal-offer').innerHTML=(j.offer[l]||j.offer.fr).map(x=>`<li>${x}</li>`).join('');
+  document.getElementById('modal-profile').innerHTML=(j.profile[l]||j.profile.fr).map(function(x){ return '<li>' + x + '</li>'; }).join('');
+  document.getElementById('modal-offer').innerHTML=(j.offer[l]||j.offer.fr).map(function(x){ return '<li>' + x + '</li>'; }).join('');
   document.getElementById('job-modal').classList.add('open');
   document.body.style.overflow='hidden';
 }
@@ -2484,7 +2484,7 @@ function applyToJob(){
   // Pré-remplir le champ message avec le poste visé
   setTimeout(()=>{
     const msgField = document.querySelector('#cv-form textarea[name="message"]');
-    if(msgField) msgField.value = (l==='en' ? `Application for: ${title} — ${company}` : `Candidature pour : ${title} — ${company}`);
+    if(msgField) msgField.value = (l==='en' ? 'Application for: ' + title + ' — ' + company : 'Candidature pour : ' + title + ' — ' + company);
     // Pré-remplir un champ caché avec le poste
     let hiddenPoste = document.getElementById('poste-vise');
     if(!hiddenPoste){
@@ -2505,7 +2505,7 @@ function applyToJob(){
       banner.style.cssText = 'padding:.85rem 1.25rem;background:#f0ece4;border-left:3px solid var(--gold);font-size:13px;margin-bottom:1rem;border-radius:2px;';
       document.getElementById('cv-form').insertBefore(banner, document.getElementById('cv-form').firstChild);
     }
-    banner.innerHTML = (l==='en' ? `✓ You are applying for: <strong>${title}</strong>` : `✓ Vous postulez pour : <strong>${title}</strong>`);
+    banner.innerHTML = (l==='en' ? '✓ You are applying for: <strong>' + title + '</strong>' : '✓ Vous postulez pour : <strong>' + title + '</strong>');
   }, 300);
 }
 
@@ -2515,7 +2515,7 @@ function handleFile(input){
   const status=document.getElementById('cv-status');
   if(!file)return;
   if(file.size>5*1024*1024){status.textContent=currentLang==='en'?'⚠ File too large (max 5MB)':'⚠ Fichier trop volumineux (max 5Mo)';status.style.color='#c0392b';return;}
-  status.textContent=currentLang==='en'?`✓ "${file.name}" selected`:`✓ "${file.name}" sélectionné`;
+  status.textContent=currentLang==='en'?'✓ "' + file.name + '" selected':'✓ "' + file.name + '" sélectionné';
   status.style.color='#2d8a4e';
   document.getElementById('drop-zone').style.borderColor='var(--black)';
   const dt=new DataTransfer();dt.items.add(file);
@@ -2551,20 +2551,7 @@ let chatHistory = [];
 let chatMsgCount = 0;
 const CHAT_MAX = 20;
 
-const SYSTEM_PROMPT = `Tu es l'assistant virtuel d'Alveris, cabinet de recrutement franco-européen fondé par Aurélie Stefanowski.
-
-ALVERIS EN BREF :
-- Spécialités : cadres & dirigeants, tech & IT, start-up & scale-up, banque & finance Luxembourg, industrie & profils pénuriques, commerce & Horeca
-- Zone : France, Luxembourg, Belgique, Suisse
-- Fondatrice : Aurélie Stefanowski, +10 ans d'expérience, ancienne fondatrice de STANWAY Luxembourg
-- Contact : contact@alveris.com ·  · alveris.com
-- Délai : premiers profils qualifiés sous 5 à 10 jours ouvrés
-- Méthode : briefing → sourcing ciblé → évaluation → 3 à 5 profils max → suivi intégration
-- Honoraires : basés sur le salaire annuel brut, devis sur demande
-
-OFFRES ACTUELLES : DAF Fintech Luxembourg (80-120K€), Lead Dev Full-Stack Paris (60-80K€), Compliance AML Luxembourg (70-95K€), Head of Sales Paris (80-100K€+variable), Technicien Maintenance Est France (35-45K€), DRH ETI Belgique (90-120K€).
-
-COMPORTEMENT : Sois professionnel, chaleureux, concis (3-4 phrases max). Réponds en français par défaut, anglais si on te parle anglais. Si tu ne sais pas, renvoie vers contact@alveris.com.`;
+const SYSTEM_PROMPT = "Tu es l'assistant virtuel d'Alveris, cabinet de recrutement franco-européen fondé par Aurélie Stefanowski.\n\nALVERIS EN BREF :\n- Spécialités : cadres & dirigeants, tech & IT, start-up & scale-up, banque & finance Luxembourg, industrie & profils pénuriques, commerce & Horeca\n- Zone : France, Luxembourg, Belgique, Suisse\n- Fondatrice : Aurélie Stefanowski, +10 ans d'expérience, ancienne fondatrice de STANWAY Luxembourg\n- Contact : contact@alveris.com ·  · alveris.com\n- Délai : premiers profils qualifiés sous 5 à 10 jours ouvrés\n- Méthode : briefing → sourcing ciblé → évaluation → 3 à 5 profils max → suivi intégration\n- Honoraires : basés sur le salaire annuel brut, devis sur demande\n\nOFFRES ACTUELLES : DAF Fintech Luxembourg (80-120K€), Lead Dev Full-Stack Paris (60-80K€), Compliance AML Luxembourg (70-95K€), Head of Sales Paris (80-100K€+variable), Technicien Maintenance Est France (35-45K€), DRH ETI Belgique (90-120K€).\n\nCOMPORTEMENT : Sois professionnel, chaleureux, concis (3-4 phrases max). Réponds en français par défaut, anglais si on te parle anglais. Si tu ne sais pas, renvoie vers contact@alveris.com.";
 
 function toggleChat(){
   chatOpen = !chatOpen;

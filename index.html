@@ -2387,13 +2387,16 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 // ── Navigation ──
 let currentLang = 'fr';
 function go(id) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById('page-'+id).classList.add('active');
-  document.querySelectorAll('.nav-links a[id^="nl-"]').forEach(a => a.classList.remove('cur'));
-  const el = document.getElementById('nl-'+id);
+  var pages = document.querySelectorAll('.page');
+  if(!pages.length) return;
+  pages.forEach(function(p){ p.classList.remove('active'); });
+  var target = document.getElementById('page-'+id);
+  if(target) target.classList.add('active');
+  document.querySelectorAll('.nav-links a[id^="nl-"]').forEach(function(a){ a.classList.remove('cur'); });
+  var el = document.getElementById('nl-'+id);
   if(el) el.classList.add('cur');
   window.scrollTo({top:0,behavior:'smooth'});
-  closeMenu();
+  if(typeof closeMenu === 'function') closeMenu();
 }
 function toggleMenu(){
   document.getElementById('hbg').classList.toggle('open');

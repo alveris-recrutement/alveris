@@ -2634,7 +2634,7 @@ async function sendToClaude(userMsg){
       b.onclick=()=>{go('jobs');sugsDiv.style.display='none';};
       sugsDiv.appendChild(b);
     } else if(low.includes('cv')||low.includes('postuler')||low.includes('candidat')){
-      addMsg('Déposez votre CV directement sur notre site et nous vous recontactons dès qu'un poste correspond à votre profil.', 'bot');
+      addMsg('Déposez votre CV directement sur notre site et nous vous recontactons dès qu’un poste correspond à votre profil.', 'bot');
       const b = document.createElement('button'); b.className='chat-sug';
       b.textContent='→ Déposer mon CV';
       b.onclick=()=>{go('cv');sugsDiv.style.display='none';};
@@ -2652,7 +2652,7 @@ async function sendToClaude(userMsg){
       b.onclick=()=>{go('contact');sugsDiv.style.display='none';};
       sugsDiv.appendChild(b);
     } else if(low.includes('délai')||low.includes('temps')||low.includes('rapide')){
-      addMsg('Alveris présente les premiers profils qualifiés sous 5 à 10 jours. Notre approche directe nous permet d'aller vite sans compromis sur la qualité.', 'bot');
+      addMsg('Alveris présente les premiers profils qualifiés sous 5 à 10 jours. Notre approche directe nous permet d’aller vite sans compromis sur la qualité.', 'bot');
       const b = document.createElement('button'); b.className='chat-sug';
       b.textContent='→ Déposer un besoin';
       b.onclick=()=>{go('contact');sugsDiv.style.display='none';};

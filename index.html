@@ -575,7 +575,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 /* SYSTEME AVIS */
 .review-btn{display:flex;align-items:center;gap:.6rem;padding:.75rem 1.5rem;background:var(--white);border:1px solid var(--light);font-size:12px;font-weight:500;letter-spacing:.08em;cursor:pointer;transition:all .2s;border-radius:var(--radius);color:var(--black);}
 .review-btn:hover{background:var(--black);color:var(--white);border-color:var(--black);}
-.review-modal-wrap{display:none;position:fixed;inset:0;background:rgba(10,10,10,.6);z-index:900;align-items:center;justify-content:center;padding:1rem;backdrop-filter:blur(4px);}
+.review-modal-wrap{display:none;position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100%;background:rgba(10,10,10,.6);z-index:9999;align-items:center;justify-content:center;padding:1rem;}
 .review-modal-wrap.open{display:flex;}
 .review-modal{background:var(--white);border-radius:6px;padding:2.5rem;width:100%;max-width:480px;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.2);}
 .review-modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;cursor:pointer;color:var(--mid);font-size:18px;padding:.25rem;}
@@ -714,7 +714,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
   <a href="#" onclick="go('cv');closeMenu();return false;" data-fr="Déposer un CV" data-en="Submit CV">Déposer un CV</a>
   <a href="#" onclick="go('contact');closeMenu();return false;" data-fr="Contact" data-en="Contact">Contact</a>
   
-  ✉ <a href="mailto:contact@alveris.fr">contact@alveris.fr</a>
+  ✉ <a href="/cdn-cgi/l/email-protection#a0c3cfced4c1c3d4e0c1ccd6c5d2c9d38ec6d2"><span class="__cf_email__" data-cfemail="35565a5b415456417554594350475c461b5347">[email&#160;protected]</span></a>
 </div>
 
 <!-- ═══════ PAGE ACCUEIL ═══════ -->
@@ -875,7 +875,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       <p class="mtext" data-fr="Nous intervenons avec la même efficacité depuis Paris, Bordeaux ou Rennes qu'au Luxembourg, à Bruxelles ou à Genève. Un réseau construit sur des années, une présence réelle sur chaque marché, pas de frontières artificielles." data-en="We work with the same efficiency from Paris, Bordeaux or Rennes as from Luxembourg, Brussels or Geneva. A network built over years, a real presence in each market, no artificial borders.">Nous intervenons avec la même efficacité depuis Paris, Bordeaux ou Rennes qu'au Luxembourg, à Bruxelles ou à Genève. Un réseau construit sur des années, une présence réelle sur chaque marché.</p>
       <div class="contact-cta-dark">
         <button class="gold-btn" onclick="go('contact')" data-fr="Parlons de votre besoin →" data-en="Let's discuss your brief →">Parlons de votre besoin →</button>
-        <div class="clink"><a href="mailto:contact@alveris.fr">contact@alveris.fr</a></div>
+        <div class="clink"><a href="/cdn-cgi/l/email-protection#dfbcb0b1abbebcab9fbeb3a9baadb6acf1b9ad"><span class="__cf_email__" data-cfemail="34575b5a405557407455584251465d471a5246">[email&#160;protected]</span></a></div>
       </div>
     </div>
     <div class="method-right">
@@ -1905,7 +1905,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
             </div>
             <span class="faq-arrow" style="color:var(--gold);flex-shrink:0;">▾</span>
           </div>
-          <div class="faq-a" style="padding:0 1.5rem 1.25rem 4.5rem;border-top:1px solid var(--light);padding-top:1rem;">Garantie remboursement intégral 30 jours, sans condition. Un simple email à <a href="mailto:contact@alveris.fr">contact@alveris.fr</a> suffit.</div>
+          <div class="faq-a" style="padding:0 1.5rem 1.25rem 4.5rem;border-top:1px solid var(--light);padding-top:1rem;">Garantie remboursement intégral 30 jours, sans condition. Un simple email à <a href="/cdn-cgi/l/email-protection#dab9b5b4aebbb9ae9abbb6acbfa8b3a9f4bca8"><span class="__cf_email__" data-cfemail="41222e2f3520223501202d37243328326f2733">[email&#160;protected]</span></a> suffit.</div>
         </div>
 
         <div class="faq-item" style="background:var(--white);border-radius:6px;border:1px solid var(--light);padding:0;overflow:hidden;">
@@ -2082,8 +2082,8 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         </div>
         <div class="dropz-title" data-fr="Glissez votre CV ici" data-en="Drop your CV here">Glissez votre CV ici</div>
         <div class="dropz-sub" data-fr="ou cliquez pour sélectionner · PDF, Word · max 5 Mo" data-en="or click to select · PDF, Word · max 5MB">ou cliquez pour sélectionner · PDF, Word · max 5 Mo</div>
-        <button class="btn-dark" style="pointer-events:none;" data-fr="Choisir un fichier" data-en="Choose file">Choisir un fichier</button>
-        <input type="file" id="cv-file" accept=".pdf,.doc,.docx" style="display:none;" onchange="handleFile(this)">
+        <label for="cv-file" class="btn-dark" style="cursor:pointer;display:inline-block;">Choisir un fichier</label>
+        <input type="file" id="cv-file" accept=".pdf,.doc,.docx" style="position:absolute;opacity:0;width:0;height:0;" onchange="handleFile(this)">
       </div>
       <div class="cv-status" id="cv-status"></div>
       <div class="cv-promise">
@@ -2124,7 +2124,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         </select>
         <input class="fi" type="text" name="salaire" placeholder="Prétentions salariales (optionnel)" data-placeholder-fr="Prétentions salariales (optionnel)" data-placeholder-en="Salary expectations (optional)">
         <textarea class="fi" name="message" rows="3" placeholder="Message (optionnel)" data-placeholder-fr="Message (optionnel)" data-placeholder-en="Message (optional)" style="resize:none;"></textarea>
-        <input type="file" name="cv" id="cv-file-form" accept=".pdf,.doc,.docx" style="display:none;">
+        <input type="file" name="cv" id="cv-file-form" accept=".pdf,.doc,.docx" style="display:none;" aria-hidden="true">
         <div class="cv-status" id="cv-status-form"></div>
         <!-- Honeypot anti-spam (invisible) -->
         <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
@@ -2144,7 +2144,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       <p class="cgeo">France · Luxembourg · Belgique · Suisse</p>
       <div class="clinks">
         
-        <div class="clink"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:16px;height:16px;flex-shrink:0;"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"/></svg> <a href="mailto:contact@alveris.fr">contact@alveris.fr</a></div>
+        <div class="clink"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:16px;height:16px;flex-shrink:0;"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"/></svg> <a href="/cdn-cgi/l/email-protection#197a76776d787a6d5978756f7c6b706a377f6b"><span class="__cf_email__" data-cfemail="2f4c40415b4e4c5b6f4e43594a5d465c01495d">[email&#160;protected]</span></a></div>
         <div class="clink"><svg width="16" height="16" viewBox="0 0 24 24" fill="#0a66c2" style="width:16px;height:16px;flex-shrink:0;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> <a href="https://www.linkedin.com/company/112808994" target="_blank" style="color:rgba(255,255,255,.55);">linkedin.com/company/alveris-recrutement</a></div>
         <div class="clink">🕐 <span data-fr="Lun–Ven · 8h–19h · Réponse sous 24h" data-en="Mon–Fri · 8am–7pm · Reply within 24h">Lun–Ven · 8h–19h · Réponse sous 24h</span></div>
       </div>
@@ -2197,7 +2197,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
           <strong style="color:var(--black);">Alveris</strong><br>
           Cabinet de recrutement<br>
           Fondatrice : Aurélie Stefanowski<br>
-          Email : <a href="mailto:contact@alveris.fr">contact@alveris.fr</a><br>
+          Email : <a href="/cdn-cgi/l/email-protection#35565a5b415456417554594350475c461b5347"><span class="__cf_email__" data-cfemail="1c7f7372687d7f685c7d706a796e756f327a6e">[email&#160;protected]</span></a><br>
           Téléphone : <br>
           Site web : alveris.fr
         </p>
@@ -2245,7 +2245,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         <div style="font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);margin-bottom:.75rem;">Responsable du traitement</div>
         <p style="font-size:14px;color:var(--mid);line-height:1.85;">
           <strong style="color:var(--black);">Aurélie Stefanowski — Alveris</strong><br>
-          Email : <a href="mailto:contact@alveris.fr">contact@alveris.fr</a><br>
+          Email : <a href="/cdn-cgi/l/email-protection#b9dad6d7cdd8dacdf9d8d5cfdccbd0ca97dfcb"><span class="__cf_email__" data-cfemail="10737f7e6471736450717c66756279633e7662">[email&#160;protected]</span></a><br>
           Téléphone : 
         </p>
       </div>
@@ -2285,7 +2285,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
           <li style="font-size:14px;color:var(--mid);padding-left:1rem;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span><strong style="color:var(--black);">Droit à la portabilité</strong> : recevoir vos données dans un format structuré</li>
         </ul>
         <p style="font-size:14px;color:var(--mid);line-height:1.85;margin-top:1rem;">
-          Pour exercer ces droits, contactez-nous à : <a href="mailto:contact@alveris.fr">contact@alveris.fr</a><br>
+          Pour exercer ces droits, contactez-nous à : <a href="/cdn-cgi/l/email-protection#472428293326243307262b3122352e34692135"><span class="__cf_email__" data-cfemail="8ae9e5e4feebe9fecaebe6fceff8e3f9a4ecf8">[email&#160;protected]</span></a><br>
           Vous pouvez également introduire une réclamation auprès de la <strong style="color:var(--black);">CNIL</strong> (Commission Nationale de l'Informatique et des Libertés) — <a href="https://www.cnil.fr" target="_blank" style="color:var(--black);">www.cnil.fr</a>
         </p>
       </div>
@@ -2337,7 +2337,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     <div class="foot-col">
       <div class="foot-col-title" data-fr="Contact" data-en="Contact">Contact</div>
       
-      <a href="mailto:contact@alveris.fr">contact@alveris.fr</a>
+      <a href="/cdn-cgi/l/email-protection#87e4e8e9f3e6e4f3c7e6ebf1e2f5eef4a9e1f5"><span class="__cf_email__" data-cfemail="01626e6f7560627541606d77647368722f6773">[email&#160;protected]</span></a>
       <a href="https://www.linkedin.com/company/112808994" target="_blank" style="display:flex;align-items:center;gap:.4rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#0a66c2" style="width:16px;height:16px;flex-shrink:0;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
       <a href="#" onclick="go('mentions');return false;" data-fr="Mentions légales" data-en="Legal notice">Mentions légales</a>
       <a href="#" onclick="go('rgpd');return false;" data-fr="Confidentialité & RGPD" data-en="Privacy & GDPR">Confidentialité & RGPD</a>
@@ -2379,7 +2379,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
   </button>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ── Navigation ──
 let currentLang = 'fr';
 function go(id) {
@@ -2787,7 +2787,6 @@ async function submitReview(){
     data.append('_subject','Nouvel avis Alveris — '+note.value+' etoiles');
     await fetch('https://formspree.io/f/mbdpayzn',{method:'POST',body:data,headers:{Accept:'application/json'}});
   }catch(e){}
-  addReviewCard(parseInt(note.value),comment,prenom,societe);
   document.getElementById('review-form-wrap').style.display='none';
   document.getElementById('review-success').style.display='block';
   btn.textContent='Publier mon avis';btn.style.opacity='1';
@@ -2873,7 +2872,7 @@ function goActu(idx) {
   currentActu = idx;
   const counter = document.getElementById('actu-counter');
   if(counter) counter.textContent = (idx + 1) + ' / ' + totalActu;
-   clearTimeout(actuTimer);
+  clearTimeout(actuTimer);
   actuTimer = setTimeout(nextActu, 6000);
 }
 function nextActu(){ goActu((currentActu + 1) % totalActu); }

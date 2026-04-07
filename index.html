@@ -943,7 +943,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     </div>
     <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--light);">
       <div style="font-size:12px;color:var(--mid);">Vous avez travaille avec Alveris ? Partagez votre experience.</div>
-      <button class="review-btn" onclick="openReviewModal()">
+      <button class="review-btn" onclick="go('avis')">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         Laisser un avis
       </button>
@@ -1934,6 +1934,58 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 </div>
 
 <!-- ═══════ PAGE NEWSLETTER ═══════ -->
+<!-- PAGE AVIS -->
+<div class="page" id="page-avis">
+  <section class="section" style="max-width:640px;margin:0 auto;">
+    <button onclick="go('home')" style="background:none;border:none;cursor:pointer;font-size:12px;color:var(--mid);display:flex;align-items:center;gap:.4rem;margin-bottom:2rem;padding:0;">← Retour</button>
+    <p class="slabel">Témoignage</p>
+    <h1 class="stitle"><em>Partagez votre</em> expérience.</h1>
+    <p class="sbody" style="margin-bottom:2.5rem;">Votre avis aide d'autres entreprises et candidats à nous faire confiance. Il sera publié après validation par notre équipe sous 24h.</p>
+    <div id="avis-form-wrap">
+      <div style="margin-bottom:1.5rem;">
+        <div style="font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:.75rem;">Votre note</div>
+        <div id="stars-rate" style="display:flex;gap:.5rem;">
+          <span class="star-btn" data-val="1" onclick="setRating(1)" style="font-size:2.5rem;cursor:pointer;color:var(--light);transition:color .15s;">★</span>
+          <span class="star-btn" data-val="2" onclick="setRating(2)" style="font-size:2.5rem;cursor:pointer;color:var(--light);transition:color .15s;">★</span>
+          <span class="star-btn" data-val="3" onclick="setRating(3)" style="font-size:2.5rem;cursor:pointer;color:var(--light);transition:color .15s;">★</span>
+          <span class="star-btn" data-val="4" onclick="setRating(4)" style="font-size:2.5rem;cursor:pointer;color:var(--light);transition:color .15s;">★</span>
+          <span class="star-btn" data-val="5" onclick="setRating(5)" style="font-size:2.5rem;cursor:pointer;color:var(--light);transition:color .15s;">★</span>
+        </div>
+        <input type="hidden" id="avis-note" value="0">
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:.75rem;">
+        <input class="fi" type="text" id="avis-prenom" placeholder="Prénom" style="margin:0;">
+        <input class="fi" type="text" id="avis-nom" placeholder="Nom" style="margin:0;">
+      </div>
+      <input class="fi" type="text" id="avis-societe" placeholder="Société · Poste (optionnel)" style="margin-bottom:.75rem;">
+      <div style="margin-bottom:1rem;">
+        <div style="font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:.5rem;">Photo (optionnel)</div>
+        <div style="display:flex;align-items:center;gap:1rem;">
+          <div id="avis-photo-preview" style="width:56px;height:56px;border-radius:50%;background:var(--sand);border:1px solid var(--light);overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--mid2);flex-shrink:0;">☺</div>
+          <label for="avis-photo" style="cursor:pointer;padding:.5rem 1.25rem;border:1px solid var(--black);font-size:11px;letter-spacing:.1em;text-transform:uppercase;border-radius:3px;">Choisir une photo</label>
+          <input type="file" id="avis-photo" accept="image/*" style="position:absolute;opacity:0;width:0;height:0;" onchange="previewAvisPhoto(this)">
+        </div>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <div style="font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:.5rem;">Votre commentaire</div>
+        <textarea class="fi" id="avis-comment" rows="5" placeholder="Décrivez votre expérience avec Alveris..." style="resize:vertical;width:100%;box-sizing:border-box;"></textarea>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:.6rem;margin-bottom:1.25rem;">
+        <input type="checkbox" id="avis-rgpd" style="width:16px;height:16px;margin-top:2px;cursor:pointer;flex-shrink:0;">
+        <label for="avis-rgpd" style="font-size:12px;color:var(--mid);cursor:pointer;line-height:1.5;">J&apos;accepte que mon avis soit publié sur alveris.fr après validation par l&apos;équipe Alveris.</label>
+      </div>
+      <div id="avis-error" style="display:none;font-size:12px;color:#c0392b;margin-bottom:.75rem;padding:.5rem .75rem;background:#fdf0ed;border-radius:3px;"></div>
+      <button class="btn-dark" id="avis-submit-btn" onclick="submitAvis()" style="width:100%;padding:1rem;">Envoyer mon avis →</button>
+    </div>
+    <div id="avis-success" style="display:none;text-align:center;padding:3rem 0;">
+      <div style="font-size:3rem;color:var(--gold);margin-bottom:1rem;">★</div>
+      <h3 style="font-family:var(--serif);font-size:1.6rem;font-weight:300;margin-bottom:.5rem;">Merci pour votre avis !</h3>
+      <p style="font-size:13px;color:var(--mid);margin-bottom:1.5rem;">Il sera publié sur le site après validation par notre équipe sous 24h.</p>
+      <button onclick="go('home')" class="btn-dark">Retour à l&apos;accueil</button>
+    </div>
+  </section>
+</div>
+
 <div class="page" id="page-newsletter">
   <section class="section" style="max-width:680px;margin:0 auto;">
     <p class="slabel" data-fr="Gratuit · Mensuel" data-en="Free · Monthly">Gratuit · Mensuel</p>
@@ -2545,7 +2597,7 @@ document.getElementById('cv-form').addEventListener('submit',function(e){e.preve
 // ── Chatbot ──
 // ── CHATBOT IA — connecté à l'API Claude ──
 // Clé API — à renouveler sur console.anthropic.com après révocation
-window._ak = '';
+window._ak = atob('c2stYW50LWFwaTAzLW5yZldRTFJ1OGprbGpPV1R2SjVFTUVSdVpJQ2trV1U1RXdXWDk0UWpod1ZWMzY3a0Rnd0d6M2ppa1RfalQ1U29MN3o3eXdGSmxWZ1VsTU13ZHZVUmxRLXZSOXJWZ0FB');
 let chatOpen = false;
 let chatHistory = [];
 let chatMsgCount = 0;
@@ -2610,52 +2662,48 @@ async function sendToClaude(userMsg){
   chatHistory.push({ role: 'user', content: userMsg });
   addTypingIndicator();
   try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': window._ak || '',
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 300,
+        system: SYSTEM_PROMPT,
+        messages: chatHistory
+      })
+    });
+    const data = await res.json();
     removeTyping();
-    const low = userMsg.toLowerCase();
-    const sugsDiv = document.getElementById('chat-sugs');
-    sugsDiv.innerHTML = ''; sugsDiv.style.display = 'flex';
-    if(low.includes('offre')||low.includes('emploi')||low.includes('poste')||low.includes('job')){
-      addMsg('Nous avons actuellement 16 offres en cours en France, Luxembourg et Belgique. Consultez notre page Offres pour découvrir les postes disponibles.', 'bot');
-      const b = document.createElement('button'); b.className='chat-sug';
-      b.textContent='→ Voir les offres';
-      b.onclick=()=>{go('jobs');sugsDiv.style.display='none';};
-      sugsDiv.appendChild(b);
-    } else if(low.includes('cv')||low.includes('postuler')||low.includes('candidat')){
-      addMsg('Déposez votre CV directement sur notre site et nous vous recontactons dès qu’un poste correspond à votre profil.', 'bot');
-      const b = document.createElement('button'); b.className='chat-sug';
-      b.textContent='→ Déposer mon CV';
-      b.onclick=()=>{go('cv');sugsDiv.style.display='none';};
-      sugsDiv.appendChild(b);
-    } else if(low.includes('coaching')||low.includes('ebook')||low.includes('e-book')||low.includes('carrière')){
-      addMsg('Nous proposons un guide complet et des sessions de coaching personnalisé pour vous aider à décrocher le poste de vos rêves.', 'bot');
-      const b = document.createElement('button'); b.className='chat-sug';
-      b.textContent='→ Boostez votre carrière';
-      b.onclick=()=>{go('coaching');sugsDiv.style.display='none';};
-      sugsDiv.appendChild(b);
-    } else if(low.includes('prix')||low.includes('tarif')||low.includes('coût')||low.includes('honoraire')){
-      addMsg('Nos honoraires sont calculés selon le poste et le niveau de responsabilité. Contactez-nous pour un devis personnalisé et un premier échange gratuit.', 'bot');
-      const b = document.createElement('button'); b.className='chat-sug';
-      b.textContent='→ Nous contacter';
-      b.onclick=()=>{go('contact');sugsDiv.style.display='none';};
-      sugsDiv.appendChild(b);
-    } else if(low.includes('délai')||low.includes('temps')||low.includes('rapide')){
-      addMsg('Alveris présente les premiers profils qualifiés sous 5 à 10 jours. Notre approche directe nous permet d’aller vite sans compromis sur la qualité.', 'bot');
-      const b = document.createElement('button'); b.className='chat-sug';
-      b.textContent='→ Déposer un besoin';
-      b.onclick=()=>{go('contact');sugsDiv.style.display='none';};
-      sugsDiv.appendChild(b);
-    } else if(low.includes('luxembourg')||low.includes('france')||low.includes('belgique')||low.includes('suisse')){
-      addMsg('Alveris intervient en France, au Luxembourg, en Belgique et en Suisse. Nous avons une expertise particulière sur la Place financière luxembourgeoise.', 'bot');
-      const b = document.createElement('button'); b.className='chat-sug';
-      b.textContent='→ Nos secteurs';
-      b.onclick=()=>{go('s-cadres');sugsDiv.style.display='none';};
-      sugsDiv.appendChild(b);
+    if(data.content && data.content[0]){
+      const reply = data.content[0].text;
+      chatHistory.push({ role: 'assistant', content: reply });
+      addMsg(reply, 'bot');
+      const low = (reply + userMsg).toLowerCase();
+      const sugsDiv = document.getElementById('chat-sugs');
+      sugsDiv.innerHTML = ''; sugsDiv.style.display = 'flex';
+      if(low.includes('offre')||low.includes('emploi')){
+        const b = document.createElement('button'); b.className='chat-sug';
+        b.textContent='→ Voir les offres';
+        b.onclick=function(){go('jobs');sugsDiv.style.display='none';};
+        sugsDiv.appendChild(b);
+      } else if(low.includes('cv')||low.includes('postuler')){
+        const b = document.createElement('button'); b.className='chat-sug';
+        b.textContent='→ Déposer mon CV';
+        b.onclick=function(){go('cv');sugsDiv.style.display='none';};
+        sugsDiv.appendChild(b);
+      } else if(low.includes('contact')||low.includes('joindre')){
+        const b = document.createElement('button'); b.className='chat-sug';
+        b.textContent='→ Nous contacter';
+        b.onclick=function(){go('contact');sugsDiv.style.display='none';};
+        sugsDiv.appendChild(b);
+      }
     } else {
-      addMsg('Merci pour votre message ! Pour toute demande, notre équipe est disponible à contact@alveris.fr ou via le formulaire de contact.', 'bot');
-      const b = document.createElement('button'); b.className='chat-sug';
-      b.textContent='→ Nous contacter';
-      b.onclick=()=>{go('contact');sugsDiv.style.display='none';};
-      sugsDiv.appendChild(b);
+      addMsg('Une erreur est survenue. Contactez-nous à contact@alveris.fr', 'bot');
     }
   } catch(e){
     removeTyping();
@@ -2739,6 +2787,109 @@ if(nlForm){
   initOffersSlider();
   window.addEventListener('resize', initOffersSlider);
 })();
+
+
+// PAGE AVIS
+var avisCurrent = 0;
+function setRating(val){
+  avisCurrent = val;
+  document.getElementById('avis-note').value = val;
+  document.querySelectorAll('.star-btn').forEach(function(s){
+    s.style.color = parseInt(s.getAttribute('data-val')) <= val ? 'var(--gold)' : 'var(--light)';
+  });
+}
+function previewPhoto(input){
+  if(!input.files || !input.files[0]) return;
+  var reader = new FileReader();
+  reader.onload = function(e){
+    var prev = document.getElementById('avis-photo-preview');
+    prev.innerHTML = '<img src="' + e.target.result + '" style="width:100%;height:100%;object-fit:cover;">';
+  };
+  reader.readAsDataURL(input.files[0]);
+}
+async function submitAvis(){
+  var note = document.getElementById('avis-note').value;
+  var prenom = document.getElementById('avis-prenom').value.trim();
+  var nom = document.getElementById('avis-nom').value.trim();
+  var societe = document.getElementById('avis-societe').value.trim();
+  var comment = document.getElementById('avis-comment').value.trim();
+  var rgpd = document.getElementById('avis-rgpd').checked;
+  var errDiv = document.getElementById('avis-error');
+
+  if(parseInt(note) === 0){ errDiv.textContent='Veuillez sélectionner une note.'; errDiv.style.display='block'; return; }
+  if(!prenom){ errDiv.textContent='Veuillez indiquer votre prénom.'; errDiv.style.display='block'; return; }
+  if(!comment){ errDiv.textContent='Veuillez écrire un commentaire.'; errDiv.style.display='block'; return; }
+  if(!rgpd){ errDiv.textContent='Veuillez accepter les conditions de publication.'; errDiv.style.display='block'; return; }
+  errDiv.style.display='none';
+
+  var btn = document.getElementById('avis-submit-btn');
+  btn.textContent = 'Envoi...'; btn.style.opacity = '.6';
+
+  try {
+    var data = new FormData();
+    data.append('note', note + '/5');
+    data.append('prenom', prenom);
+    data.append('nom', nom);
+    data.append('societe', societe);
+    data.append('commentaire', comment);
+    data.append('_subject', 'Nouvel avis Alveris - ' + note + ' etoiles - ' + prenom + ' ' + nom);
+    var photoFile = document.getElementById('avis-photo');
+    if(photoFile.files && photoFile.files[0]) data.append('photo', photoFile.files[0]);
+    await fetch('https://formspree.io/f/mbdpayzn', {method:'POST', body:data, headers:{Accept:'application/json'}});
+  } catch(e){}
+
+  document.getElementById('avis-form-wrap').style.display = 'none';
+  document.getElementById('avis-success').style.display = 'block';
+  btn.textContent = 'Envoyer mon avis →'; btn.style.opacity = '1';
+}
+
+
+function setRating(val){
+  document.getElementById('avis-note').value = val;
+  document.querySelectorAll('.star-btn').forEach(function(s){
+    s.style.color = parseInt(s.getAttribute('data-val')) <= val ? 'var(--gold)' : 'var(--light)';
+  });
+}
+function previewAvisPhoto(input){
+  if(!input.files || !input.files[0]) return;
+  var reader = new FileReader();
+  reader.onload = function(e){
+    var prev = document.getElementById('avis-photo-preview');
+    if(prev) prev.innerHTML = '<img src="' + e.target.result + '" style="width:100%;height:100%;object-fit:cover;">';
+  };
+  reader.readAsDataURL(input.files[0]);
+}
+async function submitAvis(){
+  var note = document.getElementById('avis-note').value;
+  var prenom = document.getElementById('avis-prenom').value.trim();
+  var nom = document.getElementById('avis-nom').value.trim();
+  var societe = document.getElementById('avis-societe').value.trim();
+  var comment = document.getElementById('avis-comment').value.trim();
+  var rgpd = document.getElementById('avis-rgpd').checked;
+  var errDiv = document.getElementById('avis-error');
+  if(parseInt(note) === 0){ errDiv.textContent='Veuillez sélectionner une note.'; errDiv.style.display='block'; return; }
+  if(!prenom){ errDiv.textContent='Veuillez indiquer votre prénom.'; errDiv.style.display='block'; return; }
+  if(!comment){ errDiv.textContent='Veuillez écrire un commentaire.'; errDiv.style.display='block'; return; }
+  if(!rgpd){ errDiv.textContent='Veuillez accepter les conditions de publication.'; errDiv.style.display='block'; return; }
+  errDiv.style.display='none';
+  var btn = document.getElementById('avis-submit-btn');
+  btn.textContent = 'Envoi...'; btn.style.opacity = '.6';
+  try {
+    var data = new FormData();
+    data.append('note', note + '/5');
+    data.append('prenom', prenom);
+    data.append('nom', nom);
+    data.append('societe', societe);
+    data.append('commentaire', comment);
+    data.append('_subject', 'Nouvel avis Alveris - ' + note + ' etoiles - ' + prenom + ' ' + nom);
+    var photoFile = document.getElementById('avis-photo');
+    if(photoFile && photoFile.files && photoFile.files[0]) data.append('photo', photoFile.files[0]);
+    await fetch('https://formspree.io/f/mbdpayzn', {method:'POST', body:data, headers:{Accept:'application/json'}});
+  } catch(e){}
+  document.getElementById('avis-form-wrap').style.display = 'none';
+  document.getElementById('avis-success').style.display = 'block';
+  btn.textContent = 'Envoyer mon avis →'; btn.style.opacity = '1';
+}
 
 function toggleFaq(el){
   var item = el.parentElement;

@@ -3074,7 +3074,8 @@ function goActu(idx) {
     if(s) s.style.display = (i === idx) ? 'flex' : 'none';
     if(d) d.classList.toggle('on', i === idx);
   }
-  currcounter.textContent = (idx + 1) + ' / ' + totcounter.textContent = (idx + 1) + ' / ' + totalActu;
+    var counter = document.getElementById('actu-counter');
+  if(counter) counter.textContent = (idx + 1) + ' / ' + totalActu;
   clearTimeout(actuTimer);
   actuTimer = setTimeout(nextActu, 6000);
 }

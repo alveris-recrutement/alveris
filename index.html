@@ -2133,9 +2133,9 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
           <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="8" y="4" width="24" height="32" rx="2" stroke="#ccc" stroke-width="1.5"/><line x1="13" y1="13" x2="27" y2="13" stroke="#ccc" stroke-width="1.2"/><line x1="13" y1="18" x2="27" y2="18" stroke="#ccc" stroke-width="1.2"/><line x1="13" y1="23" x2="21" y2="23" stroke="#ccc" stroke-width="1.2"/><circle cx="30" cy="30" r="8" fill="#0c0c0c"/><line x1="30" y1="26.5" x2="30" y2="33.5" stroke="white" stroke-width="1.5"/><line x1="26.5" y1="30" x2="33.5" y2="30" stroke="white" stroke-width="1.5"/></svg>
         </div>
         <div class="dropz-title" data-fr="Glissez votre CV ici" data-en="Drop your CV here">Glissez votre CV ici</div>
-        <div class="dropz-sub" data-fr="ou cliquez pour sélectionner · PDF, Word · max 5 Mo" data-en="or click to select · PDF, Word · max 5MB">ou cliquez pour sélectionner · PDF, Word · max 5 Mo</div>
+        <div class="dropz-sub" data-fr="ou cliquez pour sélectionner · PDF, Word · max 5 Mo" data-en="or click to select · PDF, Word · max 5MB">ou appuyez pour sélectionner · PDF, Word · max 5 Mo</div>
         <label for="cv-file" class="btn-dark" style="cursor:pointer;display:inline-block;">Choisir un fichier</label>
-        <input type="file" id="cv-file" accept=".pdf,.doc,.docx" style="position:absolute;opacity:0;width:0;height:0;" onchange="handleFile(this)">
+        <input type="file" id="cv-file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" style="position:absolute;opacity:0;width:0;height:0;" onchange="handleFile(this)">
       </div>
       <div class="cv-status" id="cv-status"></div>
       <div class="cv-promise">
@@ -2176,7 +2176,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         </select>
         <input class="fi" type="text" name="salaire" placeholder="Prétentions salariales (optionnel)" data-placeholder-fr="Prétentions salariales (optionnel)" data-placeholder-en="Salary expectations (optional)">
         <textarea class="fi" name="message" rows="3" placeholder="Message (optionnel)" data-placeholder-fr="Message (optionnel)" data-placeholder-en="Message (optional)" style="resize:none;"></textarea>
-        <input type="file" name="cv" id="cv-file-form" accept=".pdf,.doc,.docx" style="display:none;" aria-hidden="true">
+        <input type="file" name="cv" id="cv-file-form" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" style="display:none;" aria-hidden="true">
         <div class="cv-status" id="cv-status-form"></div>
         <!-- Honeypot anti-spam (invisible) -->
         <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
@@ -2595,9 +2595,9 @@ document.getElementById('contact-form').addEventListener('submit',function(e){e.
 document.getElementById('cv-form').addEventListener('submit',function(e){e.preventDefault();submitForm(this,'button[type="submit"]','cv-success');});
 
 // ── Chatbot ──
-// ── CHATBOT IA — connecté à l'API Claude ──
-// Clé API — à renouveler sur console.anthropic.com après révocation
-window._ak = atob('c2stYW50LWFwaTAzLW5yZldRTFJ1OGprbGpPV1R2SjVFTUVSdVpJQ2trV1U1RXdXWDk0UWpod1ZWMzY3a0Rnd0d6M2ppa1RfalQ1U29MN3o3eXdGSmxWZ1VsTU13ZHZVUmxRLXZSOXJWZ0FB');
+// ── CHATBOT IA — connecté à l'API Claude via proxy sécurisé ──
+// La clé API est stockée côté serveur (variable d'environnement Netlify)
+// Elle n'est JAMAIS exposée dans ce fichier HTML
 let chatOpen = false;
 let chatHistory = [];
 let chatMsgCount = 0;
@@ -2662,17 +2662,11 @@ async function sendToClaude(userMsg){
   chatHistory.push({ role: 'user', content: userMsg });
   addTypingIndicator();
   try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
+    // Appel via proxy Netlify Function — clé API stockée côté serveur
+    const res = await fetch('/.netlify/functions/chat', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': window._ak || '',
-        'anthropic-version': '2023-06-01',
-        'anthropic-dangerous-direct-browser-access': 'true'
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 300,
         system: SYSTEM_PROMPT,
         messages: chatHistory
       })
@@ -2707,7 +2701,7 @@ async function sendToClaude(userMsg){
     }
   } catch(e){
     removeTyping();
-    addMsg('Erreur : ' + e.message, 'bot');
+    addMsg('Erreur de connexion. Contactez-nous à contact@alveris.fr', 'bot');
   }
 }
 
@@ -2815,29 +2809,29 @@ async function submitAvis(){
   var comment = document.getElementById('avis-comment').value.trim();
   var rgpd = document.getElementById('avis-rgpd').checked;
   var errDiv = document.getElementById('avis-error');
-
   if(parseInt(note) === 0){ errDiv.textContent='Veuillez sélectionner une note.'; errDiv.style.display='block'; return; }
   if(!prenom){ errDiv.textContent='Veuillez indiquer votre prénom.'; errDiv.style.display='block'; return; }
   if(!comment){ errDiv.textContent='Veuillez écrire un commentaire.'; errDiv.style.display='block'; return; }
   if(!rgpd){ errDiv.textContent='Veuillez accepter les conditions de publication.'; errDiv.style.display='block'; return; }
   errDiv.style.display='none';
-
   var btn = document.getElementById('avis-submit-btn');
   btn.textContent = 'Envoi...'; btn.style.opacity = '.6';
-
+  var etoiles = '';
+  for(var i=1;i<=5;i++) etoiles += (i<=parseInt(note)) ? '★' : '☆';
+  var nomComplet = (prenom + (nom ? ' ' + nom : '')).trim();
   try {
     var data = new FormData();
-    data.append('note', note + '/5');
-    data.append('prenom', prenom);
-    data.append('nom', nom);
-    data.append('societe', societe);
-    data.append('commentaire', comment);
-    data.append('_subject', 'Nouvel avis Alveris - ' + note + ' etoiles - ' + prenom + ' ' + nom);
+    data.append('_subject', '⭐ Nouvel avis ' + note + '/5 — ' + nomComplet + (societe ? ' (' + societe + ')' : ''));
+    data.append('NOTE', etoiles + ' (' + note + '/5)');
+    data.append('PRÉNOM & NOM', nomComplet);
+    data.append('SOCIÉTÉ', societe || '—');
+    data.append('COMMENTAIRE', comment);
+    data.append('DATE', new Date().toLocaleDateString('fr-FR', {weekday:'long', year:'numeric', month:'long', day:'numeric'}));
+    data.append('ACTION REQUISE', '✅ Validé = à publier sur le site  |  ❌ Refusé = ne pas publier');
     var photoFile = document.getElementById('avis-photo');
-    if(photoFile.files && photoFile.files[0]) data.append('photo', photoFile.files[0]);
+    if(photoFile && photoFile.files && photoFile.files[0]) data.append('PHOTO', photoFile.files[0]);
     await fetch('https://formspree.io/f/mbdpayzn', {method:'POST', body:data, headers:{Accept:'application/json'}});
   } catch(e){}
-
   document.getElementById('avis-form-wrap').style.display = 'none';
   document.getElementById('avis-success').style.display = 'block';
   btn.textContent = 'Envoyer mon avis →'; btn.style.opacity = '1';
@@ -2859,37 +2853,7 @@ function previewAvisPhoto(input){
   };
   reader.readAsDataURL(input.files[0]);
 }
-async function submitAvis(){
-  var note = document.getElementById('avis-note').value;
-  var prenom = document.getElementById('avis-prenom').value.trim();
-  var nom = document.getElementById('avis-nom').value.trim();
-  var societe = document.getElementById('avis-societe').value.trim();
-  var comment = document.getElementById('avis-comment').value.trim();
-  var rgpd = document.getElementById('avis-rgpd').checked;
-  var errDiv = document.getElementById('avis-error');
-  if(parseInt(note) === 0){ errDiv.textContent='Veuillez sélectionner une note.'; errDiv.style.display='block'; return; }
-  if(!prenom){ errDiv.textContent='Veuillez indiquer votre prénom.'; errDiv.style.display='block'; return; }
-  if(!comment){ errDiv.textContent='Veuillez écrire un commentaire.'; errDiv.style.display='block'; return; }
-  if(!rgpd){ errDiv.textContent='Veuillez accepter les conditions de publication.'; errDiv.style.display='block'; return; }
-  errDiv.style.display='none';
-  var btn = document.getElementById('avis-submit-btn');
-  btn.textContent = 'Envoi...'; btn.style.opacity = '.6';
-  try {
-    var data = new FormData();
-    data.append('note', note + '/5');
-    data.append('prenom', prenom);
-    data.append('nom', nom);
-    data.append('societe', societe);
-    data.append('commentaire', comment);
-    data.append('_subject', 'Nouvel avis Alveris - ' + note + ' etoiles - ' + prenom + ' ' + nom);
-    var photoFile = document.getElementById('avis-photo');
-    if(photoFile && photoFile.files && photoFile.files[0]) data.append('photo', photoFile.files[0]);
-    await fetch('https://formspree.io/f/mbdpayzn', {method:'POST', body:data, headers:{Accept:'application/json'}});
-  } catch(e){}
-  document.getElementById('avis-form-wrap').style.display = 'none';
-  document.getElementById('avis-success').style.display = 'block';
-  btn.textContent = 'Envoyer mon avis →'; btn.style.opacity = '1';
-}
+// submitAvis défini ci-dessus
 
 function toggleFaq(el){
   var item = el.parentElement;

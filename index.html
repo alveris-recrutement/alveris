@@ -2128,14 +2128,14 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       <p class="slabel" data-fr="Candidats" data-en="Candidates">Candidats</p>
       <h1 class="stitle"><span data-fr="Déposez votre " data-en="Submit your ">Déposez votre </span><em data-fr="candidature" data-en="application">candidature</em></h1>
       <p class="sbody" data-fr="Votre profil entre dans notre vivier actif. Nous vous contactons dès qu'une opportunité correspond à vos critères — en France, au Luxembourg, en Belgique ou en Suisse. Toutes les candidatures sont traitées avec confidentialité et sérieux." data-en="Your profile enters our active database. We contact you as soon as an opportunity matches your criteria — in France, Luxembourg, Belgium or Switzerland. All applications are treated with confidentiality and professionalism.">Votre profil entre dans notre vivier actif. Nous vous contactons dès qu'une opportunité correspond à vos critères — en France, au Luxembourg, en Belgique ou en Suisse.</p>
-      <div class="dropz" id="drop-zone" onclick="document.getElementById('cv-file').click()">
-        <div style="margin-bottom:1rem;">
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="8" y="4" width="24" height="32" rx="2" stroke="#ccc" stroke-width="1.5"/><line x1="13" y1="13" x2="27" y2="13" stroke="#ccc" stroke-width="1.2"/><line x1="13" y1="18" x2="27" y2="18" stroke="#ccc" stroke-width="1.2"/><line x1="13" y1="23" x2="21" y2="23" stroke="#ccc" stroke-width="1.2"/><circle cx="30" cy="30" r="8" fill="#0c0c0c"/><line x1="30" y1="26.5" x2="30" y2="33.5" stroke="white" stroke-width="1.5"/><line x1="26.5" y1="30" x2="33.5" y2="30" stroke="white" stroke-width="1.5"/></svg>
+      <div style="background:var(--sand);border-radius:6px;padding:2rem;text-align:center;margin-bottom:1.5rem;">
+        <div style="font-size:2rem;margin-bottom:.75rem;">📄</div>
+        <div style="font-size:14px;font-weight:500;color:var(--black);margin-bottom:.5rem;">Joignez votre CV</div>
+        <div style="font-size:12px;color:var(--mid);margin-bottom:1.25rem;line-height:1.6;">Après envoi du formulaire, envoyez votre CV en pièce jointe à :<br><a href="mailto:contact@alveris.fr">contact@alveris.fr</a></div>
+        <div style="display:flex;align-items:center;justify-content:center;gap:.5rem;font-size:11px;color:var(--mid2);">
+          <span style="width:8px;height:8px;border-radius:50%;background:var(--gold);display:inline-block;"></span>
+          Tous formats acceptés · Réponse sous 48h
         </div>
-        <div class="dropz-title" data-fr="Glissez votre CV ici" data-en="Drop your CV here">Glissez votre CV ici</div>
-        <div class="dropz-sub" data-fr="ou cliquez pour sélectionner · PDF, Word · max 5 Mo" data-en="or click to select · PDF, Word · max 5MB">ou cliquez pour sélectionner · PDF, Word · max 5 Mo</div>
-        <label for="cv-file" class="btn-dark" style="cursor:pointer;display:inline-block;">Choisir un fichier</label>
-        <input type="file" id="cv-file" accept="*/*" style="position:absolute;left:-9999px;opacity:0;width:1px;height:1px;" onchange="handleFile(this)">
       </div>
       <div class="cv-status" id="cv-status"></div>
       <div class="cv-promise">
@@ -2146,8 +2146,9 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     <div>
       <p class="slabel" data-fr="Vos informations" data-en="Your details">Vos informations</p>
       <div style="height:.75rem;"></div>
-      <form class="form" action="https://formspree.io/f/mykbdjbj" method="POST" enctype="multipart/form-data" id="cv-form">
-        <input type="hidden" name="_subject" value="Nouvelle candidature CV — Alveris">
+      <form class="form" action="https://formspree.io/f/mbdpayzn" method="POST" enctype="multipart/form-data" id="cv-form">
+        <input type="hidden" name="_replyto" value="contact@alveris.fr">
+        <input type="hidden" name="_subject" value="[CV RECU] Nouvelle candidature — Alveris">
         <input type="hidden" name="_replyto" value="contact@alveris.fr">
         <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
         <div class="frow">
@@ -2203,6 +2204,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       </div>
     </div>
     <form class="form" action="https://formspree.io/f/mbdpayzn" method="POST" id="contact-form">
+        <input type="hidden" name="_replyto" value="contact@alveris.fr">
       <input type="hidden" name="_subject" value="Nouveau besoin de recrutement — Alveris">
       <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
       <div class="frow">
@@ -2575,9 +2577,11 @@ function handleFile(input){
   document.getElementById('cv-file-form').files=dt.files;
 }
 const dz=document.getElementById('drop-zone');
-dz.addEventListener('dragover',e=>{e.preventDefault();dz.style.borderColor='var(--black)';});
-dz.addEventListener('dragleave',()=>{dz.style.borderColor='';});
-dz.addEventListener('drop',e=>{e.preventDefault();const f=e.dataTransfer.files[0];if(f){const i=document.getElementById('cv-file');const dt=new DataTransfer();dt.items.add(f);i.files=dt.files;handleFile(i);}});
+if(dz){
+  dz.addEventListener('dragover',function(e){e.preventDefault();dz.style.borderColor='var(--black)';});
+  dz.addEventListener('dragleave',function(){dz.style.borderColor='';});
+  dz.addEventListener('drop',function(e){e.preventDefault();var f=e.dataTransfer.files[0];if(f){var i=document.getElementById('cv-file');var dt=new DataTransfer();dt.items.add(f);i.files=dt.files;handleFile(i);}});
+}
 
 // ── Formspree AJAX ──
 async function submitForm(formEl,btnSel,successId){
@@ -2592,8 +2596,10 @@ async function submitForm(formEl,btnSel,successId){
     else{btn.textContent=currentLang==='en'?'Error — retry':'Erreur — réessayez';btn.style.opacity='1';}
   }catch{btn.textContent=currentLang==='en'?'Error — retry':'Erreur — réessayez';btn.style.opacity='1';}
 }
-document.getElementById('contact-form').addEventListener('submit',function(e){e.preventDefault();submitForm(this,'button[type="submit"]','contact-success');});
-document.getElementById('cv-form').addEventListener('submit',function(e){e.preventDefault();submitForm(this,'button[type="submit"]','cv-success');});
+var cf=document.getElementById('contact-form');
+if(cf) cf.addEventListener('submit',function(e){e.preventDefault();submitForm(this,'button[type="submit"]','contact-success');});
+var cvf=document.getElementById('cv-form');
+if(cvf) cvf.addEventListener('submit',function(e){e.preventDefault();submitForm(this,'button[type="submit"]','cv-success');});
 
 // ── Chatbot ──
 // ── CHATBOT IA — connecté à l'API Claude ──
@@ -2768,6 +2774,7 @@ if(nlForm){
     if(!isMobile) return;
 
     // Sync dots on scroll
+    if(!slider) return;
     slider.addEventListener('scroll', function(){
       var mid = slider.scrollLeft + slider.offsetWidth / 2;
       var cards = slider.children;
@@ -2840,9 +2847,9 @@ async function submitAvis(){
     data.append('avis_complet', comment);
     data.append('_replyto', 'contact@alveris.fr');
     data.append('_to', 'contact@alveris.fr');
-    var photoFile = document.getElementById('avis-photo');
-    if(photoFile.files && photoFile.files[0]) data.append('photo', photoFile.files[0]);
-    await fetch('https://formspree.io/f/mbdpayzn', {method:'POST', body:data, headers:{Accept:'application/json'}});
+    var subj = encodeURIComponent('[AVIS] ' + (note||'') + ' etoiles - ' + prenom + ' ' + nom);
+    var bod = encodeURIComponent('NOTE: ' + (note||'') + '/5\nNOM: ' + prenom + ' ' + nom + '\nSOCIETE: ' + (societe||'') + '\n\nAVIS:\n' + comment);
+    window.location.href = 'mailto:contact@alveris.fr?subject=' + subj + '&body=' + bod;
   } catch(e){}
 
   document.getElementById('avis-form-wrap').style.display = 'none';
@@ -2895,9 +2902,9 @@ async function submitAvis(){
     data.append('avis_complet', comment);
     data.append('_replyto', 'contact@alveris.fr');
     data.append('_to', 'contact@alveris.fr');
-    var photoFile = document.getElementById('avis-photo');
-    if(photoFile && photoFile.files && photoFile.files[0]) data.append('photo', photoFile.files[0]);
-    await fetch('https://formspree.io/f/mbdpayzn', {method:'POST', body:data, headers:{Accept:'application/json'}});
+    var subj = encodeURIComponent('[AVIS] ' + (note||'') + ' etoiles - ' + prenom + ' ' + (nom||''));
+    var bod = encodeURIComponent('NOTE: ' + (note||'') + '/5\nNOM: ' + prenom + ' ' + (nom||'') + '\nSOCIETE: ' + (societe||'') + '\n\nAVIS:\n' + comment);
+    window.location.href = 'mailto:contact@alveris.fr?subject=' + subj + '&body=' + bod;
   } catch(e){}
   document.getElementById('avis-form-wrap').style.display = 'none';
   document.getElementById('avis-success').style.display = 'block';
@@ -2949,7 +2956,9 @@ async function submitReview(){
     data.append('prenom',prenom);
     data.append('societe',societe);
     data.append('_subject','Nouvel avis Alveris — '+note.value+' etoiles');
-    await fetch('https://formspree.io/f/mbdpayzn',{method:'POST',body:data,headers:{Accept:'application/json'}});
+    var subj = encodeURIComponent('[AVIS] ' + note.value + '/5 - ' + prenom);
+    var bod = encodeURIComponent('NOTE: ' + note.value + '/5\nNOM: ' + prenom + '\nSOCIETE: ' + (societe||'') + '\n\nAVIS:\n' + comment);
+    window.location.href = 'mailto:contact@alveris.fr?subject=' + subj + '&body=' + bod;
   }catch(e){}
   document.getElementById('review-form-wrap').style.display='none';
   document.getElementById('review-success').style.display='block';
@@ -3008,7 +3017,7 @@ function resetHpProgress(){
 
 // Touch swipe
 (function(){
-  const el = document.getElementById('hero-premium');
+  var el = document.getElementById('hero-premium');
   if(!el) return;
   let tx = 0;
   el.addEventListener('touchstart', e=>{ tx=e.touches[0].clientX; },{passive:true});

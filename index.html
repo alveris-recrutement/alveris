@@ -174,36 +174,114 @@ nav{position:sticky;top:0;z-index:300;background:rgba(250,250,248,.96);backdrop-
 /* ── SERVICES GRID ── */
 .services-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--light);margin-top:3rem;}
 .scard{background:var(--white2);padding:2rem;border-top:3px solid transparent;transition:border-color .2s,background .2s;position:relative;}
-.scard{cursor:pointer;}.scard:hover{filter:brightness(.97);}.scard-arrow{font-size:10px;font-weight:500;letter-spacing:.08em;color:var(--gold);margin-top:1rem;display:block;transition:gap .2s;}
-.scard.s-cadres{background:#f0f3f9;}
-.scard.s-cadres:hover{background:#e8edf5;}
-.scard.s-cadres .scard-ico{background:#dce5f0;color:#4a6b96;}
-.scard.s-cadres:hover{border-color:#5a7ba6;}
-.scard.s-startup{background:#edf4ee;}
-.scard.s-startup:hover{background:#e2ede4;}
-.scard.s-startup .scard-ico{background:#d4e8d6;color:#4a7a55;}
-.scard.s-startup:hover{border-color:#5a8a65;}
-.scard.s-tech{background:#f0edf8;}
-.scard.s-tech:hover{background:#e8e4f2;}
-.scard.s-tech .scard-ico{background:#ddd8f0;color:#6a5a9a;}
-.scard.s-tech:hover{border-color:#7a6aaa;}
-.scard.s-finance{background:#f6f2e6;}
-.scard.s-finance:hover{background:#f0ead8;}
-.scard.s-finance .scard-ico{background:#e8dfc0;color:#907030;}
-.scard.s-finance:hover{border-color:#a08040;}
-.scard.s-industrie{background:#f4ede8;}
-.scard.s-industrie:hover{background:#ede4dc;}
-.scard.s-industrie .scard-ico{background:#e0d0c4;color:#8a5a40;}
-.scard.s-industrie:hover{border-color:#9a6a50;}
-.scard.s-horeca{background:#f5eaee;}
-.scard.s-horeca:hover{background:#ede0e5;}
-.scard.s-horeca .scard-ico{background:#e4ccd4;color:#9a5060;}
-.scard.s-horeca:hover{border-color:#aa6070;}
-.scard-ico{font-size:1.5rem;margin-bottom:1rem;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--gold-pale);color:var(--gold2);}
-.scard-n{font-weight:500;font-size:13px;margin-bottom:.6rem;letter-spacing:.02em;}
-.scard-d{font-size:12px;color:var(--mid);line-height:1.7;}
-.tags{margin-top:1rem;display:flex;flex-wrap:wrap;gap:.3rem;}
-.tag{font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:.2rem .55rem;border:1px solid var(--light);color:var(--mid);border-radius:2px;}
+/* ── SECTOR CARDS — Premium World-Class ── */
+.scard{
+  cursor:pointer;
+  position:relative;
+  overflow:hidden;
+  border-radius:0;
+  padding:2.25rem 2rem 2rem;
+  border:1px solid transparent;
+  transition:all .35s cubic-bezier(.4,0,.2,1);
+  display:flex;
+  flex-direction:column;
+}
+.scard::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:3px;
+  background:var(--sector-accent, #c8a96d);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .35s cubic-bezier(.4,0,.2,1);
+}
+.scard:hover::before{ transform:scaleX(1); }
+.scard:hover{
+  transform:translateY(-4px);
+  box-shadow:0 20px 60px rgba(0,0,0,.1);
+  border-color:var(--sector-accent, #c8a96d);
+}
+.scard-arrow{
+  font-size:10px;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--sector-accent,#c8a96d);
+  margin-top:auto;padding-top:1.25rem;
+  display:flex;align-items:center;gap:.4rem;
+  opacity:0;transform:translateX(-6px);
+  transition:all .3s ease;
+}
+.scard:hover .scard-arrow{ opacity:1;transform:translateX(0); }
+
+/* Cadres & Dirigeants */
+.scard.s-cadres{ background:#0e0e14; --sector-accent:#8b9ef0; }
+.scard.s-cadres .scard-ico{ background:rgba(139,158,240,.12); color:#8b9ef0; }
+.scard.s-cadres .scard-n{ color:#e8eaf8; }
+.scard.s-cadres .scard-d{ color:rgba(232,234,248,.55); }
+.scard.s-cadres .tag{ border-color:rgba(139,158,240,.25); color:rgba(139,158,240,.8); }
+
+/* Start-up & Scale-up */
+.scard.s-startup{ background:#0a0f0e; --sector-accent:#5ecfa8; }
+.scard.s-startup .scard-ico{ background:rgba(94,207,168,.12); color:#5ecfa8; }
+.scard.s-startup .scard-n{ color:#e2f5ef; }
+.scard.s-startup .scard-d{ color:rgba(226,245,239,.55); }
+.scard.s-startup .tag{ border-color:rgba(94,207,168,.25); color:rgba(94,207,168,.8); }
+
+/* Tech & IT */
+.scard.s-tech{ background:#0d0a14; --sector-accent:#b07ef0; }
+.scard.s-tech .scard-ico{ background:rgba(176,126,240,.12); color:#b07ef0; }
+.scard.s-tech .scard-n{ color:#ede8f8; }
+.scard.s-tech .scard-d{ color:rgba(237,232,248,.55); }
+.scard.s-tech .tag{ border-color:rgba(176,126,240,.25); color:rgba(176,126,240,.8); }
+
+/* Banque & Finance */
+.scard.s-finance{ background:#100e08; --sector-accent:#c8a96d; }
+.scard.s-finance .scard-ico{ background:rgba(200,169,109,.12); color:#c8a96d; }
+.scard.s-finance .scard-n{ color:#f5f0e4; }
+.scard.s-finance .scard-d{ color:rgba(245,240,228,.55); }
+.scard.s-finance .tag{ border-color:rgba(200,169,109,.25); color:rgba(200,169,109,.8); }
+
+/* Industrie & BTP */
+.scard.s-industrie{ background:#0f0c09; --sector-accent:#e8956a; }
+.scard.s-industrie .scard-ico{ background:rgba(232,149,106,.12); color:#e8956a; }
+.scard.s-industrie .scard-n{ color:#f5ede6; }
+.scard.s-industrie .scard-d{ color:rgba(245,237,230,.55); }
+.scard.s-industrie .tag{ border-color:rgba(232,149,106,.25); color:rgba(232,149,106,.8); }
+
+/* Horeca & Commerce */
+.scard.s-horeca{ background:#100a0d; --sector-accent:#f07ab0; }
+.scard.s-horeca .scard-ico{ background:rgba(240,122,176,.12); color:#f07ab0; }
+.scard.s-horeca .scard-n{ color:#f5e8ee; }
+.scard.s-horeca .scard-d{ color:rgba(245,232,238,.55); }
+.scard.s-horeca .tag{ border-color:rgba(240,122,176,.25); color:rgba(240,122,176,.8); }
+
+.scard-ico{
+  font-size:1.5rem;
+  margin-bottom:1.5rem;
+  display:flex;align-items:center;justify-content:center;
+  width:48px;height:48px;
+  border-radius:12px;
+  flex-shrink:0;
+}
+.scard-n{
+  font-weight:500;font-size:14px;
+  margin-bottom:.75rem;
+  letter-spacing:.02em;
+  line-height:1.3;
+}
+.scard-d{
+  font-size:12px;
+  line-height:1.8;
+  flex:1;
+}
+.tags{margin-top:1rem;display:flex;flex-wrap:wrap;gap:.35rem;}
+.tag{
+  font-size:9px;letter-spacing:.1em;text-transform:uppercase;
+  padding:.25rem .6rem;
+  border:1px solid;
+  border-radius:2px;
+  font-weight:500;
+}
 
 /* ── MÉTHODE (dark) ── */
 .method-wrap{display:grid;grid-template-columns:1fr 1fr;}
@@ -2021,7 +2099,11 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       <div style="font-family:var(--serif);font-size:1.3rem;font-weight:400;margin-bottom:.4rem;" data-fr="Je m'abonne gratuitement" data-en="I subscribe for free">Je m'abonne gratuitement</div>
       <div style="font-size:12px;color:var(--mid);margin-bottom:1.75rem;" data-fr="Remplissez le formulaire — vous recevrez la prochaine édition dès sa parution." data-en="Fill in the form — you'll receive the next edition as soon as it's published.">Remplissez le formulaire — vous recevrez la prochaine édition dès sa parution.</div>
 
-      <form class="form" action="https://formspree.io/f/mbdpayzn" method="POST" id="newsletter-form">
+      <form class="form" action="https://api.web3forms.com/submit" method="POST" id="newsletter-form">
+        <input type="hidden" name="access_key" value="299b2f05-4d90-4b90-aa43-a664633d4424">
+        <input type="hidden" name="subject" value="Nouvel abonnement Newsletter — Alveris">
+        <input type="hidden" name="from_name" value="Alveris Newsletter">
+        <input type="hidden" name="redirect" value="false">
         <input type="hidden" name="_subject" value="Nouvel abonnement Newsletter — Alveris">
         <input type="hidden" name="_next" value="">
         <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
@@ -2145,7 +2227,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     <div>
       <p class="slabel" data-fr="Vos informations" data-en="Your details">Vos informations</p>
       <div style="height:.75rem;"></div>
-      <form class="form" action="https://formspree.io/f/mykbdjbj" method="POST" enctype="multipart/form-data" id="cv-form">
+      <form class="form" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" id="cv-form">
         <input type="hidden" name="_replyto" value="contact@alveris.fr">
         <input type="hidden" name="_subject" value="[CV RECU] Nouvelle candidature — Alveris">
         <input type="hidden" name="_replyto" value="contact@alveris.fr">
@@ -2202,7 +2284,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         <div class="clink">🕐 <span data-fr="Lun–Ven · 8h–19h · Réponse sous 24h" data-en="Mon–Fri · 8am–7pm · Reply within 24h">Lun–Ven · 8h–19h · Réponse sous 24h</span></div>
       </div>
     </div>
-    <form class="form" action="https://formspree.io/f/mbdpayzn" method="POST" id="contact-form">
+    <form class="form" action="https://api.web3forms.com/submit" method="POST" id="contact-form">
         <input type="hidden" name="_replyto" value="contact@alveris.fr">
       <input type="hidden" name="_subject" value="Demande de recrutement">
       <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
@@ -2624,32 +2706,31 @@ async function submitForm(formEl,btnSel,successId){
 var cf=document.getElementById('contact-form');
 if(cf) cf.addEventListener('submit',function(e){
   e.preventDefault();
-  // Update subject with sender name to avoid spam
   var nomField = cf.querySelector('[name="nom"]');
-  var subjectField = cf.querySelector('[name="_subject"]');
-  if(nomField && subjectField && nomField.value){
-    subjectField.value = 'Besoin recrutement - ' + nomField.value;
+  var subjectF = cf.querySelector('[name="subject"]');
+  if(subjectF && nomField && nomField.value){
+    subjectF.value = 'Besoin recrutement - ' + nomField.value;
   }
-  submitForm(this,'button[type="submit"]','contact-success');
+  var btn = cf.querySelector('button[type="submit"]');
+  if(btn){ btn.textContent='Envoi...'; btn.style.opacity='.6'; }
+  var formData = new FormData(cf);
+  fetch('https://api.web3forms.com/submit', {method:'POST', body:formData})
+  .then(function(res){ return res.json(); })
+  .then(function(data){
+    if(data.success){
+      cf.reset();
+      if(btn) btn.style.display='none';
+      var succ = document.getElementById('contact-success');
+      if(succ){ succ.style.display='block'; succ.textContent='✓ Message envoyé ! Nous vous répondrons sous 24h.'; }
+    } else {
+      if(btn){ btn.textContent='Erreur — réessayez'; btn.style.opacity='1'; }
+    }
+  })
+  .catch(function(){
+    if(btn){ btn.textContent='Erreur réseau — réessayez'; btn.style.opacity='1'; }
+  });
 });
-var cvf=document.getElementById('cv-form');
-if(cvf) cvf.addEventListener('submit',function(e){
-  e.preventDefault();
-  // Sync cv-file to form input before submit
-  var cvPreview = document.getElementById('cv-file');
-  var cvForm = document.getElementById('cv-file-form');
-  if(cvPreview && cvForm && cvPreview.files && cvPreview.files[0]){
-    try { var dt=new DataTransfer(); dt.items.add(cvPreview.files[0]); cvForm.files=dt.files; } catch(err){}
-  }
-  // Update subject with candidate name
-  var prenomF = cvf.querySelector('[name="prenom"]');
-  var nomF = cvf.querySelector('[name="nom"]');
-  var subjectF = cvf.querySelector('[name="_subject"]');
-  if(subjectF && prenomF && nomF){
-    subjectF.value = 'CV - ' + prenomF.value + ' ' + nomF.value;
-  }
-  submitForm(this,'button[type="submit"]','cv-success');
-});
+
 
 // ── Chatbot ──
 // ── CHATBOT IA — connecté à l'API Claude ──
@@ -2897,118 +2978,21 @@ async function submitAvis(){
     data.append('avis_complet', comment);
     data.append('_replyto', 'contact@alveris.fr');
     data.append('_to', 'contact@alveris.fr');
-    var subj = encodeURIComponent('[AVIS] ' + (note||'') + ' etoiles - ' + prenom + ' ' + nom);
-    var bod = encodeURIComponent('NOTE: ' + (note||'') + '/5\nNOM: ' + prenom + ' ' + nom + '\nSOCIETE: ' + (societe||'') + '\n\nAVIS:\n' + comment);
-    window.location.href = 'mailto:contact@alveris.fr?subject=' + subj + '&body=' + bod;
-  } catch(e){}
-
-  document.getElementById('avis-form-wrap').style.display = 'none';
-  document.getElementById('avis-success').style.display = 'block';
-  btn.textContent = 'Envoyer mon avis →'; btn.style.opacity = '1';
-}
-
-
-function setRating(val){
-  document.getElementById('avis-note').value = val;
-  document.querySelectorAll('.star-btn').forEach(function(s){
-    s.style.color = parseInt(s.getAttribute('data-val')) <= val ? 'var(--gold)' : 'var(--light)';
-  });
-}
-function previewAvisPhoto(input){
-  if(!input.files || !input.files[0]) return;
-  var reader = new FileReader();
-  reader.onload = function(e){
-    var prev = document.getElementById('avis-photo-preview');
-    if(prev) prev.innerHTML = '<img src="' + e.target.result + '" style="width:100%;height:100%;object-fit:cover;">';
-  };
-  reader.readAsDataURL(input.files[0]);
-}
-async function submitAvis(){
-  var note = document.getElementById('avis-note').value;
-  var prenom = document.getElementById('avis-prenom').value.trim();
-  var nom = document.getElementById('avis-nom').value.trim();
-  var societe = document.getElementById('avis-societe').value.trim();
-  var comment = document.getElementById('avis-comment').value.trim();
-  var rgpd = document.getElementById('avis-rgpd').checked;
-  var errDiv = document.getElementById('avis-error');
-  if(parseInt(note) === 0){ errDiv.textContent='Veuillez sélectionner une note.'; errDiv.style.display='block'; return; }
-  if(!prenom){ errDiv.textContent='Veuillez indiquer votre prénom.'; errDiv.style.display='block'; return; }
-  if(!comment){ errDiv.textContent='Veuillez écrire un commentaire.'; errDiv.style.display='block'; return; }
-  if(!rgpd){ errDiv.textContent='Veuillez accepter les conditions de publication.'; errDiv.style.display='block'; return; }
-  errDiv.style.display='none';
-  var btn = document.getElementById('avis-submit-btn');
-  btn.textContent = 'Envoi...'; btn.style.opacity = '.6';
-  try {
-    var data = new FormData();
-    data.append('note', note + '/5');
-    data.append('prenom', prenom);
-    data.append('nom', nom);
-    data.append('societe', societe);
-    data.append('commentaire', comment);
-    data.append('_subject', '[AVIS A VALIDER] ' + note + '/5 etoiles - ' + prenom + ' ' + nom);
-    data.append('note_sur_5', note + '/5');
-    data.append('prenom_nom', prenom + ' ' + nom);
-    data.append('societe_poste', societe || 'Non renseigne');
-    data.append('avis_complet', comment);
-    data.append('_replyto', 'contact@alveris.fr');
-    data.append('_to', 'contact@alveris.fr');
-    var subj = encodeURIComponent('[AVIS] ' + (note||'') + ' etoiles - ' + prenom + ' ' + (nom||''));
-    var bod = encodeURIComponent('NOTE: ' + (note||'') + '/5\nNOM: ' + prenom + ' ' + (nom||'') + '\nSOCIETE: ' + (societe||'') + '\n\nAVIS:\n' + comment);
-    window.location.href = 'mailto:contact@alveris.fr?subject=' + subj + '&body=' + bod;
-  } catch(e){}
-  document.getElementById('avis-form-wrap').style.display = 'none';
-  document.getElementById('avis-success').style.display = 'block';
-  btn.textContent = 'Envoyer mon avis →'; btn.style.opacity = '1';
-}
-
-function toggleFaq(el){
-  var item = el.parentElement;
-  item.classList.toggle('open');
-}
-
-// SYSTEME AVIS
-function openReviewModal(){
-  document.getElementById('review-modal-wrap').classList.add('open');
-  document.body.style.overflow='hidden';
-}
-function closeReviewModal(){
-  document.getElementById('review-modal-wrap').classList.remove('open');
-  document.body.style.overflow='';
-  setTimeout(function(){
-    document.getElementById('review-form-wrap').style.display='block';
-    document.getElementById('review-success').style.display='none';
-    document.getElementById('review-comment').value='';
-    document.getElementById('review-prenom').value='';
-    document.getElementById('review-societe').value='';
-    document.getElementById('review-rgpd').checked=false;
-    document.getElementById('review-error').style.display='none';
-    document.querySelectorAll('#stars-input input').forEach(function(i){i.checked=false;});
-  },300);
-}
-async function submitReview(){
-  var note = document.querySelector('#stars-input input:checked');
-  var comment = document.getElementById('review-comment').value.trim();
-  var prenom = document.getElementById('review-prenom').value.trim();
-  var societe = document.getElementById('review-societe').value.trim();
-  var rgpd = document.getElementById('review-rgpd').checked;
-  var errDiv = document.getElementById('review-error');
-  if(!note){errDiv.textContent='Veuillez selectionner une note.';errDiv.style.display='block';return;}
-  if(!comment){errDiv.textContent='Veuillez ecrire un commentaire.';errDiv.style.display='block';return;}
-  if(!prenom){errDiv.textContent='Veuillez indiquer votre prenom.';errDiv.style.display='block';return;}
-  if(!rgpd){errDiv.textContent="Veuillez accepter les conditions d'affichage.";errDiv.style.display='block';return;}
-  errDiv.style.display='none';
-  var btn=document.querySelector('.review-submit');
-  btn.textContent='Envoi...';btn.style.opacity='.6';
-  try{
-    var data=new FormData();
-    data.append('note',note.value+'/5');
-    data.append('commentaire',comment);
-    data.append('prenom',prenom);
-    data.append('societe',societe);
-    data.append('_subject','Nouvel avis Alveris — '+note.value+' etoiles');
-    var subj = encodeURIComponent('[AVIS] ' + note.value + '/5 - ' + prenom);
-    var bod = encodeURIComponent('NOTE: ' + note.value + '/5\nNOM: ' + prenom + '\nSOCIETE: ' + (societe||'') + '\n\nAVIS:\n' + comment);
-    window.location.href = 'mailto:contact@alveris.fr?subject=' + subj + '&body=' + bod;
+    var formDataAvis = new FormData();
+    formDataAvis.append('access_key', '299b2f05-4d90-4b90-aa43-a664633d4424');
+    formDataAvis.append('subject', '[AVIS A VALIDER] ' + (typeof note === 'object' ? note.value : String(note)) + '/5 - ' + prenom + ' ' + (nom||''));
+    formDataAvis.append('from_name', 'Alveris Avis');
+    formDataAvis.append('note', (typeof note === 'object' ? note.value : String(note)) + '/5');
+    formDataAvis.append('prenom_nom', prenom + ' ' + (nom||''));
+    formDataAvis.append('societe_poste', societe||'Non renseigne');
+    formDataAvis.append('commentaire', comment);
+    formDataAvis.append('redirect', 'false');
+    var photoFile2 = document.getElementById('avis-photo');
+    if(photoFile2 && photoFile2.files && photoFile2.files[0]) formDataAvis.append('photo', photoFile2.files[0]);
+    fetch('https://api.web3forms.com/submit', {method:'POST', body:formDataAvis})
+    .then(function(r){ return r.json(); })
+    .then(function(d){ /* success */ })
+    .catch(function(e){ /* ignore */ });
   }catch(e){}
   document.getElementById('review-form-wrap').style.display='none';
   document.getElementById('review-success').style.display='block';

@@ -181,7 +181,7 @@ nav{position:sticky;top:0;z-index:300;background:rgba(250,250,248,.96);backdrop-
   overflow:hidden;
   border-radius:0;
   padding:2.25rem 2rem 2rem;
-  border:1px solid transparent;
+  border:1px solid rgba(0,0,0,.06);
   transition:all .35s cubic-bezier(.4,0,.2,1);
   display:flex;
   flex-direction:column;
@@ -199,7 +199,6 @@ nav{position:sticky;top:0;z-index:300;background:rgba(250,250,248,.96);backdrop-
 .scard:hover::before{ transform:scaleX(1); }
 .scard:hover{
   transform:translateY(-4px);
-  box-shadow:0 20px 60px rgba(0,0,0,.1);
   border-color:var(--sector-accent, #c8a96d);
 }
 .scard-arrow{
@@ -213,47 +212,65 @@ nav{position:sticky;top:0;z-index:300;background:rgba(250,250,248,.96);backdrop-
 }
 .scard:hover .scard-arrow{ opacity:1;transform:translateX(0); }
 
-/* Cadres & Dirigeants */
-.scard.s-cadres{ background:#0e0e14; --sector-accent:#8b9ef0; }
-.scard.s-cadres .scard-ico{ background:rgba(139,158,240,.12); color:#8b9ef0; }
-.scard.s-cadres .scard-n{ color:#e8eaf8; }
-.scard.s-cadres .scard-d{ color:rgba(232,234,248,.55); }
-.scard.s-cadres .tag{ border-color:rgba(139,158,240,.25); color:rgba(139,158,240,.8); }
+/* Cadres & Dirigeants — Bleu nuit dégradé indigo/saphir */
+.scard.s-cadres{
+  background:linear-gradient(135deg,#eef1ff 0%,#e0e7ff 50%,#ede9f7 100%);
+  --sector-accent:#4f46e5;
+}
+.scard.s-cadres .scard-n{ color:#1e1b4b; }
+.scard.s-cadres .scard-d{ color:#4338ca; opacity:.75; }
+.scard.s-cadres .tag{ color:#6366f1; opacity:.8; }
+.scard.s-cadres:hover{ box-shadow:0 20px 60px rgba(79,70,229,.15); }
 
-/* Start-up & Scale-up */
-.scard.s-startup{ background:#0a0f0e; --sector-accent:#5ecfa8; }
-.scard.s-startup .scard-ico{ background:rgba(94,207,168,.12); color:#5ecfa8; }
-.scard.s-startup .scard-n{ color:#e2f5ef; }
-.scard.s-startup .scard-d{ color:rgba(226,245,239,.55); }
-.scard.s-startup .tag{ border-color:rgba(94,207,168,.25); color:rgba(94,207,168,.8); }
+/* Start-up & Scale-up — Vert menthe dégradé émeraude */
+.scard.s-startup{
+  background:linear-gradient(135deg,#ecfdf5 0%,#d1fae5 50%,#e0f7f0 100%);
+  --sector-accent:#059669;
+}
+.scard.s-startup .scard-n{ color:#064e3b; }
+.scard.s-startup .scard-d{ color:#047857; opacity:.75; }
+.scard.s-startup .tag{ color:#10b981; opacity:.8; }
+.scard.s-startup:hover{ box-shadow:0 20px 60px rgba(5,150,105,.15); }
 
-/* Tech & IT */
-.scard.s-tech{ background:#0d0a14; --sector-accent:#b07ef0; }
-.scard.s-tech .scard-ico{ background:rgba(176,126,240,.12); color:#b07ef0; }
-.scard.s-tech .scard-n{ color:#ede8f8; }
-.scard.s-tech .scard-d{ color:rgba(237,232,248,.55); }
-.scard.s-tech .tag{ border-color:rgba(176,126,240,.25); color:rgba(176,126,240,.8); }
+/* Tech & IT — Violet lilas dégradé améthyste */
+.scard.s-tech{
+  background:linear-gradient(135deg,#f5f3ff 0%,#ede9fe 50%,#faf5ff 100%);
+  --sector-accent:#7c3aed;
+}
+.scard.s-tech .scard-n{ color:#2e1065; }
+.scard.s-tech .scard-d{ color:#6d28d9; opacity:.75; }
+.scard.s-tech .tag{ color:#8b5cf6; opacity:.8; }
+.scard.s-tech:hover{ box-shadow:0 20px 60px rgba(124,58,237,.15); }
 
-/* Banque & Finance */
-.scard.s-finance{ background:#100e08; --sector-accent:#c8a96d; }
-.scard.s-finance .scard-ico{ background:rgba(200,169,109,.12); color:#c8a96d; }
-.scard.s-finance .scard-n{ color:#f5f0e4; }
-.scard.s-finance .scard-d{ color:rgba(245,240,228,.55); }
-.scard.s-finance .tag{ border-color:rgba(200,169,109,.25); color:rgba(200,169,109,.8); }
+/* Banque & Finance — Or champagne dégradé ambre */
+.scard.s-finance{
+  background:linear-gradient(135deg,#fffbeb 0%,#fef3c7 50%,#fdf6e3 100%);
+  --sector-accent:#b45309;
+}
+.scard.s-finance .scard-n{ color:#451a03; }
+.scard.s-finance .scard-d{ color:#92400e; opacity:.75; }
+.scard.s-finance .tag{ color:#c8a96d; opacity:.8; }
+.scard.s-finance:hover{ box-shadow:0 20px 60px rgba(180,83,9,.12); }
 
-/* Industrie & BTP */
-.scard.s-industrie{ background:#0f0c09; --sector-accent:#e8956a; }
-.scard.s-industrie .scard-ico{ background:rgba(232,149,106,.12); color:#e8956a; }
-.scard.s-industrie .scard-n{ color:#f5ede6; }
-.scard.s-industrie .scard-d{ color:rgba(245,237,230,.55); }
-.scard.s-industrie .tag{ border-color:rgba(232,149,106,.25); color:rgba(232,149,106,.8); }
+/* Industrie & BTP — Terre corail dégradé saumon */
+.scard.s-industrie{
+  background:linear-gradient(135deg,#fff7ed 0%,#ffedd5 50%,#fef0e6 100%);
+  --sector-accent:#c2410c;
+}
+.scard.s-industrie .scard-n{ color:#431407; }
+.scard.s-industrie .scard-d{ color:#9a3412; opacity:.75; }
+.scard.s-industrie .tag{ color:#e8956a; opacity:.8; }
+.scard.s-industrie:hover{ box-shadow:0 20px 60px rgba(194,65,12,.12); }
 
-/* Horeca & Commerce */
-.scard.s-horeca{ background:#100a0d; --sector-accent:#f07ab0; }
-.scard.s-horeca .scard-ico{ background:rgba(240,122,176,.12); color:#f07ab0; }
-.scard.s-horeca .scard-n{ color:#f5e8ee; }
-.scard.s-horeca .scard-d{ color:rgba(245,232,238,.55); }
-.scard.s-horeca .tag{ border-color:rgba(240,122,176,.25); color:rgba(240,122,176,.8); }
+/* Commerce & Horeca — Rose poudré dégradé pêche */
+.scard.s-horeca{
+  background:linear-gradient(135deg,#fdf2f8 0%,#fce7f3 50%,#fff0f6 100%);
+  --sector-accent:#be185d;
+}
+.scard.s-horeca .scard-n{ color:#500724; }
+.scard.s-horeca .scard-d{ color:#9d174d; opacity:.75; }
+.scard.s-horeca .tag{ color:#ec4899; opacity:.8; }
+.scard.s-horeca:hover{ box-shadow:0 20px 60px rgba(190,24,93,.12); }
 
 .scard-ico{display:none;}
 .scard-n{
@@ -798,7 +815,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
   <a href="#" onclick="go('cv');closeMenu();return false;" data-fr="Déposer un CV" data-en="Submit CV">Déposer un CV</a>
   <a href="#" onclick="go('contact');closeMenu();return false;" data-fr="Contact" data-en="Contact">Contact</a>
   
-  ✉ <a href="mailto:contact@alveris.fr">contact@alveris.fr</a>
+  ✉ <a href="/cdn-cgi/l/email-protection#31525e5f4550524571505d47544358421f5743"><span class="__cf_email__" data-cfemail="573438392336342317363b2132253e24793125">[email&#160;protected]</span></a>
 </div>
 
 <!-- ═══════ PAGE ACCUEIL ═══════ -->
@@ -988,7 +1005,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       <p class="mtext" data-fr="Nous intervenons avec la même efficacité depuis Paris, Bordeaux ou Rennes qu'au Luxembourg, à Bruxelles ou à Genève. Un réseau construit sur des années, une présence réelle sur chaque marché, pas de frontières artificielles." data-en="We work with the same efficiency from Paris, Bordeaux or Rennes as from Luxembourg, Brussels or Geneva. A network built over years, a real presence in each market, no artificial borders.">Nous intervenons avec la même efficacité depuis Paris, Bordeaux ou Rennes qu'au Luxembourg, à Bruxelles ou à Genève. Un réseau construit sur des années, une présence réelle sur chaque marché.</p>
       <div class="contact-cta-dark">
         <button class="gold-btn" onclick="go('contact')" data-fr="Parlons de votre besoin →" data-en="Let's discuss your brief →">Parlons de votre besoin →</button>
-        <div class="clink"><a href="mailto:contact@alveris.fr">contact@alveris.fr</a></div>
+        <div class="clink"><a href="/cdn-cgi/l/email-protection#aac9c5c4decbc9deeacbc6dccfd8c3d984ccd8"><span class="__cf_email__" data-cfemail="e3808c8d97828097a3828f9586918a90cd8591">[email&#160;protected]</span></a></div>
       </div>
     </div>
     <div class="method-right">
@@ -2059,7 +2076,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
             </div>
             <span class="faq-arrow" style="color:var(--gold);flex-shrink:0;">▾</span>
           </div>
-          <div class="faq-a" style="padding:0 1.5rem 1.25rem 4.5rem;border-top:1px solid var(--light);padding-top:1rem;">Garantie remboursement intégral 30 jours, sans condition. Un simple email à <a href="mailto:contact@alveris.fr">contact@alveris.fr</a> suffit.</div>
+          <div class="faq-a" style="padding:0 1.5rem 1.25rem 4.5rem;border-top:1px solid var(--light);padding-top:1rem;">Garantie remboursement intégral 30 jours, sans condition. Un simple email à <a href="/cdn-cgi/l/email-protection#d3b0bcbda7b2b0a793b2bfa5b6a1baa0fdb5a1"><span class="__cf_email__" data-cfemail="35565a5b415456417554594350475c461b5347">[email&#160;protected]</span></a> suffit.</div>
         </div>
 
         <div class="faq-item" style="background:var(--white);border-radius:6px;border:1px solid var(--light);padding:0;overflow:hidden;">
@@ -2359,7 +2376,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       <p class="cgeo">France · Luxembourg · Belgique · Suisse</p>
       <div class="clinks">
         
-        <div class="clink"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:16px;height:16px;flex-shrink:0;"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"/></svg> <a href="mailto:contact@alveris.fr">contact@alveris.fr</a></div>
+        <div class="clink"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:16px;height:16px;flex-shrink:0;"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"/></svg> <a href="/cdn-cgi/l/email-protection#264549485247455266474a5043544f55084054"><span class="__cf_email__" data-cfemail="294a46475d484a5d6948455f4c5b405a074f5b">[email&#160;protected]</span></a></div>
         <div class="clink"><svg width="16" height="16" viewBox="0 0 24 24" fill="#0a66c2" style="width:16px;height:16px;flex-shrink:0;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> <a href="https://www.linkedin.com/company/112808994" target="_blank" style="color:rgba(255,255,255,.55);">linkedin.com/company/alveris-recrutement</a></div>
         <div class="clink">🕐 <span data-fr="Lun–Ven · 8h–19h · Réponse sous 24h" data-en="Mon–Fri · 8am–7pm · Reply within 24h">Lun–Ven · 8h–19h · Réponse sous 24h</span></div>
       </div>
@@ -2415,7 +2432,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
           <strong style="color:var(--black);">Alveris</strong><br>
           Cabinet de recrutement<br>
           Fondatrice : Aurélie Stefanowski<br>
-          Email : <a href="mailto:contact@alveris.fr">contact@alveris.fr</a><br>
+          Email : <a href="/cdn-cgi/l/email-protection#5b3834352f3a382f1b3a372d3e293228753d29"><span class="__cf_email__" data-cfemail="f0939f9e84919384b0919c8695829983de9682">[email&#160;protected]</span></a><br>
           Téléphone : <br>
           Site web : alveris.fr
         </p>
@@ -2463,7 +2480,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         <div style="font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);margin-bottom:.75rem;">Responsable du traitement</div>
         <p style="font-size:14px;color:var(--mid);line-height:1.85;">
           <strong style="color:var(--black);">Aurélie Stefanowski — Alveris</strong><br>
-          Email : <a href="mailto:contact@alveris.fr">contact@alveris.fr</a><br>
+          Email : <a href="/cdn-cgi/l/email-protection#beddd1d0cadfddcafedfd2c8dbccd7cd90d8cc"><span class="__cf_email__" data-cfemail="1a7975746e7b796e5a7b766c7f687369347c68">[email&#160;protected]</span></a><br>
           Téléphone : 
         </p>
       </div>
@@ -2503,7 +2520,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
           <li style="font-size:14px;color:var(--mid);padding-left:1rem;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">—</span><strong style="color:var(--black);">Droit à la portabilité</strong> : recevoir vos données dans un format structuré</li>
         </ul>
         <p style="font-size:14px;color:var(--mid);line-height:1.85;margin-top:1rem;">
-          Pour exercer ces droits, contactez-nous à : <a href="mailto:contact@alveris.fr">contact@alveris.fr</a><br>
+          Pour exercer ces droits, contactez-nous à : <a href="/cdn-cgi/l/email-protection#74171b1a001517003415180211061d075a1206"><span class="__cf_email__" data-cfemail="1c7f7372687d7f685c7d706a796e756f327a6e">[email&#160;protected]</span></a><br>
           Vous pouvez également introduire une réclamation auprès de la <strong style="color:var(--black);">CNIL</strong> (Commission Nationale de l'Informatique et des Libertés) — <a href="https://www.cnil.fr" target="_blank" style="color:var(--black);">www.cnil.fr</a>
         </p>
       </div>
@@ -2555,7 +2572,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     <div class="foot-col">
       <div class="foot-col-title" data-fr="Contact" data-en="Contact">Contact</div>
       
-      <a href="mailto:contact@alveris.fr">contact@alveris.fr</a>
+      <a href="/cdn-cgi/l/email-protection#771418190316140337161b0112051e04591105"><span class="__cf_email__" data-cfemail="1b7874756f7a786f5b7a776d7e697268357d69">[email&#160;protected]</span></a>
       <a href="https://www.linkedin.com/company/112808994" target="_blank" style="display:flex;align-items:center;gap:.4rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#0a66c2" style="width:16px;height:16px;flex-shrink:0;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
       <a href="#" onclick="go('mentions');return false;" data-fr="Mentions légales" data-en="Legal notice">Mentions légales</a>
       <a href="#" onclick="go('rgpd');return false;" data-fr="Confidentialité & RGPD" data-en="Privacy & GDPR">Confidentialité & RGPD</a>
@@ -2597,7 +2614,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
   </button>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ── Navigation ──
 let currentLang = 'fr';
 function go(id) {
@@ -3107,7 +3124,7 @@ async function submitAvis(){
     formDataAvis.append('commentaire', comment);
     formDataAvis.append('redirect', 'false');
     var photoFile2 = document.getElementById('avis-photo');
-    if(photoFile2 && photoFile2.files && photoFile2.files[0]) formDataAvis.append('photo', photoFile2.files[0]);
+    if(photoFile2 && photoFile2.files && photoFile2.files[0]) formDataAvis.append('attachment', photoFile2.files[0]);
     fetch('https://api.web3forms.com/submit', {method:'POST', body:formDataAvis})
     .then(function(r){ return r.json(); })
     .then(function(d){ /* success */ })

@@ -1,3 +1,13 @@
+# robots.txt - alveris.fr
+# Cabinet de recrutement Alveris
+# Dernière mise à jour : 2026-04-24
+
 User-agent: *
 Allow: /
+
+# Pas d'accès aux fichiers internes GitHub Pages
+Disallow: /README.md
+Disallow: /DEPLOYMENT.md
+
+# Sitemap principal
 Sitemap: https://alveris.fr/sitemap.xml

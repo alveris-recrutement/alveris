@@ -3,36 +3,62 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Alveris — Cabinet de Recrutement France Luxembourg Europe | Executive Search</title>
-  <!-- Sécurité -->
-
-<meta name="description" content="Alveris, cabinet de recrutement spécialisé cadres, dirigeants, profils tech et start-up. Expertise France, Luxembourg, Belgique, Suisse. Premiers profils sous 10 jours.">
-<meta name="keywords" content="cabinet recrutement luxembourg, recrutement cadres dirigeants, executive search luxembourg, recrutement tech france, recrutement start-up, chasseur de têtes luxembourg, recrutement finance luxembourg, offres emploi cadres">
+<title>Alveris | Cabinet de Recrutement Luxembourg France — Cadres & Dirigeants</title>
+<meta name="description" content="Alveris, cabinet de recrutement spécialisé cadres, dirigeants, tech et start-up en France, Luxembourg, Belgique et Suisse. Premiers profils qualifiés sous 10 jours. Fondé par Aurélie Stefanowski.">
+<meta name="keywords" content="cabinet recrutement luxembourg, recrutement cadres dirigeants, executive search luxembourg, recrutement tech france, recrutement start-up, chasseur têtes luxembourg, recrutement finance luxembourg, cabinet RH france luxembourg, Aurélie Stefanowski, recrutement cadres managers, offres emploi cadres luxembourg, recrutement dirigeants europe">
 <meta name="author" content="Aurélie Stefanowski — Alveris">
-<meta property="og:title" content="Alveris — Cabinet de Recrutement Executive Search">
+<meta name="robots" content="index, follow">
+<meta name="language" content="French">
+<meta name="copyright" content="Alveris 2026">
+<meta name="geo.region" content="FR;LU">
+<meta name="geo.placename" content="Luxembourg, France">
+<meta name="theme-color" content="#0c0c0c">
+<link rel="canonical" href="https://alveris.fr">
+<!-- Open Graph -->
+<meta property="og:title" content="Alveris | Cabinet de Recrutement Luxembourg & France — Cadres & Dirigeants">
 <meta property="og:description" content="Recrutement cadres, dirigeants, tech et start-up. France · Luxembourg · Belgique · Suisse. Premiers profils sous 10 jours.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://alveris.fr">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://alveris.fr">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Alveris Recrutement">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alveris | Cabinet de Recrutement Luxembourg & France">
+<meta name="twitter:description" content="Cabinet de recrutement spécialisé cadres, dirigeants, tech et start-up. France, Luxembourg, Belgique, Suisse.">
 <!-- Sécurité -->
 <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
-<meta name="theme-color" content="#0c0c0c">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Alveris",
-  "description": "Cabinet de recrutement spécialisé cadres, dirigeants, profils tech et start-up",
+  "description": "Cabinet de recrutement spécialisé cadres, dirigeants, profils tech et start-up en France, Luxembourg, Belgique et Suisse",
   "url": "https://alveris.fr",
   "email": "contact@alveris.fr",
-  "founder": {"@type": "Person", "name": "Aurélie Stefanowski"},
+  "founder": {
+    "@type": "Person",
+    "name": "Aurélie Stefanowski",
+    "jobTitle": "Fondatrice & Directrice"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "351 avenue Georges Clémenceau",
+    "postalCode": "83250",
+    "addressLocality": "La Londe les Maures",
+    "addressCountry": "FR"
+  },
   "areaServed": ["France", "Luxembourg", "Belgique", "Suisse"],
-  "serviceType": ["Recrutement cadres", "Executive Search", "Recrutement Tech", "Recrutement Start-up"],
-  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "47"}
+  "serviceType": ["Recrutement cadres", "Executive Search", "Recrutement Tech", "Recrutement Start-up", "Recrutement Finance Luxembourg"],
+  "priceRange": "Sur devis",
+  "sameAs": ["https://www.linkedin.com/company/alveris-cabinet-recrutement"],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "47"
+  }
 }
 </script>
 <style>
@@ -2870,10 +2896,7 @@ if(cf) cf.addEventListener('submit',function(e){
 });
 
 
-// ── Chatbot ──
-// ── CHATBOT IA — connecté à l'API Claude ──
-// Clé API — à renouveler sur console.anthropic.com après révocation
-window._ak = atob('c2stYW50LWFwaTAzLURsTzl1TWZDeEV6eTV0UXpZWkw3WVlTZnMzS1cybkJITnkzR0hUMmc4NE9lWFZMQWFZYmZMb28zanpQeXNoemNoSGJjVTQwbTkwUDRobFlETFVTZVF3LW5reHBHUUFB');
+// ── CHATBOT IA — proxifié via Cloudflare Worker (clé sécurisée côté serveur) ──
 let chatOpen = false;
 let chatHistory = [];
 let chatMsgCount = 0;
@@ -2938,16 +2961,13 @@ async function sendToClaude(userMsg){
   chatHistory.push({ role: 'user', content: userMsg });
   addTypingIndicator();
   try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
+    const res = await fetch('https://alveris-bot.stefanowskia.workers.dev', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': window._ak || '',
-        'anthropic-version': '2023-06-01',
-        'anthropic-dangerous-direct-browser-access': 'true'
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: 'claude-haiku-4-5-20251001',
         max_tokens: 300,
         system: SYSTEM_PROMPT,
         messages: chatHistory
@@ -3250,29 +3270,4 @@ function goActu(idx) {
 function nextActu(){ goActu((currentActu + 1) % totalActu); }
 function prevActu(){ goActu((currentActu + totalActu - 1) % totalActu); }
 document.addEventListener('DOMContentLoaded', function(){
-  var monthSlide = new Date().getMonth() % totalActu;
-  currentActu = monthSlide;
-  for(var i=0;i<totalActu;i++){
-    var s=document.getElementById('aslide-'+i);
-    if(s) s.style.display=(i===monthSlide)?'flex':'none';
-  }
-  document.querySelectorAll('[id^="adot-"]').forEach(function(d,i){
-    d.classList.toggle('on',i===monthSlide);
-  });
-  var counter=document.getElementById('actu-counter');
-  if(counter) counter.textContent=(monthSlide+1)+' / '+totalActu;
-  actuTimer=setTimeout(nextActu,6000);
-});
-(function(){
-  var slider=document.getElementById('actu-slider');
-  if(!slider)return;
-  var tx=0;
-  slider.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
-  slider.addEventListener('touchend',function(e){
-    var dx=e.changedTouches[0].clientX-tx;
-    if(Math.abs(dx)>40){dx<0?nextActu():prevActu();}
-  },{passive:true});
-})();
-</script>
-</body>
-</html>
+  var monthSlide =

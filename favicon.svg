@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <rect width="200" height="200" fill="#0a0a0a"/>
-  <!-- Logo Concept 1 — A est la flèche -->
-  <!-- Trait diagonal principal -->
-  <line x1="55" y1="155" x2="148" y2="45" stroke="#c8a96d" stroke-width="10" stroke-linecap="round"/>
-  <!-- Tête de flèche solide -->
-  <polygon points="148,45 122,58 135,72" fill="#c8a96d"/>
-  <!-- Second trait — jambe gauche du A -->
-  <line x1="55" y1="155" x2="85" y2="92" stroke="#c8a96d" stroke-width="10" stroke-linecap="round"/>
-  <!-- Trait léger — jambe droite suggérée -->
-  <line x1="148" y1="45" x2="85" y2="92" stroke="#c8a96d" stroke-width="3.5" stroke-linecap="round" opacity="0.35"/>
+<rect width="200" height="200" fill="#0a0a0a"/>
+<g transform="translate(100,100) scale(1.55) translate(-100,-100)">
+<line x1="55" y1="155" x2="148" y2="45" stroke="#c8a96d" stroke-width="14" stroke-linecap="round"/>
+<polygon points="148,45 116,57 134,75" fill="#c8a96d"/>
+<line x1="55" y1="155" x2="85" y2="92" stroke="#c8a96d" stroke-width="14" stroke-linecap="round"/>
+<line x1="148" y1="45" x2="85" y2="92" stroke="#c8a96d" stroke-width="5" stroke-linecap="round" opacity="0.4"/>
+</g>
 </svg>

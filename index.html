@@ -3270,4 +3270,29 @@ function goActu(idx) {
 function nextActu(){ goActu((currentActu + 1) % totalActu); }
 function prevActu(){ goActu((currentActu + totalActu - 1) % totalActu); }
 document.addEventListener('DOMContentLoaded', function(){
-  var monthSlide =
+  var monthSlide = new Date().getMonth() % totalActu;
+  currentActu = monthSlide;
+  for(var i=0;i<totalActu;i++){
+    var s=document.getElementById('aslide-'+i);
+    if(s) s.style.display=(i===monthSlide)?'flex':'none';
+  }
+  document.querySelectorAll('[id^="adot-"]').forEach(function(d,i){
+    d.classList.toggle('on',i===monthSlide);
+  });
+  var counter=document.getElementById('actu-counter');
+  if(counter) counter.textContent=(monthSlide+1)+' / '+totalActu;
+  actuTimer=setTimeout(nextActu,6000);
+});
+(function(){
+  var slider=document.getElementById('actu-slider');
+  if(!slider)return;
+  var tx=0;
+  slider.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
+  slider.addEventListener('touchend',function(e){
+    var dx=e.changedTouches[0].clientX-tx;
+    if(Math.abs(dx)>40){dx<0?nextActu():prevActu();}
+  },{passive:true});
+})();
+</script>
+</body>
+</html>

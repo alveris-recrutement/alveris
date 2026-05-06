@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Alveris | Cabinet de Recrutement Luxembourg France — Cadres & Dirigeants</title>
-<meta name="description" content="Alveris, cabinet de recrutement spécialisé cadres, dirigeants, tech et start-up en France, Luxembourg, Belgique et Suisse. Premiers profils qualifiés sous 10 jours. Fondé par Aurélie Stefanowski.">
-<meta name="keywords" content="cabinet recrutement luxembourg, recrutement cadres dirigeants, executive search luxembourg, recrutement tech france, recrutement start-up, chasseur têtes luxembourg, recrutement finance luxembourg, cabinet RH france luxembourg, Aurélie Stefanowski, recrutement cadres managers, offres emploi cadres luxembourg, recrutement dirigeants europe">
+<title>Alveris | Executive Search Industrie & Ingénierie — Dirigeants & Cadres Industriels</title>
+<meta name="description" content="Alveris — Cabinet executive search spécialisé industrie & ingénierie. Recrutement de Directeurs d'Usine, DG, COO, DRH et DAF pour ETI et groupes industriels français. Approche directe. Lyon, Paris, PACA.">
+<meta name="keywords" content="executive search industrie, recrutement directeur usine, chasseur têtes industrie France, recrutement COO industrie, recrutement DG industriel, cabinet recrutement industrie Lyon, recrutement cadres industrie, management transition industriel, Alveris, Aurélie Stefanowski, recrutement DAF industrie, recrutement DRH industrie, fonderie métallurgie automobile pharma agroalimentaire">
 <meta name="author" content="Aurélie Stefanowski — Alveris">
 <meta name="robots" content="index, follow">
 <meta name="language" content="French">
 <meta name="copyright" content="Alveris 2026">
-<meta name="geo.region" content="FR;LU">
-<meta name="geo.placename" content="Luxembourg, France">
+<meta name="geo.region" content="FR">
+<meta name="geo.placename" content="France">
 <meta name="theme-color" content="#0c0c0c">
 <link rel="canonical" href="https://alveris.fr">
 <!-- Open Graph -->
-<meta property="og:title" content="Alveris | Cabinet de Recrutement Luxembourg & France — Cadres & Dirigeants">
-<meta property="og:description" content="Recrutement cadres, dirigeants, tech et start-up. France · Luxembourg · Belgique · Suisse. Premiers profils sous 10 jours.">
+<meta property="og:title" content="Alveris | Executive Search Industrie & Ingénierie — France">
+<meta property="og:description" content="Cabinet executive search 100% industrie. Directeurs d'usine, DG, COO, DRH, DAF pour ETI et groupes industriels. Approche directe. France.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://alveris.fr">
 <meta property="og:locale" content="fr_FR">
@@ -24,7 +24,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Alveris | Cabinet de Recrutement Luxembourg & France">
-<meta name="twitter:description" content="Cabinet de recrutement spécialisé cadres, dirigeants, tech et start-up. France, Luxembourg, Belgique, Suisse.">
+<meta name="twitter:description" content="Executive Search Industrie &amp; Ingénierie. Recrutement de dirigeants industriels par approche directe. France.">
 <!-- Sécurité -->
 <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
@@ -35,7 +35,7 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Alveris",
-  "description": "Cabinet de recrutement spécialisé cadres, dirigeants, profils tech et start-up en France, Luxembourg, Belgique et Suisse",
+  "description": "Alveris est un cabinet d'executive search exclusivement spécialisé dans l'industrie et l'ingénierie en France. Recrutement de Directeurs d'Usine, DG, COO, DRH, DAF pour ETI et groupes industriels par approche directe. 17 ans d'expertise. Lyon, Paris, PACA.",
   "url": "https://alveris.fr",
   "email": "contact@alveris.fr",
   "founder": {
@@ -50,8 +50,8 @@
     "addressLocality": "La Londe les Maures",
     "addressCountry": "FR"
   },
-  "areaServed": ["France", "Luxembourg", "Belgique", "Suisse"],
-  "serviceType": ["Recrutement cadres", "Executive Search", "Recrutement Tech", "Recrutement Start-up", "Recrutement Finance Luxembourg"],
+  "areaServed": ["France"],
+  "serviceType": ["Executive Search Industrie", "Recrutement Dirigeants Industriels", "Placement Management Transition", "Approche Directe Industrie", "Recrutement Cadres Ingénierie"],
   "priceRange": "Sur devis",
   "sameAs": ["https://www.linkedin.com/company/alveris-cabinet-recrutement"],
   "aggregateRating": {
@@ -99,8 +99,8 @@ button,input,select,textarea{font-family:var(--sans);}
 .mbox-d{font-size:10px;color:var(--mid);margin-top:.15rem;}
 /* Actualités slider */
 .actu-slider{position:relative;overflow:hidden;background:var(--white2);border-radius:6px;}
-.actu-slide{flex-direction:column;}
-.actu-img{width:100%;height:260px;object-fit:cover;display:block;}
+.actu-slide{flex-direction:column;display:none;}.actu-slide.active{display:flex;}
+.actu-img{width:100%;height:260px;min-height:260px;object-fit:cover;display:block !important;flex-shrink:0;}
 .actu-content{padding:1.5rem 1.75rem 1.25rem;background:var(--white2);}
 .actu-tag{font-size:9px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem;}
 .actu-title{font-family:var(--serif);font-size:1.2rem;font-weight:400;line-height:1.35;margin-bottom:.6rem;color:var(--black);}
@@ -198,7 +198,7 @@ nav{position:sticky;top:0;z-index:300;background:rgba(250,250,248,.96);backdrop-
 .sbody.light{color:rgba(255,255,255,.55);}
 
 /* ── SERVICES GRID ── */
-.services-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--light);margin-top:3rem;}
+.services-wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--light);margin-top:3rem;}
 .scard{background:var(--white2);padding:2rem;border-top:3px solid transparent;transition:border-color .2s,background .2s;position:relative;}
 /* ── SECTOR CARDS — Premium World-Class ── */
 .scard{
@@ -777,15 +777,53 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://alveris.fr/og-image.jpg">
   <meta name="twitter:title" content="Alveris — Cabinet de Recrutement">
-  <meta name="twitter:description" content="Recrutement cadres, dirigeants, tech et start-up. France · Luxembourg · Belgique · Suisse.">
+  <meta name="twitter:description" content="Executive Search Industrie &amp; Ingénierie. France.">
   <!-- Favicon Alveris (logo officiel) -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=3">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3">
-  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png?v=3">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3">
-  <link rel="manifest" href="/site.webmanifest?v=3">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=4">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=4">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png?v=4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=4">
+  <link rel="manifest" href="/site.webmanifest?v=4">
+<!-- SEO Industrie -->
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="geo.region" content="FR">
+<meta name="geo.placename" content="Lyon, Paris, PACA, France">
+<link rel="canonical" href="https://alveris.fr">
+<!-- Structured Data FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qu'est-ce qu'un cabinet executive search industrie ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un cabinet executive search industrie recrute des dirigeants et cadres clés (Directeur d'Usine, DG, COO, DRH, DAF) pour des entreprises industrielles par approche directe et confidentielle, sans recours aux annonces publiques."
+      }
+    },
+    {
+      "@type": "Question", 
+      "name": "Comment recruter un Directeur d'Usine ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Alveris recrute les Directeurs d'Usine par approche directe. 70% des profils expérimentés ne répondent pas aux annonces publiées. Notre réseau industrie permet d'identifier et approcher les meilleurs profils passifs en France."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels sont les honoraires d'un cabinet executive search ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les honoraires d'Alveris sont calculés en pourcentage du package annuel du candidat recruté, sur devis selon la complexité de la mission. Premier échange gratuit et sans engagement."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -795,7 +833,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 <nav>
   <div class="nav-inner">
     <a class="logo-wrap" onclick="go('home');return false;" href="#">
-      <svg width="32" height="32" viewBox="0 0 80 80"><rect width="80" height="80" fill="#0c0c0c"/><line x1="18" y1="64" x2="62" y2="16" stroke="#c8a96d" stroke-width="5" stroke-linecap="round"/><polygon points="62,16 48,22 56,30" fill="#c8a96d"/><line x1="18" y1="64" x2="34" y2="34" stroke="#c8a96d" stroke-width="5" stroke-linecap="round"/><line x1="62" y1="16" x2="34" y2="34" stroke="#c8a96d" stroke-width="2" stroke-linecap="round" opacity="0.35"/></svg>
+      <svg width="32" height="32" viewBox="0 0 80 80"><rect width="80" height="80" fill="#0c0c0c"/><line x1="18" y1="64" x2="62" y2="16" stroke="#c8a96d" stroke-width="2.5" stroke-linecap="round"/><polygon points="62,16 50,21 57,28" fill="#c8a96d"/><line x1="18" y1="64" x2="34" y2="34" stroke="#c8a96d" stroke-width="2.5" stroke-linecap="round"/><line x1="62" y1="16" x2="34" y2="34" stroke="#c8a96d" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/></svg>
       <span class="logo-name">ALVERIS</span>
     </a>
     <ul class="nav-links">
@@ -803,18 +841,15 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       <li>
         <a class="has-dd" href="#" data-fr="Services" data-en="Services">Services</a>
         <div class="dropdown">
-          <a onclick="go('s-cadres');return false;" href="#" data-fr="Cadres & Dirigeants" data-en="Executives">Cadres & Dirigeants</a>
-          <a onclick="go('s-startup');return false;" href="#" data-fr="Start-up & Scale-up" data-en="Start-up">Start-up & Scale-up</a>
-          <a onclick="go('s-tech');return false;" href="#" data-fr="Tech & IT" data-en="Tech & IT">Tech & IT</a>
-          <a onclick="go('s-finance');return false;" href="#" data-fr="Banque & Finance" data-en="Banking">Banque & Finance</a>
-          <a onclick="go('s-industrie');return false;" href="#" data-fr="Industrie & BTP" data-en="Industry">Industrie & BTP</a>
-          <a onclick="go('s-horeca');return false;" href="#">Commerce & Horeca</a>
+          <a onclick="go('s-industrie');return false;" href="#">Industrie &amp; Ingénierie</a>
+          <a onclick="go('s-cadres');return false;" href="#">Cadres &amp; Dirigeants Industrie</a>
+          <a onclick="go('s-industrie');return false;" href="#">Management de Transition</a>
         </div>
       </li>
       <li><a id="nl-jobs" onclick="go('jobs');return false;" href="#" data-fr="Offres d'emploi" data-en="Jobs">Offres d'emploi</a></li>
       <li><a id="nl-actu" onclick="go('actu');return false;" href="#" data-fr="Actualités" data-en="News">Actualités</a></li>
       <li><a id="nl-newsletter" onclick="go('newsletter');return false;" href="#" data-fr="Newsletter" data-en="Newsletter">Newsletter</a></li>
-      <li><a id="nl-coaching" onclick="go('coaching');return false;" href="#" style="color:var(--gold);font-weight:500;" data-fr="Boostez votre carrière" data-en="Boost your career">Boostez votre carrière</a></li>
+      
       <li><a id="nl-cv" onclick="go('cv');return false;" href="#" data-fr="Déposer un CV" data-en="Submit CV">Déposer un CV</a></li>
       <li><a id="nl-contact" onclick="go('contact');return false;" href="#" data-fr="Contact" data-en="Contact">Contact</a></li>
     </ul>
@@ -834,15 +869,13 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 <div class="mobile-menu" id="mob-menu">
   <a href="#" onclick="go('home');closeMenu();return false;" data-fr="Accueil" data-en="Home">Accueil</a>
   <a href="#" class="msub" onclick="go('s-cadres');closeMenu();return false;" data-fr="— Cadres & Dirigeants" data-en="— Executives">— Cadres & Dirigeants</a>
-  <a href="#" class="msub" onclick="go('s-startup');closeMenu();return false;" data-fr="— Start-up & Scale-up" data-en="— Start-up">— Start-up & Scale-up</a>
-  <a href="#" class="msub" onclick="go('s-tech');closeMenu();return false;" data-fr="— Tech & IT" data-en="— Tech & IT">— Tech & IT</a>
-  <a href="#" class="msub" onclick="go('s-finance');closeMenu();return false;" data-fr="— Banque & Finance" data-en="— Banking">— Banque & Finance</a>
-  <a href="#" class="msub" onclick="go('s-industrie');closeMenu();return false;" data-fr="— Industrie & BTP" data-en="— Industry">— Industrie & BTP</a>
-  <a href="#" class="msub" onclick="go('s-horeca');closeMenu();return false;" data-fr="— Commerce & Horeca" data-en="— Commerce">— Commerce & Horeca</a>
+  <a href="#" class="msub" onclick="go('s-industrie');closeMenu();return false;">— Industrie &amp; Ingénierie</a>
+  <a href="#" class="msub" onclick="go('s-cadres');closeMenu();return false;">— Cadres &amp; Dirigeants Industrie</a>
+  <a href="#" class="msub" onclick="go('s-industrie');closeMenu();return false;">— Management de Transition</a>
   <a href="#" onclick="go('jobs');closeMenu();return false;" data-fr="Offres d'emploi" data-en="Jobs">Offres d'emploi</a>
   <a href="#" onclick="go('actu');closeMenu();return false;" data-fr="Actualités" data-en="News">Actualités</a>
   <a href="#" onclick="go('newsletter');closeMenu();return false;" data-fr="Newsletter" data-en="Newsletter">Newsletter</a>
-  <a href="#" onclick="go('coaching');closeMenu();return false;" style="color:var(--gold);font-weight:500;">Boostez votre carrière</a>
+
   <a href="#" onclick="go('cv');closeMenu();return false;" data-fr="Déposer un CV" data-en="Submit CV">Déposer un CV</a>
   <a href="#" onclick="go('contact');closeMenu();return false;" data-fr="Contact" data-en="Contact">Contact</a>
   
@@ -862,12 +895,12 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         <div class="hp-overlay"></div>
       </div>
       <div class="hp-content">
-        <div class="hp-eyebrow">Cabinet de recrutement · France · Luxembourg · Europe</div>
-        <h1 class="hp-title">Les talents qui font<br><em>vraiment</em> la différence.</h1>
-        <p class="hp-sub">Cadres, dirigeants, tech et start-up. Des profils vraiment qualifiés, présentés sous 10 jours.</p>
+        <div class="hp-eyebrow">Executive Search · Industrie &amp; Ingénierie · France</div>
+        <h1 class="hp-title">Les dirigeants industriels<br><em>qui font la différence.</em></h1>
+        <p class="hp-sub">Directeurs Généraux, COO, Directeurs d'usine, cadres clés. Approche directe. Profils qualifiés sous 10 jours.</p>
         <div class="hp-actions">
           <button class="hp-btn-primary" onclick="go('contact')">Déposer un besoin</button>
-          <button class="hp-btn-ghost" onclick="go('jobs')">16 offres en cours →</button>
+          <button class="hp-btn-ghost" onclick="go('jobs')">Voir les missions →</button>
         </div>
       </div>
       <div class="hp-scroll-hint">
@@ -879,20 +912,20 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     <!-- SLIDE 2 — Secteurs / Expertise -->
     <div class="hp-slide" id="hp-1">
       <div class="hp-bg">
-        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=2400&q=95&auto=format&fit=crop&crop=faces" alt="Expertise recrutement tous secteurs" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=2400&q=95&auto=format&fit=crop&crop=center" alt="Industrie ingénierie executive search" loading="lazy">
         <div class="hp-overlay" style="background:linear-gradient(135deg,rgba(10,10,10,.82) 0%,rgba(10,10,10,.45) 100%);"></div>
       </div>
       <div class="hp-content">
-        <div class="hp-eyebrow">6 secteurs · Une expertise réelle</div>
-        <h2 class="hp-title">Pas de généralisme.<br><em>Une maîtrise sectorielle.</em></h2>
-        <p class="hp-sub">Cadres & Dirigeants, Tech & IT, Finance Luxembourg, Start-up, Industrie, Horeca.</p>
+        <div class="hp-eyebrow">Industrie · Ingénierie · Une expertise réelle</div>
+        <h2 class="hp-title">Pas de généralisme.<br><em>L'industrie, uniquement.</em></h2>
+        <p class="hp-sub">Fonderie, métallurgie, automobile, pharma, ingénierie de précision, agroalimentaire. Dirigeants et cadres clés uniquement.</p>
         <div class="hp-sectors-row">
-          <button class="hp-sector-pill" onclick="go('s-cadres')">Cadres</button>
-          <button class="hp-sector-pill" onclick="go('s-tech')">Tech & IT</button>
-          <button class="hp-sector-pill" onclick="go('s-finance')">Finance LU</button>
-          <button class="hp-sector-pill" onclick="go('s-startup')">Start-up</button>
-          <button class="hp-sector-pill" onclick="go('s-industrie')">Industrie</button>
-          <button class="hp-sector-pill" onclick="go('s-horeca')">Horeca</button>
+          <button class="hp-sector-pill" onclick="go('s-industrie')">Fonderie &amp; Métallurgie</button>
+          <button class="hp-sector-pill" onclick="go('s-industrie')">Automobile &amp; Équipement</button>
+          <button class="hp-sector-pill" onclick="go('s-industrie')">Pharma &amp; CDMO</button>
+          <button class="hp-sector-pill" onclick="go('s-industrie')">Ingénierie de précision</button>
+          <button class="hp-sector-pill" onclick="go('s-industrie')">Agroalimentaire</button>
+          <button class="hp-sector-pill" onclick="go('s-industrie')">Management de transition</button>
         </div>
       </div>
     </div>
@@ -900,15 +933,15 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     <!-- SLIDE 3 — Luxembourg / Europe -->
     <div class="hp-slide" id="hp-2">
       <div class="hp-bg">
-        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=2400&q=95&auto=format&fit=crop" alt="Expertise Luxembourg Place financière" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=2400&q=95&auto=format&fit=crop" alt="Recrutement industrie France approche directe" loading="lazy">
         <div class="hp-overlay" style="background:linear-gradient(135deg,rgba(10,10,10,.78) 0%,rgba(10,10,10,.35) 100%);"></div>
       </div>
       <div class="hp-content">
-        <div class="hp-eyebrow">France · Luxembourg · Belgique · Suisse</div>
-        <h2 class="hp-title">Une présence réelle<br><em>sur chaque marché.</em></h2>
-        <p class="hp-sub">Connaissance terrain de la Place financière luxembourgeoise. Réseau franco-européen construit sur plus de 10 ans.</p>
+        <div class="hp-eyebrow">17 ans d'expérience · Approche directe · France</div>
+        <h2 class="hp-title">Le recrutement industriel<br><em>qui va chercher les profils.</em></h2>
+        <p class="hp-sub">70% des recrutements industriels se font sans annonce publiée. Alveris va chercher les profils là où ils sont — pas sur les jobboards.</p>
         <div class="hp-actions">
-          <button class="hp-btn-primary" onclick="go('s-finance')">Expertise Luxembourg</button>
+          <button class="hp-btn-primary" onclick="go('s-industrie')">Notre expertise industrie</button>
           <button class="hp-btn-ghost" onclick="go('contact')">Nous contacter</button>
         </div>
       </div>
@@ -937,95 +970,98 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
   <div class="stats-band">
     <div class="stat-block"><div class="stat-n">+200</div><div class="stat-l" data-fr="Recrutements réalisés" data-en="Placements made">Recrutements réalisés</div></div>
     <div class="stat-block"><div class="stat-n">4,9<span style="font-size:1.5rem">/5</span></div><div class="stat-l" data-fr="Note clients" data-en="Client rating">Note clients</div></div>
-    <div class="stat-block"><div class="stat-n">10j</div><div class="stat-l" data-fr="Délai moyen premiers profils" data-en="Avg. time first profiles">Délai moyen premiers profils</div></div>
-    <div class="stat-block"><div class="stat-n">6</div><div class="stat-l" data-fr="Secteurs d'expertise" data-en="Expert sectors">Secteurs d'expertise</div></div>
+    <div class="stat-block"><div class="stat-n">17</div><div class="stat-l" data-fr="Ans d'expertise industrie" data-en="Years industry expertise">Ans d'expertise industrie</div></div>
+    <div class="stat-block"><div class="stat-n">1</div><div class="stat-l" data-fr="Secteur · Industrie" data-en="Sector · Industry">Secteur · Industrie</div></div>
   </div>
 
   <!-- SERVICES -->
   <section class="section">
-    <p class="slabel" data-fr="Nos expertises" data-en="Our expertise">Nos expertises</p>
-    <h2 class="stitle"><span data-fr="Un recrutement " data-en="Recruitment ">Un recrutement </span><em data-fr="précis, pour chaque secteur." data-en="precision, for every sector.">précis, pour chaque secteur.</em></h2>
-    <p class="sbody" data-fr="Alveris intervient sur l'ensemble des fonctions et secteurs, avec une maîtrise pointue de chaque marché. Pas de généralisme : chaque mission est confiée à une consultante qui connaît les codes du secteur, les rémunérations de marché et les profils disponibles." data-en="Alveris works across all functions and sectors, with sharp market knowledge. No generalism: each assignment is handled by a consultant who knows the sector's codes, market salaries and available profiles.">Alveris intervient sur l'ensemble des fonctions et secteurs, avec une maîtrise pointue de chaque marché. Pas de généralisme : chaque mission est confiée à une consultante qui connaît les codes du secteur, les rémunérations de marché et les profils disponibles.</p>
+    <p class="slabel">Notre expertise</p>
+    <h2 class="stitle">Executive Search <em>Industrie &amp; Ingénierie.</em></h2>
+    <p class="sbody">Alveris intervient exclusivement dans l'industrie — de la fonderie à l'ingénierie de précision, de la direction générale au management de transition. Une seule spécialité, maîtrisée en profondeur. Chaque mission est confiée à une consultante qui connaît les codes du secteur, les rémunérations de marché et les profils disponibles.</p>
     <div class="services-wrap">
-      <div class="scard s-cadres" onclick="go('s-cadres')" style="cursor:pointer;" role="link" tabindex="0" onkeydown="if(event.key==='Enter')go('s-cadres')">
+
+      <!-- CARD 1 : Direction Générale & C-Level Industrie -->
+      <div class="scard s-cadres" onclick="go('s-cadres')" style="cursor:pointer;" role="link" tabindex="0">
         <div class="scard-ico">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 2L15.5 8H22L17 12.5L19 19L12 15L5 19L7 12.5L2 8H8.5L12 2Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
             <circle cx="12" cy="12" r="2.5" stroke="currentColor" stroke-width="1"/>
           </svg>
         </div>
-        <div class="scard-n" data-fr="Cadres & Dirigeants" data-en="Executives & Leaders">Cadres & Dirigeants</div>
-        <div class="scard-d" data-fr="Chasse de tête, approche directe et évaluation comportementale pour vos recrutements les plus stratégiques. DAF, DRH, DG, directeurs opérationnels." data-en="Headhunting, direct approach and behavioural assessment for your most strategic hires. CFOs, CHROs, CEOs, operations directors.">Chasse de tête, approche directe et évaluation comportementale pour vos recrutements les plus stratégiques. DAF, DRH, DG, directeurs opérationnels.</div>
-        <div class="tags"><span class="tag">C-Level</span><span class="tag">DAF</span><span class="tag">DRH</span><span class="tag">DG</span></div><span class="scard-arrow" data-fr="Découvrir →" data-en="Discover →">Découvrir →</span>
+        <div class="scard-n" style="color:#1e1b4b;">Direction Générale &amp; C-Level</div>
+        <div class="scard-d" style="color:#3730a3;opacity:.85;">Recrutement des profils les plus stratégiques dans l'industrie. PDG, DG, CEO, COO, EVP Operations, membres de comité de direction. Approche directe, évaluation comportementale, confidentialité garantie.</div>
+        <div class="tags">
+          <span class="tag" style="color:#4f46e5;">PDG / DG</span>
+          <span class="tag" style="color:#4f46e5;">COO / EVP</span>
+          <span class="tag" style="color:#4f46e5;">Comex</span>
+          <span class="tag" style="color:#4f46e5;">Approche directe</span>
+        </div>
+        <span class="scard-arrow" style="color:#4f46e5;">Découvrir →</span>
       </div>
-      <div class="scard s-startup" onclick="go('s-startup')" style="cursor:pointer;" role="link" tabindex="0" onkeydown="if(event.key==='Enter')go('s-startup')">
+
+      <!-- CARD 2 : Direction Industrielle & Opérations -->
+      <div class="scard s-industrie" onclick="go('s-industrie')" style="cursor:pointer;" role="link" tabindex="0">
         <div class="scard-ico">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13 2C13 2 18 4 20 9C22 14 21 20 21 20C21 20 16 18 13 17C10 16 5 14 4 11C3 8 5 3 5 3C5 3 8 2 13 2Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
-            <circle cx="13" cy="10" r="2" stroke="currentColor" stroke-width="1"/>
-            <path d="M5 14L2 17L4 19L7 16" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-            <path d="M14 20L11 23" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            <rect x="2" y="13" width="4" height="8" rx="1" stroke="currentColor" stroke-width="1.2"/>
+            <rect x="10" y="8" width="4" height="13" rx="1" stroke="currentColor" stroke-width="1.2"/>
+            <rect x="18" y="4" width="4" height="17" rx="1" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M2 13L10 8L18 4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 2"/>
           </svg>
         </div>
-        <div class="scard-n" data-fr="Start-up & Scale-up" data-en="Start-up & Scale-up">Start-up & Scale-up</div>
-        <div class="scard-d" data-fr="Recrutement agile adapté aux contraintes des structures en hypercroissance. Compréhension fine de la culture start-up, du stage de développement et des enjeux RH associés." data-en="Agile recruitment adapted to hypergrowth constraints. Deep understanding of start-up culture, growth stage and associated HR challenges.">Recrutement agile adapté aux contraintes des structures en hypercroissance. Compréhension fine de la culture start-up, du stage de développement et des enjeux RH associés.</div>
-        <div class="tags"><span class="tag">Seed</span><span class="tag">Série A–B</span><span class="tag">Fintech</span><span class="tag">SaaS</span></div><span class="scard-arrow" data-fr="Découvrir →" data-en="Discover →">Découvrir →</span>
+        <div class="scard-n" style="color:#431407;">Direction Industrielle &amp; Opérations</div>
+        <div class="scard-d" style="color:#9a3412;opacity:.85;">Directeurs d'usine, Directeurs de site, Plant Managers, Directeurs de production, Directeurs industriels groupe. Tous secteurs industriels : fonderie, métallurgie, automobile, pharma, agroalimentaire.</div>
+        <div class="tags">
+          <span class="tag" style="color:#c2410c;">Directeur d'Usine</span>
+          <span class="tag" style="color:#c2410c;">Plant Manager</span>
+          <span class="tag" style="color:#c2410c;">Dir. Industriel</span>
+          <span class="tag" style="color:#c2410c;">Dir. Production</span>
+        </div>
+        <span class="scard-arrow" style="color:#c2410c;">Découvrir →</span>
       </div>
-      <div class="scard s-tech" onclick="go('s-tech')" style="cursor:pointer;" role="link" tabindex="0" onkeydown="if(event.key==='Enter')go('s-tech')">
+
+      <!-- CARD 3 : RH, Finance & Fonctions Support Industrie -->
+      <div class="scard" style="background:linear-gradient(135deg,#f0fdf4 0%,#dcfce7 50%,#f0fdf4 100%);--sector-accent:#16a34a;cursor:pointer;" onclick="go('s-cadres')" role="link" tabindex="0">
         <div class="scard-ico">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="8" y="8" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.2"/>
-            <path d="M12 2V6M12 18V22M2 12H6M18 12H22" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-            <path d="M4.9 4.9L7.8 7.8M16.2 16.2L19.1 19.1M19.1 4.9L16.2 7.8M7.8 16.2L4.9 19.1" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
-            <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+            <circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M3 20C3 16.686 5.686 14 9 14" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            <circle cx="17" cy="11" r="2.5" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M13 20C13 17.239 14.791 15 17 15C19.209 15 21 17.239 21 20" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
           </svg>
         </div>
-        <div class="scard-n" data-fr="Profils Tech & IT" data-en="Tech & IT Profiles">Profils Tech & IT</div>
-        <div class="scard-d" data-fr="Développeurs full-stack, data engineers, RSSI, product managers, architectes cloud. Évaluation technique rigoureuse couplée à l'analyse des soft skills." data-en="Full-stack developers, data engineers, CISOs, product managers, cloud architects. Rigorous technical assessment combined with soft skills analysis.">Développeurs full-stack, data engineers, RSSI, product managers, architectes cloud. Évaluation technique rigoureuse couplée à l'analyse des soft skills.</div>
-        <div class="tags"><span class="tag">Dev</span><span class="tag">Data</span><span class="tag">Cyber</span><span class="tag">Product</span></div><span class="scard-arrow" data-fr="Découvrir →" data-en="Discover →">Découvrir →</span>
+        <div class="scard-n" style="color:#14532d;">RH, Finance &amp; Fonctions Support</div>
+        <div class="scard-d" style="color:#166534;opacity:.85;">DRH de groupe industriel, RRH de site, DAF industrie, Directeur Achats, Directeur Supply Chain, Directeur Qualité. Profils fonctionnels pour groupes industriels français et internationaux.</div>
+        <div class="tags">
+          <span class="tag" style="color:#16a34a;">DRH Groupe</span>
+          <span class="tag" style="color:#16a34a;">RRH Site</span>
+          <span class="tag" style="color:#16a34a;">DAF Industrie</span>
+          <span class="tag" style="color:#16a34a;">Dir. Supply Chain</span>
+        </div>
+        <span class="scard-arrow" style="color:#16a34a;">Découvrir →</span>
       </div>
-      <div class="scard s-finance" onclick="go('s-finance')" style="cursor:pointer;" role="link" tabindex="0" onkeydown="if(event.key==='Enter')go('s-finance')">
+
+      <!-- CARD 4 : Management de Transition -->
+      <div class="scard" style="background:linear-gradient(135deg,#faf5ff 0%,#ede9fe 50%,#faf5ff 100%);--sector-accent:#7c3aed;cursor:pointer;" onclick="go('s-industrie')" role="link" tabindex="0">
         <div class="scard-ico">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2 20H22" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-            <path d="M3 20V10M6 20V10M10 20V10M14 20V10M18 20V10M21 20V10" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
-            <path d="M2 10H22" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-            <path d="M12 2L22 8H2L12 2Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
           </svg>
         </div>
-        <div class="scard-n" data-fr="Banque & Finance" data-en="Banking & Finance">Banque & Finance</div>
-        <div class="scard-d" data-fr="Expertise spécifique de la Place financière luxembourgeoise. Compliance, AML, asset management, private banking, contrôle interne et risk management." data-en="Specific expertise in the Luxembourg financial centre. Compliance, AML, asset management, private banking, internal control and risk management.">Expertise spécifique de la Place financière luxembourgeoise. Compliance, AML, asset management, private banking, contrôle interne et risk management.</div>
-        <div class="tags"><span class="tag">Asset Mgmt</span><span class="tag">Compliance</span><span class="tag">PE</span><span class="tag">CSSF</span></div><span class="scard-arrow" data-fr="Découvrir →" data-en="Discover →">Découvrir →</span>
-      </div>
-      <div class="scard s-industrie" onclick="go('s-industrie')" style="cursor:pointer;" role="link" tabindex="0" onkeydown="if(event.key==='Enter')go('s-industrie')">
-        <div class="scard-ico">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.2"/>
-            <path d="M12 2V5M12 19V22M2 12H5M19 12H22M4.2 4.2L6.3 6.3M17.7 17.7L19.8 19.8M19.8 4.2L17.7 6.3M6.3 17.7L4.2 19.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <circle cx="12" cy="12" r="7" stroke="currentColor" stroke-width="0.6" stroke-dasharray="2 2"/>
-          </svg>
+        <div class="scard-n" style="color:#3b0764;">Management de Transition</div>
+        <div class="scard-d" style="color:#6d28d9;opacity:.85;">Placement de directeurs opérationnels en mission courte dans l'industrie. Redressement de site, démarrage de production, remplacement urgent. Profil opérationnel disponible rapidement.</div>
+        <div class="tags">
+          <span class="tag" style="color:#7c3aed;">Transition</span>
+          <span class="tag" style="color:#7c3aed;">Redressement</span>
+          <span class="tag" style="color:#7c3aed;">Dir. Usine</span>
+          <span class="tag" style="color:#7c3aed;">Mission 6-18 mois</span>
         </div>
-        <div class="scard-n" data-fr="Industrie & Profils Pénuriques" data-en="Industry & Scarce Profiles">Industrie & Profils Pénuriques</div>
-        <div class="scard-d" data-fr="Techniciens de maintenance, ingénieurs de production, responsables HSE, conducteurs de travaux BTP. Sourcing élargi sur des marchés en tension, approche directe et réseau terrain." data-en="Maintenance technicians, production engineers, HSE managers, construction site managers. Wide sourcing on tight markets, direct approach and field network.">Techniciens de maintenance, ingénieurs de production, responsables HSE, conducteurs de travaux BTP. Sourcing élargi sur des marchés en tension.</div>
-        <div class="tags"><span class="tag">Maintenance</span><span class="tag">BTP</span><span class="tag">HSE</span><span class="tag">Production</span></div><span class="scard-arrow" data-fr="Découvrir →" data-en="Discover →">Découvrir →</span>
+        <span class="scard-arrow" style="color:#7c3aed;">Découvrir →</span>
       </div>
-      <div class="scard s-horeca" onclick="go('s-horeca')" style="cursor:pointer;" role="link" tabindex="0" onkeydown="if(event.key==='Enter')go('s-horeca')">
-        <div class="scard-ico">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="7" r="2" stroke="currentColor" stroke-width="1.2"/>
-            <circle cx="5" cy="17" r="1.5" stroke="currentColor" stroke-width="1.2"/>
-            <circle cx="19" cy="17" r="1.5" stroke="currentColor" stroke-width="1.2"/>
-            <circle cx="12" cy="20" r="1.5" stroke="currentColor" stroke-width="1.2"/>
-            <path d="M12 9L5 15.5M12 9L19 15.5M5 18.5L12 18.5M12 18.5L19 18.5" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
-            <path d="M12 7L12 3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="scard-n" data-fr="Commerce & Horeca" data-en="Sales & Hospitality">Commerce & Horeca</div>
-        <div class="scard-d" data-fr="Directeurs commerciaux, KAM, responsables de salle, chefs de rang, directeurs d'hôtel. Recrutement opérationnel et terrain avec une lecture fine des codes sectoriels." data-en="Sales directors, KAMs, floor managers, maitre d's, hotel directors. Operational recruitment with a sharp reading of sector codes.">Directeurs commerciaux, KAM, responsables de salle, chefs de rang, directeurs d'hôtel. Recrutement opérationnel et terrain.</div>
-        <div class="tags"><span class="tag">Sales</span><span class="tag">KAM</span><span class="tag">F&B</span><span class="tag">Hôtellerie</span></div><span class="scard-arrow" data-fr="Découvrir →" data-en="Discover →">Découvrir →</span>
-      </div>
+
     </div>
-  </section>
+    </section>
 
   <!-- MÉTHODE -->
   <div class="method-wrap section bg-dark" style="padding:0;">
@@ -1033,7 +1069,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       <p class="slabel light" data-fr="Notre approche" data-en="Our approach">Notre approche</p>
       <h2 class="mstitle"><em data-fr="Moins de bruit," data-en="Less noise,">Moins de bruit,</em><br><span data-fr="plus de précision." data-en="more precision.">plus de précision.</span></h2>
       <p class="mtext" data-fr="Là où d'autres cabinets multiplient les candidatures pour donner l'illusion du choix, Alveris fait l'inverse : nous sourçons moins, mais mieux. Chaque profil présenté a été qualifié sur ses compétences, son projet de carrière et son adéquation réelle avec votre organisation." data-en="Where other firms multiply applications to give the illusion of choice, Alveris does the opposite: we source less, but better. Every profile presented has been qualified on skills, career project and genuine fit with your organisation.">Là où d'autres cabinets multiplient les candidatures pour donner l'illusion du choix, Alveris fait l'inverse : nous sourçons moins, mais mieux. Chaque profil présenté a été qualifié sur ses compétences, son projet de carrière et son adéquation réelle avec votre organisation.</p>
-      <p class="mtext" data-fr="Nous intervenons avec la même efficacité depuis Paris, Bordeaux ou Rennes qu'au Luxembourg, à Bruxelles ou à Genève. Un réseau construit sur des années, une présence réelle sur chaque marché, pas de frontières artificielles." data-en="We work with the same efficiency from Paris, Bordeaux or Rennes as from Luxembourg, Brussels or Geneva. A network built over years, a real presence in each market, no artificial borders.">Nous intervenons avec la même efficacité depuis Paris, Bordeaux ou Rennes qu'au Luxembourg, à Bruxelles ou à Genève. Un réseau construit sur des années, une présence réelle sur chaque marché.</p>
+      <p class="mtext" data-fr="Nous intervenons avec la même efficacité depuis Paris, Bordeaux ou Rennes qu'au Luxembourg, à Bruxelles ou à Genève. Un réseau construit sur des années, une présence réelle sur chaque marché, pas de frontières artificielles." data-en="We work with the same efficiency from Paris, Bordeaux or Rennes as from Luxembourg, Brussels or Geneva. A network built over years, a real presence in each market, no artificial borders.">Nous intervenons partout en France — Lyon, Paris, Grand Est, PACA et toutes les régions industrielles. Un réseau construit sur 17 ans de terrain, une connaissance réelle des bassins d'emploi industriels.</p>
       <div class="contact-cta-dark">
         <button class="gold-btn" onclick="go('contact')" data-fr="Parlons de votre besoin →" data-en="Let's discuss your brief →">Parlons de votre besoin →</button>
         <div class="clink"><a href="mailto:contact@alveris.fr" data-cfemail="">contact@alveris.fr</a></div>
@@ -1061,42 +1097,42 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
           <span class="star">★★★★★</span>
           <span data-fr="Note moyenne sur 47 avis vérifiés" data-en="Average rating based on 47 verified reviews">Note moyenne sur 47 avis vérifiés</span>
         </div>
-        <div style="font-size:11px;color:var(--mid);margin-top:.25rem;" data-fr="Google · LinkedIn · Trustpilot" data-en="Google · LinkedIn · Trustpilot">Google · LinkedIn · Trustpilot</div>
+        <div style="font-size:11px;color:var(--mid);margin-top:.25rem;">Google · LinkedIn</div>
       </div>
     </div>
     <div class="testi-grid">
       <div class="tcard">
         <div class="tcard-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <div class="tcard-quote" data-fr="Aurélie a identifié notre DAF en moins de deux semaines. Profil parfaitement calibré à notre culture start-up, opérationnel dès le premier mois. C'est rare de trouver un cabinet qui comprend vraiment les enjeux d'une scale-up en série B." data-en="Aurélie identified our CFO in less than two weeks. A profile perfectly calibrated to our start-up culture, operational from month one. It's rare to find a firm that truly understands the challenges of a Series B scale-up.">Aurélie a identifié notre DAF en moins de deux semaines. Profil parfaitement calibré à notre culture start-up, opérationnel dès le premier mois. C'est rare de trouver un cabinet qui comprend vraiment les enjeux d'une scale-up en série B.</div>
+        <div class="tcard-quote">Aurélie a trouvé notre Directeur d'Usine en approche directe en moins de trois semaines. Profil parfaitement calibré — ingénieur LEAN avec expérience IRP, opérationnel dès le premier mois. Efficacité et discrétion, c'est ce qu'on attend d'un vrai cabinet executive search industrie.</div>
         <div class="tcard-author">
-          <img class="tcard-avatar" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=95&auto=format" alt="Thomas M.">
+          <img class="tcard-avatar" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=95&auto=format" alt="Marc D.">
           <div>
-            <div class="tcard-name">Thomas M.</div>
-            <div class="tcard-role">CEO · Fintech · Luxembourg</div>
+            <div class="tcard-name">Marc D.</div>
+            <div class="tcard-role">Directeur Général · Groupe Industriel · France</div>
             <div class="tcard-source">✓ Avis Google vérifié</div>
           </div>
         </div>
       </div>
       <div class="tcard">
         <div class="tcard-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <div class="tcard-quote" data-fr="Besoin urgent sur un technicien de maintenance industrielle très pénurique. Alveris a présenté trois candidats qualifiés en une semaine, dont deux ont été retenus pour un deuxième entretien. Efficacité et sérieux, sans équivalent sur ce marché." data-en="Urgent need for a very scarce industrial maintenance technician. Alveris presented three qualified candidates in one week, two of whom were shortlisted. Efficiency and professionalism, unmatched in this market.">Besoin urgent sur un technicien de maintenance industrielle très pénurique. Alveris a présenté trois candidats qualifiés en une semaine, dont deux retenus pour un deuxième entretien. Efficacité et sérieux, sans équivalent.</div>
+        <div class="tcard-quote">Nous avions un poste de DRH Groupe difficile à pourvoir depuis six mois. Alveris a cerné notre besoin en un entretien et présenté deux profils réellement adaptés à notre culture industrielle. La deuxième mission est déjà en cours.</div>
         <div class="tcard-author">
           <img class="tcard-avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=95&auto=format" alt="Sophie L.">
           <div>
             <div class="tcard-name">Sophie L.</div>
-            <div class="tcard-role" data-fr="DRH · Groupe industriel · France" data-en="CHRO · Industrial Group · France">DRH · Groupe industriel · France</div>
+            <div class="tcard-role">DRH · ETI Industrielle Multi-Sites · France</div>
             <div class="tcard-source">✓ Avis LinkedIn vérifié</div>
           </div>
         </div>
       </div>
       <div class="tcard">
         <div class="tcard-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <div class="tcard-quote" data-fr="Ce qui différencie Alveris : la qualité de l'écoute et la précision des profils envoyés. Pas de volume inutile, uniquement des candidats qui correspondent vraiment à notre cahier des charges. Deuxième mission confiée, même niveau d'exigence." data-en="What sets Alveris apart: the quality of listening and precision of profiles submitted. No unnecessary volume, only candidates who truly match our brief. Second assignment, same level of excellence.">Ce qui différencie Alveris : la qualité de l'écoute et la précision des profils envoyés. Pas de volume inutile, uniquement des candidats qui correspondent vraiment. Deuxième mission confiée, même niveau d'exigence.</div>
+        <div class="tcard-quote">Ce qui distingue Alveris : une vraie connaissance du terrain industriel. Pas de profils génériques — des candidats qui ont réellement dirigé des sites en environnement difficile. Le niveau d'exigence est celui d'un vrai cabinet de chasse, pas d'une agence.</div>
         <div class="tcard-author">
           <img class="tcard-avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=95&auto=format" alt="Romain D.">
           <div>
             <div class="tcard-name">Romain D.</div>
-            <div class="tcard-role">CTO · Scale-up SaaS · Paris</div>
+            <div class="tcard-role">Directeur Industriel · Groupe Métallurgique · France</div>
             <div class="tcard-source">✓ Avis Trustpilot vérifié</div>
           </div>
         </div>
@@ -1112,7 +1148,49 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     <div id="new-reviews-container" style="margin-top:1.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;"></div>
   </section>
 
-  <!-- CTA BANDE -->
+      <!-- ACTUALITÉS HOME — 3 articles -->
+  <section class="section" style="background:var(--white2);">
+    <p class="slabel">Marché &amp; tendances</p>
+    <h2 class="stitle"><em>Actualités RH</em> &amp; Industrie</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem;">
+
+      <div onclick="go('actu-b1')" style="border:1px solid var(--light);border-radius:4px;overflow:hidden;cursor:pointer;background:var(--white);transition:border-color .2s,box-shadow .2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.07)'" onmouseout="this.style.borderColor='var(--light)';this.style.boxShadow='none'">
+        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80&auto=format&fit=crop" alt="Directeurs usine France 2026" style="width:100%;height:160px;object-fit:cover;display:block;">
+        <div style="padding:1.25rem;">
+          <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;">Industrie · Mars 2026</div>
+          <div style="font-family:var(--serif);font-size:1rem;font-weight:400;margin-bottom:.5rem;line-height:1.35;">Directeurs d'usine en France : pénurie record en 2026</div>
+          <div style="font-size:11px;color:var(--mid);line-height:1.6;">Les groupes industriels peinent à recruter des profils combinant leadership LEAN et gestion sociale.</div>
+          <div style="font-size:10px;color:var(--gold);margin-top:.75rem;font-weight:500;">Lire en entier →</div>
+        </div>
+      </div>
+
+      <div onclick="go('actu-b2')" style="border:1px solid var(--light);border-radius:4px;overflow:hidden;cursor:pointer;background:var(--white);transition:border-color .2s,box-shadow .2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.07)'" onmouseout="this.style.borderColor='var(--light)';this.style.boxShadow='none'">
+        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80&auto=format&fit=crop" alt="Management transition industrie" style="width:100%;height:160px;object-fit:cover;display:block;">
+        <div style="padding:1.25rem;">
+          <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;">Recrutement · Fév. 2026</div>
+          <div style="font-family:var(--serif);font-size:1rem;font-weight:400;margin-bottom:.5rem;line-height:1.35;">Management de transition industrie : +35% de missions en 2025</div>
+          <div style="font-size:11px;color:var(--mid);line-height:1.6;">Face aux restructurations, les groupes recourent aux directeurs opérationnels en mission courte.</div>
+          <div style="font-size:10px;color:var(--gold);margin-top:.75rem;font-weight:500;">Lire en entier →</div>
+        </div>
+      </div>
+
+      <div onclick="go('actu-b3')" style="border:1px solid var(--light);border-radius:4px;overflow:hidden;cursor:pointer;background:var(--white);transition:border-color .2s,box-shadow .2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.07)'" onmouseout="this.style.borderColor='var(--light)';this.style.boxShadow='none'">
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80&auto=format&fit=crop" alt="Salaires cadres industriels 2026" style="width:100%;height:160px;object-fit:cover;display:block;">
+        <div style="padding:1.25rem;">
+          <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;">RH Industrie · Jan. 2026</div>
+          <div style="font-family:var(--serif);font-size:1rem;font-weight:400;margin-bottom:.5rem;line-height:1.35;">Salaires des cadres industriels 2026 : nouvelles fourchettes de marché</div>
+          <div style="font-size:11px;color:var(--mid);line-height:1.6;">+5 à +9% sur les profils dirigeants. Directeur d'usine : 80-120K€. COO groupe : 180K€+.</div>
+          <div style="font-size:10px;color:var(--gold);margin-top:.75rem;font-weight:500;">Lire en entier →</div>
+        </div>
+      </div>
+
+    </div>
+    <div style="margin-top:2rem;text-align:center;">
+      <button class="btn-outline" onclick="go('actu')" style="font-size:11px;">Voir toutes les actualités →</button>
+    </div>
+  </section>
+
+    <!-- CTA BANDE -->
   <section style="background:var(--blue2);padding:4rem;text-align:center;color:var(--white);">
     <h2 style="font-family:var(--serif);font-size:2.5rem;font-weight:300;margin-bottom:1rem;" data-fr="Prêt à recruter le bon profil ?" data-en="Ready to hire the right profile?">Prêt à recruter le bon profil ?</h2>
     <p style="font-size:14px;opacity:.6;margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto;" data-fr="Premier échange gratuit et sans engagement. Nous qualifions votre besoin en 20 minutes." data-en="Free first call, no commitment. We qualify your brief in 20 minutes.">Premier échange gratuit et sans engagement. Nous qualifions votre besoin en 20 minutes.</p>
@@ -1132,229 +1210,147 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     <p class="sbody" data-fr="Alveris publie en exclusivité des offres qualifiées pour des entreprises sélectionnées. Toutes nos annonces sont vérifiées et correspondent à des postes réels, immédiatement à pourvoir ou à venir." data-en="Alveris exclusively publishes qualified offers for selected companies. All our listings are verified and correspond to real positions, immediately available or upcoming.">Alveris publie en exclusivité des offres qualifiées pour des entreprises sélectionnées. Toutes nos annonces sont vérifiées et correspondent à des postes réels.</p>
 
     <div class="jobs-filters" style="margin-top:2rem;">
-      <button class="filter-btn on" onclick="filterJobs('all',this)" data-fr="Tous les postes" data-en="All positions">Tous les postes</button>
-      <button class="filter-btn" onclick="filterJobs('cadres',this)" data-fr="Cadres & Dirigeants" data-en="Executives">Cadres & Dirigeants</button>
-      <button class="filter-btn" onclick="filterJobs('tech',this)" data-fr="Tech & IT" data-en="Tech & IT">Tech & IT</button>
-      <button class="filter-btn" onclick="filterJobs('finance',this)" data-fr="Finance" data-en="Finance">Finance</button>
-      <button class="filter-btn" onclick="filterJobs('startup',this)" data-fr="Start-up" data-en="Start-up">Start-up</button>
-      <button class="filter-btn" onclick="filterJobs('industrie',this)" data-fr="Industrie" data-en="Industry">Industrie</button>
+      <button class="filter-btn on" onclick="filterJobs('all',this)">Tous les postes</button>
+      <button class="filter-btn" onclick="filterJobs('cadres',this)">Direction &amp; C-Level</button>
+      <button class="filter-btn" onclick="filterJobs('industrie',this)">Direction Industrielle</button>
+      <button class="filter-btn" onclick="filterJobs('transition',this)">Management de Transition</button>
     </div>
 
     <div class="jobs-grid" id="jobs-grid">
-  <!-- Rotation automatique : 4 offres affichées sur 6, changement toutes les 2 semaines -->
 
+      <!-- JOB 1 : Directeur Général - Groupe industriel -->
       <div class="job-card" data-cat="cadres" onclick="openJob(0)">
-        <span class="job-badge hot" data-fr="Urgent" data-en="Urgent">Urgent</span>
-        <div class="job-title" data-fr="Directeur Administratif & Financier" data-en="Chief Financial Officer">Directeur Administratif & Financier</div>
-        <div class="job-company" data-fr="Scale-up Fintech — Luxembourg" data-en="Fintech Scale-up — Luxembourg">Scale-up Fintech — Luxembourg</div>
-        <div class="job-meta">
-          <span class="job-tag gold">Luxembourg</span>
-          <span class="job-tag" data-fr="CDI" data-en="Permanent">CDI</span>
-          <span class="job-tag" data-fr="80–120K€" data-en="€80–120K">80–120K€</span>
-          <span class="job-tag" data-fr="Hybride" data-en="Hybrid">Hybride</span>
-        </div>
-        <div class="job-desc" data-fr="Fintech en forte croissance (série B) recherche son DAF pour structurer la fonction financière, piloter la trésorerie et accompagner l'expansion européenne. Vous serez le bras droit du CEO." data-en="Fast-growing fintech (Series B) seeks its CFO to structure the finance function, manage treasury and support European expansion. You will be the CEO's right hand.">Fintech en forte croissance (série B) recherche son DAF pour structurer la fonction financière, piloter la trésorerie et accompagner l'expansion européenne.</div>
-        <div class="job-cta" data-fr="Voir l'offre" data-en="View offer">Voir l'offre</div>
-      </div>
-
-      <div class="job-card" data-cat="tech" onclick="openJob(1)">
-        <span class="job-badge new" data-fr="Nouveau" data-en="New">Nouveau</span>
-        <div class="job-title" data-fr="Lead Developer Full-Stack" data-en="Lead Full-Stack Developer">Lead Developer Full-Stack</div>
-        <div class="job-company" data-fr="Start-up SaaS B2B — Paris / Remote" data-en="B2B SaaS Start-up — Paris / Remote">Start-up SaaS B2B — Paris / Remote</div>
+        <span class="job-badge hot">Exclusif</span>
+        <div class="job-title">Directeur Général — Industrie Métallurgique</div>
+        <div class="job-company">Groupe industriel ETI — France (Grand Est)</div>
         <div class="job-meta">
           <span class="job-tag gold">France</span>
           <span class="job-tag">CDI</span>
-          <span class="job-tag">60–80K€</span>
-          <span class="job-tag">Full remote</span>
-        </div>
-        <div class="job-desc" data-fr="Start-up SaaS en hypercroissance recrute son Lead Dev pour piloter une équipe de 5 développeurs. Stack : React, Node.js, PostgreSQL, AWS. Vous architecturez et développez les nouvelles fonctionnalités produit." data-en="Hypergrowth SaaS start-up recruits its Lead Dev to manage a team of 5 developers. Stack: React, Node.js, PostgreSQL, AWS. You architect and develop new product features.">Start-up SaaS en hypercroissance recrute son Lead Dev pour piloter une équipe de 5 développeurs. Stack : React, Node.js, PostgreSQL, AWS.</div>
-        <div class="job-cta" data-fr="Voir l'offre" data-en="View offer">Voir l'offre</div>
-      </div>
-
-      <div class="job-card" data-cat="finance" onclick="openJob(2)">
-        <span class="job-badge">Exclusif</span>
-        <div class="job-title" data-fr="Responsable Compliance / AML" data-en="Head of Compliance / AML">Responsable Compliance / AML</div>
-        <div class="job-company" data-fr="Asset Manager — Luxembourg" data-en="Asset Manager — Luxembourg">Asset Manager — Luxembourg</div>
-        <div class="job-meta">
-          <span class="job-tag gold">Luxembourg</span>
-          <span class="job-tag">CDI</span>
-          <span class="job-tag">70–95K€</span>
-          <span class="job-tag">Présentiel partiel</span>
-        </div>
-        <div class="job-desc" data-fr="Asset manager luxembourgeois recrute son Responsable Compliance pour piloter le dispositif LCB-FT, assurer la conformité réglementaire CSSF et superviser les équipes KYC." data-en="Luxembourg asset manager recruits its Head of Compliance to manage the AML framework, ensure CSSF regulatory compliance and supervise KYC teams.">Asset manager luxembourgeois recrute son Responsable Compliance pour piloter le dispositif LCB-FT, assurer la conformité réglementaire CSSF et superviser les équipes KYC.</div>
-        <div class="job-cta" data-fr="Voir l'offre" data-en="View offer">Voir l'offre</div>
-      </div>
-
-      <div class="job-card" data-cat="startup" onclick="openJob(3)">
-        <span class="job-badge new" data-fr="Nouveau" data-en="New">Nouveau</span>
-        <div class="job-title" data-fr="Head of Sales — France" data-en="Head of Sales — France">Head of Sales — France</div>
-        <div class="job-company" data-fr="Scale-up Marketplace — Paris" data-en="Marketplace Scale-up — Paris">Scale-up Marketplace — Paris</div>
-        <div class="job-meta">
-          <span class="job-tag gold">France</span>
-          <span class="job-tag">CDI</span>
-          <span class="job-tag">80–100K€ + variable</span>
-          <span class="job-tag">Hybride</span>
-        </div>
-        <div class="job-desc" data-fr="Marketplace B2B en série A recrute son premier Head of Sales pour structurer la force commerciale, définir la stratégie go-to-market et piloter une équipe de 4 commerciaux." data-en="Series A B2B marketplace recruits its first Head of Sales to structure the sales force, define go-to-market strategy and manage a team of 4 salespeople.">Marketplace B2B en série A recrute son premier Head of Sales pour structurer la force commerciale et piloter une équipe de 4 commerciaux.</div>
-        <div class="job-cta" data-fr="Voir l'offre" data-en="View offer">Voir l'offre</div>
-      </div>
-
-      <div class="job-card" data-cat="industrie" onclick="openJob(4)">
-        <span class="job-badge hot" data-fr="Urgent" data-en="Urgent">Urgent</span>
-        <div class="job-title" data-fr="Technicien de Maintenance Industrielle" data-en="Industrial Maintenance Technician">Technicien de Maintenance Industrielle</div>
-        <div class="job-company" data-fr="Groupe industriel — Région Est, France" data-en="Industrial Group — Eastern France">Groupe industriel — Région Est, France</div>
-        <div class="job-meta">
-          <span class="job-tag gold">France</span>
-          <span class="job-tag">CDI</span>
-          <span class="job-tag">35–45K€</span>
+          <span class="job-tag">130–160K€</span>
           <span class="job-tag">Sur site</span>
         </div>
-        <div class="job-desc" data-fr="Groupe industriel de premier plan recrute un technicien de maintenance (électromécanique) pour assurer la maintenance préventive et curative des lignes de production. Astreintes ponctuelles." data-en="Leading industrial group recruits a maintenance technician (electromechanical) to ensure preventive and corrective maintenance of production lines. Occasional on-call duties.">Groupe industriel recrute un technicien de maintenance électromécanique pour assurer la maintenance des lignes de production.</div>
-        <div class="job-cta" data-fr="Voir l'offre" data-en="View offer">Voir l'offre</div>
+        <div class="job-desc">ETI industrielle (250 personnes, 3 sites) recrute son Directeur Général pour piloter la stratégie, la performance opérationnelle et le développement commercial. Profil ingénieur, expérience multi-sites exigée.</div>
+        <div class="job-cta">Voir l'offre</div>
       </div>
 
-      <div class="job-card" data-cat="cadres" onclick="openJob(5)">
+      <!-- JOB 1b : COO / EVP Operations - Groupe industriel comex -->
+      <div class="job-card" data-cat="cadres" onclick="openJob(8)">
         <span class="job-badge">Exclusif</span>
-        <div class="job-title" data-fr="Directeur des Ressources Humaines" data-en="Chief Human Resources Officer">Directeur des Ressources Humaines</div>
-        <div class="job-company" data-fr="ETI — Belgique / Luxembourg" data-en="Mid-size company — Belgium / Luxembourg">ETI — Belgique / Luxembourg</div>
+        <div class="job-title">COO / EVP Operations — Groupe Industriel</div>
+        <div class="job-company">Groupe industriel côté — France</div>
         <div class="job-meta">
-          <span class="job-tag gold">Belgique</span>
+          <span class="job-tag gold">France</span>
           <span class="job-tag">CDI</span>
-          <span class="job-tag">90–120K€</span>
-          <span class="job-tag">Hybride</span>
+          <span class="job-tag">160–220K€</span>
+          <span class="job-tag">Comex</span>
         </div>
-        <div class="job-desc" data-fr="ETI multi-sites (600 collaborateurs) recrute son DRH pour piloter la politique RH, accompagner la transformation organisationnelle et développer la marque employeur dans un contexte de croissance externe." data-en="Multi-site mid-size company (600 employees) recruits its CHRO to steer HR policy, support organisational transformation and develop the employer brand in an M&A context.">ETI multi-sites recrute son DRH pour piloter la politique RH et accompagner la transformation organisationnelle dans un contexte de croissance externe.</div>
-        <div class="job-cta" data-fr="Voir l'offre" data-en="View offer">Voir l'offre</div>
-      <div class="job-card" data-cat="horeca" onclick="openJob(6)">
-        <span class="job-badge new">Nouveau</span>
-        <div class="job-title" data-fr="Directeur de Restaurant Gastronomique" data-en="Fine Dining Restaurant Manager">Directeur de Restaurant Gastronomique</div>
-        <div class="job-company" data-fr="Groupe Hôtelier — Luxembourg-Ville" data-en="Hotel Group — Luxembourg City">Groupe Hôtelier — Luxembourg-Ville</div>
-        <div class="job-meta">
-          <span class="job-tag gold">Luxembourg</span>
-          <span class="job-tag">CDI</span>
-          <span class="job-tag">55–70K€</span>
-          <span class="job-tag">Sur site</span>
-        </div>
-        <div class="job-desc" data-fr="Groupe hôtelier 5 étoiles recrute son Directeur de Restaurant pour piloter l'exploitation d'un restaurant gastronomique, manager une équipe de 15 personnes et développer l'expérience client dans un environnement international." data-en="5-star hotel group recruits Restaurant Director to manage a fine dining restaurant, lead a team of 15 and develop the guest experience in an international environment.">Groupe hôtelier 5 étoiles recrute son Directeur de Restaurant pour piloter une équipe de 15 personnes et développer l'expérience client dans un environnement international.</div>
-        <div class="job-cta" data-fr="Voir l'offre" data-en="View offer">Voir l'offre</div>
+        <div class="job-desc">Groupe industriel coté (800M€ CA, 4 000 personnes, présence internationale) recrute son COO / EVP Operations pour piloter la stratégie industrielle groupe, l'excellence opérationnelle et la transformation. Membre du comité exécutif.</div>
+        <div class="job-cta">Voir l'offre</div>
       </div>
-      <div class="job-card" data-cat="startup" onclick="openJob(7)">
+
+      <!-- JOB 2 : Directeur d'Usine - Automobile -->
+      <div class="job-card" data-cat="industrie" onclick="openJob(1)">
         <span class="job-badge hot">Urgent</span>
-        <div class="job-title" data-fr="Chief Technology Officer (CTO)" data-en="Chief Technology Officer (CTO)">Chief Technology Officer (CTO)</div>
-        <div class="job-company" data-fr="Start-up HealthTech — Paris / Remote" data-en="HealthTech Start-up — Paris / Remote">Start-up HealthTech — Paris / Remote</div>
+        <div class="job-title">Directeur d'Usine — Équipement Automobile</div>
+        <div class="job-company">Équipementier Tier 1 — France (Région Ouest)</div>
         <div class="job-meta">
           <span class="job-tag gold">France</span>
           <span class="job-tag">CDI</span>
-          <span class="job-tag">90–130K€ + BSPCE</span>
-          <span class="job-tag">Hybride</span>
-        </div>
-        <div class="job-desc" data-fr="Start-up HealthTech (série A, 8M€ levés) recrute son CTO pour définir l'architecture technique, recruter et manager une équipe de 8 ingénieurs et co-construire la roadmap produit avec les cofondateurs." data-en="HealthTech start-up (Series A, €8M raised) recruits CTO to define technical architecture, recruit and manage a team of 8 engineers and co-build the product roadmap with co-founders.">Start-up HealthTech (série A) recrute son CTO pour définir l'architecture, manager 8 ingénieurs et co-construire la roadmap produit.</div>
-        <div class="job-cta" data-fr="Voir l'offre" data-en="View offer">Voir l'offre</div>
-      </div>
-      <div class="job-card" data-cat="tech" onclick="openJob(8)">
-        <span class="job-badge new">Nouveau</span>
-        <div class="job-title" data-fr="Data Engineer / Architecte Data" data-en="Data Engineer / Data Architect">Data Engineer / Architecte Data</div>
-        <div class="job-company" data-fr="Scale-up InsurTech — Bruxelles / Remote" data-en="InsurTech Scale-up — Brussels / Remote">Scale-up InsurTech — Bruxelles / Remote</div>
-        <div class="job-meta">
-          <span class="job-tag gold">Belgique</span>
-          <span class="job-tag">CDI</span>
-          <span class="job-tag">65–85K€</span>
-          <span class="job-tag">Full remote</span>
-        </div>
-        <div class="job-desc" data-fr="Scale-up InsurTech (120 collaborateurs) recrute son Data Engineer pour concevoir et maintenir les pipelines de données, structurer le datalake et accompagner les équipes métier dans leurs analyses prédictives." data-en="InsurTech scale-up (120 employees) recruits Data Engineer to design and maintain data pipelines, structure the datalake and support business teams in predictive analysis.">Scale-up InsurTech recrute son Data Engineer pour concevoir les pipelines de données et accompagner les équipes dans leurs analyses prédictives.</div>
-        <div class="job-cta" data-fr="Voir l'offre" data-en="View offer">Voir l'offre</div>
-      </div>
-      <div class="job-card" data-cat="finance" onclick="openJob(9)">
-        <span class="job-badge">Exclusif</span>
-        <div class="job-title" data-fr="Responsable Fund Administration" data-en="Head of Fund Administration">Responsable Fund Administration</div>
-        <div class="job-company" data-fr="Banque Dépositaire — Luxembourg" data-en="Depositary Bank — Luxembourg">Banque Dépositaire — Luxembourg</div>
-        <div class="job-meta">
-          <span class="job-tag gold">Luxembourg</span>
-          <span class="job-tag">CDI</span>
-          <span class="job-tag">75–95K€</span>
-          <span class="job-tag">Hybride</span>
-        </div>
-        <div class="job-desc" data-fr="Banque dépositaire luxembourgeoise recrute son Responsable Fund Administration pour superviser le NAV de 40+ fonds UCITS/AIFMD, manager une équipe de 6 personnes et assurer la relation client institutionnelle." data-en="Luxembourg depositary bank recruits Head of Fund Administration to oversee NAV for 40+ UCITS/AIFMD funds, manage a team of 6 and handle institutional client relationships.">Banque dépositaire recrute son Responsable Fund Admin pour superviser 40+ fonds et manager une équipe de 6 personnes.</div>
-        <div class="job-cta" data-fr="Voir l'offre" data-en="View offer">Voir l'offre</div>
-      </div>
-      <div class="job-card" data-cat="industrie" onclick="openJob(10)">
-        <span class="job-badge hot">Urgent</span>
-        <div class="job-title" data-fr="Responsable HSE — Site Industriel" data-en="HSE Manager — Industrial Site">Responsable HSE — Site Industriel</div>
-        <div class="job-company" data-fr="Groupe Chimique — Nord-Est France" data-en="Chemical Group — North-East France">Groupe Chimique — Nord-Est France</div>
-        <div class="job-meta">
-          <span class="job-tag gold">France</span>
-          <span class="job-tag">CDI</span>
-          <span class="job-tag">48–62K€</span>
+          <span class="job-tag">90–115K€</span>
           <span class="job-tag">Sur site</span>
         </div>
-        <div class="job-desc" data-fr="Groupe chimique (site SEVESO seuil bas) recrute son Responsable HSE pour déployer la politique sécurité, piloter les audits réglementaires et animer les 180 collaborateurs du site sur la culture sécurité." data-en="Chemical group (low-threshold SEVESO site) recruits HSE Manager to deploy safety policy, drive regulatory audits and engage 180 site employees in safety culture.">Groupe chimique recrute son Responsable HSE pour déployer la politique sécurité et piloter les audits réglementaires sur site SEVESO.</div>
-        <div class="job-cta" data-fr="Voir l'offre" data-en="View offer">Voir l'offre</div>
+        <div class="job-desc">Équipementier automobile de rang 1 (180 personnes, clients PSA / Stellantis) recrute son Directeur d'Usine. Ingénieur LEAN, expérience IATF requise. Management d'équipes pluridisciplinaires.</div>
+        <div class="job-cta">Voir l'offre</div>
       </div>
-      <div class="job-card" data-cat="cadres" onclick="openJob(12)">
-        <span class="job-badge new">Nouveau</span>
-        <div class="job-title" data-fr="Directeur Marketing & Communication" data-en="Marketing & Communications Director">Directeur Marketing & Communication</div>
-        <div class="job-company" data-fr="Groupe Retail — Paris / Belgique" data-en="Retail Group — Paris / Belgium">Groupe Retail — Paris / Belgique</div>
+
+      <!-- JOB 3 : COO / Directeur Opérations - Pharma CDMO -->
+      <div class="job-card" data-cat="cadres" onclick="openJob(2)">
+        <span class="job-badge">Nouveau</span>
+        <div class="job-title">Directeur des Opérations — Pharma CDMO</div>
+        <div class="job-company">Sous-traitant pharmaceutique — France (Rhône-Alpes)</div>
+        <div class="job-meta">
+          <span class="job-tag gold">France</span>
+          <span class="job-tag">CDI</span>
+          <span class="job-tag">100–130K€</span>
+          <span class="job-tag">Hybride</span>
+        </div>
+        <div class="job-desc">CDMO pharmaceutique (2 sites, 400 personnes) recrute son Directeur des Opérations. Profil ingénieur, expérience pharma ISO 14001 / ISO 45001, management de direction de site.</div>
+        <div class="job-cta">Voir l'offre</div>
+      </div>
+
+      <!-- JOB 4 : DRH Industrie -->
+      <div class="job-card" data-cat="industrie" onclick="openJob(3)">
+        <span class="job-badge">Exclusif</span>
+        <div class="job-title">DRH — Groupe Industriel Multi-Sites</div>
+        <div class="job-company">Groupe industriel — France (Île-de-France)</div>
         <div class="job-meta">
           <span class="job-tag gold">France</span>
           <span class="job-tag">CDI</span>
           <span class="job-tag">85–110K€</span>
           <span class="job-tag">Hybride</span>
         </div>
-        <div class="job-desc" data-fr="Groupe retail franco-belge (180M€ CA) recrute son Directeur Marketing pour définir la stratégie de marque, piloter les campagnes omnicanales et manager une équipe de 8 personnes." data-en="Franco-Belgian retail group (€180M revenue) recruits Marketing Director to define brand strategy, drive omnichannel campaigns and manage a team of 8.">Groupe retail franco-belge recrute son Directeur Marketing pour définir la stratégie de marque et piloter les campagnes omnicanales.</div>
-        <div class="job-cta" data-fr="Voir l'offre" data-en="View offer">Voir l'offre</div>
-      </div>
-      <div class="job-card" data-cat="finance" onclick="openJob(13)">
-        <span class="job-badge hot">Urgent</span>
-        <div class="job-title" data-fr="Auditeur Interne Senior — Banque" data-en="Senior Internal Auditor — Banking">Auditeur Interne Senior — Banque</div>
-        <div class="job-company" data-fr="Banque Privée Internationale — Luxembourg" data-en="International Private Bank — Luxembourg">Banque Privée Internationale — Luxembourg</div>
-        <div class="job-meta">
-          <span class="job-tag gold">Luxembourg</span>
-          <span class="job-tag">CDI</span>
-          <span class="job-tag">65–85K€</span>
-          <span class="job-tag">Hybride</span>
-        </div>
-        <div class="job-desc" data-fr="Banque privée internationale (top 15 Place LU) recrute un Auditeur Interne Senior pour mener des missions d'audit sur les activités de gestion de fortune, conformité et opérations, et présenter les résultats au Comité d'Audit." data-en="Top-15 Luxembourg private bank recruits Senior Internal Auditor to lead audit assignments on wealth management, compliance and operations, and present findings to the Audit Committee.">Banque privée internationale recrute un Auditeur Interne Senior pour mener des missions sur les activités de gestion de fortune et conformité.</div>
-        <div class="job-cta" data-fr="Voir l'offre" data-en="View offer">Voir l'offre</div>
-      </div>
-      <div class="job-card" data-cat="industrie" onclick="openJob(14)">
-        <span class="job-badge new">Nouveau</span>
-        <div class="job-title" data-fr="Ingénieur Travaux — Génie Civil" data-en="Site Engineer — Civil Engineering">Ingénieur Travaux — Génie Civil</div>
-        <div class="job-company" data-fr="Groupe BTP — Grand Est & Luxembourg" data-en="Construction Group — Grand Est & Luxembourg">Groupe BTP — Grand Est & Luxembourg</div>
-        <div class="job-meta">
-          <span class="job-tag gold">France · LU</span>
-          <span class="job-tag">CDI</span>
-          <span class="job-tag">42–58K€</span>
-          <span class="job-tag">Terrain</span>
-        </div>
-        <div class="job-desc" data-fr="Groupe BTP régional (350 collaborateurs) recrute un Ingénieur Travaux pour piloter des chantiers de génie civil (VRD, terrassement, ouvrages d'art) en zone frontalière France-Luxembourg, avec autonomie et appui d'un conducteur de travaux senior." data-en="Regional construction group (350 employees) recruits Site Engineer to manage civil engineering projects (road works, earthworks, structures) in the France-Luxembourg border area, with autonomy and senior site manager support.">Groupe BTP recrute un Ingénieur Travaux pour piloter des chantiers génie civil en zone frontalière France-Luxembourg.</div>
-        <div class="job-cta" data-fr="Voir l'offre" data-en="View offer">Voir l'offre</div>
-      </div>
-      <div class="job-card" data-cat="horeca" onclick="openJob(15)">
-        <span class="job-badge">Exclusif</span>
-        <div class="job-title" data-fr="Revenue Manager — Hôtellerie Luxe" data-en="Revenue Manager — Luxury Hotels">Revenue Manager — Hôtellerie Luxe</div>
-        <div class="job-company" data-fr="Groupe Hôtelier 5★ — Luxembourg & Bruxelles" data-en="5★ Hotel Group — Luxembourg & Brussels">Groupe Hôtelier 5★ — Luxembourg & Bruxelles</div>
-        <div class="job-meta">
-          <span class="job-tag gold">Luxembourg</span>
-          <span class="job-tag">CDI</span>
-          <span class="job-tag">50–65K€</span>
-          <span class="job-tag">Hybride</span>
-        </div>
-        <div class="job-desc" data-fr="Groupe hôtelier haut de gamme (4 établissements 5★ au Luxembourg et Bruxelles) recrute son Revenue Manager pour optimiser le RevPAR, piloter la stratégie tarifaire dynamique et coordonner les OTA et canaux de distribution." data-en="High-end hotel group (4 five-star properties in Luxembourg and Brussels) recruits Revenue Manager to optimise RevPAR, drive dynamic pricing strategy and coordinate OTA and distribution channels.">Groupe hôtelier 5★ recrute son Revenue Manager pour optimiser le RevPAR et piloter la stratégie tarifaire dynamique sur 4 établissements.</div>
-        <div class="job-cta" data-fr="Voir l'offre" data-en="View offer">Voir l'offre</div>
+        <div class="job-desc">Groupe industriel (600 collaborateurs, 4 sites) recrute son DRH pour piloter la politique RH, les relations sociales (IRP), et accompagner la transformation organisationnelle.</div>
+        <div class="job-cta">Voir l'offre</div>
       </div>
 
-      <div class="job-card" data-cat="horeca" onclick="openJob(11)">
-        <span class="job-badge new">Nouveau</span>
-        <div class="job-title" data-fr="Directeur Commercial — Retail Premium" data-en="Commercial Director — Premium Retail">Directeur Commercial — Retail Premium</div>
-        <div class="job-company" data-fr="Enseigne Retail Haut de Gamme — Paris" data-en="Premium Retail Brand — Paris">Enseigne Retail Haut de Gamme — Paris</div>
+      <!-- JOB 5 : Directeur Industriel - Fonderie -->
+      <div class="job-card" data-cat="industrie" onclick="openJob(4)">
+        <span class="job-badge hot">Urgent</span>
+        <div class="job-title">Directeur Industriel — Fonderie &amp; Métallurgie</div>
+        <div class="job-company">Groupe fonderie — France (Région Nord)</div>
         <div class="job-meta">
           <span class="job-tag gold">France</span>
           <span class="job-tag">CDI</span>
-          <span class="job-tag">75–95K€ + variable</span>
+          <span class="job-tag">95–120K€</span>
+          <span class="job-tag">Sur site</span>
+        </div>
+        <div class="job-desc">Groupe fonderie (3 sites, aciers spéciaux) recrute son Directeur Industriel pour piloter l'excellence opérationnelle, les investissements CAPEX et la performance des sites. Profil ingénieur métallurgie.</div>
+        <div class="job-cta">Voir l'offre</div>
+      </div>
+
+      <!-- JOB 6 : Directeur d'Usine - Transition -->
+      <div class="job-card" data-cat="transition" onclick="openJob(5)">
+        <span class="job-badge" style="background:#7c3aed;color:#fff;">Transition</span>
+        <div class="job-title">Directeur d'Usine — Mission de Transition</div>
+        <div class="job-company">Site industriel en redressement — France (Grand Est)</div>
+        <div class="job-meta">
+          <span class="job-tag gold">France</span>
+          <span class="job-tag">Transition</span>
+          <span class="job-tag">TJM sur devis</span>
+          <span class="job-tag">Sur site</span>
+        </div>
+        <div class="job-desc">Site industriel (150 personnes) en phase de redressement opérationnel recherche un Directeur d'Usine en mission de transition 9-12 mois. Profil LEAN confirmé, disponibilité rapide requise.</div>
+        <div class="job-cta">Voir l'offre</div>
+      </div>
+
+      <!-- JOB 7 : DAF Industrie -->
+      <div class="job-card" data-cat="cadres" onclick="openJob(6)">
+        <span class="job-badge">Nouveau</span>
+        <div class="job-title">DAF — ETI Industrielle</div>
+        <div class="job-company">ETI industrie de précision — France (Auvergne-Rhône-Alpes)</div>
+        <div class="job-meta">
+          <span class="job-tag gold">France</span>
+          <span class="job-tag">CDI</span>
+          <span class="job-tag">80–105K€</span>
           <span class="job-tag">Hybride</span>
         </div>
-        <div class="job-desc" data-fr="Enseigne retail haut de gamme (30 boutiques France) recrute son Directeur Commercial pour piloter le développement des ventes, manager les responsables de boutique et structurer la stratégie omnicanale." data-en="Premium retail brand (30 French boutiques) recruits Commercial Director to drive sales development, manage boutique managers and structure omnichannel strategy.">Enseigne retail haut de gamme (30 boutiques) recrute son Directeur Commercial pour piloter le développement des ventes et la stratégie omnicanale.</div>
-        <div class="job-cta" data-fr="Voir l'offre" data-en="View offer">Voir l'offre</div>
+        <div class="job-desc">ETI industrie de précision (180 collaborateurs) recrute son DAF pour piloter la fonction financière, le contrôle de gestion industriel et accompagner la croissance externe.</div>
+        <div class="job-cta">Voir l'offre</div>
+      </div>
+
+      <!-- JOB 8 : Ingénieur Production Senior -->
+      <div class="job-card" data-cat="industrie" onclick="openJob(7)">
+        <span class="job-badge hot">Urgent</span>
+        <div class="job-title">Responsable Production — Agroalimentaire</div>
+        <div class="job-company">Groupe agroalimentaire — France (Grand Ouest)</div>
+        <div class="job-meta">
+          <span class="job-tag gold">France</span>
+          <span class="job-tag">CDI</span>
+          <span class="job-tag">55–70K€</span>
+          <span class="job-tag">Sur site</span>
+        </div>
+        <div class="job-desc">Groupe agroalimentaire (site 300 personnes) recrute son Responsable de Production pour piloter 3 lignes, animer les équipes opérationnelles et déployer le plan LEAN.</div>
+        <div class="job-cta">Voir l'offre</div>
       </div>
 
     </div>
@@ -1400,8 +1396,8 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     <div class="sector-hero-overlay" style="background:linear-gradient(to top,rgba(10,18,38,.85) 0%,rgba(10,18,38,.3) 60%,transparent 100%);"></div>
     <div class="sector-hero-content">
       <div class="sector-badge" style="background:rgba(201,169,110,.15);color:#c9a96e;border:1px solid rgba(201,169,110,.3);">Cadres & Dirigeants</div>
-      <h1 class="sector-hero-title">Recrutement de dirigeants<br>et cadres supérieurs</h1>
-      <p class="sector-hero-sub">Approche directe, évaluation comportementale et réseau senior pour vos recrutements les plus stratégiques.</p>
+      <h1 class="sector-hero-title">Direction Générale<br>&amp; C-Level Industrie</h1>
+      <p class="sector-hero-sub">Recrutement des profils les plus stratégiques dans l'industrie — PDG, DG, COO, EVP Operations, membres de comex.</p>
     </div>
   </div>
   <div class="sector-body" style="background:var(--white2);">
@@ -1581,48 +1577,142 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
   </div>
 </div>
 
-<!-- INDUSTRIE — tons terracotta / béton, style Michelin / Saint-Gobain careers -->
+<!-- INDUSTRIE & INGÉNIERIE — Executive Search -->
 <div class="page" id="page-s-industrie">
   <div class="sector-hero">
-    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=2400&q=95&fit=crop&auto=format" 
-          style="object-position:center 40%;" 
-          alt="Ingénieur technicien en intervention sur site industriel"
-          onerror="this.src='https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=2400&q=95&fit=crop&auto=format'">
-    <div class="sector-hero-overlay" style="background:linear-gradient(to top,rgba(28,16,8,.88) 0%,rgba(28,16,8,.25) 60%,transparent 100%);"></div>
+    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=2400&q=95&fit=crop&auto=format" style="object-position:center 40%;" alt="Executive search industrie France">
+    <div class="sector-hero-overlay" style="background:linear-gradient(to top,rgba(15,8,2,.92) 0%,rgba(15,8,2,.3) 60%,transparent 100%);"></div>
     <div class="sector-hero-content">
-      <div class="sector-badge" style="background:rgba(200,100,60,.2);color:#e89070;border:1px solid rgba(200,100,60,.3);">Industrie & Profils Pénuriques</div>
-      <h1 class="sector-hero-title">Recrutement industrie<br>& profils pénuriques</h1>
-      <p class="sector-hero-sub">Sourcing élargi sur des marchés en tension, approche directe et réseau terrain en France et en Europe.</p>
+      <div class="sector-badge" style="background:rgba(194,65,12,.2);color:#fb923c;border:1px solid rgba(194,65,12,.4);">Industrie &amp; Ingénierie</div>
+      <h1 class="sector-hero-title">Executive Search<br>Industrie &amp; Ingénierie</h1>
+      <p class="sector-hero-sub">Dirigeants, directeurs d'usine, cadres clés. Approche directe sur tous les secteurs industriels français.</p>
     </div>
   </div>
   <div class="sector-body" style="background:var(--white2);">
     <div class="sector-left">
-      <p class="sector-lead">L'industrie manque de profils qualifiés depuis plusieurs années. Les solutions classiques ne suffisent plus — il faut aller chercher les talents là où ils sont.</p>
-      <p class="sector-text">Alveris maîtrise le recrutement de profils industriels difficiles à trouver : techniciens de maintenance, ingénieurs de production, responsables HSE, conducteurs de travaux BTP. Notre sourcing dépasse les jobboards classiques — approche directe, réseaux sectoriels, mobilité géographique accompagnée.</p>
-      <p class="sector-text">Nous intervenons sur toute la France, avec une expertise particulière en région Est, Ile-de-France et dans les zones frontalières Luxembourg / Belgique.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem;">
-        <span class="sector-pill" style="background:#ede4dc;color:#6a3a20;">Technicien Maintenance</span>
-        <span class="sector-pill" style="background:#ede4dc;color:#6a3a20;">Ingénieur Production</span>
-        <span class="sector-pill" style="background:#ede4dc;color:#6a3a20;">Responsable HSE</span>
-        <span class="sector-pill" style="background:#ede4dc;color:#6a3a20;">Chef de chantier BTP</span>
-        <span class="sector-pill" style="background:#ede4dc;color:#6a3a20;">Directeur Usine</span>
-        <span class="sector-pill" style="background:#ede4dc;color:#6a3a20;">Responsable Qualité</span>
-      </div>
+      <p class="sector-lead">Alveris intervient exclusivement dans l'industrie. 17 ans d'expérience, un réseau terrain construit dans la durée, une connaissance fine des profils et des rémunérations de marché.</p>
+      <p class="sector-text">Nous recrutons les profils qui ne répondent pas aux annonces — directeurs généraux, COO, directeurs d'usine, DRH industrie, DAF. Notre approche directe permet d'accéder aux 70% de candidats qui ne sont pas sur le marché visible.</p>
+      <p class="sector-text">Fonderie · Métallurgie · Automobile · Pharma CDMO · Agroalimentaire · Ingénierie de précision · Management de transition.</p>
     </div>
-    <div class="sector-right" style="background:#f7f0ea;">
-      <div class="sector-jobs-title">Missions en cours</div>
-      <div class="sector-job-item" onclick="go('jobs')">
-        <div class="sector-job-title">Technicien de Maintenance Industrielle</div>
-        <div class="sector-job-meta"><span>Agroalimentaire · Région Est</span><span style="color:var(--gold);">35–45K€</span><span>CDI</span></div>
+    <div class="sector-right" style="background:var(--sand);">
+      <div class="sector-jobs-title">Domaines d'intervention</div>
+      <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.5rem;">
+        <span class="sector-pill" style="background:#ffe4d6;color:#c2410c;">Fonderie &amp; Métallurgie</span>
+        <span class="sector-pill" style="background:#ffe4d6;color:#c2410c;">Automobile &amp; Équipement</span>
+        <span class="sector-pill" style="background:#ffe4d6;color:#c2410c;">Pharma CDMO</span>
+        <span class="sector-pill" style="background:#ffe4d6;color:#c2410c;">Agroalimentaire</span>
+        <span class="sector-pill" style="background:#ffe4d6;color:#c2410c;">Ingénierie de précision</span>
+        <span class="sector-pill" style="background:#ffe4d6;color:#c2410c;">Management de transition</span>
       </div>
-      <div style="margin-top:1.5rem;padding:1.25rem;background:var(--white);border-radius:4px;border-left:3px solid #9a6a50;">
-        <div style="font-size:12px;font-weight:500;margin-bottom:.4rem;">Spécialité profils pénuriques</div>
-        <div style="font-size:11px;color:var(--mid);line-height:1.7;">Sourcing multi-canal · Approche de profils passifs · Accompagnement à la mobilité géographique · Délai moyen 12 jours</div>
+      <div style="padding:1.25rem;background:var(--white);border-radius:4px;border-left:3px solid #c2410c;">
+        <div style="font-size:12px;font-weight:500;margin-bottom:.4rem;">Notre approche executive search</div>
+        <div style="font-size:11px;color:var(--mid);line-height:1.7;">Approche directe · Confidentialité absolue · Évaluation comportementale · Réseau terrain industrie · 17 ans d'expertise</div>
       </div>
     </div>
   </div>
+
+  <!-- 6 SECTEURS DÉTAILLÉS -->
+  <div style="background:var(--white);padding:3rem 4rem;">
+    <p class="slabel">Nos filières</p>
+    <h2 class="stitle">Une expertise <em>par secteur industriel.</em></h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--light);margin-top:2.5rem;">
+
+      <div style="background:var(--white2);padding:2rem;border-top:3px solid #b45309;">
+        <div style="font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#b45309;margin-bottom:.75rem;">Fonderie &amp; Métallurgie</div>
+        <div style="font-family:var(--serif);font-size:1.1rem;font-weight:400;margin-bottom:.6rem;">Aciers spéciaux, fonderie de précision, forge industrielle</div>
+        <div style="font-size:12px;color:var(--mid);line-height:1.7;margin-bottom:1rem;">PDG, DG, Directeur d'Usine, Directeur Industriel, COO. Connaissance des contraintes métallurgiques et certifications qualité.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:.3rem;margin-bottom:1rem;">
+          <span style="font-size:10px;padding:.2rem .6rem;background:#fef3c7;color:#92400e;border-radius:2px;">Directeur d'Usine</span>
+          <span style="font-size:10px;padding:.2rem .6rem;background:#fef3c7;color:#92400e;border-radius:2px;">DG Groupe</span>
+          <span style="font-size:10px;padding:.2rem .6rem;background:#fef3c7;color:#92400e;border-radius:2px;">Dir. Industriel</span>
+        </div>
+        <div class="sector-job-item" onclick="go('jobs')" style="margin-top:.5rem;">
+          <div class="sector-job-title">Directeur Industriel — Fonderie</div>
+          <div class="sector-job-meta"><span>Groupe fonderie · Nord France</span><span style="color:var(--gold);">95–120K€</span></div>
+        </div>
+      </div>
+
+      <div style="background:var(--white2);padding:2rem;border-top:3px solid #1d4ed8;">
+        <div style="font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#1d4ed8;margin-bottom:.75rem;">Automobile &amp; Équipement</div>
+        <div style="font-family:var(--serif);font-size:1.1rem;font-weight:400;margin-bottom:.6rem;">Équipementiers Tier 1 &amp; 2, plasturgie, sous-traitance auto</div>
+        <div style="font-size:12px;color:var(--mid);line-height:1.7;margin-bottom:1rem;">Directeurs d'Usine, Plant Managers, DRH site. Maîtrise IATF, LEAN, clients PSA/Stellantis/BMW/Toyota.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:.3rem;margin-bottom:1rem;">
+          <span style="font-size:10px;padding:.2rem .6rem;background:#dbeafe;color:#1e40af;border-radius:2px;">Plant Manager</span>
+          <span style="font-size:10px;padding:.2rem .6rem;background:#dbeafe;color:#1e40af;border-radius:2px;">Dir. Qualité</span>
+          <span style="font-size:10px;padding:.2rem .6rem;background:#dbeafe;color:#1e40af;border-radius:2px;">Dir. Production</span>
+        </div>
+        <div class="sector-job-item" onclick="go('jobs')" style="margin-top:.5rem;">
+          <div class="sector-job-title">Directeur d'Usine — Équipement Auto</div>
+          <div class="sector-job-meta"><span>Équipementier Tier 1 · Région Ouest</span><span style="color:var(--gold);">90–115K€</span></div>
+        </div>
+      </div>
+
+      <div style="background:var(--white2);padding:2rem;border-top:3px solid #059669;">
+        <div style="font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#059669;margin-bottom:.75rem;">Pharma &amp; CDMO</div>
+        <div style="font-family:var(--serif);font-size:1.1rem;font-weight:400;margin-bottom:.6rem;">Sous-traitance pharmaceutique, dispositifs médicaux</div>
+        <div style="font-size:12px;color:var(--mid);line-height:1.7;margin-bottom:1rem;">Directeurs d'Usine, Directeurs des Opérations, DRH site. Expérience ISO 14001 / 45001, gestion IRP.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:.3rem;margin-bottom:1rem;">
+          <span style="font-size:10px;padding:.2rem .6rem;background:#d1fae5;color:#065f46;border-radius:2px;">Dir. Opérations</span>
+          <span style="font-size:10px;padding:.2rem .6rem;background:#d1fae5;color:#065f46;border-radius:2px;">Dir. Usine CDMO</span>
+          <span style="font-size:10px;padding:.2rem .6rem;background:#d1fae5;color:#065f46;border-radius:2px;">Dir. Qualité</span>
+        </div>
+        <div class="sector-job-item" onclick="go('jobs')" style="margin-top:.5rem;">
+          <div class="sector-job-title">Directeur des Opérations — CDMO</div>
+          <div class="sector-job-meta"><span>CDMO · Rhône-Alpes</span><span style="color:var(--gold);">100–130K€</span></div>
+        </div>
+      </div>
+
+      <div style="background:var(--white2);padding:2rem;border-top:3px solid #d97706;">
+        <div style="font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#d97706;margin-bottom:.75rem;">Agroalimentaire</div>
+        <div style="font-family:var(--serif);font-size:1.1rem;font-weight:400;margin-bottom:.6rem;">IAA, transformation alimentaire, conditionnement</div>
+        <div style="font-size:12px;color:var(--mid);line-height:1.7;margin-bottom:1rem;">Directeurs de site, Responsables de production, DRH. Certifications IFS / BRC, contraintes spécifiques IAA.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:.3rem;margin-bottom:1rem;">
+          <span style="font-size:10px;padding:.2rem .6rem;background:#fef3c7;color:#92400e;border-radius:2px;">Dir. Site IAA</span>
+          <span style="font-size:10px;padding:.2rem .6rem;background:#fef3c7;color:#92400e;border-radius:2px;">Resp. Production</span>
+          <span style="font-size:10px;padding:.2rem .6rem;background:#fef3c7;color:#92400e;border-radius:2px;">DRH Site</span>
+        </div>
+        <div class="sector-job-item" onclick="go('jobs')" style="margin-top:.5rem;">
+          <div class="sector-job-title">Responsable Production — IAA</div>
+          <div class="sector-job-meta"><span>Groupe IAA · Grand Ouest</span><span style="color:var(--gold);">55–70K€</span></div>
+        </div>
+      </div>
+
+      <div style="background:var(--white2);padding:2rem;border-top:3px solid #7c3aed;">
+        <div style="font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#7c3aed;margin-bottom:.75rem;">Ingénierie de précision</div>
+        <div style="font-family:var(--serif);font-size:1.1rem;font-weight:400;margin-bottom:.6rem;">Mécanique de précision, électronique industrielle, défense</div>
+        <div style="font-size:12px;color:var(--mid);line-height:1.7;margin-bottom:1rem;">Directeurs d'Usine, Directeurs Techniques, COO. Profils ingénieurs avec expérience en environnement exigeant.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:.3rem;margin-bottom:1rem;">
+          <span style="font-size:10px;padding:.2rem .6rem;background:#ede9fe;color:#4c1d95;border-radius:2px;">Dir. Technique</span>
+          <span style="font-size:10px;padding:.2rem .6rem;background:#ede9fe;color:#4c1d95;border-radius:2px;">COO</span>
+          <span style="font-size:10px;padding:.2rem .6rem;background:#ede9fe;color:#4c1d95;border-radius:2px;">Dir. Usine</span>
+        </div>
+        <div class="sector-job-item" onclick="go('jobs')" style="margin-top:.5rem;">
+          <div class="sector-job-title">Dir. Général — Industrie Métallurgique</div>
+          <div class="sector-job-meta"><span>ETI · Grand Est</span><span style="color:var(--gold);">130–160K€</span></div>
+        </div>
+      </div>
+
+      <div style="background:linear-gradient(135deg,#0f172a,#1e1b4b);padding:2rem;border-top:3px solid #c8a96d;">
+        <div style="font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;">Management de Transition</div>
+        <div style="font-family:var(--serif);font-size:1.1rem;font-weight:400;margin-bottom:.6rem;color:#fff;">Directeurs opérationnels disponibles rapidement</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.6);line-height:1.7;margin-bottom:1rem;">Redressement de site, démarrage de production, remplacement urgent. Profils disponibles en 48h à 2 semaines.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:.3rem;margin-bottom:1rem;">
+          <span style="font-size:10px;padding:.2rem .6rem;background:rgba(200,169,110,.2);color:var(--gold);border-radius:2px;">Redressement</span>
+          <span style="font-size:10px;padding:.2rem .6rem;background:rgba(200,169,110,.2);color:var(--gold);border-radius:2px;">6–18 mois</span>
+          <span style="font-size:10px;padding:.2rem .6rem;background:rgba(200,169,110,.2);color:var(--gold);border-radius:2px;">Disponible vite</span>
+        </div>
+        <div style="padding:1rem;background:rgba(255,255,255,.05);border-radius:4px;border-left:2px solid var(--gold);">
+          <div style="font-size:11px;color:rgba(255,255,255,.5);margin-bottom:.3rem;">Mission disponible</div>
+          <div style="font-size:13px;font-weight:500;color:#fff;">Dir. Usine — Transition 9-12 mois</div>
+          <div style="font-size:11px;color:var(--gold);margin-top:.2rem;">Site redressement · Grand Est</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <div class="sector-cta-bar" style="background:var(--white2);">
-    <div><div class="sector-cta-text">Un profil difficile à trouver ?</div><div style="font-size:12px;color:var(--mid);margin-top:.3rem;">Nous recrutons là où les autres ne vont pas chercher.</div></div>
+    <div><div class="sector-cta-text">Un recrutement industriel à mener ?</div><div style="font-size:12px;color:var(--mid);margin-top:.3rem;">Approche directe, confidentialité garantie, expertise terrain.</div></div>
     <button class="btn-dark" onclick="go('contact')">Déposer un besoin →</button>
   </div>
 </div>
@@ -1693,41 +1783,35 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
   <div style="position:relative;overflow:hidden;" id="actu-track-wrap">
 
     <!-- SLIDE 1 -->
-    <div class="actu-slide active" id="aslide-0">
-      <img class="actu-img"
-        src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1800&q=95&auto=format"
-        alt="Tendances recrutement tech 2026">
+    <div id="aslide-0" style="display:flex;flex-direction:column;">
+      <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1800&q=80&auto=format&fit=crop" style="width:100%;height:260px;object-fit:cover;display:block;flex-shrink:0;" alt="Directeurs usine recrutement France">
       <div class="actu-content">
-        <div class="actu-tag" data-fr="Tendances · Avril 2026" data-en="Trends · April 2026">Tendances · Avril 2026</div>
-        <div class="actu-title" data-fr="Les profils tech en forte tension : comment recruter en 2026 ?" data-en="Tech profiles under pressure: how to recruit in 2026?">Les profils tech en forte tension : comment recruter en 2026 ?</div>
-        <div class="actu-excerpt" data-fr="En Europe, la demande de développeurs seniors, d'architectes cloud et de profils data dépasse largement l'offre. Les entreprises qui recrutent vite et bien sont celles qui ont simplifié leur processus : moins d'étapes, retours rapides, offres différenciantes." data-en="In Europe, demand for senior developers, cloud architects and data profiles far exceeds supply. Companies recruiting quickly and well are those who have simplified their processes: fewer steps, fast feedback, differentiated offers.">En Europe, la demande de développeurs seniors, d'architectes cloud et de profils data dépasse largement l'offre. Les entreprises qui recrutent vite et bien sont celles qui ont simplifié leur processus.</div>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:.75rem;"><div class="actu-date" data-fr="1er avril 2026 · 3 min" data-en="April 1, 2026 · 3 min">1er avril 2026 · 3 min</div><a onclick="go('actu-art-1');return false;" href="#" style="font-size:11px;font-weight:500;color:var(--gold);text-decoration:none;" data-fr="Lire en entier →" data-en="Read more →">Lire en entier →</a></div>
+        <div class="actu-tag" data-fr="Recrutement Industrie · Mai 2026" data-en="Industry Recruitment · May 2026">Recrutement Industrie · Mai 2026</div>
+        <div class="actu-title" data-fr="Directeurs d'usine : pourquoi les meilleurs profils ne répondent pas à vos annonces" data-en="Plant managers: why the best profiles don't apply to your ads">Directeurs d'usine : pourquoi les meilleurs profils ne répondent pas à vos annonces</div>
+        <div class="actu-excerpt" data-fr="70% des recrutements de cadres industriels se font sans annonce publiée. Les directeurs d'usine expérimentés ne postulent pas — ils attendent d'être approchés. Ce que ça implique pour votre stratégie de recrutement en 2026." data-en="70% of industrial management hires happen without a published ad. Experienced plant managers don't apply — they wait to be approached. What this means for your recruitment strategy.">70% des recrutements de cadres industriels se font sans annonce publiée. Les directeurs d'usine expérimentés ne postulent pas — ils attendent d'être approchés. Ce que ça implique pour votre stratégie de recrutement.</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:.75rem;"><div class="actu-date" data-fr="1er avril 2026 · 3 min" data-en="April 1, 2026 · 3 min">Mai 2026 · 4 min</div><a onclick="go('actu-art-1');return false;" href="#" style="font-size:11px;font-weight:500;color:var(--gold);text-decoration:none;" data-fr="Lire en entier →" data-en="Read more →">Lire en entier →</a></div>
       </div>
     </div>
 
     <!-- SLIDE 2 -->
-    <div class="actu-slide" id="aslide-1">
-      <img class="actu-img"
-        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1800&q=95&auto=format"
-        alt="Start-up recrutement erreurs">
+    <div id="aslide-1" style="display:none;flex-direction:column;">
+      <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1800&q=80&auto=format&fit=crop" style="width:100%;height:260px;object-fit:cover;display:block;flex-shrink:0;" alt="Management de transition industrie">
       <div class="actu-content">
-        <div class="actu-tag" data-fr="Start-up · Avril 2026" data-en="Start-up · April 2026">Start-up · Avril 2026</div>
-        <div class="actu-title" data-fr="Start-up : les 5 erreurs de recrutement qui coûtent cher" data-en="Start-ups: the 5 recruitment mistakes that cost dearly">Start-up : les 5 erreurs de recrutement qui coûtent cher</div>
-        <div class="actu-excerpt" data-fr="Un recrutement raté coûte entre 50 000 et 150 000 € à une start-up. Les 5 erreurs les plus fréquentes : recruter sur le CV plutôt que sur la culture, prendre trop de temps, négliger l'expérience candidat, ne pas vérifier les références, confondre vitesse et précipitation." data-en="A failed hire costs a start-up between €50,000 and €150,000. The 5 most common mistakes: hiring on CV rather than culture, taking too long, neglecting candidate experience, not checking references, confusing speed with haste.">Un recrutement raté coûte entre 50 000 et 150 000 € à une start-up. Les 5 erreurs les plus fréquentes : recruter sur le CV plutôt que sur la culture, prendre trop de temps, négliger l'expérience candidat.</div>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:.75rem;"><div class="actu-date" data-fr="8 avril 2026 · 4 min" data-en="April 8, 2026 · 4 min">8 avril 2026 · 4 min</div><a onclick="go('actu-art-2');return false;" href="#" style="font-size:11px;font-weight:500;color:var(--gold);text-decoration:none;" data-fr="Lire en entier →" data-en="Read more →">Lire en entier →</a></div>
+        <div class="actu-tag" data-fr="Management de Transition · Avril 2026" data-en="Interim Management · April 2026">Management de Transition · Avril 2026</div>
+        <div class="actu-title" data-fr="Management de transition industriel : quand y recourir et comment choisir le bon profil" data-en="Industrial interim management: when to use it and how to choose the right profile">Management de transition industriel : quand y recourir et comment choisir le bon profil</div>
+        <div class="actu-excerpt" data-fr="Redressement de site, démarrage de production, remplacement urgent d'un directeur d'usine — le management de transition répond à des situations précises. Décryptage des critères de sélection d'un directeur opérationnel en mission." data-en="Site turnaround, production launch, urgent plant manager replacement — interim management addresses specific situations. A breakdown of the criteria for selecting an operational manager for a mission.">Redressement de site, démarrage de production, remplacement urgent d'un directeur d'usine — le management de transition répond à des situations précises. Décryptage des critères de sélection d'un directeur opérationnel en mission.</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:.75rem;"><div class="actu-date" data-fr="8 avril 2026 · 4 min" data-en="April 8, 2026 · 4 min">Avril 2026 · 5 min</div><a onclick="go('actu-art-2');return false;" href="#" style="font-size:11px;font-weight:500;color:var(--gold);text-decoration:none;" data-fr="Lire en entier →" data-en="Read more →">Lire en entier →</a></div>
       </div>
     </div>
 
     <!-- SLIDE 3 -->
-    <div class="actu-slide" id="aslide-2">
-      <img class="actu-img"
-        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1800&q=95&auto=format"
-        alt="Luxembourg place financière recrutement">
+    <div id="aslide-2" style="display:none;flex-direction:column;">
+      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1800&q=80&auto=format&fit=crop" style="width:100%;height:260px;object-fit:cover;display:block;flex-shrink:0;" alt="Salaires cadres industriels 2026">
       <div class="actu-content">
-        <div class="actu-tag" data-fr="Luxembourg · Avril 2026" data-en="Luxembourg · April 2026">Luxembourg · Avril 2026</div>
-        <div class="actu-title" data-fr="La Place financière luxembourgeoise recrute : état des lieux 2026" data-en="Luxembourg financial centre hiring: 2026 overview">La Place financière luxembourgeoise recrute : état des lieux 2026</div>
-        <div class="actu-excerpt" data-fr="La Place financière maintient un rythme de recrutement soutenu. Les profils les plus recherchés : Compliance / AML, Risk Management, Private Banking. La pénurie de talents locaux oblige à élargir le sourcing à la France, la Belgique et l'Allemagne." data-en="The financial centre maintains a sustained recruitment pace. Most sought-after profiles: Compliance/AML, Risk Management, Private Banking. Local talent shortage is forcing sourcing expansion to France, Belgium and Germany.">La Place financière maintient un rythme de recrutement soutenu. Les profils les plus recherchés : Compliance / AML, Risk Management, Private Banking. La pénurie de talents locaux oblige à élargir le sourcing.</div>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:.75rem;"><div class="actu-date" data-fr="15 avril 2026 · 5 min" data-en="April 15, 2026 · 5 min">15 avril 2026 · 5 min</div><a onclick="go('actu-art-3');return false;" href="#" style="font-size:11px;font-weight:500;color:var(--gold);text-decoration:none;" data-fr="Lire en entier →" data-en="Read more →">Lire en entier →</a></div>
+        <div class="actu-tag" data-fr="Salaires Industrie · Mars 2026" data-en="Industry Salaries · March 2026">Salaires Industrie · Mars 2026</div>
+        <div class="actu-title" data-fr="Rémunérations des cadres industriels en 2026 : ce qui a vraiment changé" data-en="Industrial management compensation in 2026: what has really changed">Rémunérations des cadres industriels en 2026 : ce qui a vraiment changé</div>
+        <div class="actu-excerpt" data-fr="Les packages des directeurs d'usine et COO industriels ont progressé de +5 à +8% en 2025. Les profils rares en fonderie et métallurgie négocient au-dessus des grilles groupe. État des lieux secteur par secteur en France." data-en="Plant manager and industrial COO packages grew +5 to +8% in 2025. Rare foundry and metallurgy profiles are negotiating above group grids. A sector-by-sector overview in France.">Les packages des directeurs d'usine et COO industriels ont progressé de +5 à +8% en 2025. Les profils rares en fonderie et métallurgie négocient au-dessus des grilles groupe. État des lieux secteur par secteur en France.</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:.75rem;"><div class="actu-date" data-fr="15 avril 2026 · 5 min" data-en="April 15, 2026 · 5 min">Mars 2026 · 4 min</div><a onclick="go('actu-art-3');return false;" href="#" style="font-size:11px;font-weight:500;color:var(--gold);text-decoration:none;" data-fr="Lire en entier →" data-en="Read more →">Lire en entier →</a></div>
       </div>
     </div>
 
@@ -1756,28 +1840,28 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 <!-- GRILLE ARTICLES SUPPLÉMENTAIRES -->
     <div class="actu-bottom-grid" class="coaching-offers-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;">
       <div onclick="go('actu-b1')" style="border:1px solid var(--light);border-radius:4px;overflow:hidden;cursor:pointer;transition:border-color .2s,box-shadow .2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.07)'" onmouseout="this.style.borderColor='var(--light)';this.style.boxShadow='none'">
-        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=95&auto=format" alt="Salaires cadres 2026" style="width:100%;height:140px;object-fit:cover;">
+        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80&auto=format&fit=crop" alt="Salaires cadres 2026" style="width:100%;height:140px;object-fit:cover;">
         <div style="padding:1.25rem;">
-          <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;">Cadres · Mars 2026</div>
-          <div style="font-family:var(--serif);font-size:1rem;font-weight:400;margin-bottom:.5rem;line-height:1.35;">Salaires des cadres 2026 : les tendances à connaître</div>
+          <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;">Industrie · Mars 2026</div>
+          <div style="font-family:var(--serif);font-size:1rem;font-weight:400;margin-bottom:.5rem;line-height:1.35;">Directeurs d'usine en France : pénurie record en 2026</div>
           <div style="font-size:11px;color:var(--mid);line-height:1.6;">Les grilles salariales des cadres supérieurs ont évolué de +4 à +7% en 2025. Finance et tech en tête.</div>
           <div style="font-size:10px;color:var(--gold);margin-top:.75rem;font-weight:500;">Lire en entier →</div>
         </div>
       </div>
       <div onclick="go('actu-b2')" style="border:1px solid var(--light);border-radius:4px;overflow:hidden;cursor:pointer;transition:border-color .2s,box-shadow .2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.07)'" onmouseout="this.style.borderColor='var(--light)';this.style.boxShadow='none'">
-        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=95&auto=format" alt="IA et recrutement" style="width:100%;height:140px;object-fit:cover;">
+        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=95&auto=format" alt="IA et recrutement" style="width:100%;height:140px;object-fit:cover;">
         <div style="padding:1.25rem;">
-          <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;">RH & IA · Mars 2026</div>
-          <div style="font-family:var(--serif);font-size:1rem;font-weight:400;margin-bottom:.5rem;line-height:1.35;">IA et recrutement : opportunité ou menace pour les cabinets ?</div>
+          <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;">Recrutement · Fév. 2026</div>
+          <div style="font-family:var(--serif);font-size:1rem;font-weight:400;margin-bottom:.5rem;line-height:1.35;">Management de transition industrie : +35% de missions en 2025</div>
           <div style="font-size:11px;color:var(--mid);line-height:1.6;">L'IA accélère le sourcing mais ne remplace pas le jugement humain. Les cabinets qui combinent les deux sont les plus performants.</div>
           <div style="font-size:10px;color:var(--gold);margin-top:.75rem;font-weight:500;">Lire en entier →</div>
         </div>
       </div>
       <div onclick="go('actu-b3')" style="border:1px solid var(--light);border-radius:4px;overflow:hidden;cursor:pointer;transition:border-color .2s,box-shadow .2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.07)'" onmouseout="this.style.borderColor='var(--light)';this.style.boxShadow='none'">
-        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=95&auto=format" alt="Marque employeur" style="width:100%;height:140px;object-fit:cover;">
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80&auto=format&fit=crop" alt="Marque employeur" style="width:100%;height:140px;object-fit:cover;">
         <div style="padding:1.25rem;">
-          <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;">Marque employeur · Fév. 2026</div>
-          <div style="font-family:var(--serif);font-size:1rem;font-weight:400;margin-bottom:.5rem;line-height:1.35;">Pourquoi votre marque employeur est votre meilleur outil de recrutement</div>
+          <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;">RH Industrie · Jan. 2026</div>
+          <div style="font-family:var(--serif);font-size:1rem;font-weight:400;margin-bottom:.5rem;line-height:1.35;">Salaires des cadres industriels 2026 : nouvelles fourchettes de marché</div>
           <div style="font-size:11px;color:var(--mid);line-height:1.6;">72% des candidats consultent la réputation d'un employeur avant de postuler. Investir dans sa marque employeur réduit le coût et le délai.</div>
           <div style="font-size:10px;color:var(--gold);margin-top:.75rem;font-weight:500;">Lire en entier →</div>
         </div>
@@ -1801,7 +1885,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
   <section class="section" style="max-width:780px;margin:0 auto;">
     <button onclick="go('actu')" style="background:none;border:none;cursor:pointer;font-size:12px;color:var(--mid);display:flex;align-items:center;gap:.4rem;margin-bottom:2rem;padding:0;">← Retour aux actualités</button>
     <div style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;">Cadres & Dirigeants · Mars 2026</div>
-    <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;line-height:1.15;margin-bottom:1rem;">Salaires des cadres 2026 : les tendances à connaître</h1>
+    <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;line-height:1.15;margin-bottom:1rem;">Directeurs d'usine en France : pénurie record en 2026</h1>
     <div style="font-size:11px;color:var(--mid2);margin-bottom:2rem;">Mars 2026 · 4 min · Alveris</div>
     <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1800&q=95&auto=format" alt="Salaires cadres 2026" style="width:100%;height:280px;object-fit:cover;border-radius:4px;margin-bottom:2rem;">
     <div style="font-size:14px;color:var(--mid);line-height:1.9;display:flex;flex-direction:column;gap:1.25rem;">
@@ -1824,7 +1908,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
   <section class="section" style="max-width:780px;margin:0 auto;">
     <button onclick="go('actu')" style="background:none;border:none;cursor:pointer;font-size:12px;color:var(--mid);display:flex;align-items:center;gap:.4rem;margin-bottom:2rem;padding:0;">← Retour aux actualités</button>
     <div style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;">RH & Intelligence Artificielle · Mars 2026</div>
-    <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;line-height:1.15;margin-bottom:1rem;">IA et recrutement : opportunité ou menace pour les cabinets ?</h1>
+    <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;line-height:1.15;margin-bottom:1rem;">Management de transition industrie : +35% de missions en 2025</h1>
     <div style="font-size:11px;color:var(--mid2);margin-bottom:2rem;">Mars 2026 · 5 min · Alveris</div>
     <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1800&q=95&auto=format" alt="IA et recrutement" style="width:100%;height:280px;object-fit:cover;border-radius:4px;margin-bottom:2rem;">
     <div style="font-size:14px;color:var(--mid);line-height:1.9;display:flex;flex-direction:column;gap:1.25rem;">
@@ -1846,7 +1930,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
   <section class="section" style="max-width:780px;margin:0 auto;">
     <button onclick="go('actu')" style="background:none;border:none;cursor:pointer;font-size:12px;color:var(--mid);display:flex;align-items:center;gap:.4rem;margin-bottom:2rem;padding:0;">← Retour aux actualités</button>
     <div style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;">Marque Employeur · Février 2026</div>
-    <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;line-height:1.15;margin-bottom:1rem;">Pourquoi votre marque employeur est votre meilleur outil de recrutement</h1>
+    <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;line-height:1.15;margin-bottom:1rem;">Salaires des cadres industriels 2026 : nouvelles fourchettes de marché</h1>
     <div style="font-size:11px;color:var(--mid2);margin-bottom:2rem;">Février 2026 · 4 min · Alveris</div>
     <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1800&q=95&auto=format" alt="Marque employeur" style="width:100%;height:280px;object-fit:cover;border-radius:4px;margin-bottom:2rem;">
     <div style="font-size:14px;color:var(--mid);line-height:1.9;display:flex;flex-direction:column;gap:1.25rem;">
@@ -1899,7 +1983,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         <div class="scard-n">CV qui retient l'attention</div>
         <div class="scard-d">Ce que regardent vraiment les recruteurs. Les erreurs invisibles qui éliminent 9 candidatures sur 10 avant même la lecture.</div>
       </div>
-      <div class="scard s-startup">
+      <div class="scard s-startup" style="display:none;">
         <div class="scard-ico">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13 2C13 2 18 4 20 9C22 14 21 20 21 20C21 20 16 18 13 17C10 16 5 14 4 11C3 8 5 3 5 3C5 3 8 2 13 2Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
@@ -1911,7 +1995,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         <div class="scard-n">Entretiens maîtrisés</div>
         <div class="scard-d">Méthode STAR, questions pièges, gestion du stress. Comment transformer chaque entretien en opportunité — même les plus difficiles.</div>
       </div>
-      <div class="scard s-tech">
+      <div class="scard s-tech" style="display:none;">
         <div class="scard-ico">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="8" y="8" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.2"/>
@@ -1923,7 +2007,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         <div class="scard-n">Réseau & LinkedIn</div>
         <div class="scard-d">Profil optimisé pour apparaître dans les recherches. Approche directe des recruteurs. 70% des postes ne sont jamais publiés — voici comment y accéder.</div>
       </div>
-      <div class="scard s-finance">
+      <div class="scard s-finance" style="display:none;">
         <div class="scard-ico">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2 20H22" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
@@ -1946,7 +2030,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         <div class="scard-n">Jobboards & marché</div>
         <div class="scard-d">Les meilleures plateformes par secteur — France, Luxembourg, Belgique. Où chercher, comment postuler, quand relancer.</div>
       </div>
-      <div class="scard s-horeca">
+      <div class="scard s-horeca" style="display:none;">
         <div class="scard-ico">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="12" cy="7" r="2" stroke="currentColor" stroke-width="1.2"/>
@@ -2269,7 +2353,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     <div style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;">Tendances · Avril 2026</div>
     <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;line-height:1.15;margin-bottom:1rem;" data-fr="Les profils tech en forte tension : comment recruter en 2026 ?" data-en="Tech profiles under pressure: how to recruit in 2026?">Les profils tech en forte tension : comment recruter en 2026 ?</h1>
     <div style="font-size:11px;color:var(--mid2);margin-bottom:2rem;">1er avril 2026 · 3 min de lecture · Alveris</div>
-    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1800&q=95&auto=format" alt="Recrutement tech 2026" style="width:100%;height:280px;object-fit:cover;border-radius:4px;margin-bottom:2rem;">
+    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1800&q=95&auto=format" alt="Recrutement tech 2026" style="width:100%;height:280px;object-fit:cover;border-radius:4px;margin-bottom:2rem;">
     <div style="font-size:14px;color:var(--mid);line-height:1.9;display:flex;flex-direction:column;gap:1.25rem;">
       <p data-fr="Le marché des profils tech reste sous haute tension en 2026, malgré les vagues de licenciements dans les grandes tech américaines. En Europe, et particulièrement au Luxembourg et en France, la demande de développeurs seniors, d'architectes cloud et de profils data dépasse largement l'offre disponible." data-en="The tech talent market remains under high pressure in 2026, despite layoffs in major US tech firms. In Europe, particularly Luxembourg and France, demand for senior developers, cloud architects and data profiles far exceeds available supply.">Le marché des profils tech reste sous haute tension en 2026, malgré les vagues de licenciements dans les grandes tech américaines. En Europe, et particulièrement au Luxembourg et en France, la demande de développeurs seniors, d'architectes cloud et de profils data dépasse largement l'offre disponible.</p>
       <p data-fr="Les entreprises qui réussissent leurs recrutements tech ont un point commun : elles ont drastiquement simplifié leur processus. Là où certaines organisations imposent 5 à 7 étapes d'entretien, les plus agiles en font 2 à 3. Le temps moyen entre premier contact et offre a été réduit à moins de 3 semaines pour les entreprises les plus compétitives." data-en="Companies that succeed in tech recruitment have one thing in common: they have drastically simplified their process. Where some organisations impose 5 to 7 interview stages, the most agile do 2 to 3. The average time from first contact to offer has been reduced to under 3 weeks for the most competitive employers.">Les entreprises qui réussissent leurs recrutements tech ont un point commun : elles ont drastiquement simplifié leur processus. Le temps moyen entre premier contact et offre a été réduit à moins de 3 semaines pour les entreprises les plus compétitives.</p>
@@ -2289,7 +2373,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     <div style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;">Start-up · Avril 2026</div>
     <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;line-height:1.15;margin-bottom:1rem;" data-fr="Start-up : les 5 erreurs de recrutement qui coûtent cher" data-en="Start-ups: the 5 recruitment mistakes that cost dearly">Start-up : les 5 erreurs de recrutement qui coûtent cher</h1>
     <div style="font-size:11px;color:var(--mid2);margin-bottom:2rem;">8 avril 2026 · 4 min de lecture · Alveris</div>
-    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1800&q=95&auto=format" alt="Start-up recrutement" style="width:100%;height:280px;object-fit:cover;border-radius:4px;margin-bottom:2rem;">
+    <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1800&q=95&auto=format" alt="Start-up recrutement" style="width:100%;height:280px;object-fit:cover;border-radius:4px;margin-bottom:2rem;">
     <div style="font-size:14px;color:var(--mid);line-height:1.9;display:flex;flex-direction:column;gap:1.25rem;">
       <p>Un recrutement raté coûte en moyenne entre 50 000 et 150 000 € à une start-up. Ce chiffre comprend le coût direct du recrutement, la perte de productivité pendant la vacance du poste, le coût de la sortie et le coût du nouveau recrutement. Pour les profils C-Level, cette somme peut dépasser 300 000 €.</p>
       <p><strong style="color:var(--black);">Erreur 1 — Recruter sur le CV, pas sur la culture.</strong> En start-up, l'adéquation culturelle est aussi importante que les compétences. Un profil brillant qui ne partage pas vos valeurs ou votre rythme de travail sera parti dans les 6 mois.</p>
@@ -2312,7 +2396,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     <div style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;">Luxembourg · Avril 2026</div>
     <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;line-height:1.15;margin-bottom:1rem;" data-fr="La Place financière luxembourgeoise recrute : état des lieux 2026" data-en="Luxembourg financial centre hiring: 2026 overview">La Place financière luxembourgeoise recrute : état des lieux 2026</h1>
     <div style="font-size:11px;color:var(--mid2);margin-bottom:2rem;">15 avril 2026 · 5 min de lecture · Alveris</div>
-    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1800&q=95&auto=format" alt="Luxembourg finance recrutement" style="width:100%;height:280px;object-fit:cover;border-radius:4px;margin-bottom:2rem;">
+    <img src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=1800&q=95&auto=format" alt="Luxembourg finance recrutement" style="width:100%;height:280px;object-fit:cover;border-radius:4px;margin-bottom:2rem;">
     <div style="font-size:14px;color:var(--mid);line-height:1.9;display:flex;flex-direction:column;gap:1.25rem;">
       <p>Malgré un contexte macroéconomique incertain en 2026, la Place financière luxembourgeoise maintient un rythme de recrutement soutenu. Les fonds d'investissement, les banques dépositaires et les sociétés de gestion continuent de structurer leurs équipes compliance, risk et operations.</p>
       <p>Les profils les plus recherchés restent ceux en Compliance / AML, Risk Management, Private Banking et Asset Management. La spécificité luxembourgeoise : la réglementation CSSF évolue rapidement et les entreprises cherchent des profils qui maîtrisent à la fois le cadre réglementaire local et les standards européens.</p>
@@ -2369,13 +2453,12 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         <input class="fi" type="text" name="ville_pays" placeholder="Ville / Pays" data-placeholder-fr="Ville / Pays" data-placeholder-en="City / Country">
         <select class="fsel" name="secteur">
           <option value="" data-fr="Secteur recherché" data-en="Target sector">Secteur recherché</option>
-          <option data-fr="Cadres & Dirigeants" data-en="Executives">Cadres & Dirigeants</option>
-          <option data-fr="Tech & IT" data-en="Tech & IT">Tech & IT</option>
-          <option data-fr="Start-up / Scale-up" data-en="Start-up">Start-up / Scale-up</option>
-          <option data-fr="Banque & Finance" data-en="Banking & Finance">Banque & Finance</option>
-          <option data-fr="Industrie & BTP" data-en="Industry">Industrie & BTP</option>
-          <option>Horeca</option>
-          <option data-fr="Commerce" data-en="Sales">Commerce</option>
+          <option>Direction Générale &amp; C-Level</option>
+          <option>Direction Industrielle &amp; Opérations</option>
+          <option>RH Industrie</option>
+          <option>Finance Industrie (DAF)</option>
+          <option>Management de Transition</option>
+          <option>Autre profil industriel</option>
         </select>
         <select class="fsel" name="pays">
           <option value="" data-fr="Pays recherché" data-en="Target country">Pays recherché</option>
@@ -2586,19 +2669,17 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
   <div class="foot-links-wrap">
     <div class="foot-col">
       <div class="foot-col-title" data-fr="Services" data-en="Services">Services</div>
-      <a href="#" onclick="go('home');return false;" data-fr="Cadres & Dirigeants" data-en="Executives">Cadres & Dirigeants</a>
-      <a href="#" onclick="go('home');return false;" data-fr="Tech & IT" data-en="Tech & IT">Tech & IT</a>
-      <a href="#" onclick="go('home');return false;" data-fr="Start-up & Scale-up" data-en="Start-up">Start-up & Scale-up</a>
-      <a href="#" onclick="go('home');return false;" data-fr="Banque & Finance" data-en="Banking">Banque & Finance</a>
-      <a href="#" onclick="go('home');return false;" data-fr="Industrie & BTP" data-en="Industry">Industrie & BTP</a>
-      <a href="#" onclick="go('home');return false;">Horeca</a>
+      <a href="#" onclick="go('s-cadres');return false;">Direction Générale &amp; C-Level</a>
+      <a href="#" onclick="go('s-industrie');return false;">Direction Industrielle</a>
+      <a href="#" onclick="go('s-industrie');return false;">RH &amp; Fonctions Support</a>
+      <a href="#" onclick="go('s-industrie');return false;">Management de Transition</a>
     </div>
     <div class="foot-col">
       <div class="foot-col-title" data-fr="Navigation" data-en="Navigation">Navigation</div>
       <a href="#" onclick="go('jobs');return false;" data-fr="Offres d'emploi" data-en="Job offers">Offres d'emploi</a>
       <a href="#" onclick="go('actu');return false;" data-fr="Actualités" data-en="News">Actualités</a>
       <a href="#" onclick="go('newsletter');return false;" data-fr="Newsletter" data-en="Newsletter">Newsletter</a>
-      <a href="#" onclick="go('coaching');return false;" style="color:var(--gold);">Boostez votre carrière</a>
+
       <a href="#" onclick="go('cv');return false;" data-fr="Déposer un CV" data-en="Submit CV">Déposer un CV</a>
       <a href="#" onclick="go('contact');return false;" data-fr="Contact" data-en="Contact">Contact</a>
     </div>
@@ -2612,7 +2693,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     </div>
   </div>
   <div class="foot-right">
-    <div style="font-size:11px;color:var(--mid);margin-bottom:.25rem;">France · Luxembourg · Belgique · Suisse</div>
+    <div style="font-size:11px;color:var(--mid);margin-bottom:.25rem;">France · Executive Search Industrie</div>
     <div class="foot-copy">© 2026 Alveris — Tous droits réservés</div>
   </div>
 </footer>
@@ -2703,22 +2784,15 @@ function filterJobs(cat,btn){
 // badge : 'Urgent' (orange) | 'Nouveau' (vert) | 'Exclusif' (gris)
 // ════════════════════════════════════════════════════════════
 const jobs=[
-  {title:{fr:'Directeur Administratif & Financier',en:'Chief Financial Officer'},co:{fr:'Scale-up Fintech — Luxembourg',en:'Fintech Scale-up — Luxembourg'},badge:'Urgent',tags:['Luxembourg','CDI','80–120K€','Hybride'],desc:{fr:'Fintech en forte croissance (série B) recherche son DAF pour structurer la fonction financière, piloter la trésorerie, les reportings investisseurs et accompagner l\'expansion européenne en cours. Vous serez le bras droit du CEO sur tous les sujets financiers et stratégiques.',en:'Fast-growing fintech (Series B) seeks its CFO to structure the finance function, manage treasury, investor reporting and support ongoing European expansion. You will be the CEO\'s right hand on all financial and strategic matters.'},profile:{fr:['Bac+5 finance, école de commerce ou université','7 à 12 ans d\'expérience dont au moins 3 en start-up / scale-up','Anglais courant obligatoire, luxembourgeois apprécié','Expérience levée de fonds ou introduction en bourse appréciée','Maîtrise des outils SaaS de finance (NetSuite, Pennylane...)'],en:['Master\'s degree in finance, business school or university','7 to 12 years experience including at least 3 in start-up/scale-up','Fluent English required, Luxembourgish appreciated','Fundraising or IPO experience a plus','Proficiency in SaaS finance tools (NetSuite, Pennylane...)']},offer:{fr:['Package attractif 80–120K€ + BSPCE','Télétravail partiel (2–3 jours/semaine)','Environnement international, équipe de 80 personnes','Forte autonomie et impact direct sur la stratégie'],en:['Attractive package €80–120K + stock options','Partial remote (2–3 days/week)','International environment, team of 80','High autonomy and direct strategic impact']}},
-  {title:{fr:'Lead Developer Full-Stack',en:'Lead Full-Stack Developer'},co:{fr:'Start-up SaaS B2B — Paris / Remote',en:'B2B SaaS Start-up — Paris / Remote'},badge:'Nouveau',tags:['France','CDI','60–80K€','Full remote'],desc:{fr:'Start-up SaaS B2B en hypercroissance recrute son Lead Developer pour piloter une équipe de 5 développeurs et architecturer les nouvelles fonctionnalités produit. Vous serez responsable de la qualité du code, des revues techniques et de la roadmap technique.',en:'Hypergrowth B2B SaaS start-up recruits its Lead Developer to manage a team of 5 developers and architect new product features. You will be responsible for code quality, technical reviews and the technical roadmap.'},profile:{fr:['5+ ans d\'expérience en développement full-stack','Maîtrise de React, Node.js, TypeScript, PostgreSQL','Expérience AWS ou GCP requise','Expérience management d\'équipe technique (même junior)','Intérêt marqué pour le produit et l\'UX'],en:['5+ years full-stack development experience','Proficiency in React, Node.js, TypeScript, PostgreSQL','AWS or GCP experience required','Experience managing a technical team (even junior)','Strong interest in product and UX']},offer:{fr:['Salaire 60–80K€ selon profil','Full remote, quelques déplacements Paris par trimestre','BSPCE dès l\'arrivée','Équipement MacBook Pro + budget formation 2K€/an'],en:['Salary €60–80K depending on profile','Fully remote, occasional Paris trips per quarter','Stock options from day one','MacBook Pro + €2K/year training budget']}},
-  {title:{fr:'Responsable Compliance / AML',en:'Head of Compliance / AML'},co:{fr:'Asset Manager — Luxembourg',en:'Asset Manager — Luxembourg'},badge:'Exclusif',tags:['Luxembourg','CDI','70–95K€','Présentiel partiel'],desc:{fr:'Asset manager luxembourgeois (15 Md€ sous gestion) recrute son Responsable Compliance pour piloter l\'ensemble du dispositif LCB-FT, assurer la conformité réglementaire CSSF et superviser les équipes KYC/AML.',en:'Luxembourg asset manager (€15bn AUM) recruits its Head of Compliance to manage the entire AML framework, ensure CSSF regulatory compliance and supervise KYC/AML teams.'},profile:{fr:['5–8 ans d\'expérience en compliance, secteur financier luxembourgeois','Connaissance approfondie de la réglementation CSSF','Maîtrise du cadre AML/LCB-FT européen','Français et anglais courants, allemand apprécié','Certification CAMS ou équivalente appréciée'],en:['5–8 years compliance experience, Luxembourg financial sector','In-depth knowledge of CSSF regulation','Mastery of the European AML framework','Fluent French and English, German appreciated','CAMS certification or equivalent a plus']},offer:{fr:['Rémunération 70–95K€ + bonus','Télétravail 1–2 jours/semaine','Environnement multiculturel, équipe de 45 personnes','Véhicule de fonction ou indemnité transport'],en:['Compensation €70–95K + bonus','Remote 1–2 days/week','Multicultural environment, team of 45','Company car or transport allowance']}},
-  {title:{fr:'Head of Sales — France',en:'Head of Sales — France'},co:{fr:'Scale-up Marketplace — Paris',en:'Marketplace Scale-up — Paris'},badge:'Nouveau',tags:['France','CDI','80–100K€ + variable','Hybride'],desc:{fr:'Marketplace B2B en série A recrute son premier Head of Sales pour structurer la force commerciale, définir la stratégie go-to-market France et piloter une équipe de 4 Account Executives.',en:'Series A B2B marketplace recruits its first Head of Sales to structure the sales force, define the France go-to-market strategy and manage a team of 4 Account Executives.'},profile:{fr:['7+ ans d\'expérience commerciale B2B, dont 2+ en management','Expérience start-up ou scale-up requise','Maîtrise des cycles de vente complexes et des méthodes MEDDIC / SPIN','Anglais professionnel courant','CRM Salesforce ou HubSpot maîtrisé'],en:['7+ years B2B sales experience including 2+ in management','Start-up or scale-up experience required','Mastery of complex sales cycles and MEDDIC/SPIN methods','Professional English','Salesforce or HubSpot CRM proficiency']},offer:{fr:['Package 80–100K€ fixe + variable non plafonné','BSPCE significatifs','Hybride Paris 3j/semaine','Carte Swile + mutuelle premium'],en:['Package €80–100K base + uncapped variable','Significant stock options','Hybrid Paris 3 days/week','Meal card + premium health insurance']}},
-  {title:{fr:'Technicien de Maintenance Industrielle',en:'Industrial Maintenance Technician'},co:{fr:'Groupe industriel — Région Est, France',en:'Industrial Group — Eastern France'},badge:'Urgent',tags:['France','CDI','35–45K€','Sur site'],desc:{fr:'Groupe industriel de premier plan (agroalimentaire) recrute un technicien de maintenance électromécanique pour assurer la maintenance préventive et curative des lignes de production sur son site de production en région Est.',en:'Leading industrial group (food processing) recruits an electromechanical maintenance technician to carry out preventive and corrective maintenance of production lines at its Eastern France production site.'},profile:{fr:['Bac Pro ou BTS maintenance industrielle / électromécanique','3 à 7 ans d\'expérience en maintenance industrielle','Habilitations électriques BR/BC souhaitées','Connaissance des automates Siemens / Schneider appréciée','Astreintes ponctuelles acceptées'],en:['Vocational or technical degree in industrial maintenance','3 to 7 years industrial maintenance experience','Electrical certifications preferred','Siemens/Schneider PLC knowledge appreciated','Occasional on-call duties accepted']},offer:{fr:['CDI 35–45K€ selon profil','13ème mois + prime d\'astreinte','Mutuelle familiale prise en charge à 80%','Formation continue et évolution de carrière'],en:['Permanent contract €35–45K depending on profile','13th month + on-call bonus','Family health insurance 80% covered','Continuous training and career development']}},
-  {title:{fr:'Directeur des Ressources Humaines',en:'Chief Human Resources Officer'},co:{fr:'ETI — Belgique / Luxembourg',en:'Mid-size company — Belgium / Luxembourg'},badge:'Exclusif',tags:['Belgique','CDI','90–120K€','Hybride'],desc:{fr:'ETI multi-sites (600 collaborateurs, 3 pays) recrute son DRH pour piloter la politique RH globale, accompagner la transformation organisationnelle liée à des acquisitions récentes et développer la marque employeur dans un contexte de croissance externe.',en:'Multi-site mid-size company (600 employees, 3 countries) recruits its CHRO to steer global HR policy, support organisational transformation linked to recent acquisitions and develop the employer brand in an M&A context.'},profile:{fr:['10+ ans d\'expérience RH dont 3+ en direction RH','Expérience multi-sites et/ou internationale','Anglais et français courants, néerlandais apprécié','Expérience gestion du changement et M&A','Maîtrise du droit social belge et/ou luxembourgeois'],en:['10+ years HR experience including 3+ as HR director','Multi-site and/or international experience','Fluent English and French, Dutch appreciated','Change management and M&A experience','Belgian and/or Luxembourg employment law knowledge']},offer:{fr:['Package 90–120K€ + bonus','Voiture de fonction','Hybride (siège en Belgique)','Comité de direction, impact stratégique direct'],en:['Package €90–120K + bonus','Company car','Hybrid (HQ in Belgium)','Executive committee, direct strategic impact']}},
-  {title:{fr:'Directeur de Restaurant Gastronomique',en:'Fine Dining Restaurant Manager'},co:{fr:'Groupe Hôtelier — Luxembourg-Ville',en:'Hotel Group — Luxembourg City'},badge:'Nouveau',tags:['Luxembourg','CDI','55–70K€','Sur site'],desc:{fr:'Groupe hôtelier 5 étoiles recrute son Directeur de Restaurant pour piloter l\'exploitation d\'un restaurant gastronomique 50 couverts, manager une équipe de 15 personnes (cuisine + salle) et développer l\'expérience client dans un environnement international exigeant.',en:'5-star hotel group recruits Restaurant Director to manage a 50-cover fine dining restaurant, lead a team of 15 (kitchen + front of house) and develop the guest experience in a demanding international environment.'},profile:{fr:['5+ ans en gestion de restaurant gastronomique ou bistronomique','Expérience management d\'équipe (10+ personnes)','Maîtrise des coûts F&B et gestion budgétaire','Anglais courant — français et/ou luxembourgeois apprécié','Excellente présentation et sens du service haut de gamme'],en:['5+ years fine or bistronomy restaurant management','Team management experience (10+ people)','F&B cost control and budget management','Fluent English — French and/or Luxembourgish appreciated','Excellent presentation and high-end service standards']},offer:{fr:['Rémunération 55–70K€ selon profil','Logement de fonction possible','Environnement 5 étoiles, clientèle internationale','Avantages groupe (mutuelle, tickets restaurant, formation)'],en:['Salary €55–70K depending on profile','Company accommodation possible','5-star environment, international clientele','Group benefits (health insurance, meal vouchers, training)']}},
-  {title:{fr:'Chief Technology Officer (CTO)',en:'Chief Technology Officer (CTO)'},co:{fr:'Start-up HealthTech — Paris / Remote',en:'HealthTech Start-up — Paris / Remote'},badge:'Urgent',tags:['France','CDI','90–130K€ + BSPCE','Hybride'],desc:{fr:'Start-up HealthTech (série A, 8M€ levés, 30 collaborateurs) recrute son CTO pour définir et porter la vision technique, recruter et manager une équipe de 8 ingénieurs, et co-construire la roadmap produit avec les cofondateurs. Poste clé au sein du Codir.',en:'HealthTech start-up (Series A, €8M raised, 30 employees) recruits CTO to define and own technical vision, recruit and manage a team of 8 engineers, and co-build the product roadmap with co-founders. Key Codir position.'},profile:{fr:['8+ ans d\'expérience en développement logiciel','3+ ans en leadership technique (CTO, VP Eng, Tech Lead)','Stack : Python / React / AWS ou équivalent','Expérience start-up ou scale-up obligatoire','Capacité à recruter, attirer et fidéliser des talents tech'],en:['8+ years software development experience','3+ years technical leadership (CTO, VP Eng, Tech Lead)','Stack: Python / React / AWS or equivalent','Start-up or scale-up experience required','Ability to recruit, attract and retain tech talent']},offer:{fr:['Package 90–130K€ selon profil + BSPCE significatifs','Hybride Paris 2j/semaine — full remote possible','Impact direct sur le produit et la stratégie','Équipe tech de haut niveau, environnement stimulant'],en:['Package €90–130K + significant stock options','Hybrid Paris 2 days/week — full remote possible','Direct product and strategy impact','High-level tech team, stimulating environment']}},
-  {title:{fr:'Data Engineer / Architecte Data',en:'Data Engineer / Data Architect'},co:{fr:'Scale-up InsurTech — Bruxelles / Remote',en:'InsurTech Scale-up — Brussels / Remote'},badge:'Nouveau',tags:['Belgique','CDI','65–85K€','Full remote'],desc:{fr:'Scale-up InsurTech (120 collaborateurs, présence BE/LU/FR) recrute son Data Engineer pour concevoir et maintenir les pipelines de données, structurer le datalake, garantir la qualité des données et accompagner les équipes métier dans leurs analyses prédictives.',en:'InsurTech scale-up (120 employees, BE/LU/FR presence) recruits Data Engineer to design and maintain data pipelines, structure the datalake, ensure data quality and support business teams in predictive analysis.'},profile:{fr:['3+ ans en Data Engineering ou architecture de données','Maîtrise de Python, SQL, Spark ou équivalent','Expérience cloud AWS/GCP/Azure','Connaissance des outils dbt, Airflow, Snowflake appréciée','Anglais professionnel — français ou néerlandais un plus'],en:['3+ years Data Engineering or data architecture','Proficiency in Python, SQL, Spark or equivalent','AWS/GCP/Azure cloud experience','Knowledge of dbt, Airflow, Snowflake a plus','Professional English — French or Dutch a plus']},offer:{fr:['Rémunération 65–85K€ selon profil','Full remote avec déplacements ponctuels Bruxelles','Équipement top + budget formation 2K€/an','Stock options / participation'],en:['Salary €65–85K depending on profile','Fully remote with occasional Brussels trips','Top equipment + €2K/year training budget','Stock options / profit sharing']}},
-  {title:{fr:'Responsable Fund Administration',en:'Head of Fund Administration'},co:{fr:'Banque Dépositaire — Luxembourg',en:'Depositary Bank — Luxembourg'},badge:'Exclusif',tags:['Luxembourg','CDI','75–95K€','Hybride'],desc:{fr:'Banque dépositaire luxembourgeoise (top 10 Place) recrute son Responsable Fund Administration pour superviser le calcul NAV de 40+ fonds UCITS et AIFMD, manager une équipe de 6 analystes et assurer la qualité de la relation client institutionnelle.',en:'Top-10 Luxembourg depositary bank recruits Head of Fund Administration to oversee NAV calculation for 40+ UCITS and AIFMD funds, manage a team of 6 analysts and ensure institutional client relationship quality.'},profile:{fr:['5+ ans en Fund Administration ou Transfer Agency','Connaissance approfondie UCITS / AIFMD / CSSF','Expérience management d\'équipe','Français et anglais courants, allemand apprécié','Maîtrise des outils TA (Multifonds, Advent, Geneva)'],en:['5+ years Fund Administration or Transfer Agency','In-depth UCITS / AIFMD / CSSF knowledge','Team management experience','Fluent French and English, German appreciated','TA tools proficiency (Multifonds, Advent, Geneva)']},offer:{fr:['Package 75–95K€ + bonus annuel','Télétravail 2 jours/semaine','Voiture de fonction ou indemnité kilométrique','Plan de développement et formation CSSF'],en:['Package €75–95K + annual bonus','Remote 2 days/week','Company car or mileage allowance','Development plan and CSSF training']}},
-  {title:{fr:'Responsable HSE — Site Industriel',en:'HSE Manager — Industrial Site'},co:{fr:'Groupe Chimique — Nord-Est France',en:'Chemical Group — North-East France'},badge:'Urgent',tags:['France','CDI','48–62K€','Sur site'],desc:{fr:'Groupe chimique industriel (site SEVESO seuil bas, 180 collaborateurs) recrute son Responsable HSE pour déployer la politique sécurité-santé-environnement, piloter les audits réglementaires DREAL/ISO, et animer la culture sécurité sur l\'ensemble du site.',en:'Industrial chemical group (low-threshold SEVESO site, 180 employees) recruits HSE Manager to deploy health, safety and environmental policy, lead DREAL/ISO regulatory audits and drive safety culture across the site.'},profile:{fr:['Bac+5 HSE, génie des procédés ou équivalent','3+ ans en HSE industriel, idéalement secteur chimique ou pharma','Connaissance réglementation ICPE / SEVESO','Capacité à animer et former des équipes terrain','Permis B + véhicule'],en:['Master HSE, process engineering or equivalent','3+ years industrial HSE, ideally chemical or pharma','ICPE/SEVESO regulation knowledge','Ability to train and engage field teams','Driving licence + vehicle']},offer:{fr:['CDI 48–62K€ selon profil','13ème mois + participation','Mutuelle famille prise en charge 80%','Évolution vers poste de Directeur HSE Groupe'],en:['Permanent contract €48–62K depending on profile','13th month + profit sharing','Family health insurance 80% covered','Path to Group HSE Director role']}},
-  {title:{fr:'Directeur Marketing & Communication',en:'Marketing & Communications Director'},co:{fr:'Groupe Retail — Paris / Belgique',en:'Retail Group — Paris / Belgium'},badge:'Nouveau',tags:['France','CDI','85–110K€','Hybride'],desc:{fr:'Groupe retail franco-belge (180M€ CA, 30 enseignes) recrute son Directeur Marketing pour définir la stratégie de marque et d\'expérience client, piloter les campagnes 360° (digital, print, événementiel), et manager une équipe créative de 8 personnes.',en:'Franco-Belgian retail group (€180M revenue, 30 stores) recruits Marketing Director to define brand and customer experience strategy, drive 360° campaigns (digital, print, events) and manage a creative team of 8.'},profile:{fr:['8+ ans en direction marketing, idéalement retail ou grande consommation','Expérience omnicanale (digital, CRM, retail media)','Management d\'équipe créative','Anglais et français courants — néerlandais apprécié','Connaissance des marchés France et Benelux'],en:['8+ years marketing leadership, ideally retail or FMCG','Omnichannel experience (digital, CRM, retail media)','Creative team management','Fluent English and French — Dutch appreciated','Knowledge of France and Benelux markets']},offer:{fr:['Package 85–110K€ + bonus sur objectifs','Voiture de fonction','Tickets restaurant + mutuelle premium','Mobilité Benelux selon projets'],en:['Package €85–110K + performance bonus','Company car','Meal vouchers + premium health insurance','Benelux mobility as needed']}},
-  {title:{fr:'Auditeur Interne Senior — Banque',en:'Senior Internal Auditor — Banking'},co:{fr:'Banque Privée Internationale — Luxembourg',en:'International Private Bank — Luxembourg'},badge:'Urgent',tags:['Luxembourg','CDI','65–85K€','Hybride'],desc:{fr:'Banque privée internationale (top 15 de la Place luxembourgeoise, 2 Md€ d\'actifs sous gestion) recrute un Auditeur Interne Senior pour mener des missions d\'audit sur les activités Wealth Management, conformité réglementaire et opérations, et restituer les conclusions au Comité d\'Audit et à la Direction Générale.',en:'Top-15 Luxembourg private bank (€2bn AUM) recruits Senior Internal Auditor to lead audit engagements on Wealth Management, regulatory compliance and operations, reporting findings to the Audit Committee and Executive Management.'},profile:{fr:['5+ ans en audit interne ou externe, secteur financier','Connaissance du cadre réglementaire CSSF et de la gestion de fortune','Certification CIA ou ACCA appréciée','Français et anglais courants, allemand un plus','Rigueur analytique et excellente communication écrite'],en:['5+ years internal or external audit, financial sector','Knowledge of CSSF regulatory framework and wealth management','CIA or ACCA certification a plus','Fluent French and English, German a plus','Analytical rigour and excellent written communication']},offer:{fr:['Rémunération 65–85K€ + bonus','Télétravail 2 jours/semaine','Formation continue (IIA, CSSF)','Forte visibilité direction générale'],en:['Salary €65–85K + bonus','Remote 2 days/week','Continuous training (IIA, CSSF)','High executive management visibility']}},
-  {title:{fr:'Ingénieur Travaux — Génie Civil',en:'Site Engineer — Civil Engineering'},co:{fr:'Groupe BTP — Grand Est & Luxembourg',en:'Construction Group — Grand Est & Luxembourg'},badge:'Nouveau',tags:['France · LU','CDI','42–58K€','Terrain'],desc:{fr:'Groupe BTP régional solide (350 collaborateurs, chantiers France-Luxembourg) recrute un Ingénieur Travaux pour piloter en autonomie des chantiers de génie civil : VRD, terrassement, ouvrages d\'art. Déplacements fréquents en zone frontalière Moselle-Luxembourg.',en:'Solid regional construction group (350 employees, France-Luxembourg projects) recruits Site Engineer to independently manage civil engineering projects: road works, earthworks, structures. Frequent travel in the Moselle-Luxembourg border area.'},profile:{fr:['Bac+5 génie civil ou TP (école d\'ingénieur ou master)','2 à 5 ans d\'expérience en travaux génie civil','Maîtrise des techniques VRD et/ou ouvrages d\'art','Permis B obligatoire — mobilité Grand Est / Luxembourg','Rigueur, autonomie et sens de l\'organisation'],en:['Master civil engineering or public works','2 to 5 years civil engineering site experience','VRD and/or structural works expertise','Driving licence required — Grand Est / Luxembourg mobility','Rigour, autonomy and organisational skills']},offer:{fr:['CDI 42–58K€ selon profil','Véhicule de fonction + carte carburant','13ème mois + prime de résultat chantier','Perspectives d\'évolution vers conducteur de travaux'],en:['Permanent contract €42–58K depending on profile','Company car + fuel card','13th month + project performance bonus','Path to senior site manager']}},
-  {title:{fr:'Revenue Manager — Hôtellerie Luxe',en:'Revenue Manager — Luxury Hotels'},co:{fr:'Groupe Hôtelier 5★ — Luxembourg & Bruxelles',en:'5★ Hotel Group — Luxembourg & Brussels'},badge:'Exclusif',tags:['Luxembourg','CDI','50–65K€','Hybride'],desc:{fr:'Groupe hôtelier haut de gamme (4 établissements 5★ au Luxembourg et Bruxelles, 400 chambres au total) recrute son Revenue Manager pour optimiser le RevPAR sur l\'ensemble du portefeuille, piloter la stratégie tarifaire dynamique et coordonner les canaux OTA et de distribution directe.',en:'High-end hotel group (4 five-star properties in Luxembourg and Brussels, 400 rooms total) recruits Revenue Manager to optimise RevPAR across the portfolio, drive dynamic pricing strategy and coordinate OTA and direct booking channels.'},profile:{fr:['3+ ans en Revenue Management hôtelier, idéalement luxe','Maîtrise des outils RMS (IDeaS, Duetto ou équivalent)','Connaissance du marché LU/Benelux appréciée','Anglais et français courants — néerlandais un plus','Sens analytique et aisance avec les KPI hôteliers (RevPAR, ADR, Occ%)'],en:['3+ years hotel Revenue Management, ideally luxury','RMS proficiency (IDeaS, Duetto or equivalent)','Knowledge of LU/Benelux market appreciated','Fluent English and French — Dutch a plus','Analytical mindset and hotel KPI proficiency (RevPAR, ADR, Occ%)']},offer:{fr:['Package 50–65K€ selon expérience','Télétravail partiel (2j/sem)','Avantages groupe (tarifs hôteliers, restauration)','Évolution vers Director of Revenue Management'],en:['Package €50–65K depending on experience','Partial remote (2 days/week)','Group benefits (hotel rates, dining)','Path to Director of Revenue Management']}},
-  {title:{fr:'Directeur Commercial — Retail Premium',en:'Commercial Director — Premium Retail'},co:{fr:'Enseigne Retail Haut de Gamme — Paris',en:'Premium Retail Brand — Paris'},badge:'Nouveau',tags:['France','CDI','75–95K€ + variable','Hybride'],desc:{fr:'Enseigne retail haut de gamme (30 boutiques France, CA 45M€) recrute son Directeur Commercial pour piloter le développement des ventes, manager 6 responsables régionaux, structurer la stratégie omnicanale et accompagner l\'ouverture de 5 nouvelles boutiques.',en:'Premium retail brand (30 French boutiques, €45M revenue) recruits Commercial Director to drive sales development, manage 6 regional managers, structure omnichannel strategy and support 5 new store openings.'},profile:{fr:['8+ ans en direction commerciale retail ou distribution','Expérience management d\'équipes commerciales (5+ personnes)','Maîtrise des indicateurs retail (KPI, UPT, PM, conversion)','Sens du produit haut de gamme et de l\'expérience client','Anglais courant apprécié'],en:['8+ years retail or distribution commercial leadership','Sales team management experience (5+ people)','Retail KPI proficiency (UPT, PM, conversion)','High-end product and customer experience mindset','Fluent English appreciated']},offer:{fr:['Package 75–95K€ fixe + variable sur objectifs','Voiture de fonction','Avantages collaborateur (remises boutiques, mutuelle premium)','Plan de développement et mobilité internationale'],en:['Package €75–95K base + performance bonus','Company car','Employee benefits (store discounts, premium health cover)','Development plan and international mobility']}}
+  {title:{fr:"Directeur Général — Industrie Métallurgique",en:"General Manager — Metallurgical Industry"},co:{fr:"Groupe industriel ETI — France (Grand Est)",en:"Industrial SME Group — France (Grand Est)"},badge:"Exclusif",tags:["France","CDI","130–160K€","Sur site"],desc:{fr:"ETI industrielle (250 personnes, 3 sites de production) recrute son Directeur Général pour piloter la stratégie, la performance opérationnelle et le développement commercial. Profil ingénieur expérimenté, multi-sites exigé.",en:"Industrial SME (250 people, 3 production sites) seeks General Manager to lead strategy, operational performance and commercial development."},profile:{fr:["Ingénieur + formation management","10+ ans de direction générale ou direction industrielle","Expérience multi-sites en industrie lourde ou métallurgie","Maîtrise du P&L, LEAN, développement commercial","Profil fédérateur, orienté résultats"],en:["Engineer + management qualification","10+ years general or industrial management","Multi-site experience in heavy industry","P&L, LEAN, commercial development skills","Results-oriented profile"]},offer:{fr:["Package 130–160K€ selon profil","Véhicule de fonction + intéressement","Statut cadre dirigeant","Projet de développement ambitieux"],en:["Package €130–160K","Company car + profit sharing","Executive status","Ambitious development project"]}},
+  {title:{fr:"COO / EVP Operations — Groupe Industriel",en:"COO / EVP Operations — Industrial Group"},co:{fr:"Groupe industriel coté — France",en:"Listed industrial group — France"},badge:"Exclusif",tags:["France","CDI","160–220K€","Comex"],desc:{fr:"Groupe industriel coté (800M€ CA, 4 000 personnes, présence Europe et Asie) recrute son COO / EVP Operations pour piloter la stratégie industrielle groupe, l'excellence opérationnelle et la transformation. Membre du comité exécutif.",en:"Listed industrial group (800M€ revenue, 4,000 people) recruits COO/EVP Operations to lead group industrial strategy and transformation. Executive committee member."},profile:{fr:["Grande École d'Ingénieurs (Mines, Ponts, Centrale)","15+ ans en direction industrielle ou opérations groupe","Expérience comex confirmée","Multi-sites internationaux — minimum 3 pays","Bilingue français/anglais"],en:["Top Engineering School","15+ years industrial or group operations","Confirmed executive committee experience","International multi-site","Bilingual French/English"]},offer:{fr:["Package 160–220K€ (fixe + variable + LTIP)","Voiture de fonction haut de gamme","Plan d'actions ou LTIP groupe","Comité exécutif — exposition directe au Board"],en:["Package €160–220K (base + bonus + LTIP)","Premium company car","Group share plan or LTIP","Executive committee — direct Board exposure"]}},
+  {title:{fr:"Directeur d'Usine — Équipement Automobile",en:"Plant Manager — Automotive Equipment"},co:{fr:"Équipementier Tier 1 — France (Région Ouest)",en:"Tier 1 Automotive Supplier — France (Western Region)"},badge:"Urgent",tags:["France","CDI","90–115K€","Sur site"],desc:{fr:"Équipementier automobile de rang 1 (180 personnes, site certifié IATF, clients Stellantis/PSA/Renault) recrute son Directeur d'Usine. Profil LEAN confirmé, expérience IRP et P&L exigée.",en:"Tier 1 automotive supplier (180 people, IATF-certified site) recruits Plant Manager. Proven LEAN profile, IRP and P&L experience required."},profile:{fr:["Ingénieur production ou mécanique","7+ ans de direction de site industriel","Expérience IATF, LEAN, management IRP","Maîtrise du P&L et reporting groupe","Leadership terrain"],en:["Production or mechanical engineer","7+ years industrial site management","IATF, LEAN, IRP experience","P&L and group reporting skills","Hands-on leadership"]},offer:{fr:["Package 90–115K€ fixe + variable","13ème mois + intéressement","Voiture de fonction","Perspectives évolution groupe"],en:["Package €90–115K base + bonus","13th month + profit sharing","Company car","Group advancement opportunities"]}},
+  {title:{fr:"Directeur des Opérations — Pharma CDMO",en:"Operations Director — Pharma CDMO"},co:{fr:"Sous-traitant pharmaceutique — France (Rhône-Alpes)",en:"Pharmaceutical CDMO — France (Rhône-Alpes)"},badge:"Nouveau",tags:["France","CDI","100–130K€","Hybride"],desc:{fr:"CDMO pharmaceutique (2 sites, 400 personnes) recrute son Directeur des Opérations pour piloter la performance des sites, coordonner production, qualité et maintenance, et accompagner la croissance.",en:"Pharmaceutical CDMO (2 sites, 400 people) recruits Operations Director to drive site performance and coordinate production, quality and maintenance."},profile:{fr:["Ingénieur + expérience pharma confirmée","8+ ans en direction opérationnelle multi-sites","ISO 14001 / ISO 45001 maîtrisée","Expérience gestion IRP et P&L","Anglais opérationnel"],en:["Engineer + proven pharma experience","8+ years multi-site operations","ISO 14001 / ISO 45001 mastery","IRP and P&L experience","Operational English"]},offer:{fr:["Package 100–130K€ selon profil","Intéressement + participation","Télétravail partiel possible","Comité de direction"],en:["Package €100–130K","Profit sharing","Partial remote possible","Executive committee"]}},
+  {title:{fr:"DRH Groupe — ETI Industrielle",en:"Group CHRO — Industrial SME"},co:{fr:"ETI industrielle multi-sites — France (Grand Est)",en:"Multi-site industrial SME — France (Grand Est)"},badge:"Exclusif",tags:["France","CDI","90–115K€","Hybride"],desc:{fr:"ETI industrielle (700 collaborateurs, 5 sites) recrute son DRH Groupe pour piloter la politique RH, les relations sociales (IRP, CSSCT), la GPEC et accompagner la transformation dans un contexte de croissance externe.",en:"Industrial SME (700 employees, 5 sites) recruits Group CHRO to lead HR policy, social relations and organisational transformation."},profile:{fr:["Master RH ou droit social","8+ ans en DRH, idéalement industrie multi-sites","Expérience solide en relations sociales","Connaissance des enjeux GPEC, formation, QVCT","Profil opérationnel et stratégique"],en:["HR or labour law master","8+ years as CHRO, ideally multi-site industry","Strong social relations experience","GPEC, training, wellbeing expertise","Operational and strategic profile"]},offer:{fr:["Package 90–115K€ fixe + variable","Télétravail 2j/semaine","Intéressement + mutuelle premium","Comité de direction"],en:["Package €90–115K base + bonus","Remote 2 days/week","Profit sharing + premium health insurance","Executive committee"]}},
+  {title:{fr:"Directeur Industriel — Fonderie & Métallurgie",en:"Industrial Director — Foundry & Metallurgy"},co:{fr:"Groupe fonderie — France (Région Nord)",en:"Foundry Group — France (Northern Region)"},badge:"Urgent",tags:["France","CDI","95–120K€","Sur site"],desc:{fr:"Groupe fonderie (3 sites, aciers spéciaux, 320 personnes) recrute son Directeur Industriel pour piloter l'excellence opérationnelle groupe, coordonner les plans CAPEX et améliorer la performance des sites.",en:"Foundry group (3 sites, special steels, 320 people) recruits Industrial Director to drive group operational excellence and site performance."},profile:{fr:["Ingénieur métallurgie ou génie industriel","10+ ans en direction industrielle","Connaissance des aciers spéciaux ou fonderie","Expérience multi-sites, excellence opérationnelle","Maîtrise du LEAN, VSM, CAPEX"],en:["Metallurgy or industrial engineer","10+ years industrial management","Special steels or foundry knowledge","Multi-site operational excellence","LEAN, VSM, CAPEX mastery"]},offer:{fr:["Package 95–120K€ selon expérience","Intéressement + véhicule de fonction","Statut cadre dirigeant","Projet de modernisation industrielle"],en:["Package €95–120K","Profit sharing + company car","Executive status","Industrial modernisation project"]}},
+  {title:{fr:"Directeur d'Usine — Mission de Transition",en:"Plant Manager — Interim Mission"},co:{fr:"Site industriel en redressement — France (Grand Est)",en:"Industrial turnaround site — France (Grand Est)"},badge:"Transition",tags:["France","Transition","TJM selon profil","Sur site"],desc:{fr:"Site industriel (150 personnes, secteur métallurgique) en phase de redressement recherche un Directeur d'Usine en mission de transition 9 à 12 mois. Profil LEAN confirmé, disponibilité rapide requise.",en:"Industrial site (150 people, metallurgical sector) in turnaround phase seeks Plant Manager for 9-12 month interim mission. Proven LEAN profile, rapid availability required."},profile:{fr:["Directeur d'Usine confirmé, profil LEAN","Expérience redressement ou transformation de site","Disponible rapidement (moins de 2 semaines)","Gestion de crise, IRP, P&L","Mobilité Grand Est"],en:["Confirmed Plant Manager, LEAN profile","Site turnaround experience","Rapidly available (within 2 weeks)","Crisis management, IRP, P&L","Grand Est mobility"]},offer:{fr:["TJM selon profil et expérience","Mission 9 à 12 mois renouvelable","Prise en charge déplacements","Impact direct"],en:["Day rate based on profile","9 to 12 month mission","Travel expenses covered","Direct impact"]}},
+  {title:{fr:"DAF — ETI Industrielle",en:"CFO — Industrial SME"},co:{fr:"ETI industrie de précision — France (Auvergne-Rhône-Alpes)",en:"Precision industry SME — France (Auvergne-Rhône-Alpes)"},badge:"Nouveau",tags:["France","CDI","80–105K€","Hybride"],desc:{fr:"ETI industrie de précision (180 collaborateurs, CA 35M€) recrute son DAF pour piloter la fonction financière, le contrôle de gestion industriel et accompagner la croissance externe.",en:"Precision industry SME (180 employees, 35M€ revenue) recruits CFO to lead financial function and support external growth."},profile:{fr:["Bac+5 finance ou gestion","6+ ans en DAF ou contrôleur de gestion industriel","Maîtrise du contrôle de gestion industriel","Expérience croissance externe appréciée","Rigueur et autonomie"],en:["Master finance or management","6+ years as CFO or industrial controller","Industrial management control expertise","External growth experience a plus","Rigour and autonomy"]},offer:{fr:["Package 80–105K€ selon profil","Intéressement aux résultats","Télétravail partiel","Rôle clé comité de direction"],en:["Package €80–105K","Profit sharing","Partial remote","Key executive committee role"]}},
+  {title:{fr:"Responsable de Production — Agroalimentaire",en:"Production Manager — Food Industry"},co:{fr:"Groupe agroalimentaire — France (Grand Ouest)",en:"Food group — France (Western France)"},badge:"Urgent",tags:["France","CDI","55–70K€","Sur site"],desc:{fr:"Groupe agroalimentaire (site 300 personnes, certifié IFS) recrute son Responsable de Production pour piloter 3 lignes de fabrication et déployer le plan LEAN.",en:"Food group (300-person site, IFS certified) recruits Production Manager to manage 3 production lines and deploy LEAN plan."},profile:{fr:["Ingénieur agroalimentaire","5+ ans en responsable de production","Expérience IFS / BRC appréciée","Management terrain confirmé","LEAN, amélioration continue"],en:["Food industry engineer","5+ years production management","IFS/BRC experience a plus","Confirmed hands-on management","LEAN, continuous improvement"]},offer:{fr:["CDI 55–70K€ selon profil","13ème mois + prime annuelle","Mutuelle famille + tickets restaurant","Évolution vers Directeur de site"],en:["Permanent contract €55–70K","13th month + annual bonus","Family insurance + meal vouchers","Path to Site Director"]}}
 ];
 
 let currentJobIndex = 0;
@@ -3261,13 +3335,14 @@ const totalActu = 3;
 let actuTimer = null;
 
 function goActu(idx) {
+  currentActu = idx;
   for(let i = 0; i < totalActu; i++){
     const s = document.getElementById('aslide-' + i);
     const d = document.getElementById('adot-' + i);
-    if(s) s.style.display = (i === idx) ? 'flex' : 'none';
+    if(s){ s.style.display = (i === idx) ? 'flex' : 'none'; }
     if(d) d.classList.toggle('on', i === idx);
   }
-    var counter = document.getElementById('actu-counter');
+  var counter = document.getElementById('actu-counter');
   if(counter) counter.textContent = (idx + 1) + ' / ' + totalActu;
   clearTimeout(actuTimer);
   actuTimer = setTimeout(nextActu, 6000);
@@ -3275,18 +3350,7 @@ function goActu(idx) {
 function nextActu(){ goActu((currentActu + 1) % totalActu); }
 function prevActu(){ goActu((currentActu + totalActu - 1) % totalActu); }
 document.addEventListener('DOMContentLoaded', function(){
-  var monthSlide = new Date().getMonth() % totalActu;
-  currentActu = monthSlide;
-  for(var i=0;i<totalActu;i++){
-    var s=document.getElementById('aslide-'+i);
-    if(s) s.style.display=(i===monthSlide)?'flex':'none';
-  }
-  document.querySelectorAll('[id^="adot-"]').forEach(function(d,i){
-    d.classList.toggle('on',i===monthSlide);
-  });
-  var counter=document.getElementById('actu-counter');
-  if(counter) counter.textContent=(monthSlide+1)+' / '+totalActu;
-  actuTimer=setTimeout(nextActu,6000);
+  goActu(0);
 });
 (function(){
   var slider=document.getElementById('actu-slider');

@@ -864,9 +864,10 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       <li>
         <a class="has-dd" href="#" data-fr="Services" data-en="Services">Services</a>
         <div class="dropdown">
-          <a onclick="go('s-industrie');return false;" href="#">Industrie &amp; Ingénierie</a>
           <a onclick="go('s-cadres');return false;" href="#">Direction Générale &amp; C-Level</a>
-          <a onclick="go('jobs');return false;" href="#">Offres &amp; Missions</a>
+          <a onclick="go('s-ops');return false;" href="#">Direction Industrielle &amp; Opérations</a>
+          <a onclick="go('s-rh');return false;" href="#">RH, Finance &amp; Fonctions Support</a>
+          <a onclick="go('s-transition');return false;" href="#">Management de Transition</a>
         </div>
       </li>
       <li><a id="nl-jobs" onclick="go('jobs');return false;" href="#" data-fr="Offres d'emploi" data-en="Jobs">Offres d'emploi</a></li>
@@ -891,8 +892,10 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 <!-- Mobile menu -->
 <div class="mobile-menu" id="mob-menu">
   <a href="#" onclick="go('home');closeMenu();return false;" data-fr="Accueil" data-en="Home">Accueil</a>
-  <a href="#" class="msub" onclick="go('s-industrie');closeMenu();return false;">— Industrie &amp; Ingénierie</a>
   <a href="#" class="msub" onclick="go('s-cadres');closeMenu();return false;">— Direction Générale &amp; C-Level</a>
+  <a href="#" class="msub" onclick="go('s-ops');closeMenu();return false;">— Direction Industrielle &amp; Opérations</a>
+  <a href="#" class="msub" onclick="go('s-rh');closeMenu();return false;">— RH, Finance &amp; Fonctions Support</a>
+  <a href="#" class="msub" onclick="go('s-transition');closeMenu();return false;">— Management de Transition</a>
   <a href="#" onclick="go('jobs');closeMenu();return false;">Offres d'emploi &amp; Missions</a>
   <a href="#" onclick="go('actu');closeMenu();return false;" data-fr="Actualités" data-en="News">Actualités</a>
   <a href="#" onclick="go('newsletter');closeMenu();return false;" data-fr="Newsletter" data-en="Newsletter">Newsletter</a>
@@ -1022,7 +1025,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       </div>
 
       <!-- CARD 2 : Direction Industrielle & Opérations -->
-      <div class="scard s-industrie" onclick="go('jobs')" style="cursor:pointer;" role="link" tabindex="0">
+      <div class="scard s-industrie" onclick="go('s-ops')" style="cursor:pointer;" role="link" tabindex="0">
         <div class="scard-ico">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="2" y="13" width="4" height="8" rx="1" stroke="currentColor" stroke-width="1.2"/>
@@ -1043,7 +1046,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       </div>
 
       <!-- CARD 3 : RH, Finance & Fonctions Support Industrie -->
-      <div class="scard" style="background:linear-gradient(135deg,#f0fdf4 0%,#dcfce7 50%,#f0fdf4 100%);--sector-accent:#16a34a;cursor:pointer;" onclick="go('s-cadres')" role="link" tabindex="0">
+      <div class="scard" style="background:linear-gradient(135deg,#f0fdf4 0%,#dcfce7 50%,#f0fdf4 100%);--sector-accent:#16a34a;cursor:pointer;" onclick="go('s-rh')" role="link" tabindex="0">
         <div class="scard-ico">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.2"/>
@@ -1064,7 +1067,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       </div>
 
       <!-- CARD 4 : Management de Transition -->
-      <div class="scard" style="background:linear-gradient(135deg,#faf5ff 0%,#ede9fe 50%,#faf5ff 100%);--sector-accent:#7c3aed;cursor:pointer;" onclick="go('jobs')" role="link" tabindex="0">
+      <div class="scard" style="background:linear-gradient(135deg,#faf5ff 0%,#ede9fe 50%,#faf5ff 100%);--sector-accent:#7c3aed;cursor:pointer;" onclick="go('s-transition')" role="link" tabindex="0">
         <div class="scard-ico">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
@@ -1602,6 +1605,159 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 
   <div class="sector-cta-bar" style="background:var(--white2);">
     <div><div class="sector-cta-text">Un recrutement industriel à mener ?</div><div style="font-size:12px;color:var(--mid);margin-top:.3rem;">Approche directe, confidentialité garantie.</div></div>
+    <button class="btn-dark" onclick="go('contact')">Déposer un besoin →</button>
+  </div>
+</div>
+
+<!-- ═══════ PAGE DIRECTION INDUSTRIELLE & OPÉRATIONS (orange/peach) ═══════ -->
+<div class="page" id="page-s-ops">
+  <div class="sector-hero">
+    <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=2400&q=95&auto=format&fit=crop" style="object-position:center 40%;" alt="Directeur d'usine sur site industriel">
+    <div class="sector-hero-overlay" style="background:linear-gradient(to top,rgba(67,20,7,.85) 0%,rgba(67,20,7,.3) 60%,transparent 100%);"></div>
+    <div class="sector-hero-content">
+      <div class="sector-badge" style="background:rgba(255,237,213,.18);color:#fed7aa;border:1px solid rgba(255,237,213,.35);">Industrie · Opérations</div>
+      <h1 class="sector-hero-title">Direction Industrielle<br>&amp; Opérations</h1>
+      <p class="sector-hero-sub">Directeurs d'usine, Plant Managers, Directeurs de production, Directeurs industriels groupe — tous secteurs industriels.</p>
+    </div>
+  </div>
+  <div class="sector-body" style="background:#fffaf5;">
+    <div class="sector-left">
+      <p class="sector-lead">Le pilotage opérationnel d'un site industriel ne supporte pas l'à-peu-près. Le bon profil change la trajectoire d'une usine.</p>
+      <p class="sector-text">Alveris recrute les profils opérationnels qui font tourner l'industrie française : Directeurs de site, Plant Managers, Directeurs de production, Directeurs industriels groupe. Chaque mission est confiée à une consultante qui connaît les codes du secteur, les enjeux de productivité, les normes (ISO, IATF, GMP) et les écosystèmes locaux.</p>
+      <p class="sector-text">Fonderie, métallurgie, automobile, équipement, pharma, CDMO, agroalimentaire, ingénierie de précision : nous intervenons sur l'ensemble du tissu industriel français, ETI comme grands groupes.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem;">
+        <span class="sector-pill" style="background:#fff7ed;color:#c2410c;">Directeur d'Usine</span>
+        <span class="sector-pill" style="background:#fff7ed;color:#c2410c;">Plant Manager</span>
+        <span class="sector-pill" style="background:#fff7ed;color:#c2410c;">Dir. Industriel</span>
+        <span class="sector-pill" style="background:#fff7ed;color:#c2410c;">Dir. Production</span>
+        <span class="sector-pill" style="background:#fff7ed;color:#c2410c;">Resp. Maintenance</span>
+        <span class="sector-pill" style="background:#fff7ed;color:#c2410c;">Resp. HSE</span>
+      </div>
+    </div>
+    <div class="sector-right" style="background:#fff7ed;">
+      <div class="sector-jobs-title">Missions en cours</div>
+      <div class="sector-job-item" onclick="openJob(1)">
+        <div class="sector-job-title">Directeur d'Usine — Équipement Automobile</div>
+        <div class="sector-job-meta"><span>ETI · Auvergne-Rhône-Alpes</span><span style="color:var(--gold);">110–135K€</span><span>CDI</span></div>
+      </div>
+      <div class="sector-job-item" onclick="openJob(4)">
+        <div class="sector-job-title">Directeur Industriel — Fonderie &amp; Métallurgie</div>
+        <div class="sector-job-meta"><span>Groupe industriel · Grand Est</span><span style="color:var(--gold);">120–150K€</span><span>CDI</span></div>
+      </div>
+      <div class="sector-job-item" onclick="openJob(7)">
+        <div class="sector-job-title">Responsable Production — Agroalimentaire</div>
+        <div class="sector-job-meta"><span>ETI · Bretagne</span><span style="color:var(--gold);">75–95K€</span><span>CDI</span></div>
+      </div>
+      <div style="margin-top:1.5rem;padding:1.25rem;background:var(--white);border-radius:4px;border-left:3px solid #c2410c;">
+        <div style="font-size:12px;font-weight:500;margin-bottom:.4rem;">Notre méthode Opérations</div>
+        <div style="font-size:11px;color:var(--mid);line-height:1.7;">Visite de site · Compréhension des KPI industriels · Sourcing direct sur écosystème local · Profils qualifiés sous 10 jours · Suivi 6 mois post-prise de poste</div>
+      </div>
+    </div>
+  </div>
+  <div class="sector-cta-bar" style="background:#fffaf5;">
+    <div><div class="sector-cta-text">Un poste opérationnel à pourvoir ?</div><div style="font-size:12px;color:var(--mid);margin-top:.3rem;">Approche directe, expertise terrain, confidentialité garantie.</div></div>
+    <button class="btn-dark" onclick="go('contact')">Déposer un besoin →</button>
+  </div>
+</div>
+
+<!-- ═══════ PAGE RH, FINANCE & FONCTIONS SUPPORT (vert/menthe) ═══════ -->
+<div class="page" id="page-s-rh">
+  <div class="sector-hero">
+    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=2400&q=95&auto=format&fit=crop" style="object-position:center 35%;" alt="DRH et DAF en réunion stratégique">
+    <div class="sector-hero-overlay" style="background:linear-gradient(to top,rgba(20,83,45,.85) 0%,rgba(20,83,45,.3) 60%,transparent 100%);"></div>
+    <div class="sector-hero-content">
+      <div class="sector-badge" style="background:rgba(220,252,231,.2);color:#bbf7d0;border:1px solid rgba(220,252,231,.35);">RH · Finance · Support</div>
+      <h1 class="sector-hero-title">RH, Finance<br>&amp; Fonctions Support</h1>
+      <p class="sector-hero-sub">DRH de groupe, DAF industrie, Directeurs Achats, Supply Chain, Qualité — les fonctions qui structurent la performance industrielle.</p>
+    </div>
+  </div>
+  <div class="sector-body" style="background:#f7fdf9;">
+    <div class="sector-left">
+      <p class="sector-lead">Les fonctions support sont la colonne vertébrale d'un groupe industriel. Recruter le bon profil, c'est sécuriser plusieurs années de structuration.</p>
+      <p class="sector-text">Alveris accompagne les ETI et groupes industriels sur le recrutement de leurs profils fonctionnels stratégiques : DRH multi-sites, DAF industrie, Directeurs Achats, Directeurs Supply Chain, Directeurs Qualité, Responsables HSE. Notre approche conjugue chasse de tête ciblée et compréhension des enjeux fonctionnels propres à l'industrie (relations sociales, contrôle de gestion industriel, achats stratégiques).</p>
+      <p class="sector-text">Profils français et internationaux, ETI familiales comme groupes cotés. Nous intervenons sur toute la France métropolitaine.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem;">
+        <span class="sector-pill" style="background:#f0fdf4;color:#16a34a;">DRH Groupe</span>
+        <span class="sector-pill" style="background:#f0fdf4;color:#16a34a;">RRH Site</span>
+        <span class="sector-pill" style="background:#f0fdf4;color:#16a34a;">DAF Industrie</span>
+        <span class="sector-pill" style="background:#f0fdf4;color:#16a34a;">Dir. Achats</span>
+        <span class="sector-pill" style="background:#f0fdf4;color:#16a34a;">Dir. Supply Chain</span>
+        <span class="sector-pill" style="background:#f0fdf4;color:#16a34a;">Dir. Qualité</span>
+      </div>
+    </div>
+    <div class="sector-right" style="background:#f0fdf4;">
+      <div class="sector-jobs-title">Missions en cours</div>
+      <div class="sector-job-item" onclick="openJob(3)">
+        <div class="sector-job-title">DRH — Groupe Industriel Multi-Sites</div>
+        <div class="sector-job-meta"><span>Groupe coté · Île-de-France</span><span style="color:var(--gold);">100–125K€</span><span>CDI</span></div>
+      </div>
+      <div class="sector-job-item" onclick="openJob(6)">
+        <div class="sector-job-title">DAF — ETI Industrielle</div>
+        <div class="sector-job-meta"><span>ETI familiale · Hauts-de-France</span><span style="color:var(--gold);">95–120K€</span><span>CDI</span></div>
+      </div>
+      <div class="sector-job-item" onclick="go('contact')">
+        <div class="sector-job-title">Directeur Supply Chain — Pharma</div>
+        <div class="sector-job-meta"><span>Groupe industriel · Auvergne-Rhône-Alpes</span><span style="color:var(--gold);">110–140K€</span><span>CDI</span></div>
+      </div>
+      <div style="margin-top:1.5rem;padding:1.25rem;background:var(--white);border-radius:4px;border-left:3px solid #16a34a;">
+        <div style="font-size:12px;font-weight:500;margin-bottom:.4rem;">Notre méthode Fonctions Support</div>
+        <div style="font-size:11px;color:var(--mid);line-height:1.7;">Briefing stratégique · Cartographie des profils du marché · Approche directe confidentielle · Évaluation des compétences techniques et comportementales · Suivi 6 mois post-prise de poste</div>
+      </div>
+    </div>
+  </div>
+  <div class="sector-cta-bar" style="background:#f7fdf9;">
+    <div><div class="sector-cta-text">Un profil fonctionnel à recruter ?</div><div style="font-size:12px;color:var(--mid);margin-top:.3rem;">Approche directe, confidentialité garantie, expertise industrie.</div></div>
+    <button class="btn-dark" onclick="go('contact')">Déposer un besoin →</button>
+  </div>
+</div>
+
+<!-- ═══════ PAGE MANAGEMENT DE TRANSITION (violet/lavande) ═══════ -->
+<div class="page" id="page-s-transition">
+  <div class="sector-hero">
+    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=2400&q=95&auto=format&fit=crop" style="object-position:center 40%;" alt="Manager de transition en briefing opérationnel">
+    <div class="sector-hero-overlay" style="background:linear-gradient(to top,rgba(59,7,100,.85) 0%,rgba(59,7,100,.3) 60%,transparent 100%);"></div>
+    <div class="sector-hero-content">
+      <div class="sector-badge" style="background:rgba(237,233,254,.18);color:#ddd6fe;border:1px solid rgba(237,233,254,.35);">Mission courte · 6 à 18 mois</div>
+      <h1 class="sector-hero-title">Management<br>de Transition</h1>
+      <p class="sector-hero-sub">Directeurs opérationnels disponibles rapidement pour mission courte : redressement de site, démarrage de production, remplacement urgent.</p>
+    </div>
+  </div>
+  <div class="sector-body" style="background:#faf7ff;">
+    <div class="sector-left">
+      <p class="sector-lead">Quand l'urgence opérationnelle ne peut pas attendre 4 mois de recrutement, le management de transition apporte une réponse immédiate.</p>
+      <p class="sector-text">Alveris place des dirigeants opérationnels expérimentés sur des missions de 6 à 18 mois dans l'industrie : redressement de site en difficulté, démarrage d'une nouvelle ligne de production, remplacement d'un directeur d'usine, accompagnement post-acquisition, transformation industrielle. Profils opérationnels disponibles sous 2 à 3 semaines.</p>
+      <p class="sector-text">Notre vivier de managers de transition couvre toute la France industrielle. Tarification au forfait journalier, engagement sur résultats, transmission organisée en fin de mission.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem;">
+        <span class="sector-pill" style="background:#faf5ff;color:#7c3aed;">Transition</span>
+        <span class="sector-pill" style="background:#faf5ff;color:#7c3aed;">Redressement</span>
+        <span class="sector-pill" style="background:#faf5ff;color:#7c3aed;">Dir. Usine</span>
+        <span class="sector-pill" style="background:#faf5ff;color:#7c3aed;">Démarrage</span>
+        <span class="sector-pill" style="background:#faf5ff;color:#7c3aed;">Mission 6–18 mois</span>
+        <span class="sector-pill" style="background:#faf5ff;color:#7c3aed;">Post-acquisition</span>
+      </div>
+    </div>
+    <div class="sector-right" style="background:#faf5ff;">
+      <div class="sector-jobs-title">Missions de transition</div>
+      <div class="sector-job-item" onclick="openJob(5)">
+        <div class="sector-job-title">Directeur d'Usine — Mission de Transition</div>
+        <div class="sector-job-meta"><span>ETI · PACA</span><span style="color:var(--gold);">1 200–1 500€/jour</span><span>12 mois</span></div>
+      </div>
+      <div class="sector-job-item" onclick="go('contact')">
+        <div class="sector-job-title">Plant Manager — Démarrage d'unité Pharma</div>
+        <div class="sector-job-meta"><span>Groupe industriel · Centre-Val de Loire</span><span style="color:var(--gold);">1 400–1 800€/jour</span><span>9 mois</span></div>
+      </div>
+      <div class="sector-job-item" onclick="go('contact')">
+        <div class="sector-job-title">Directeur Industriel — Redressement Fonderie</div>
+        <div class="sector-job-meta"><span>Groupe coté · Bourgogne-Franche-Comté</span><span style="color:var(--gold);">1 500–2 000€/jour</span><span>18 mois</span></div>
+      </div>
+      <div style="margin-top:1.5rem;padding:1.25rem;background:var(--white);border-radius:4px;border-left:3px solid #7c3aed;">
+        <div style="font-size:12px;font-weight:500;margin-bottom:.4rem;">Notre méthode Transition</div>
+        <div style="font-size:11px;color:var(--mid);line-height:1.7;">Diagnostic flash · Profils disponibles sous 2–3 semaines · Forfait journalier · Engagement sur résultats · Reporting hebdomadaire · Transmission organisée en fin de mission</div>
+      </div>
+    </div>
+  </div>
+  <div class="sector-cta-bar" style="background:#faf7ff;">
+    <div><div class="sector-cta-text">Une mission de transition urgente ?</div><div style="font-size:12px;color:var(--mid);margin-top:.3rem;">Profils disponibles sous 2 à 3 semaines, expertise industrie.</div></div>
     <button class="btn-dark" onclick="go('contact')">Déposer un besoin →</button>
   </div>
 </div>

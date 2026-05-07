@@ -1235,8 +1235,9 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 
     <div class="jobs-filters" style="margin-top:2rem;">
       <button class="filter-btn on" onclick="filterJobs('all',this)">Tous les postes</button>
-      <button class="filter-btn" onclick="filterJobs('cadres',this)">Direction &amp; C-Level</button>
-      <button class="filter-btn" onclick="filterJobs('industrie',this)">Direction Industrielle</button>
+      <button class="filter-btn" onclick="filterJobs('cadres',this)">Direction Générale &amp; C-Level</button>
+      <button class="filter-btn" onclick="filterJobs('industrie',this)">Direction Industrielle &amp; Opérations</button>
+      <button class="filter-btn" onclick="filterJobs('rh',this)">RH, Finance &amp; Fonctions Support</button>
       <button class="filter-btn" onclick="filterJobs('transition',this)">Management de Transition</button>
     </div>
 
@@ -1258,7 +1259,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       </div>
 
       <!-- JOB 1b : COO / EVP Operations - Groupe industriel comex -->
-      <div class="job-card" data-cat="cadres" onclick="openJob(8)">
+      <div class="job-card" data-cat="cadres" onclick="openJob(1)">
         <span class="job-badge">Exclusif</span>
         <div class="job-title">COO / EVP Operations — Groupe Industriel</div>
         <div class="job-company">Groupe industriel côté — France</div>
@@ -1273,7 +1274,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       </div>
 
       <!-- JOB 2 : Directeur d'Usine - Automobile -->
-      <div class="job-card" data-cat="industrie" onclick="openJob(1)">
+      <div class="job-card" data-cat="industrie" onclick="openJob(2)">
         <span class="job-badge hot">Urgent</span>
         <div class="job-title">Directeur d'Usine — Équipement Automobile</div>
         <div class="job-company">Équipementier Tier 1 — France (Région Ouest)</div>
@@ -1288,7 +1289,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       </div>
 
       <!-- JOB 3 : COO / Directeur Opérations - Pharma CDMO -->
-      <div class="job-card" data-cat="cadres" onclick="openJob(2)">
+      <div class="job-card" data-cat="cadres" onclick="openJob(3)">
         <span class="job-badge">Nouveau</span>
         <div class="job-title">Directeur des Opérations — Pharma CDMO</div>
         <div class="job-company">Sous-traitant pharmaceutique — France (Rhône-Alpes)</div>
@@ -1303,7 +1304,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       </div>
 
       <!-- JOB 4 : DRH Industrie -->
-      <div class="job-card" data-cat="cadres" onclick="openJob(3)">
+      <div class="job-card" data-cat="rh" onclick="openJob(4)">
         <span class="job-badge">Exclusif</span>
         <div class="job-title">DRH — Groupe Industriel Multi-Sites</div>
         <div class="job-company">Groupe industriel — France (Île-de-France)</div>
@@ -1318,7 +1319,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       </div>
 
       <!-- JOB 5 : Directeur Industriel - Fonderie -->
-      <div class="job-card" data-cat="industrie" onclick="openJob(4)">
+      <div class="job-card" data-cat="industrie" onclick="openJob(5)">
         <span class="job-badge hot">Urgent</span>
         <div class="job-title">Directeur Industriel — Fonderie &amp; Métallurgie</div>
         <div class="job-company">Groupe fonderie — France (Région Nord)</div>
@@ -1333,7 +1334,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       </div>
 
       <!-- JOB 6 : Directeur d'Usine - Transition -->
-      <div class="job-card" data-cat="transition" onclick="openJob(5)">
+      <div class="job-card" data-cat="transition" onclick="openJob(6)">
         <span class="job-badge" style="background:#7c3aed;color:#fff;">Transition</span>
         <div class="job-title">Directeur d'Usine — Mission de Transition</div>
         <div class="job-company">Site industriel en redressement — France (Grand Est)</div>
@@ -1348,7 +1349,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       </div>
 
       <!-- JOB 7 : DAF Industrie -->
-      <div class="job-card" data-cat="cadres" onclick="openJob(6)">
+      <div class="job-card" data-cat="rh" onclick="openJob(7)">
         <span class="job-badge">Nouveau</span>
         <div class="job-title">DAF — ETI Industrielle</div>
         <div class="job-company">ETI industrie de précision — France (Auvergne-Rhône-Alpes)</div>
@@ -1363,7 +1364,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       </div>
 
       <!-- JOB 8 : Ingénieur Production Senior -->
-      <div class="job-card" data-cat="industrie" onclick="openJob(7)">
+      <div class="job-card" data-cat="industrie" onclick="openJob(8)">
         <span class="job-badge hot">Urgent</span>
         <div class="job-title">Responsable Production — Agroalimentaire</div>
         <div class="job-company">Groupe agroalimentaire — France (Grand Ouest)</div>
@@ -1374,6 +1375,51 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
           <span class="job-tag">Sur site</span>
         </div>
         <div class="job-desc">Groupe agroalimentaire (site 300 personnes) recrute son Responsable de Production pour piloter 3 lignes, animer les équipes opérationnelles et déployer le plan LEAN.</div>
+        <div class="job-cta">Voir l'offre</div>
+      </div>
+
+      <!-- JOB 9 : Directeur Supply Chain — Pharma -->
+      <div class="job-card" data-cat="rh" onclick="openJob(9)">
+        <span class="job-badge">Exclusif</span>
+        <div class="job-title">Directeur Supply Chain — Pharma</div>
+        <div class="job-company">Groupe pharmaceutique — France (Auvergne-Rhône-Alpes)</div>
+        <div class="job-meta">
+          <span class="job-tag gold">France</span>
+          <span class="job-tag">CDI</span>
+          <span class="job-tag">110–140K€</span>
+          <span class="job-tag">Hybride</span>
+        </div>
+        <div class="job-desc">Groupe pharmaceutique (3 sites de production, 1 200 personnes) recrute son Directeur Supply Chain pour piloter S&amp;OP, achats stratégiques et flux internationaux. Profil ingénieur, anglais courant exigé.</div>
+        <div class="job-cta">Voir l'offre</div>
+      </div>
+
+      <!-- JOB 10 : Plant Manager Transition — Démarrage Pharma -->
+      <div class="job-card" data-cat="transition" onclick="openJob(10)">
+        <span class="job-badge" style="background:#7c3aed;color:#fff;">Transition</span>
+        <div class="job-title">Plant Manager — Démarrage d'unité Pharma</div>
+        <div class="job-company">Groupe industriel — France (Centre-Val de Loire)</div>
+        <div class="job-meta">
+          <span class="job-tag gold">France</span>
+          <span class="job-tag">Transition</span>
+          <span class="job-tag">1 400–1 800€/jour</span>
+          <span class="job-tag">9 mois</span>
+        </div>
+        <div class="job-desc">Mission de transition pour piloter le démarrage d'une nouvelle unité de production pharmaceutique (BPF / GMP). Recrutement, qualification, validation et montée en cadence. Disponibilité sous 3 semaines.</div>
+        <div class="job-cta">Voir l'offre</div>
+      </div>
+
+      <!-- JOB 11 : Directeur Industriel Transition — Redressement Fonderie -->
+      <div class="job-card" data-cat="transition" onclick="openJob(11)">
+        <span class="job-badge" style="background:#7c3aed;color:#fff;">Transition</span>
+        <div class="job-title">Directeur Industriel — Redressement Fonderie</div>
+        <div class="job-company">Groupe coté — France (Bourgogne-Franche-Comté)</div>
+        <div class="job-meta">
+          <span class="job-tag gold">France</span>
+          <span class="job-tag">Transition</span>
+          <span class="job-tag">1 500–2 000€/jour</span>
+          <span class="job-tag">18 mois</span>
+        </div>
+        <div class="job-desc">Site fonderie en difficulté (220 personnes) cherche un Directeur Industriel de transition pour piloter le plan de redressement, restructurer l'organisation et restaurer les marges. Profil LEAN confirmé.</div>
         <div class="job-cta">Voir l'offre</div>
       </div>
 
@@ -1455,57 +1501,6 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       </div>
     </div>
   </div>
-  <div class="
-
-  <!-- PROFILS C-LEVEL SIMPLE -->
-  <div style="background:var(--white);padding:2rem 1.5rem;">
-    <p class="slabel">Profils recrutés</p>
-    <h2 class="stitle">Les profils <em>C-Level industrie.</em></h2>
-    <div style="display:flex;flex-direction:column;gap:1px;background:var(--light);margin-top:2rem;">
-
-      <div style="background:linear-gradient(135deg,#eef1ff,#e0e7ff);padding:1.75rem;border-left:4px solid #4f46e5;">
-        <div style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#4f46e5;margin-bottom:.5rem;">Direction Générale</div>
-        <div style="font-family:var(--serif);font-size:1.1rem;color:#1e1b4b;margin-bottom:.4rem;">PDG, DG, CEO</div>
-        <div style="font-size:12px;color:#3730a3;line-height:1.6;">ETI et groupes industriels. P&amp;L, multi-sites, développement stratégique.</div>
-        <div style="margin-top:.75rem;padding:.75rem 1rem;background:white;border-radius:3px;border:1px solid #c7d2fe;">
-          <div style="font-size:13px;font-weight:500;color:#1e1b4b;">DG — ETI Métallurgique · Grand Est</div>
-          <div style="font-size:12px;color:var(--gold);margin-top:.2rem;">130–160K€</div>
-        </div>
-      </div>
-
-      <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);padding:1.75rem;border-left:4px solid #c2410c;">
-        <div style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#c2410c;margin-bottom:.5rem;">Direction des Opérations</div>
-        <div style="font-family:var(--serif);font-size:1.1rem;color:#431407;margin-bottom:.4rem;">COO, EVP Operations</div>
-        <div style="font-size:12px;color:#9a3412;line-height:1.6;">Membres de comex, multi-sites. Transformation industrielle.</div>
-        <div style="margin-top:.75rem;padding:.75rem 1rem;background:white;border-radius:3px;border:1px solid #fed7aa;">
-          <div style="font-size:13px;font-weight:500;color:#431407;">COO / EVP Operations · Groupe coté · France</div>
-          <div style="font-size:12px;color:var(--gold);margin-top:.2rem;">160–220K€</div>
-        </div>
-      </div>
-
-      <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);padding:1.75rem;border-left:4px solid #16a34a;">
-        <div style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#16a34a;margin-bottom:.5rem;">Direction RH &amp; Finance</div>
-        <div style="font-family:var(--serif);font-size:1.1rem;color:#14532d;margin-bottom:.4rem;">DRH Groupe, DAF Industrie</div>
-        <div style="font-size:12px;color:#166534;line-height:1.6;">Multi-sites, relations sociales, contrôle de gestion industriel.</div>
-        <div style="margin-top:.75rem;padding:.75rem 1rem;background:white;border-radius:3px;border:1px solid #bbf7d0;">
-          <div style="font-size:13px;font-weight:500;color:#14532d;">DRH Groupe — ETI Industrielle · Grand Est</div>
-          <div style="font-size:12px;color:var(--gold);margin-top:.2rem;">90–115K€</div>
-        </div>
-      </div>
-
-      <div style="background:linear-gradient(135deg,#faf5ff,#ede9fe);padding:1.75rem;border-left:4px solid #7c3aed;">
-        <div style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#7c3aed;margin-bottom:.5rem;">Direction Industrielle</div>
-        <div style="font-family:var(--serif);font-size:1.1rem;color:#3b0764;margin-bottom:.4rem;">Dir. des Opérations, Dir. Industriel Groupe</div>
-        <div style="font-size:12px;color:#6d28d9;line-height:1.6;">Coordination multi-sites, excellence opérationnelle. Ingénieurs grande école.</div>
-        <div style="margin-top:.75rem;padding:.75rem 1rem;background:white;border-radius:3px;border:1px solid #ddd6fe;">
-          <div style="font-size:13px;font-weight:500;color:#3b0764;">Dir. Opérations — Pharma CDMO · Rhône-Alpes</div>
-          <div style="font-size:12px;color:var(--gold);margin-top:.2rem;">100–130K€</div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
   <div class="sector-cta-bar" style="background:var(--white2);">
     <div><div class="sector-cta-text">Un recrutement industriel à mener ?</div><div style="font-size:12px;color:var(--mid);margin-top:.3rem;">Approche directe, confidentialité garantie, expertise terrain.</div></div>
     <button class="btn-dark" onclick="go('contact')">Déposer un besoin →</button>
@@ -1636,15 +1631,15 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     </div>
     <div class="sector-right" style="background:#fff7ed;">
       <div class="sector-jobs-title">Missions en cours</div>
-      <div class="sector-job-item" onclick="openJob(1)">
+      <div class="sector-job-item" onclick="openJob(2)">
         <div class="sector-job-title">Directeur d'Usine — Équipement Automobile</div>
         <div class="sector-job-meta"><span>ETI · Auvergne-Rhône-Alpes</span><span style="color:var(--gold);">110–135K€</span><span>CDI</span></div>
       </div>
-      <div class="sector-job-item" onclick="openJob(4)">
+      <div class="sector-job-item" onclick="openJob(5)">
         <div class="sector-job-title">Directeur Industriel — Fonderie &amp; Métallurgie</div>
         <div class="sector-job-meta"><span>Groupe industriel · Grand Est</span><span style="color:var(--gold);">120–150K€</span><span>CDI</span></div>
       </div>
-      <div class="sector-job-item" onclick="openJob(7)">
+      <div class="sector-job-item" onclick="openJob(8)">
         <div class="sector-job-title">Responsable Production — Agroalimentaire</div>
         <div class="sector-job-meta"><span>ETI · Bretagne</span><span style="color:var(--gold);">75–95K€</span><span>CDI</span></div>
       </div>
@@ -1687,15 +1682,15 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     </div>
     <div class="sector-right" style="background:#f0fdf4;">
       <div class="sector-jobs-title">Missions en cours</div>
-      <div class="sector-job-item" onclick="openJob(3)">
+      <div class="sector-job-item" onclick="openJob(4)">
         <div class="sector-job-title">DRH — Groupe Industriel Multi-Sites</div>
         <div class="sector-job-meta"><span>Groupe coté · Île-de-France</span><span style="color:var(--gold);">100–125K€</span><span>CDI</span></div>
       </div>
-      <div class="sector-job-item" onclick="openJob(6)">
+      <div class="sector-job-item" onclick="openJob(7)">
         <div class="sector-job-title">DAF — ETI Industrielle</div>
         <div class="sector-job-meta"><span>ETI familiale · Hauts-de-France</span><span style="color:var(--gold);">95–120K€</span><span>CDI</span></div>
       </div>
-      <div class="sector-job-item" onclick="go('contact')">
+      <div class="sector-job-item" onclick="openJob(9)">
         <div class="sector-job-title">Directeur Supply Chain — Pharma</div>
         <div class="sector-job-meta"><span>Groupe industriel · Auvergne-Rhône-Alpes</span><span style="color:var(--gold);">110–140K€</span><span>CDI</span></div>
       </div>
@@ -1738,15 +1733,15 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     </div>
     <div class="sector-right" style="background:#faf5ff;">
       <div class="sector-jobs-title">Missions de transition</div>
-      <div class="sector-job-item" onclick="openJob(5)">
+      <div class="sector-job-item" onclick="openJob(6)">
         <div class="sector-job-title">Directeur d'Usine — Mission de Transition</div>
         <div class="sector-job-meta"><span>ETI · PACA</span><span style="color:var(--gold);">1 200–1 500€/jour</span><span>12 mois</span></div>
       </div>
-      <div class="sector-job-item" onclick="go('contact')">
+      <div class="sector-job-item" onclick="openJob(10)">
         <div class="sector-job-title">Plant Manager — Démarrage d'unité Pharma</div>
         <div class="sector-job-meta"><span>Groupe industriel · Centre-Val de Loire</span><span style="color:var(--gold);">1 400–1 800€/jour</span><span>9 mois</span></div>
       </div>
-      <div class="sector-job-item" onclick="go('contact')">
+      <div class="sector-job-item" onclick="openJob(11)">
         <div class="sector-job-title">Directeur Industriel — Redressement Fonderie</div>
         <div class="sector-job-meta"><span>Groupe coté · Bourgogne-Franche-Comté</span><span style="color:var(--gold);">1 500–2 000€/jour</span><span>18 mois</span></div>
       </div>
@@ -2837,7 +2832,10 @@ const jobs=[
   {title:{fr:"Directeur Industriel — Fonderie & Métallurgie",en:"Industrial Director — Foundry & Metallurgy"},co:{fr:"Groupe fonderie — France (Région Nord)",en:"Foundry Group — France (Northern Region)"},badge:"Urgent",tags:["France","CDI","95–120K€","Sur site"],desc:{fr:"Groupe fonderie (3 sites, aciers spéciaux, 320 personnes) recrute son Directeur Industriel pour piloter l'excellence opérationnelle groupe, coordonner les plans CAPEX et améliorer la performance des sites.",en:"Foundry group (3 sites, special steels, 320 people) recruits Industrial Director to drive group operational excellence and site performance."},profile:{fr:["Ingénieur métallurgie ou génie industriel","10+ ans en direction industrielle","Connaissance des aciers spéciaux ou fonderie","Expérience multi-sites, excellence opérationnelle","Maîtrise du LEAN, VSM, CAPEX"],en:["Metallurgy or industrial engineer","10+ years industrial management","Special steels or foundry knowledge","Multi-site operational excellence","LEAN, VSM, CAPEX mastery"]},offer:{fr:["Package 95–120K€ selon expérience","Intéressement + véhicule de fonction","Statut cadre dirigeant","Projet de modernisation industrielle"],en:["Package €95–120K","Profit sharing + company car","Executive status","Industrial modernisation project"]}},
   {title:{fr:"Directeur d'Usine — Mission de Transition",en:"Plant Manager — Interim Mission"},co:{fr:"Site industriel en redressement — France (Grand Est)",en:"Industrial turnaround site — France (Grand Est)"},badge:"Transition",tags:["France","Transition","TJM selon profil","Sur site"],desc:{fr:"Site industriel (150 personnes, secteur métallurgique) en phase de redressement recherche un Directeur d'Usine en mission de transition 9 à 12 mois. Profil LEAN confirmé, disponibilité rapide requise.",en:"Industrial site (150 people, metallurgical sector) in turnaround phase seeks Plant Manager for 9-12 month interim mission. Proven LEAN profile, rapid availability required."},profile:{fr:["Directeur d'Usine confirmé, profil LEAN","Expérience redressement ou transformation de site","Disponible rapidement (moins de 2 semaines)","Gestion de crise, IRP, P&L","Mobilité Grand Est"],en:["Confirmed Plant Manager, LEAN profile","Site turnaround experience","Rapidly available (within 2 weeks)","Crisis management, IRP, P&L","Grand Est mobility"]},offer:{fr:["TJM selon profil et expérience","Mission 9 à 12 mois renouvelable","Prise en charge déplacements","Impact direct"],en:["Day rate based on profile","9 to 12 month mission","Travel expenses covered","Direct impact"]}},
   {title:{fr:"DAF — ETI Industrielle",en:"CFO — Industrial SME"},co:{fr:"ETI industrie de précision — France (Auvergne-Rhône-Alpes)",en:"Precision industry SME — France (Auvergne-Rhône-Alpes)"},badge:"Nouveau",tags:["France","CDI","80–105K€","Hybride"],desc:{fr:"ETI industrie de précision (180 collaborateurs, CA 35M€) recrute son DAF pour piloter la fonction financière, le contrôle de gestion industriel et accompagner la croissance externe.",en:"Precision industry SME (180 employees, 35M€ revenue) recruits CFO to lead financial function and support external growth."},profile:{fr:["Bac+5 finance ou gestion","6+ ans en DAF ou contrôleur de gestion industriel","Maîtrise du contrôle de gestion industriel","Expérience croissance externe appréciée","Rigueur et autonomie"],en:["Master finance or management","6+ years as CFO or industrial controller","Industrial management control expertise","External growth experience a plus","Rigour and autonomy"]},offer:{fr:["Package 80–105K€ selon profil","Intéressement aux résultats","Télétravail partiel","Rôle clé comité de direction"],en:["Package €80–105K","Profit sharing","Partial remote","Key executive committee role"]}},
-  {title:{fr:"Responsable de Production — Agroalimentaire",en:"Production Manager — Food Industry"},co:{fr:"Groupe agroalimentaire — France (Grand Ouest)",en:"Food group — France (Western France)"},badge:"Urgent",tags:["France","CDI","55–70K€","Sur site"],desc:{fr:"Groupe agroalimentaire (site 300 personnes, certifié IFS) recrute son Responsable de Production pour piloter 3 lignes de fabrication et déployer le plan LEAN.",en:"Food group (300-person site, IFS certified) recruits Production Manager to manage 3 production lines and deploy LEAN plan."},profile:{fr:["Ingénieur agroalimentaire","5+ ans en responsable de production","Expérience IFS / BRC appréciée","Management terrain confirmé","LEAN, amélioration continue"],en:["Food industry engineer","5+ years production management","IFS/BRC experience a plus","Confirmed hands-on management","LEAN, continuous improvement"]},offer:{fr:["CDI 55–70K€ selon profil","13ème mois + prime annuelle","Mutuelle famille + tickets restaurant","Évolution vers Directeur de site"],en:["Permanent contract €55–70K","13th month + annual bonus","Family insurance + meal vouchers","Path to Site Director"]}}
+  {title:{fr:"Responsable de Production — Agroalimentaire",en:"Production Manager — Food Industry"},co:{fr:"Groupe agroalimentaire — France (Grand Ouest)",en:"Food group — France (Western France)"},badge:"Urgent",tags:["France","CDI","55–70K€","Sur site"],desc:{fr:"Groupe agroalimentaire (site 300 personnes, certifié IFS) recrute son Responsable de Production pour piloter 3 lignes de fabrication et déployer le plan LEAN.",en:"Food group (300-person site, IFS certified) recruits Production Manager to manage 3 production lines and deploy LEAN plan."},profile:{fr:["Ingénieur agroalimentaire","5+ ans en responsable de production","Expérience IFS / BRC appréciée","Management terrain confirmé","LEAN, amélioration continue"],en:["Food industry engineer","5+ years production management","IFS/BRC experience a plus","Confirmed hands-on management","LEAN, continuous improvement"]},offer:{fr:["CDI 55–70K€ selon profil","13ème mois + prime annuelle","Mutuelle famille + tickets restaurant","Évolution vers Directeur de site"],en:["Permanent contract €55–70K","13th month + annual bonus","Family insurance + meal vouchers","Path to Site Director"]}},
+  {title:{fr:"Directeur Supply Chain — Pharma",en:"Supply Chain Director — Pharma"},co:{fr:"Groupe pharmaceutique — France (Auvergne-Rhône-Alpes)",en:"Pharmaceutical group — France (Auvergne-Rhône-Alpes)"},badge:"Exclusif",tags:["France","CDI","110–140K€","Hybride"],desc:{fr:"Groupe pharmaceutique (3 sites de production, 1 200 personnes) recrute son Directeur Supply Chain pour piloter S&OP, achats stratégiques et flux internationaux. Profil ingénieur, anglais courant exigé.",en:"Pharmaceutical group (3 production sites, 1,200 people) recruits Supply Chain Director to lead S&OP, strategic procurement and international flows."},profile:{fr:["Ingénieur + Master Supply Chain","8+ ans en direction Supply Chain","Expérience pharma ou industrie réglementée","Maîtrise S&OP, achats, flux internationaux","Anglais courant"],en:["Engineer + Supply Chain Master","8+ years Supply Chain Director","Pharma or regulated industry experience","S&OP, procurement, international flows","Fluent English"]},offer:{fr:["Package 110–140K€ selon profil","Bonus annuel + intéressement","Télétravail 2j/semaine","Comité de direction"],en:["Package €110–140K","Annual bonus + profit sharing","Remote 2 days/week","Executive committee"]}},
+  {title:{fr:"Plant Manager — Démarrage d'unité Pharma",en:"Plant Manager — Pharma Unit Start-up"},co:{fr:"Groupe industriel — France (Centre-Val de Loire)",en:"Industrial group — France (Centre-Val de Loire)"},badge:"Transition",tags:["France","Transition","1 400–1 800€/jour","9 mois"],desc:{fr:"Mission de transition pour piloter le démarrage d'une nouvelle unité de production pharmaceutique (BPF / GMP). Recrutement, qualification des équipements, validation des process et montée en cadence. Disponibilité sous 3 semaines.",en:"Interim mission to lead the start-up of a new pharma production unit (GMP). Recruitment, equipment qualification, process validation and ramp-up. Availability within 3 weeks."},profile:{fr:["Plant Manager confirmé en pharma ou agroalimentaire","Expérience démarrage d'unité (greenfield)","Maîtrise BPF / GMP / qualification équipements","Disponibilité immédiate","Mobilité Centre-Val de Loire"],en:["Confirmed Plant Manager in pharma or food","Greenfield start-up experience","GMP / equipment qualification mastery","Immediate availability","Centre-Val de Loire mobility"]},offer:{fr:["TJM 1 400–1 800€ selon expérience","Mission 9 mois renouvelable","Frais de déplacement pris en charge","Impact direct sur lancement"],en:["Day rate €1,400–1,800","9 month renewable mission","Travel expenses covered","Direct impact on launch"]}},
+  {title:{fr:"Directeur Industriel — Redressement Fonderie",en:"Industrial Director — Foundry Turnaround"},co:{fr:"Groupe coté — France (Bourgogne-Franche-Comté)",en:"Listed group — France (Bourgogne-Franche-Comté)"},badge:"Transition",tags:["France","Transition","1 500–2 000€/jour","18 mois"],desc:{fr:"Site fonderie en difficulté (220 personnes) cherche un Directeur Industriel de transition pour piloter le plan de redressement, restructurer l'organisation et restaurer les marges. Profil LEAN confirmé, expérience IRP exigée.",en:"Foundry site in difficulty (220 people) seeks interim Industrial Director to lead turnaround plan, restructure organisation and restore margins. Confirmed LEAN profile."},profile:{fr:["Directeur Industriel ou Directeur d'Usine confirmé","Expérience redressement / restructuration","Maîtrise LEAN, gestion de crise, IRP","Connaissance fonderie ou métallurgie","Disponibilité sous 3 semaines"],en:["Confirmed Industrial or Plant Director","Turnaround / restructuring experience","LEAN, crisis management, IRP","Foundry or metallurgy knowledge","Available within 3 weeks"]},offer:{fr:["TJM 1 500–2 000€ selon profil","Mission 18 mois","Reporting direct au Comex","Frais de déplacement pris en charge"],en:["Day rate €1,500–2,000","18 month mission","Direct reporting to ExCo","Travel expenses covered"]}}
 ];
 
 let currentJobIndex = 0;

@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://alveris.fr/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://alveris.fr/"/>
@@ -12,67 +12,61 @@
   </url>
   <url>
     <loc>https://alveris.fr/#jobs</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://alveris.fr/#services</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://alveris.fr/#s-cadres</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alveris.fr/#s-startup</loc>
-    <lastmod>2026-04-26</lastmod>
+    <loc>https://alveris.fr/#s-ops</loc>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alveris.fr/#s-tech</loc>
-    <lastmod>2026-04-26</lastmod>
+    <loc>https://alveris.fr/#s-rh</loc>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alveris.fr/#s-finance</loc>
-    <lastmod>2026-04-26</lastmod>
+    <loc>https://alveris.fr/#s-transition</loc>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://alveris.fr/#s-industrie</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alveris.fr/#s-horeca</loc>
-    <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://alveris.fr/#actu</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://alveris.fr/#contact</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://alveris.fr/#cv</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

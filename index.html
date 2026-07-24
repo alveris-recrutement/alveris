@@ -386,25 +386,6 @@ nav{position:sticky;top:0;z-index:300;background:rgba(250,250,248,.96);backdrop-
 .modal-apply-btn{display:block;width:100%;padding:1rem;background:var(--black);color:var(--white);border:none;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;margin-top:1.5rem;transition:opacity .2s;border-radius:2px;}
 .modal-apply-btn:hover{opacity:.8;}
 
-/* ── TÉMOIGNAGES ── */
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
-.tcard{background:var(--white);padding:2rem;border-radius:var(--radius);border:1px solid var(--light);transition:border-color .2s,box-shadow .2s;}
-.tcard:hover{border-color:var(--gold);box-shadow:0 4px 20px rgba(0,0,0,.05);}
-.tcard-stars{display:flex;gap:3px;margin-bottom:1rem;}
-.star{color:var(--gold);font-size:14px;}
-.tcard-quote{font-family:var(--serif);font-size:1rem;font-style:italic;font-weight:300;line-height:1.7;color:var(--black);margin-bottom:1.5rem;position:relative;}
-.tcard-quote::before{content:'"';font-size:2.5rem;font-family:var(--serif);color:var(--gold);line-height:.5;display:block;margin-bottom:.75rem;font-style:normal;}
-.tcard-author{display:flex;align-items:center;gap:.85rem;border-top:1px solid var(--light);padding-top:1.25rem;}
-.tcard-avatar{width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0;background:var(--sand);}
-.tcard-initials{width:40px;height:40px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;color:var(--white);flex-shrink:0;letter-spacing:.05em;}
-.tcard-name{font-size:13px;font-weight:500;}
-.tcard-role{font-size:11px;color:var(--mid);}
-.tcard-source{font-size:10px;color:var(--mid);opacity:.6;margin-top:.2rem;}
-.rating-summary{display:flex;align-items:center;gap:1.5rem;margin-bottom:2rem;padding:1.5rem;background:var(--sand);border-radius:var(--radius);}
-.rating-big{font-family:var(--serif);font-size:3.5rem;font-weight:300;line-height:1;color:var(--black);}
-.rating-detail{display:flex;flex-direction:column;gap:.3rem;}
-.rating-stars-row{display:flex;align-items:center;gap:.5rem;font-size:12px;color:var(--mid);}
-
 /* ── À PROPOS ── */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;min-height:55vh;}
 .about-dark{background:var(--black);color:var(--white);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;}
@@ -709,33 +690,6 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
   .chat-toggle{width:52px;height:52px;}
   input,select,textarea{font-size:16px !important;}
 }
-
-/* SYSTEME AVIS */
-.review-btn{display:flex;align-items:center;gap:.6rem;padding:.75rem 1.5rem;background:var(--white);border:1px solid var(--light);font-size:12px;font-weight:500;letter-spacing:.08em;cursor:pointer;transition:all .2s;border-radius:var(--radius);color:var(--black);}
-.review-btn:hover{background:var(--black);color:var(--white);border-color:var(--black);}
-.review-modal-wrap{display:none;position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100%;background:rgba(10,10,10,.6);z-index:9999;align-items:center;justify-content:center;padding:1rem;}
-.review-modal-wrap.open{display:flex;}
-.review-modal{background:var(--white);border-radius:6px;padding:2.5rem;width:100%;max-width:480px;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.2);}
-.review-modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;cursor:pointer;color:var(--mid);font-size:18px;padding:.25rem;}
-.review-modal h3{font-family:var(--serif);font-size:1.5rem;font-weight:300;margin-bottom:.4rem;}
-.review-modal-sub{font-size:12px;color:var(--mid);margin-bottom:1.75rem;}
-.stars-input{display:flex;flex-direction:row-reverse;justify-content:flex-end;gap:.35rem;margin-bottom:1.5rem;}
-.stars-input input{display:none;}
-.stars-input label{font-size:2rem;color:var(--light);cursor:pointer;transition:color .15s;line-height:1;}
-.stars-input:hover label,.stars-input label:hover~label,.stars-input input:checked~label{color:var(--gold);}
-.review-note-label{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:.5rem;display:block;}
-.review-textarea{width:100%;min-height:90px;resize:vertical;padding:.85rem 1rem;font-size:13px;border:1px solid var(--light);border-radius:var(--radius);font-family:var(--sans);color:var(--black);background:var(--white2);box-sizing:border-box;}
-.review-textarea:focus{outline:none;border-color:var(--gold);}
-.review-fields-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:.75rem;}
-.review-submit{width:100%;margin-top:1.25rem;padding:.9rem;background:var(--black);color:var(--white);border:none;font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;border-radius:var(--radius);}
-.review-submit:hover{opacity:.82;}
-.review-success{display:none;text-align:center;padding:2rem 0;}
-.review-success-icon{font-size:2.5rem;margin-bottom:.75rem;color:var(--gold);}
-.review-success h4{font-family:var(--serif);font-size:1.4rem;font-weight:300;margin-bottom:.4rem;}
-.tcard-new{animation:fadeInUp .5s ease forwards;}
-@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:560px){.review-fields-row{grid-template-columns:1fr;}.review-modal{padding:1.75rem;}.stars-input label{font-size:1.75rem;}}
-
 /* ══ HERO PREMIUM SLIDER ══ */
 .hero-premium{position:relative;height:100vh;min-height:600px;overflow:hidden;}
 .hp-slide{position:absolute;inset:0;opacity:0;transition:opacity 1s cubic-bezier(.4,0,.2,1);pointer-events:none;}
@@ -1100,69 +1054,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     </div>
   </div>
 
-  <!-- TÉMOIGNAGES -->
-  <section class="section bg-sand" style="background:var(--sand);">
-    <p class="slabel" data-fr="Ils nous font confiance" data-en="They trust us">Ils nous font confiance</p>
-    <h2 class="stitle"><em data-fr="Ce que disent nos clients." data-en="What our clients say.">Ce que disent nos clients.</em></h2>
-    <div class="rating-summary">
-      <div class="rating-big">4,9</div>
-      <div class="rating-detail">
-        <div class="rating-stars-row">
-          <span class="star">★★★★★</span>
-          <span data-fr="Note moyenne sur 47 avis vérifiés" data-en="Average rating based on 47 verified reviews">Note moyenne sur 47 avis vérifiés</span>
-        </div>
-        <div style="font-size:11px;color:var(--mid);margin-top:.25rem;">Google · LinkedIn · Trustpilot</div>
-      </div>
-    </div>
-    <div class="testi-grid">
-      <div class="tcard">
-        <div class="tcard-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <div class="tcard-quote">Aurélie a trouvé notre Directeur d'Usine en approche directe en moins de trois semaines. Profil parfaitement calibré — ingénieur LEAN avec expérience IRP, opérationnel dès le premier mois. Efficacité et discrétion, c'est ce qu'on attend d'un vrai cabinet executive search industrie.</div>
-        <div class="tcard-author">
-          <img class="tcard-avatar" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=95&auto=format" alt="Marc D.">
-          <div>
-            <div class="tcard-name">Marc D.</div>
-            <div class="tcard-role">Directeur Général · Groupe Industriel · France</div>
-            <div class="tcard-source">✓ Avis Google vérifié</div>
-          </div>
-        </div>
-      </div>
-      <div class="tcard">
-        <div class="tcard-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <div class="tcard-quote">Nous avions un poste de DRH Groupe difficile à pourvoir depuis six mois. Alveris a cerné notre besoin en un entretien et présenté deux profils réellement adaptés à notre culture industrielle. La deuxième mission est déjà en cours.</div>
-        <div class="tcard-author">
-          <img class="tcard-avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=95&auto=format" alt="Sophie L.">
-          <div>
-            <div class="tcard-name">Sophie L.</div>
-            <div class="tcard-role">DRH · ETI Industrielle Multi-Sites · France</div>
-            <div class="tcard-source">✓ Avis LinkedIn vérifié</div>
-          </div>
-        </div>
-      </div>
-      <div class="tcard">
-        <div class="tcard-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <div class="tcard-quote">Ce qui distingue Alveris : une vraie connaissance du terrain industriel. Pas de profils génériques — des candidats qui ont réellement dirigé des sites en environnement difficile. Le niveau d'exigence est celui d'un vrai cabinet de chasse, pas d'une agence.</div>
-        <div class="tcard-author">
-          <img class="tcard-avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=95&auto=format" alt="Romain D.">
-          <div>
-            <div class="tcard-name">Romain D.</div>
-            <div class="tcard-role">Directeur Industriel · Groupe Métallurgique · France</div>
-            <div class="tcard-source">✓ Avis Trustpilot vérifié</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--light);">
-      <div style="font-size:12px;color:var(--mid);">Vous avez travaille avec Alveris ? Partagez votre experience.</div>
-      <button class="review-btn" onclick="go('avis')">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        Laisser un avis
-      </button>
-    </div>
-    <div id="new-reviews-container" style="margin-top:1.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;"></div>
-  </section>
-
-      <!-- ACTUALITÉS HOME — 3 articles -->
+  <!-- ACTUALITÉS HOME — 3 articles -->
   <section class="section" style="background:var(--white2);">
     <p class="slabel">Marché &amp; tendances</p>
     <h2 class="stitle"><em>Actualités RH</em> &amp; Industrie</h2>
@@ -1233,37 +1125,34 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 
     <div class="jobs-grid" id="jobs-grid">
 
-      <!-- JOB 1 : Directeur Général - Groupe industriel -->
-      <div class="job-card" data-cat="cadres" onclick="openJob(0)">
-        <span class="job-badge hot">Exclusif</span>
-        <div class="job-title">Directeur Général — Industrie Métallurgique</div>
-        <div class="job-company">Groupe industriel ETI — France (Grand Est)</div>
+      <div class="job-card" data-cat="industrie" onclick="openJob(0)">
+        <span class="job-badge new">Nouveau</span>
+        <div class="job-title">Directeur de Site — Énergie Nucléaire</div>
+        <div class="job-company">Exploitant nucléaire — France (Normandie)</div>
         <div class="job-meta">
           <span class="job-tag gold">France</span>
           <span class="job-tag">CDI</span>
-          <span class="job-tag">130–160K€</span>
+          <span class="job-tag">100–130K€</span>
           <span class="job-tag">Sur site</span>
         </div>
-        <div class="job-desc">ETI industrielle (250 personnes, 3 sites) recrute son Directeur Général pour piloter la stratégie, la performance opérationnelle et le développement commercial. Profil ingénieur, expérience multi-sites exigée.</div>
+        <div class="job-desc">Exploitant du secteur de l'énergie nucléaire (site de production, 450 personnes) recrute son Directeur de Site pour piloter la sûreté, la performance industrielle et les relations avec les autorités de contrôle. Profil ingénieur, habilitation nucléaire requise.</div>
         <div class="job-cta">Voir l'offre</div>
       </div>
 
-      <!-- JOB 1b : COO / EVP Operations - Groupe industriel comex -->
       <div class="job-card" data-cat="cadres" onclick="openJob(1)">
         <span class="job-badge">Exclusif</span>
-        <div class="job-title">COO / EVP Operations — Groupe Industriel</div>
-        <div class="job-company">Groupe industriel côté — France</div>
+        <div class="job-title">Directeur Général — Groupe Aéronautique &amp; MRO</div>
+        <div class="job-company">Groupe aéronautique &amp; MRO — France (Occitanie)</div>
         <div class="job-meta">
           <span class="job-tag gold">France</span>
           <span class="job-tag">CDI</span>
-          <span class="job-tag">160–220K€</span>
+          <span class="job-tag">150–190K€</span>
           <span class="job-tag">Comex</span>
         </div>
-        <div class="job-desc">Groupe industriel coté (800M€ CA, 4 000 personnes, présence internationale) recrute son COO / EVP Operations pour piloter la stratégie industrielle groupe, l'excellence opérationnelle et la transformation. Membre du comité exécutif.</div>
+        <div class="job-desc">Groupe aéronautique spécialisé en maintenance, réparation et révision (MRO, 3 sites, 1 100 personnes) recrute son Directeur Général pour piloter la stratégie, la relation avec les grands donneurs d'ordre et la performance opérationnelle. Membre du comité exécutif.</div>
         <div class="job-cta">Voir l'offre</div>
       </div>
 
-      <!-- JOB 2 : Directeur d'Usine - Automobile -->
       <div class="job-card" data-cat="industrie" onclick="openJob(2)">
         <span class="job-badge hot">Urgent</span>
         <div class="job-title">Directeur d'Usine — Équipement Automobile</div>
@@ -1278,9 +1167,8 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         <div class="job-cta">Voir l'offre</div>
       </div>
 
-      <!-- JOB 3 : COO / Directeur Opérations - Pharma CDMO -->
       <div class="job-card" data-cat="cadres" onclick="openJob(3)">
-        <span class="job-badge">Nouveau</span>
+        <span class="job-badge new">Nouveau</span>
         <div class="job-title">Directeur des Opérations — Pharma CDMO</div>
         <div class="job-company">Sous-traitant pharmaceutique — France (Rhône-Alpes)</div>
         <div class="job-meta">
@@ -1293,7 +1181,6 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         <div class="job-cta">Voir l'offre</div>
       </div>
 
-      <!-- JOB 4 : DRH Industrie -->
       <div class="job-card" data-cat="rh" onclick="openJob(4)">
         <span class="job-badge">Exclusif</span>
         <div class="job-title">DRH — Groupe Industriel Multi-Sites</div>
@@ -1308,7 +1195,6 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         <div class="job-cta">Voir l'offre</div>
       </div>
 
-      <!-- JOB 5 : Directeur Industriel - Fonderie -->
       <div class="job-card" data-cat="industrie" onclick="openJob(5)">
         <span class="job-badge hot">Urgent</span>
         <div class="job-title">Directeur Industriel — Fonderie &amp; Métallurgie</div>
@@ -1323,9 +1209,8 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         <div class="job-cta">Voir l'offre</div>
       </div>
 
-      <!-- JOB 6 : Directeur d'Usine - Transition -->
       <div class="job-card" data-cat="transition" onclick="openJob(6)">
-        <span class="job-badge" style="background:#7c3aed;color:#fff;">Transition</span>
+        <span class="job-badge" style="background:#7c3aed;color:#fff">Transition</span>
         <div class="job-title">Directeur d'Usine — Mission de Transition</div>
         <div class="job-company">Site industriel en redressement — France (Grand Est)</div>
         <div class="job-meta">
@@ -1338,9 +1223,8 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         <div class="job-cta">Voir l'offre</div>
       </div>
 
-      <!-- JOB 7 : DAF Industrie -->
       <div class="job-card" data-cat="rh" onclick="openJob(7)">
-        <span class="job-badge">Nouveau</span>
+        <span class="job-badge new">Nouveau</span>
         <div class="job-title">DAF — ETI Industrielle</div>
         <div class="job-company">ETI industrie de précision — France (Auvergne-Rhône-Alpes)</div>
         <div class="job-meta">
@@ -1353,7 +1237,6 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         <div class="job-cta">Voir l'offre</div>
       </div>
 
-      <!-- JOB 8 : Ingénieur Production Senior -->
       <div class="job-card" data-cat="industrie" onclick="openJob(8)">
         <span class="job-badge hot">Urgent</span>
         <div class="job-title">Responsable Production — Agroalimentaire</div>
@@ -1368,48 +1251,45 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         <div class="job-cta">Voir l'offre</div>
       </div>
 
-      <!-- JOB 9 : Directeur Supply Chain — Pharma -->
-      <div class="job-card" data-cat="rh" onclick="openJob(9)">
+      <div class="job-card" data-cat="cadres" onclick="openJob(9)">
         <span class="job-badge">Exclusif</span>
-        <div class="job-title">Directeur Supply Chain — Pharma</div>
-        <div class="job-company">Groupe pharmaceutique — France (Auvergne-Rhône-Alpes)</div>
+        <div class="job-title">Directeur de Programme — Systèmes de Défense</div>
+        <div class="job-company">Groupe de défense &amp; systèmes navals — France (Bretagne)</div>
         <div class="job-meta">
           <span class="job-tag gold">France</span>
           <span class="job-tag">CDI</span>
           <span class="job-tag">110–140K€</span>
-          <span class="job-tag">Hybride</span>
+          <span class="job-tag">Sur site</span>
         </div>
-        <div class="job-desc">Groupe pharmaceutique (3 sites de production, 1 200 personnes) recrute son Directeur Supply Chain pour piloter S&amp;OP, achats stratégiques et flux internationaux. Profil ingénieur, anglais courant exigé.</div>
+        <div class="job-desc">Groupe industriel de défense (systèmes navals et embarqués, 900 personnes) recrute son Directeur de Programme pour piloter des programmes stratégiques export et étatiques, de la conception à la livraison. Habilitation défense requise.</div>
         <div class="job-cta">Voir l'offre</div>
       </div>
 
-      <!-- JOB 10 : Plant Manager Transition — Démarrage Pharma -->
-      <div class="job-card" data-cat="transition" onclick="openJob(10)">
-        <span class="job-badge" style="background:#7c3aed;color:#fff;">Transition</span>
-        <div class="job-title">Plant Manager — Démarrage d'unité Pharma</div>
-        <div class="job-company">Groupe industriel — France (Centre-Val de Loire)</div>
+      <div class="job-card" data-cat="cadres" onclick="openJob(10)">
+        <span class="job-badge">Exclusif</span>
+        <div class="job-title">COO / EVP Operations — Groupe Industriel</div>
+        <div class="job-company">Groupe industriel coté — France</div>
         <div class="job-meta">
           <span class="job-tag gold">France</span>
-          <span class="job-tag">Transition</span>
-          <span class="job-tag">1 400–1 800€/jour</span>
-          <span class="job-tag">9 mois</span>
+          <span class="job-tag">CDI</span>
+          <span class="job-tag">160–220K€</span>
+          <span class="job-tag">Comex</span>
         </div>
-        <div class="job-desc">Mission de transition pour piloter le démarrage d'une nouvelle unité de production pharmaceutique (BPF / GMP). Recrutement, qualification, validation et montée en cadence. Disponibilité sous 3 semaines.</div>
+        <div class="job-desc">Groupe industriel coté (800M€ CA, 4 000 personnes, présence internationale) recrute son COO / EVP Operations pour piloter la stratégie industrielle groupe, l'excellence opérationnelle et la transformation. Membre du comité exécutif.</div>
         <div class="job-cta">Voir l'offre</div>
       </div>
 
-      <!-- JOB 11 : Directeur Industriel Transition — Redressement Fonderie -->
       <div class="job-card" data-cat="transition" onclick="openJob(11)">
-        <span class="job-badge" style="background:#7c3aed;color:#fff;">Transition</span>
-        <div class="job-title">Directeur Industriel — Redressement Fonderie</div>
-        <div class="job-company">Groupe coté — France (Bourgogne-Franche-Comté)</div>
+        <span class="job-badge" style="background:#7c3aed;color:#fff">Transition</span>
+        <div class="job-title">Directeur Industriel — Mission de Transition Aéronautique</div>
+        <div class="job-company">Site aéronautique en réorganisation — France (Occitanie)</div>
         <div class="job-meta">
           <span class="job-tag gold">France</span>
           <span class="job-tag">Transition</span>
-          <span class="job-tag">1 500–2 000€/jour</span>
-          <span class="job-tag">18 mois</span>
+          <span class="job-tag">TJM sur devis</span>
+          <span class="job-tag">Sur site</span>
         </div>
-        <div class="job-desc">Site fonderie en difficulté (220 personnes) cherche un Directeur Industriel de transition pour piloter le plan de redressement, restructurer l'organisation et restaurer les marges. Profil LEAN confirmé.</div>
+        <div class="job-desc">Site de production aéronautique (240 personnes) en phase de réorganisation industrielle recherche un Directeur Industriel en mission de transition 12 mois pour restructurer l'organisation et sécuriser la montée en cadence. Profil LEAN confirmé.</div>
         <div class="job-cta">Voir l'offre</div>
       </div>
 
@@ -1776,10 +1656,10 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     <div id="aslide-0" style="display:flex;flex-direction:column;">
       <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1800&q=80&auto=format&fit=crop" style="width:100%;height:260px;object-fit:cover;display:block;flex-shrink:0;" alt="Directeurs usine recrutement France">
       <div class="actu-content">
-        <div class="actu-tag" data-fr="Recrutement Industrie · Mai 2026" data-en="Industry Recruitment · May 2026">Recrutement Industrie · Mai 2026</div>
+        <div class="actu-tag" data-fr="Recrutement Industrie · Juillet 2026" data-en="Industry Recruitment · July 2026">Recrutement Industrie · Juillet 2026</div>
         <div class="actu-title" data-fr="Directeurs d'usine : pourquoi les meilleurs profils ne répondent pas à vos annonces" data-en="Plant managers: why the best profiles don't apply to your ads">Directeurs d'usine : pourquoi les meilleurs profils ne répondent pas à vos annonces</div>
         <div class="actu-excerpt" data-fr="70% des recrutements de cadres industriels se font sans annonce publiée. Les directeurs d'usine expérimentés ne postulent pas — ils attendent d'être approchés. Ce que ça implique pour votre stratégie de recrutement en 2026." data-en="70% of industrial management hires happen without a published ad. Experienced plant managers don't apply — they wait to be approached. What this means for your recruitment strategy.">70% des recrutements de cadres industriels se font sans annonce publiée. Les directeurs d'usine expérimentés ne postulent pas — ils attendent d'être approchés. Ce que ça implique pour votre stratégie de recrutement.</div>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:.75rem;"><div class="actu-date" data-fr="1er avril 2026 · 3 min" data-en="April 1, 2026 · 3 min">Mai 2026 · 4 min</div><a onclick="go('actu-art-1');return false;" href="#" style="font-size:11px;font-weight:500;color:var(--gold);text-decoration:none;" data-fr="Lire en entier →" data-en="Read more →">Lire en entier →</a></div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:.75rem;"><div class="actu-date" data-fr="3 juillet 2026 · 4 min" data-en="July 3, 2026 · 4 min">3 juillet 2026 · 4 min</div><a onclick="go('actu-art-1');return false;" href="#" style="font-size:11px;font-weight:500;color:var(--gold);text-decoration:none;" data-fr="Lire en entier →" data-en="Read more →">Lire en entier →</a></div>
       </div>
     </div>
 
@@ -1787,10 +1667,10 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     <div id="aslide-1" style="display:none;flex-direction:column;">
       <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1800&q=80&auto=format&fit=crop" style="width:100%;height:260px;object-fit:cover;display:block;flex-shrink:0;" alt="Management de transition industrie">
       <div class="actu-content">
-        <div class="actu-tag" data-fr="Management de Transition · Avril 2026" data-en="Interim Management · April 2026">Management de Transition · Avril 2026</div>
+        <div class="actu-tag" data-fr="Management de Transition · Juin 2026" data-en="Interim Management · June 2026">Management de Transition · Juin 2026</div>
         <div class="actu-title" data-fr="Management de transition industriel : quand y recourir et comment choisir le bon profil" data-en="Industrial interim management: when to use it and how to choose the right profile">Management de transition industriel : quand y recourir et comment choisir le bon profil</div>
         <div class="actu-excerpt" data-fr="Redressement de site, démarrage de production, remplacement urgent d'un directeur d'usine — le management de transition répond à des situations précises. Décryptage des critères de sélection d'un directeur opérationnel en mission." data-en="Site turnaround, production launch, urgent plant manager replacement — interim management addresses specific situations. A breakdown of the criteria for selecting an operational manager for a mission.">Redressement de site, démarrage de production, remplacement urgent d'un directeur d'usine — le management de transition répond à des situations précises. Décryptage des critères de sélection d'un directeur opérationnel en mission.</div>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:.75rem;"><div class="actu-date" data-fr="8 avril 2026 · 4 min" data-en="April 8, 2026 · 4 min">Avril 2026 · 5 min</div><a onclick="go('actu-art-2');return false;" href="#" style="font-size:11px;font-weight:500;color:var(--gold);text-decoration:none;" data-fr="Lire en entier →" data-en="Read more →">Lire en entier →</a></div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:.75rem;"><div class="actu-date" data-fr="18 juin 2026 · 4 min" data-en="June 18, 2026 · 4 min">18 juin 2026 · 4 min</div><a onclick="go('actu-art-2');return false;" href="#" style="font-size:11px;font-weight:500;color:var(--gold);text-decoration:none;" data-fr="Lire en entier →" data-en="Read more →">Lire en entier →</a></div>
       </div>
     </div>
 
@@ -1798,10 +1678,10 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     <div id="aslide-2" style="display:none;flex-direction:column;">
       <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1800&q=80&auto=format&fit=crop" style="width:100%;height:260px;object-fit:cover;display:block;flex-shrink:0;" alt="Salaires cadres industriels 2026">
       <div class="actu-content">
-        <div class="actu-tag" data-fr="Salaires Industrie · Mars 2026" data-en="Industry Salaries · March 2026">Salaires Industrie · Mars 2026</div>
+        <div class="actu-tag" data-fr="Salaires Industrie · Mai 2026" data-en="Industry Salaries · May 2026">Salaires Industrie · Mai 2026</div>
         <div class="actu-title" data-fr="Rémunérations des cadres industriels en 2026 : ce qui a vraiment changé" data-en="Industrial management compensation in 2026: what has really changed">Rémunérations des cadres industriels en 2026 : ce qui a vraiment changé</div>
         <div class="actu-excerpt" data-fr="Les packages des directeurs d'usine et COO industriels ont progressé de +5 à +8% en 2025. Les profils rares en fonderie et métallurgie négocient au-dessus des grilles groupe. État des lieux secteur par secteur en France." data-en="Plant manager and industrial COO packages grew +5 to +8% in 2025. Rare foundry and metallurgy profiles are negotiating above group grids. A sector-by-sector overview in France.">Les packages des directeurs d'usine et COO industriels ont progressé de +5 à +8% en 2025. Les profils rares en fonderie et métallurgie négocient au-dessus des grilles groupe. État des lieux secteur par secteur en France.</div>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:.75rem;"><div class="actu-date" data-fr="15 avril 2026 · 5 min" data-en="April 15, 2026 · 5 min">Mars 2026 · 4 min</div><a onclick="go('actu-art-3');return false;" href="#" style="font-size:11px;font-weight:500;color:var(--gold);text-decoration:none;" data-fr="Lire en entier →" data-en="Read more →">Lire en entier →</a></div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:.75rem;"><div class="actu-date" data-fr="25 mai 2026 · 3 min" data-en="May 25, 2026 · 3 min">25 mai 2026 · 3 min</div><a onclick="go('actu-art-3');return false;" href="#" style="font-size:11px;font-weight:500;color:var(--gold);text-decoration:none;" data-fr="Lire en entier →" data-en="Read more →">Lire en entier →</a></div>
       </div>
     </div>
 
@@ -1942,57 +1822,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 
 
 <!-- ═══════ PAGE NEWSLETTER ═══════ -->
-<!-- PAGE AVIS -->
-<div class="page" id="page-avis">
-  <section class="section" style="max-width:640px;margin:0 auto;">
-    <button onclick="go('home')" style="background:none;border:none;cursor:pointer;font-size:12px;color:var(--mid);display:flex;align-items:center;gap:.4rem;margin-bottom:2rem;padding:0;">← Retour</button>
-    <p class="slabel">Témoignage</p>
-    <h1 class="stitle"><em>Partagez votre</em> expérience.</h1>
-    <p class="sbody" style="margin-bottom:2.5rem;">Votre avis aide d'autres entreprises et candidats à nous faire confiance. Il sera publié après validation par notre équipe sous 24h.</p>
-    <div id="avis-form-wrap">
-      <div style="margin-bottom:1.5rem;">
-        <div style="font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:.75rem;">Votre note</div>
-        <div id="stars-rate" style="display:flex;gap:.5rem;">
-          <span class="star-btn" data-val="1" onclick="setRating(1)" style="font-size:2.5rem;cursor:pointer;color:var(--light);transition:color .15s;">★</span>
-          <span class="star-btn" data-val="2" onclick="setRating(2)" style="font-size:2.5rem;cursor:pointer;color:var(--light);transition:color .15s;">★</span>
-          <span class="star-btn" data-val="3" onclick="setRating(3)" style="font-size:2.5rem;cursor:pointer;color:var(--light);transition:color .15s;">★</span>
-          <span class="star-btn" data-val="4" onclick="setRating(4)" style="font-size:2.5rem;cursor:pointer;color:var(--light);transition:color .15s;">★</span>
-          <span class="star-btn" data-val="5" onclick="setRating(5)" style="font-size:2.5rem;cursor:pointer;color:var(--light);transition:color .15s;">★</span>
-        </div>
-        <input type="hidden" id="avis-note" value="0">
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:.75rem;">
-        <input class="fi" type="text" id="avis-prenom" placeholder="Prénom" style="margin:0;">
-        <input class="fi" type="text" id="avis-nom" placeholder="Nom" style="margin:0;">
-      </div>
-      <input class="fi" type="text" id="avis-societe" placeholder="Société · Poste (optionnel)" style="margin-bottom:.75rem;">
-      <div style="margin-bottom:1rem;">
-        <div style="font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:.5rem;">Photo (optionnel)</div>
-        <div style="display:flex;align-items:center;gap:1rem;">
-          <div id="avis-photo-preview" style="width:56px;height:56px;border-radius:50%;background:var(--sand);border:1px solid var(--light);overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--mid2);flex-shrink:0;">☺</div>
-          <label for="avis-photo" style="cursor:pointer;padding:.5rem 1.25rem;border:1px solid var(--black);font-size:11px;letter-spacing:.1em;text-transform:uppercase;border-radius:3px;display:inline-block;user-select:none;">Choisir une photo</label>
-          <input type="file" id="avis-photo" accept="image/*" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" onchange="previewAvisPhoto(this)">
-        </div>
-      </div>
-      <div style="margin-bottom:1rem;">
-        <div style="font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:.5rem;">Votre commentaire</div>
-        <textarea class="fi" id="avis-comment" rows="5" placeholder="Décrivez votre expérience avec Alveris..." style="resize:vertical;width:100%;box-sizing:border-box;"></textarea>
-      </div>
-      <div style="display:flex;align-items:flex-start;gap:.6rem;margin-bottom:1.25rem;">
-        <input type="checkbox" id="avis-rgpd" style="width:16px;height:16px;margin-top:2px;cursor:pointer;flex-shrink:0;">
-        <label for="avis-rgpd" style="font-size:12px;color:var(--mid);cursor:pointer;line-height:1.5;">J&apos;accepte que mon avis soit publié sur alveris.fr après validation par l&apos;équipe Alveris.</label>
-      </div>
-      <div id="avis-error" style="display:none;font-size:12px;color:#c0392b;margin-bottom:.75rem;padding:.5rem .75rem;background:#fdf0ed;border-radius:3px;"></div>
-      <button class="btn-dark" id="avis-submit-btn" onclick="submitAvis()" style="width:100%;padding:1rem;">Envoyer mon avis →</button>
-    </div>
-    <div id="avis-success" style="display:none;text-align:center;padding:3rem 0;">
-      <div style="font-size:3rem;color:var(--gold);margin-bottom:1rem;">★</div>
-      <h3 style="font-family:var(--serif);font-size:1.6rem;font-weight:300;margin-bottom:.5rem;">Merci pour votre avis !</h3>
-      <p style="font-size:13px;color:var(--mid);margin-bottom:1.5rem;">Il sera publié sur le site après validation par notre équipe sous 24h.</p>
-      <button onclick="go('home')" class="btn-dark">Retour à l&apos;accueil</button>
-    </div>
-  </section>
-</div>
+
 
 <div class="page" id="page-newsletter">
   <section class="section" style="max-width:680px;margin:0 auto;">
@@ -2511,18 +2341,18 @@ function filterJobs(cat,btn){
 // badge : 'Urgent' (orange) | 'Nouveau' (vert) | 'Exclusif' (gris)
 // ════════════════════════════════════════════════════════════
 const jobs=[
-  {title:{fr:"Directeur Général — Industrie Métallurgique",en:"General Manager — Metallurgical Industry"},co:{fr:"Groupe industriel ETI — France (Grand Est)",en:"Industrial SME Group — France (Grand Est)"},badge:"Exclusif",tags:["France","CDI","130–160K€","Sur site"],desc:{fr:"ETI industrielle (250 personnes, 3 sites de production) recrute son Directeur Général pour piloter la stratégie, la performance opérationnelle et le développement commercial. Profil ingénieur expérimenté, multi-sites exigé.",en:"Industrial SME (250 people, 3 production sites) seeks General Manager to lead strategy, operational performance and commercial development."},profile:{fr:["Ingénieur + formation management","10+ ans de direction générale ou direction industrielle","Expérience multi-sites en industrie lourde ou métallurgie","Maîtrise du P&L, LEAN, développement commercial","Profil fédérateur, orienté résultats"],en:["Engineer + management qualification","10+ years general or industrial management","Multi-site experience in heavy industry","P&L, LEAN, commercial development skills","Results-oriented profile"]},offer:{fr:["Package 130–160K€ selon profil","Véhicule de fonction + intéressement","Statut cadre dirigeant","Projet de développement ambitieux"],en:["Package €130–160K","Company car + profit sharing","Executive status","Ambitious development project"]}},
-  {title:{fr:"COO / EVP Operations — Groupe Industriel",en:"COO / EVP Operations — Industrial Group"},co:{fr:"Groupe industriel coté — France",en:"Listed industrial group — France"},badge:"Exclusif",tags:["France","CDI","160–220K€","Comex"],desc:{fr:"Groupe industriel coté (800M€ CA, 4 000 personnes, présence Europe et Asie) recrute son COO / EVP Operations pour piloter la stratégie industrielle groupe, l'excellence opérationnelle et la transformation. Membre du comité exécutif.",en:"Listed industrial group (800M€ revenue, 4,000 people) recruits COO/EVP Operations to lead group industrial strategy and transformation. Executive committee member."},profile:{fr:["Grande École d'Ingénieurs (Mines, Ponts, Centrale)","15+ ans en direction industrielle ou opérations groupe","Expérience comex confirmée","Multi-sites internationaux — minimum 3 pays","Bilingue français/anglais"],en:["Top Engineering School","15+ years industrial or group operations","Confirmed executive committee experience","International multi-site","Bilingual French/English"]},offer:{fr:["Package 160–220K€ (fixe + variable + LTIP)","Voiture de fonction haut de gamme","Plan d'actions ou LTIP groupe","Comité exécutif — exposition directe au Board"],en:["Package €160–220K (base + bonus + LTIP)","Premium company car","Group share plan or LTIP","Executive committee — direct Board exposure"]}},
-  {title:{fr:"Directeur d'Usine — Équipement Automobile",en:"Plant Manager — Automotive Equipment"},co:{fr:"Équipementier Tier 1 — France (Région Ouest)",en:"Tier 1 Automotive Supplier — France (Western Region)"},badge:"Urgent",tags:["France","CDI","90–115K€","Sur site"],desc:{fr:"Équipementier automobile de rang 1 (180 personnes, site certifié IATF, clients Stellantis/PSA/Renault) recrute son Directeur d'Usine. Profil LEAN confirmé, expérience IRP et P&L exigée.",en:"Tier 1 automotive supplier (180 people, IATF-certified site) recruits Plant Manager. Proven LEAN profile, IRP and P&L experience required."},profile:{fr:["Ingénieur production ou mécanique","7+ ans de direction de site industriel","Expérience IATF, LEAN, management IRP","Maîtrise du P&L et reporting groupe","Leadership terrain"],en:["Production or mechanical engineer","7+ years industrial site management","IATF, LEAN, IRP experience","P&L and group reporting skills","Hands-on leadership"]},offer:{fr:["Package 90–115K€ fixe + variable","13ème mois + intéressement","Voiture de fonction","Perspectives évolution groupe"],en:["Package €90–115K base + bonus","13th month + profit sharing","Company car","Group advancement opportunities"]}},
-  {title:{fr:"Directeur des Opérations — Pharma CDMO",en:"Operations Director — Pharma CDMO"},co:{fr:"Sous-traitant pharmaceutique — France (Rhône-Alpes)",en:"Pharmaceutical CDMO — France (Rhône-Alpes)"},badge:"Nouveau",tags:["France","CDI","100–130K€","Hybride"],desc:{fr:"CDMO pharmaceutique (2 sites, 400 personnes) recrute son Directeur des Opérations pour piloter la performance des sites, coordonner production, qualité et maintenance, et accompagner la croissance.",en:"Pharmaceutical CDMO (2 sites, 400 people) recruits Operations Director to drive site performance and coordinate production, quality and maintenance."},profile:{fr:["Ingénieur + expérience pharma confirmée","8+ ans en direction opérationnelle multi-sites","ISO 14001 / ISO 45001 maîtrisée","Expérience gestion IRP et P&L","Anglais opérationnel"],en:["Engineer + proven pharma experience","8+ years multi-site operations","ISO 14001 / ISO 45001 mastery","IRP and P&L experience","Operational English"]},offer:{fr:["Package 100–130K€ selon profil","Intéressement + participation","Télétravail partiel possible","Comité de direction"],en:["Package €100–130K","Profit sharing","Partial remote possible","Executive committee"]}},
-  {title:{fr:"DRH Groupe — ETI Industrielle",en:"Group CHRO — Industrial SME"},co:{fr:"ETI industrielle multi-sites — France (Grand Est)",en:"Multi-site industrial SME — France (Grand Est)"},badge:"Exclusif",tags:["France","CDI","90–115K€","Hybride"],desc:{fr:"ETI industrielle (700 collaborateurs, 5 sites) recrute son DRH Groupe pour piloter la politique RH, les relations sociales (IRP, CSSCT), la GPEC et accompagner la transformation dans un contexte de croissance externe.",en:"Industrial SME (700 employees, 5 sites) recruits Group CHRO to lead HR policy, social relations and organisational transformation."},profile:{fr:["Master RH ou droit social","8+ ans en DRH, idéalement industrie multi-sites","Expérience solide en relations sociales","Connaissance des enjeux GPEC, formation, QVCT","Profil opérationnel et stratégique"],en:["HR or labour law master","8+ years as CHRO, ideally multi-site industry","Strong social relations experience","GPEC, training, wellbeing expertise","Operational and strategic profile"]},offer:{fr:["Package 90–115K€ fixe + variable","Télétravail 2j/semaine","Intéressement + mutuelle premium","Comité de direction"],en:["Package €90–115K base + bonus","Remote 2 days/week","Profit sharing + premium health insurance","Executive committee"]}},
-  {title:{fr:"Directeur Industriel — Fonderie & Métallurgie",en:"Industrial Director — Foundry & Metallurgy"},co:{fr:"Groupe fonderie — France (Région Nord)",en:"Foundry Group — France (Northern Region)"},badge:"Urgent",tags:["France","CDI","95–120K€","Sur site"],desc:{fr:"Groupe fonderie (3 sites, aciers spéciaux, 320 personnes) recrute son Directeur Industriel pour piloter l'excellence opérationnelle groupe, coordonner les plans CAPEX et améliorer la performance des sites.",en:"Foundry group (3 sites, special steels, 320 people) recruits Industrial Director to drive group operational excellence and site performance."},profile:{fr:["Ingénieur métallurgie ou génie industriel","10+ ans en direction industrielle","Connaissance des aciers spéciaux ou fonderie","Expérience multi-sites, excellence opérationnelle","Maîtrise du LEAN, VSM, CAPEX"],en:["Metallurgy or industrial engineer","10+ years industrial management","Special steels or foundry knowledge","Multi-site operational excellence","LEAN, VSM, CAPEX mastery"]},offer:{fr:["Package 95–120K€ selon expérience","Intéressement + véhicule de fonction","Statut cadre dirigeant","Projet de modernisation industrielle"],en:["Package €95–120K","Profit sharing + company car","Executive status","Industrial modernisation project"]}},
-  {title:{fr:"Directeur d'Usine — Mission de Transition",en:"Plant Manager — Interim Mission"},co:{fr:"Site industriel en redressement — France (Grand Est)",en:"Industrial turnaround site — France (Grand Est)"},badge:"Transition",tags:["France","Transition","TJM selon profil","Sur site"],desc:{fr:"Site industriel (150 personnes, secteur métallurgique) en phase de redressement recherche un Directeur d'Usine en mission de transition 9 à 12 mois. Profil LEAN confirmé, disponibilité rapide requise.",en:"Industrial site (150 people, metallurgical sector) in turnaround phase seeks Plant Manager for 9-12 month interim mission. Proven LEAN profile, rapid availability required."},profile:{fr:["Directeur d'Usine confirmé, profil LEAN","Expérience redressement ou transformation de site","Disponible rapidement (moins de 2 semaines)","Gestion de crise, IRP, P&L","Mobilité Grand Est"],en:["Confirmed Plant Manager, LEAN profile","Site turnaround experience","Rapidly available (within 2 weeks)","Crisis management, IRP, P&L","Grand Est mobility"]},offer:{fr:["TJM selon profil et expérience","Mission 9 à 12 mois renouvelable","Prise en charge déplacements","Impact direct"],en:["Day rate based on profile","9 to 12 month mission","Travel expenses covered","Direct impact"]}},
-  {title:{fr:"DAF — ETI Industrielle",en:"CFO — Industrial SME"},co:{fr:"ETI industrie de précision — France (Auvergne-Rhône-Alpes)",en:"Precision industry SME — France (Auvergne-Rhône-Alpes)"},badge:"Nouveau",tags:["France","CDI","80–105K€","Hybride"],desc:{fr:"ETI industrie de précision (180 collaborateurs, CA 35M€) recrute son DAF pour piloter la fonction financière, le contrôle de gestion industriel et accompagner la croissance externe.",en:"Precision industry SME (180 employees, 35M€ revenue) recruits CFO to lead financial function and support external growth."},profile:{fr:["Bac+5 finance ou gestion","6+ ans en DAF ou contrôleur de gestion industriel","Maîtrise du contrôle de gestion industriel","Expérience croissance externe appréciée","Rigueur et autonomie"],en:["Master finance or management","6+ years as CFO or industrial controller","Industrial management control expertise","External growth experience a plus","Rigour and autonomy"]},offer:{fr:["Package 80–105K€ selon profil","Intéressement aux résultats","Télétravail partiel","Rôle clé comité de direction"],en:["Package €80–105K","Profit sharing","Partial remote","Key executive committee role"]}},
-  {title:{fr:"Responsable de Production — Agroalimentaire",en:"Production Manager — Food Industry"},co:{fr:"Groupe agroalimentaire — France (Grand Ouest)",en:"Food group — France (Western France)"},badge:"Urgent",tags:["France","CDI","55–70K€","Sur site"],desc:{fr:"Groupe agroalimentaire (site 300 personnes, certifié IFS) recrute son Responsable de Production pour piloter 3 lignes de fabrication et déployer le plan LEAN.",en:"Food group (300-person site, IFS certified) recruits Production Manager to manage 3 production lines and deploy LEAN plan."},profile:{fr:["Ingénieur agroalimentaire","5+ ans en responsable de production","Expérience IFS / BRC appréciée","Management terrain confirmé","LEAN, amélioration continue"],en:["Food industry engineer","5+ years production management","IFS/BRC experience a plus","Confirmed hands-on management","LEAN, continuous improvement"]},offer:{fr:["CDI 55–70K€ selon profil","13ème mois + prime annuelle","Mutuelle famille + tickets restaurant","Évolution vers Directeur de site"],en:["Permanent contract €55–70K","13th month + annual bonus","Family insurance + meal vouchers","Path to Site Director"]}},
-  {title:{fr:"Directeur Supply Chain — Pharma",en:"Supply Chain Director — Pharma"},co:{fr:"Groupe pharmaceutique — France (Auvergne-Rhône-Alpes)",en:"Pharmaceutical group — France (Auvergne-Rhône-Alpes)"},badge:"Exclusif",tags:["France","CDI","110–140K€","Hybride"],desc:{fr:"Groupe pharmaceutique (3 sites de production, 1 200 personnes) recrute son Directeur Supply Chain pour piloter S&OP, achats stratégiques et flux internationaux. Profil ingénieur, anglais courant exigé.",en:"Pharmaceutical group (3 production sites, 1,200 people) recruits Supply Chain Director to lead S&OP, strategic procurement and international flows."},profile:{fr:["Ingénieur + Master Supply Chain","8+ ans en direction Supply Chain","Expérience pharma ou industrie réglementée","Maîtrise S&OP, achats, flux internationaux","Anglais courant"],en:["Engineer + Supply Chain Master","8+ years Supply Chain Director","Pharma or regulated industry experience","S&OP, procurement, international flows","Fluent English"]},offer:{fr:["Package 110–140K€ selon profil","Bonus annuel + intéressement","Télétravail 2j/semaine","Comité de direction"],en:["Package €110–140K","Annual bonus + profit sharing","Remote 2 days/week","Executive committee"]}},
-  {title:{fr:"Plant Manager — Démarrage d'unité Pharma",en:"Plant Manager — Pharma Unit Start-up"},co:{fr:"Groupe industriel — France (Centre-Val de Loire)",en:"Industrial group — France (Centre-Val de Loire)"},badge:"Transition",tags:["France","Transition","1 400–1 800€/jour","9 mois"],desc:{fr:"Mission de transition pour piloter le démarrage d'une nouvelle unité de production pharmaceutique (BPF / GMP). Recrutement, qualification des équipements, validation des process et montée en cadence. Disponibilité sous 3 semaines.",en:"Interim mission to lead the start-up of a new pharma production unit (GMP). Recruitment, equipment qualification, process validation and ramp-up. Availability within 3 weeks."},profile:{fr:["Plant Manager confirmé en pharma ou agroalimentaire","Expérience démarrage d'unité (greenfield)","Maîtrise BPF / GMP / qualification équipements","Disponibilité immédiate","Mobilité Centre-Val de Loire"],en:["Confirmed Plant Manager in pharma or food","Greenfield start-up experience","GMP / equipment qualification mastery","Immediate availability","Centre-Val de Loire mobility"]},offer:{fr:["TJM 1 400–1 800€ selon expérience","Mission 9 mois renouvelable","Frais de déplacement pris en charge","Impact direct sur lancement"],en:["Day rate €1,400–1,800","9 month renewable mission","Travel expenses covered","Direct impact on launch"]}},
-  {title:{fr:"Directeur Industriel — Redressement Fonderie",en:"Industrial Director — Foundry Turnaround"},co:{fr:"Groupe coté — France (Bourgogne-Franche-Comté)",en:"Listed group — France (Bourgogne-Franche-Comté)"},badge:"Transition",tags:["France","Transition","1 500–2 000€/jour","18 mois"],desc:{fr:"Site fonderie en difficulté (220 personnes) cherche un Directeur Industriel de transition pour piloter le plan de redressement, restructurer l'organisation et restaurer les marges. Profil LEAN confirmé, expérience IRP exigée.",en:"Foundry site in difficulty (220 people) seeks interim Industrial Director to lead turnaround plan, restructure organisation and restore margins. Confirmed LEAN profile."},profile:{fr:["Directeur Industriel ou Directeur d'Usine confirmé","Expérience redressement / restructuration","Maîtrise LEAN, gestion de crise, IRP","Connaissance fonderie ou métallurgie","Disponibilité sous 3 semaines"],en:["Confirmed Industrial or Plant Director","Turnaround / restructuring experience","LEAN, crisis management, IRP","Foundry or metallurgy knowledge","Available within 3 weeks"]},offer:{fr:["TJM 1 500–2 000€ selon profil","Mission 18 mois","Reporting direct au Comex","Frais de déplacement pris en charge"],en:["Day rate €1,500–2,000","18 month mission","Direct reporting to ExCo","Travel expenses covered"]}}
+  {title:{fr:"Directeur de Site — Énergie Nucléaire",en:"Site Director — Nuclear Energy"},co:{fr:"Exploitant nucléaire — France (Normandie)",en:"Nuclear operator — France (Normandy)"},badge:"Nouveau",tags:["France","CDI","100–130K€","Sur site"],desc:{fr:"Exploitant du secteur de l'énergie nucléaire (site de production, 450 personnes) recrute son Directeur de Site pour piloter la sûreté, la performance industrielle et les relations avec les autorités de contrôle. Profil ingénieur, habilitation nucléaire requise.",en:"Nuclear energy operator (production site, 450 people) seeks Site Director to lead safety, industrial performance and relations with regulatory authorities. Engineering background, nuclear clearance required."},profile:{fr:["Ingénieur généraliste ou génie nucléaire","10 ans+ sur site nucléaire ou industrie à hauts standards de sûreté","Habilitation ou aptitude à l'habilitation nucléaire","Culture sûreté et exigence réglementaire fortes","Leadership confirmé sur équipes pluridisciplinaires"],en:["Engineering degree, nuclear or process","10+ years on nuclear or high-safety sites","Nuclear clearance or eligibility","Strong safety culture and regulatory rigor","Proven multidisciplinary leadership"]},offer:{fr:["Poste stratégique à fort impact sûreté","Package fixe + variable + avantages site","Statut cadre dirigeant","Environnement industriel de pointe"],en:["Strategic role with strong safety impact","Fixed + variable pay + site benefits","Executive status","Advanced industrial environment"]}},
+  {title:{fr:"Directeur Général — Groupe Aéronautique & MRO",en:"Managing Director — Aerospace & MRO Group"},co:{fr:"Groupe aéronautique & MRO — France (Occitanie)",en:"Aerospace & MRO Group — France (Occitanie)"},badge:"Exclusif",tags:["France","CDI","150–190K€","Comex"],desc:{fr:"Groupe aéronautique spécialisé en maintenance, réparation et révision (MRO, 3 sites, 1 100 personnes) recrute son Directeur Général pour piloter la stratégie, la relation avec les grands donneurs d'ordre et la performance opérationnelle. Membre du comité exécutif.",en:"Aerospace MRO group (3 sites, 1,100 people) seeks Managing Director to lead strategy, key account relationships and operational performance. Executive committee member."},profile:{fr:["Grande école d'ingénieurs ou équivalent","15 ans+ en direction générale ou industrielle en aéronautique","Expérience MRO ou production aéronautique certifiée (Part 145/21)","Expérience comex confirmée","Anglais courant"],en:["Engineering degree or equivalent","15+ years general/industrial management in aerospace","MRO or certified aerospace production experience (Part 145/21)","Proven executive committee experience","Fluent English"]},offer:{fr:["Direction générale d'un groupe en croissance","Package attractif + LTI","Statut cadre dirigeant","Rattachement direct actionnaires"],en:["General management of a growing group","Attractive package + LTI","Executive status","Direct shareholder reporting"]}},
+  {title:{fr:"Directeur d'Usine — Équipement Automobile",en:"Plant Manager — Automotive Equipment"},co:{fr:"Équipementier Tier 1 — France (Région Ouest)",en:"Tier 1 Automotive Supplier — France (Western Region)"},badge:"Urgent",tags:["France","CDI","90–115K€","Sur site"],desc:{fr:"Équipementier automobile de rang 1 (180 personnes, clients PSA / Stellantis) recrute son Directeur d'Usine. Ingénieur LEAN, expérience IATF requise. Management d'équipes pluridisciplinaires.",en:"Tier 1 automotive supplier (180 people, PSA/Stellantis accounts) recruits Plant Manager. LEAN engineer, IATF experience required. Cross-functional team management."},profile:{fr:["Ingénieur production ou mécanique","7 ans+ de direction de site industriel","Expérience IATF, LEAN, management IRP","Maîtrise du P&L et reporting groupe","Leadership terrain"],en:["Production or mechanical engineer","7+ years industrial site management","IATF, LEAN, IRP experience","P&L and group reporting","Hands-on leadership"]},offer:{fr:["Package fixe + variable","13ème mois + intéressement","Voiture de fonction","Perspectives d'évolution groupe"],en:["Fixed + variable package","13th month + profit sharing","Company car","Group advancement opportunities"]}},
+  {title:{fr:"Directeur des Opérations — Pharma CDMO",en:"Operations Director — Pharma CDMO"},co:{fr:"Sous-traitant pharmaceutique — France (Rhône-Alpes)",en:"Pharmaceutical CDMO — France (Rhône-Alpes)"},badge:"Nouveau",tags:["France","CDI","100–130K€","Hybride"],desc:{fr:"CDMO pharmaceutique (2 sites, 400 personnes) recrute son Directeur des Opérations. Profil ingénieur, expérience pharma ISO 14001 / ISO 45001, management de direction de site.",en:"Pharmaceutical CDMO (2 sites, 400 people) recruits Operations Director. Engineer profile, ISO 14001/45001 pharma experience, site management."},profile:{fr:["Ingénieur, expérience pharma confirmée","8 ans+ en direction opérationnelle multi-sites","ISO 14001 / ISO 45001 maîtrisées","Expérience BPF/GMP et relations autorités","Anglais opérationnel"],en:["Engineer with proven pharma experience","8+ years multi-site operations","ISO 14001 / ISO 45001 mastery","GMP experience and regulatory relations","Operational English"]},offer:{fr:["Package selon profil","Intéressement + participation","Télétravail partiel possible","Comité de direction"],en:["Package based on profile","Profit sharing","Partial remote possible","Executive committee"]}},
+  {title:{fr:"DRH — Groupe Industriel Multi-Sites",en:"CHRO — Multi-Site Industrial Group"},co:{fr:"Groupe industriel — France (Île-de-France)",en:"Industrial Group — France (Île-de-France)"},badge:"Exclusif",tags:["France","CDI","85–110K€","Hybride"],desc:{fr:"Groupe industriel (600 collaborateurs, 4 sites) recrute son DRH pour piloter la politique RH, les relations sociales (IRP), et accompagner la transformation organisationnelle.",en:"Industrial group (600 employees, 4 sites) recruits CHRO to lead HR policy, social relations and organisational transformation."},profile:{fr:["Master RH ou droit social","8 ans+ en DRH, idéalement industrie multi-sites","Expérience solide en relations sociales (IRP)","Connaissance GPEC, formation, QVCT","Profil opérationnel et stratégique"],en:["HR or labour law master's degree","8+ years as CHRO, ideally multi-site industry","Strong social relations experience","GPEC, training, wellbeing expertise","Operational and strategic profile"]},offer:{fr:["Package fixe + variable","Télétravail 2j/semaine","Intéressement + mutuelle premium","Comité de direction"],en:["Fixed + variable package","Remote 2 days/week","Profit sharing + premium health cover","Executive committee"]}},
+  {title:{fr:"Directeur Industriel — Fonderie & Métallurgie",en:"Industrial Director — Foundry & Metallurgy"},co:{fr:"Groupe fonderie — France (Région Nord)",en:"Foundry Group — France (Northern Region)"},badge:"Urgent",tags:["France","CDI","95–120K€","Sur site"],desc:{fr:"Groupe fonderie (3 sites, aciers spéciaux) recrute son Directeur Industriel pour piloter l'excellence opérationnelle, les investissements CAPEX et la performance des sites. Profil ingénieur métallurgie.",en:"Foundry group (3 sites, special steels) recruits Industrial Director to drive operational excellence, CAPEX investment and site performance. Metallurgy engineer profile."},profile:{fr:["Ingénieur métallurgie ou génie industriel","10 ans+ en direction industrielle","Connaissance des aciers spéciaux ou fonderie","Expérience multi-sites, excellence opérationnelle","Maîtrise du LEAN, VSM, pilotage CAPEX"],en:["Metallurgy or industrial engineer","10+ years industrial management","Special steels or foundry knowledge","Multi-site operational excellence","LEAN, VSM, CAPEX management"]},offer:{fr:["Package fixe + variable","Statut cadre","Prime d'objectifs","Comité de direction"],en:["Fixed + variable package","Manager status","Performance bonus","Executive committee"]}},
+  {title:{fr:"Directeur d'Usine — Mission de Transition",en:"Plant Manager — Interim Assignment"},co:{fr:"Site industriel en redressement — France (Grand Est)",en:"Industrial site in turnaround — France (Grand Est)"},badge:"Transition",tags:["France","Transition","TJM sur devis","Sur site"],desc:{fr:"Site industriel (150 personnes) en phase de redressement opérationnel recherche un Directeur d'Usine en mission de transition 9-12 mois. Profil LEAN confirmé, disponibilité rapide requise.",en:"Industrial site (150 people) undergoing operational turnaround seeks Plant Manager for a 9-12 month interim assignment. Proven LEAN profile, quick availability required."},profile:{fr:["Ingénieur, profil LEAN confirmé","10 ans+ en direction de site industriel","Expérience en redressement ou situation de crise","Disponibilité immédiate ou sous 2-3 semaines","Capacité à manager dans l'urgence"],en:["Engineer with proven LEAN profile","10+ years plant management","Turnaround or crisis management experience","Immediate or 2-3 week availability","Ability to manage under pressure"]},offer:{fr:["TJM sur devis selon profil","Mission 9-12 mois","Statut indépendant ou portage","Impact direct et mesurable"],en:["Daily rate on quote, based on profile","9-12 month assignment","Independent or umbrella company status","Direct, measurable impact"]}},
+  {title:{fr:"DAF — ETI Industrielle",en:"CFO — Industrial SME"},co:{fr:"ETI industrie de précision — France (Auvergne-Rhône-Alpes)",en:"Precision engineering SME — France (Auvergne-Rhône-Alpes)"},badge:"Nouveau",tags:["France","CDI","80–105K€","Hybride"],desc:{fr:"ETI industrie de précision (180 collaborateurs) recrute son DAF pour piloter la fonction financière, le contrôle de gestion industriel et accompagner la croissance externe.",en:"Precision engineering SME (180 employees) recruits CFO to lead the finance function, industrial cost control and support external growth."},profile:{fr:["Diplômé grande école de commerce ou ingénieur","8 ans+ en direction financière industrielle","Maîtrise du contrôle de gestion industriel","Expérience croissance externe / M&A","Anglais opérationnel"],en:["Business school or engineering graduate","8+ years industrial finance leadership","Industrial cost control expertise","External growth / M&A experience","Operational English"]},offer:{fr:["Package fixe + variable","Intéressement","Télétravail partiel","Comité de direction"],en:["Fixed + variable package","Profit sharing","Partial remote work","Executive committee"]}},
+  {title:{fr:"Responsable Production — Agroalimentaire",en:"Production Manager — Food Industry"},co:{fr:"Groupe agroalimentaire — France (Grand Ouest)",en:"Food Industry Group — France (Grand Ouest)"},badge:"Urgent",tags:["France","CDI","55–70K€","Sur site"],desc:{fr:"Groupe agroalimentaire (site 300 personnes) recrute son Responsable de Production pour piloter 3 lignes, animer les équipes opérationnelles et déployer le plan LEAN.",en:"Food industry group (300-person site) recruits Production Manager to run 3 lines, lead operational teams and deploy the LEAN plan."},profile:{fr:["Ingénieur agroalimentaire ou équivalent","5 ans+ en management de production","Expérience LEAN et animation d'équipes","Connaissance des normes IFS/BRC","Leadership terrain"],en:["Food industry engineer or equivalent","5+ years production management","LEAN experience and team leadership","IFS/BRC standards knowledge","Hands-on leadership"]},offer:{fr:["Package fixe + variable","13ème mois","Prime de performance","Perspectives d'évolution"],en:["Fixed + variable package","13th month","Performance bonus","Advancement opportunities"]}},
+  {title:{fr:"Directeur de Programme — Systèmes de Défense",en:"Program Director — Defence Systems"},co:{fr:"Groupe de défense & systèmes navals — France (Bretagne)",en:"Defence & Naval Systems Group — France (Brittany)"},badge:"Exclusif",tags:["France","CDI","110–140K€","Sur site"],desc:{fr:"Groupe industriel de défense (systèmes navals et embarqués, 900 personnes) recrute son Directeur de Programme pour piloter des programmes stratégiques export et étatiques, de la conception à la livraison. Habilitation défense requise.",en:"Defence industrial group (naval and embedded systems, 900 people) seeks Program Director to lead strategic export and state programmes from design to delivery. Defence clearance required."},profile:{fr:["Ingénieur systèmes ou équivalent","12 ans+ en gestion de programmes complexes","Expérience secteur défense ou aéronautique militaire","Habilitation défense ou aptitude à l'obtenir","Anglais courant"],en:["Systems engineer or equivalent","12+ years complex programme management","Defence or military aerospace sector experience","Defence clearance or eligibility","Fluent English"]},offer:{fr:["Package fixe + variable élevé","Statut cadre dirigeant","Programmes stratégiques à long terme","Environnement technologique de pointe"],en:["High fixed + variable package","Executive status","Long-term strategic programmes","Cutting-edge technology environment"]}},
+  {title:{fr:"COO / EVP Operations — Groupe Industriel",en:"COO / EVP Operations — Industrial Group"},co:{fr:"Groupe industriel coté — France",en:"Listed Industrial Group — France"},badge:"Exclusif",tags:["France","CDI","160–220K€","Comex"],desc:{fr:"Groupe industriel coté (800M€ CA, 4 000 personnes, présence internationale) recrute son COO / EVP Operations pour piloter la stratégie industrielle groupe, l'excellence opérationnelle et la transformation. Membre du comité exécutif.",en:"Listed industrial group (€800M revenue, 4,000 people, international presence) recruits COO/EVP Operations to lead group industrial strategy, operational excellence and transformation. Executive committee member."},profile:{fr:["Grande École d'Ingénieurs (Mines, Ponts, Centrale...)","15 ans+ en direction industrielle ou opérations groupe","Expérience comex confirmée","Multi-sites internationaux (minimum 3 pays)","Bilingue français/anglais"],en:["Top Engineering School","15+ years industrial or group operations","Confirmed executive committee experience","International multi-site (3+ countries)","Bilingual French/English"]},offer:{fr:["Package 160–220K€ (fixe + variable + LTIP)","Voiture de fonction haut de gamme","Plan d'actions ou LTIP groupe","Comité exécutif, exposition directe au Board"],en:["Package €160–220K (base + bonus + LTIP)","Premium company car","Group share plan or LTIP","Executive committee, direct Board exposure"]}},
+  {title:{fr:"Directeur Industriel — Mission de Transition Aéronautique",en:"Industrial Director — Aerospace Interim Assignment"},co:{fr:"Site aéronautique en réorganisation — France (Occitanie)",en:"Aerospace site in reorganisation — France (Occitanie)"},badge:"Transition",tags:["France","Transition","TJM sur devis","Sur site"],desc:{fr:"Site de production aéronautique (240 personnes) en phase de réorganisation industrielle recherche un Directeur Industriel en mission de transition 12 mois pour restructurer l'organisation et sécuriser la montée en cadence. Profil LEAN confirmé.",en:"Aerospace production site (240 people) undergoing industrial reorganisation seeks Industrial Director for a 12-month interim assignment to restructure operations and secure ramp-up. Proven LEAN profile."},profile:{fr:["Ingénieur, expérience aéronautique confirmée","10 ans+ en direction industrielle","Expérience réorganisation ou montée en cadence","Disponibilité rapide (2-3 semaines)","Profil LEAN confirmé"],en:["Engineer with proven aerospace experience","10+ years industrial management","Reorganisation or ramp-up experience","Quick availability (2-3 weeks)","Proven LEAN profile"]},offer:{fr:["TJM sur devis selon profil","Mission 12 mois","Statut indépendant ou portage","Enjeu stratégique pour le site"],en:["Daily rate on quote, based on profile","12-month assignment","Independent or umbrella company status","Strategic stakes for the site"]}}
 ];
 
 let currentJobIndex = 0;
@@ -2894,122 +2724,6 @@ if(nlForm){
   window.addEventListener('resize', initOffersSlider);
 })();
 
-
-// PAGE AVIS
-var avisCurrent = 0;
-function setRating(val){
-  avisCurrent = val;
-  document.getElementById('avis-note').value = val;
-  document.querySelectorAll('.star-btn').forEach(function(s){
-    s.style.color = parseInt(s.getAttribute('data-val')) <= val ? 'var(--gold)' : 'var(--light)';
-  });
-}
-function previewAvisPhoto(input){
-  if(!input.files || !input.files[0]) return;
-  var reader = new FileReader();
-  reader.onload = function(e){
-    var prev = document.getElementById('avis-photo-preview');
-    prev.innerHTML = '<img src="' + e.target.result + '" style="width:100%;height:100%;object-fit:cover;">';
-  };
-  reader.readAsDataURL(input.files[0]);
-}
-async function submitAvis(){
-  var note = document.getElementById('avis-note').value;
-  var prenom = document.getElementById('avis-prenom').value.trim();
-  var nom = document.getElementById('avis-nom').value.trim();
-  var societe = document.getElementById('avis-societe').value.trim();
-  var comment = document.getElementById('avis-comment').value.trim();
-  var rgpd = document.getElementById('avis-rgpd').checked;
-  var errDiv = document.getElementById('avis-error');
-
-  if(parseInt(note) === 0){ errDiv.textContent='Veuillez sélectionner une note.'; errDiv.style.display='block'; return; }
-  if(!prenom){ errDiv.textContent='Veuillez indiquer votre prénom.'; errDiv.style.display='block'; return; }
-  if(!comment){ errDiv.textContent='Veuillez écrire un commentaire.'; errDiv.style.display='block'; return; }
-  if(!rgpd){ errDiv.textContent='Veuillez accepter les conditions de publication.'; errDiv.style.display='block'; return; }
-  errDiv.style.display='none';
-
-  var btn = document.getElementById('avis-submit-btn');
-  btn.textContent = 'Envoi...'; btn.style.opacity = '.6';
-
-  try {
-    var data = new FormData();
-    data.append('note', note + '/5');
-    data.append('prenom', prenom);
-    data.append('nom', nom);
-    data.append('societe', societe);
-    data.append('commentaire', comment);
-    data.append('_subject', '[AVIS A VALIDER] ' + note + '/5 etoiles - ' + prenom + ' ' + nom);
-    data.append('note_sur_5', note + '/5');
-    data.append('prenom_nom', prenom + ' ' + nom);
-    data.append('societe_poste', societe || 'Non renseigne');
-    data.append('avis_complet', comment);
-    data.append('_replyto', 'contact@alveris.fr');
-    data.append('_to', 'contact@alveris.fr');
-    var formDataAvis = new FormData();
-    formDataAvis.append('access_key', '3ca9d971-3911-4b35-bee6-7bf99e270d49');
-    formDataAvis.append('subject', '[AVIS A VALIDER] ' + (typeof note === 'object' ? note.value : String(note)) + '/5 - ' + prenom + ' ' + (nom||''));
-    formDataAvis.append('from_name', 'Alveris Avis');
-    formDataAvis.append('note', (typeof note === 'object' ? note.value : String(note)) + '/5');
-    formDataAvis.append('prenom_nom', prenom + ' ' + (nom||''));
-    formDataAvis.append('societe_poste', societe||'Non renseigne');
-    formDataAvis.append('commentaire', comment);
-    formDataAvis.append('redirect', 'false');
-    var photoFile2 = document.getElementById('avis-photo');
-    if(photoFile2 && photoFile2.files && photoFile2.files[0]) formDataAvis.append('attachment', photoFile2.files[0]);
-    fetch('https://api.web3forms.com/submit', {method:'POST', body:formDataAvis})
-    .then(function(r){ return r.json(); })
-    .then(function(d){
-      var wrap = document.getElementById('avis-form-wrap');
-      var succ = document.getElementById('avis-success');
-      if(wrap) wrap.style.display='none';
-      if(succ){
-        succ.style.display='block';
-        succ.querySelector && (succ.querySelector('h3') || succ.querySelector('p')) ? null : null;
-        var star = document.createElement('div');
-        star.style.cssText = 'font-size:2.5rem;color:var(--gold);margin-bottom:1rem;';
-        star.textContent = '★';
-        var h3 = document.createElement('h3');
-        h3.style.cssText = 'font-family:var(--serif);font-size:1.4rem;font-weight:300;margin-bottom:.5rem;';
-        h3.textContent = 'Merci pour votre avis !';
-        var p = document.createElement('p');
-        p.style.cssText = 'font-size:13px;color:var(--mid);margin-bottom:1.5rem;';
-        p.textContent = 'Votre avis a bien été reçu et sera publié après validation sous 24h.';
-        var btnR = document.createElement('button');
-        btnR.className = 'btn-dark';
-        btnR.textContent = 'Retour à l’accueil';
-        btnR.onclick = function(){ go('home'); };
-        succ.innerHTML = '';
-        succ.appendChild(star); succ.appendChild(h3); succ.appendChild(p); succ.appendChild(btnR);
-      }
-      var btn2=document.getElementById('avis-submit-btn');
-      if(btn2){btn2.textContent='Envoyer mon avis →';btn2.style.opacity='1';}
-    })
-    .catch(function(e){
-      var btn2=document.getElementById('avis-submit-btn');
-      if(btn2){btn2.textContent='Envoyer mon avis →';btn2.style.opacity='1';}
-    });
-  }catch(e){}
-  document.getElementById('review-form-wrap').style.display='none';
-  document.getElementById('review-success').style.display='block';
-  btn.textContent='Publier mon avis';btn.style.opacity='1';
-  setTimeout(closeReviewModal,2500);
-}
-function addReviewCard(note,comment,prenom,societe){
-  var container=document.getElementById('new-reviews-container');
-  if(!container)return;
-  var stars='';
-  for(var i=1;i<=5;i++) stars+=(i<=note)?'<span style="color:var(--gold)">★</span>':'<span style="color:var(--light)">★</span>';
-  var initials=prenom.split(' ').map(function(w){return w[0];}).join('').substring(0,2).toUpperCase();
-  var now=new Date();
-  var date=now.toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'});
-  var card=document.createElement('div');
-  card.className='tcard tcard-new';
-  var role=societe?societe:'Client Alveris';
-  card.innerHTML='<div class="tcard-stars">'+stars+'</div><div class="tcard-quote">'+comment+'</div><div class="tcard-author"><div class="tcard-initials" style="background:var(--blue)">'+initials+'</div><div><div class="tcard-name">'+prenom+'</div><div class="tcard-role">'+role+'</div><div class="tcard-source">Avis verifie · '+date+'</div></div></div>';
-  container.appendChild(card);
-  if(window.innerWidth<560) container.style.gridTemplateColumns='1fr';
-  else if(window.innerWidth<960) container.style.gridTemplateColumns='1fr 1fr';
-}
 
 // ══ HERO PREMIUM SLIDER ══
 let hpCurrent = 0;

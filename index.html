@@ -794,14 +794,14 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a class="logo-wrap" onclick="go('home');return false;" href="#">
+    <a class="logo-wrap" onclick="go('home');return false;" href="/">
       <svg width="32" height="32" viewBox="0 0 80 80"><rect width="80" height="80" fill="#0c0c0c"/><line x1="18" y1="64" x2="62" y2="16" stroke="#c8a96d" stroke-width="2.5" stroke-linecap="round"/><polygon points="62,16 50,21 57,28" fill="#c8a96d"/><line x1="18" y1="64" x2="34" y2="34" stroke="#c8a96d" stroke-width="2.5" stroke-linecap="round"/><line x1="62" y1="16" x2="34" y2="34" stroke="#c8a96d" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/></svg>
       <span class="logo-name">ALVERIS</span>
     </a>
     <ul class="nav-links">
-      <li><a id="nl-home" class="cur" onclick="go('home');return false;" href="#" data-fr="Accueil" data-en="Home">Accueil</a></li>
+      <li><a id="nl-home" class="cur" onclick="go('home');return false;" href="/" data-fr="Accueil" data-en="Home">Accueil</a></li>
       <li>
-        <a class="has-dd" href="#" data-fr="Services" data-en="Services">Services</a>
+        <a class="has-dd" data-fr="Services" data-en="Services">Services</a>
         <div class="dropdown">
           <a href="/recrutement-directeur-general-industrie.html">Recrutement DG Industrie</a>
           <a href="/recrutement-directeur-usine-industrie.html">Directeur d'Usine</a>
@@ -817,11 +817,11 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
           <a href="/cabinet-recrutement-industrie-paris.html">Recrutement Industrie Paris</a>
         </div>
       </li>
-      <li><a id="nl-jobs" onclick="go('jobs');return false;" href="#" data-fr="Postes sur lesquels nous intervenons" data-en="Positions we work on">Postes sur lesquels nous intervenons</a></li>
-      <li><a id="nl-actu" onclick="go('actu');return false;" href="#" data-fr="Actualités" data-en="News">Actualités</a></li>
+      <li><a id="nl-jobs" onclick="go('jobs');return false;" href="#page-jobs" data-fr="Postes sur lesquels nous intervenons" data-en="Positions we work on">Postes sur lesquels nous intervenons</a></li>
+      <li><a id="nl-actu" href="/actualites/" data-fr="Actualités" data-en="News">Actualités</a></li>
       
-      <li><a id="nl-cv" onclick="go('cv');return false;" href="#" data-fr="Déposer un CV" data-en="Submit CV">Déposer un CV</a></li>
-      <li><a id="nl-contact" onclick="go('contact');return false;" href="#" data-fr="Contact" data-en="Contact">Contact</a></li>
+      <li><a id="nl-cv" onclick="go('cv');return false;" href="#page-cv" data-fr="Déposer un CV" data-en="Submit CV">Déposer un CV</a></li>
+      <li><a id="nl-contact" onclick="go('contact');return false;" href="#page-contact" data-fr="Contact" data-en="Contact">Contact</a></li>
     </ul>
     <div class="nav-right">
       <div class="lang-wrap">
@@ -837,7 +837,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 
 <!-- Mobile menu -->
 <div class="mobile-menu" id="mob-menu">
-  <a href="#" onclick="go('home');closeMenu();return false;" data-fr="Accueil" data-en="Home">Accueil</a>
+  <a href="/" onclick="go('home');closeMenu();return false;" data-fr="Accueil" data-en="Home">Accueil</a>
   <a href="/recrutement-directeur-general-industrie.html" class="msub">— Recrutement DG Industrie</a>
 <a href="/recrutement-directeur-usine-industrie.html" class="msub">— Directeur d'Usine</a>
 <a href="/recrutement-fonctions-support-industrie.html" class="msub">— Fonctions Support</a>
@@ -850,11 +850,11 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 <a href="/cabinet-recrutement-industrie-paca.html" class="msub">— Recrutement Industrie PACA</a>
 <a href="/cabinet-recrutement-industrie-grand-est.html" class="msub">— Recrutement Industrie Grand Est</a>
 <a href="/cabinet-recrutement-industrie-paris.html" class="msub">— Recrutement Industrie Paris</a>
-  <a href="#" onclick="go('jobs');closeMenu();return false;">Postes sur lesquels nous intervenons</a>
-  <a href="#" onclick="go('actu');closeMenu();return false;" data-fr="Actualités" data-en="News">Actualités</a>
+  <a href="#page-jobs" onclick="go('jobs');closeMenu();return false;">Postes sur lesquels nous intervenons</a>
+  <a href="/actualites/" data-fr="Actualités" data-en="News">Actualités</a>
 
-  <a href="#" onclick="go('cv');closeMenu();return false;" data-fr="Déposer un CV" data-en="Submit CV">Déposer un CV</a>
-  <a href="#" onclick="go('contact');closeMenu();return false;" data-fr="Contact" data-en="Contact">Contact</a>
+  <a href="#page-cv" onclick="go('cv');closeMenu();return false;" data-fr="Déposer un CV" data-en="Submit CV">Déposer un CV</a>
+  <a href="#page-contact" onclick="go('contact');closeMenu();return false;" data-fr="Contact" data-en="Contact">Contact</a>
   
   ✉ <a href="mailto:contact@alveris.fr" data-cfemail="">contact@alveris.fr</a>
 </div>
@@ -873,7 +873,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       </div>
       <div class="hp-content">
         <div class="hp-eyebrow">Executive Search · Industrie &amp; Ingénierie · France</div>
-        <h1 class="hp-title">Cabinet de recrutement industrie<br><em>&amp; executive search pour dirigeants.</em></h1>
+        <h1 class="hp-title">Cabinet de recrutement industrie &amp; executive search<br><em>pour ETI et groupes industriels</em></h1>
         <p class="hp-sub">Cabinet de recrutement industrie et executive search : Directeurs Généraux, COO, Directeurs d'usine, cadres clés. Approche directe, profils qualifiés sous 10 jours.</p>
         <div class="hp-actions">
           <button class="hp-btn-primary" onclick="go('contact')">Déposer un besoin</button>
@@ -1068,44 +1068,40 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     <p class="slabel">Marché &amp; tendances</p>
     <h2 class="stitle"><em>Actualités RH</em> &amp; Industrie</h2>
     <div id="actu-home-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem;">
-
-      <div onclick="go('actu-b1')" style="border:1px solid var(--light);border-radius:4px;overflow:hidden;cursor:pointer;background:var(--white);transition:border-color .2s,box-shadow .2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.07)'" onmouseout="this.style.borderColor='var(--light)';this.style.boxShadow='none'">
-        <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&q=80&auto=format&fit=crop" alt="Travail de fonderie et métallurgie" style="width:100%;height:160px;object-fit:cover;display:block;">
-        <div style="padding:1.25rem;">
-          <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;">Fonderie &amp; Métallurgie · Juillet 2026</div>
-          <div style="font-family:var(--serif);font-size:1rem;font-weight:400;margin-bottom:.5rem;line-height:1.35;">Fonderie et métallurgie : pourquoi les directeurs de site sont introuvables en 2026</div>
-          <div style="font-size:11px;color:var(--mid);line-height:1.6;">Les groupes de fonderie et de métallurgie peinent à pourvoir leurs postes de direction de site, un déficit de profils qui s'installe durablement.</div>
-          <div style="font-size:10px;color:var(--gold);margin-top:.75rem;font-weight:500;">Lire en entier →</div>
-        </div>
-      </div>
-
-      <div onclick="go('actu-b2')" style="border:1px solid var(--light);border-radius:4px;overflow:hidden;cursor:pointer;background:var(--white);transition:border-color .2s,box-shadow .2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.07)'" onmouseout="this.style.borderColor='var(--light)';this.style.boxShadow='none'">
-        <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&q=80&auto=format&fit=crop" alt="DRH industrie en comité de direction" style="width:100%;height:160px;object-fit:cover;display:block;">
-        <div style="padding:1.25rem;">
-          <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;">RH Industrie · Juin 2026</div>
-          <div style="font-family:var(--serif);font-size:1rem;font-weight:400;margin-bottom:.5rem;line-height:1.35;">DRH industrie : les nouvelles attentes des directions générales en 2026</div>
-          <div style="font-size:11px;color:var(--mid);line-height:1.6;">Le rôle du DRH industriel évolue vers un poste plus stratégique, directement associé aux enjeux de production et de compétitivité.</div>
-          <div style="font-size:10px;color:var(--gold);margin-top:.75rem;font-weight:500;">Lire en entier →</div>
-        </div>
-      </div>
-
-      <div onclick="go('actu-b3')" style="border:1px solid var(--light);border-radius:4px;overflow:hidden;cursor:pointer;background:var(--white);transition:border-color .2s,box-shadow .2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.07)'" onmouseout="this.style.borderColor='var(--light)';this.style.boxShadow='none'">
-        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=80&auto=format&fit=crop" alt="Marque employeur d'un groupe industriel" style="width:100%;height:160px;object-fit:cover;display:block;">
-        <div style="padding:1.25rem;">
-          <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;">Marque Employeur · Juin 2026</div>
-          <div style="font-family:var(--serif);font-size:1rem;font-weight:400;margin-bottom:.5rem;line-height:1.35;">Marque employeur industrielle : comment attirer les meilleurs directeurs de site</div>
-          <div style="font-size:11px;color:var(--mid);line-height:1.6;">Une majorité de candidats se renseignent sur la réputation d'un employeur avant de postuler, un enjeu que les groupes industriels ne peuvent plus ignorer.</div>
-          <div style="font-size:10px;color:var(--gold);margin-top:.75rem;font-weight:500;">Lire en entier →</div>
-        </div>
-      </div>
-
+  <a href="/actualites/directeur-site-nucleaire-marche-tension.html" style="display:block;text-decoration:none;color:inherit;border:1px solid var(--light);border-radius:4px;overflow:hidden;background:var(--white);transition:border-color .2s,box-shadow .2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.07)'" onmouseout="this.style.borderColor='var(--light)';this.style.boxShadow='none'">
+    <img alt="Tours de refroidissement d'une centrale nucléaire" src="https://images.unsplash.com/photo-1630142895963-6996ae6b3a5b?w=800&amp;q=80&amp;auto=format&amp;fit=crop" style="width:100%;height:160px;object-fit:cover;display:block;">
+    <div style="padding:1.25rem;">
+      <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;">Nucléaire · Énergie · Juillet 2026</div>
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:400;margin:0 0 .5rem;line-height:1.35;">Directeur de site nucléaire : un marché sous très forte tension</h3>
+      <div style="font-size:11px;color:var(--mid);line-height:1.6;">La filière nucléaire française engage un cycle de recrutement de dirigeants sans précédent depuis plusieurs décennies.</div>
+      <div style="font-size:10px;color:var(--gold);margin-top:.75rem;font-weight:500;">Lire l'article →</div>
     </div>
-    <div style="margin-top:2rem;text-align:center;">
-      <button class="btn-outline" onclick="go('actu')" style="font-size:11px;">Voir toutes les actualités →</button>
+  </a>
+  <a href="/actualites/cout-cabinet-executive-search-industrie.html" style="display:block;text-decoration:none;color:inherit;border:1px solid var(--light);border-radius:4px;overflow:hidden;background:var(--white);transition:border-color .2s,box-shadow .2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.07)'" onmouseout="this.style.borderColor='var(--light)';this.style.boxShadow='none'">
+    <img alt="Immeuble de bureaux d'un groupe industriel au crépuscule" src="https://images.unsplash.com/photo-1643391448961-621e0b1bc5b1?w=800&amp;q=80&amp;auto=format&amp;fit=crop" style="width:100%;height:160px;object-fit:cover;display:block;">
+    <div style="padding:1.25rem;">
+      <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;">Executive search · Méthode · Juillet 2026</div>
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:400;margin:0 0 .5rem;line-height:1.35;">Combien coûte un cabinet d'executive search industrie en 2026</h3>
+      <div style="font-size:11px;color:var(--mid);line-height:1.6;">Le coût d'un mandat d'executive search reste mal compris par de nombreuses directions générales industrielles.</div>
+      <div style="font-size:10px;color:var(--gold);margin-top:.75rem;font-weight:500;">Lire l'article →</div>
     </div>
+  </a>
+  <a href="/actualites/management-transition-aeronautique-cadence.html" style="display:block;text-decoration:none;color:inherit;border:1px solid var(--light);border-radius:4px;overflow:hidden;background:var(--white);transition:border-color .2s,box-shadow .2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.07)'" onmouseout="this.style.borderColor='var(--light)';this.style.boxShadow='none'">
+    <img alt="Ligne d'assemblage d'avions sur un site aéronautique" src="https://images.unsplash.com/photo-1784173938177-8a577ba9a50b?w=800&amp;q=80&amp;auto=format&amp;fit=crop" style="width:100%;height:160px;object-fit:cover;display:block;">
+    <div style="padding:1.25rem;">
+      <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;">Aéronautique · MRO · Juillet 2026</div>
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:400;margin:0 0 .5rem;line-height:1.35;">Management de transition en aéronautique : gérer une montée en cadence sans dérailler</h3>
+      <div style="font-size:11px;color:var(--mid);line-height:1.6;">La filière aéronautique poursuit sa montée en cadence, exposant les sites de production à de fortes tensions.</div>
+      <div style="font-size:10px;color:var(--gold);margin-top:.75rem;font-weight:500;">Lire l'article →</div>
+    </div>
+  </a>
+</div>
+<div style="text-align:center;margin-top:2rem;">
+  <a href="/actualites/" style="font-size:12px;font-weight:500;letter-spacing:.05em;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px;">Toutes les actualités →</a>
+</div>
   </section>
 
-    <!-- CTA BANDE -->
+  <!-- CTA BANDE --><!-- CTA BANDE -->
   <section style="background:var(--blue2);padding:4rem;text-align:center;color:var(--white);">
     <h2 style="font-family:var(--serif);font-size:2.5rem;font-weight:300;margin-bottom:1rem;" data-fr="Prêt à recruter le bon profil ?" data-en="Ready to hire the right profile?">Prêt à recruter le bon profil ?</h2>
     <p style="font-size:14px;opacity:.6;margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto;" data-fr="Premier échange gratuit et sans engagement. Nous qualifions votre besoin en 20 minutes." data-en="Free first call, no commitment. We qualify your brief in 20 minutes.">Premier échange gratuit et sans engagement. Nous qualifions votre besoin en 20 minutes.</p>
@@ -1121,7 +1117,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 <div class="page" id="page-jobs">
   <section class="section">
     <p class="slabel" data-fr="Postes sur lesquels nous intervenons" data-en="Positions we work on">Postes sur lesquels nous intervenons</p>
-    <h1 class="stitle"><em data-fr="Postes sur lesquels " data-en="Positions we are ">Postes sur lesquels </em><span data-fr="nous intervenons." data-en="working on.">nous intervenons.</span></h1>
+    <h2 class="stitle"><em data-fr="Postes sur lesquels " data-en="Positions we are ">Postes sur lesquels </em><span data-fr="nous intervenons." data-en="working on.">nous intervenons.</span></h2>
     <p class="sbody" data-fr="Aperçu des fonctions sur lesquelles Alveris intervient dans l'industrie. Les mandats en cours ne sont jamais publiés, par respect de la confidentialité de nos clients." data-en="Overview of the functions Alveris works on across industry. Ongoing mandates are never published, out of respect for our clients' confidentiality.">Aperçu des fonctions sur lesquelles Alveris intervient dans l'industrie. Les mandats en cours ne sont jamais publiés, par respect de la confidentialité de nos clients.</p>
 
     <div class="jobs-filters" style="margin-top:2rem;">
@@ -1346,7 +1342,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     <div class="sector-hero-overlay" style="background:linear-gradient(to top,rgba(10,18,38,.85) 0%,rgba(10,18,38,.3) 60%,transparent 100%);"></div>
     <div class="sector-hero-content">
       <div class="sector-badge" style="background:rgba(201,169,110,.15);color:#c9a96e;border:1px solid rgba(201,169,110,.3);">Cadres & Dirigeants</div>
-      <h1 class="sector-hero-title">Direction Générale<br>&amp; C-Level Industrie</h1>
+      <h2 class="sector-hero-title">Direction Générale<br>&amp; C-Level Industrie</h2>
       <p class="sector-hero-sub">Recrutement des profils les plus stratégiques dans l'industrie — PDG, DG, COO, EVP Operations, membres de comex.</p>
     </div>
   </div>
@@ -1395,7 +1391,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     <div class="sector-hero-overlay" style="background:linear-gradient(to top,rgba(15,8,2,.92) 0%,rgba(15,8,2,.3) 60%,transparent 100%);"></div>
     <div class="sector-hero-content">
       <div class="sector-badge" style="background:rgba(194,65,12,.2);color:#fb923c;border:1px solid rgba(194,65,12,.4);">Industrie &amp; Ingénierie</div>
-      <h1 class="sector-hero-title">Executive Search<br>Industrie &amp; Ingénierie</h1>
+      <h2 class="sector-hero-title">Executive Search<br>Industrie &amp; Ingénierie</h2>
       <p class="sector-hero-sub">Fonderie, automobile, pharma, agroalimentaire, ingénierie. Approche directe sur toute la France.</p>
     </div>
   </div>
@@ -1491,7 +1487,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     <div class="sector-hero-overlay" style="background:linear-gradient(to top,rgba(67,20,7,.85) 0%,rgba(67,20,7,.3) 60%,transparent 100%);"></div>
     <div class="sector-hero-content">
       <div class="sector-badge" style="background:rgba(255,237,213,.18);color:#fed7aa;border:1px solid rgba(255,237,213,.35);">Industrie · Opérations</div>
-      <h1 class="sector-hero-title">Direction Industrielle<br>&amp; Opérations</h1>
+      <h2 class="sector-hero-title">Direction Industrielle<br>&amp; Opérations</h2>
       <p class="sector-hero-sub">Directeurs d'usine, Plant Managers, Directeurs de production, Directeurs industriels groupe — tous secteurs industriels.</p>
     </div>
   </div>
@@ -1542,7 +1538,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     <div class="sector-hero-overlay" style="background:linear-gradient(to top,rgba(20,83,45,.85) 0%,rgba(20,83,45,.3) 60%,transparent 100%);"></div>
     <div class="sector-hero-content">
       <div class="sector-badge" style="background:rgba(220,252,231,.2);color:#bbf7d0;border:1px solid rgba(220,252,231,.35);">RH · Finance · Support</div>
-      <h1 class="sector-hero-title">RH, Finance<br>&amp; Fonctions Support</h1>
+      <h2 class="sector-hero-title">RH, Finance<br>&amp; Fonctions Support</h2>
       <p class="sector-hero-sub">DRH de groupe, DAF industrie, Directeurs Achats, Supply Chain, Qualité — les fonctions qui structurent la performance industrielle.</p>
     </div>
   </div>
@@ -1589,7 +1585,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     <div class="sector-hero-overlay" style="background:linear-gradient(to top,rgba(59,7,100,.85) 0%,rgba(59,7,100,.3) 60%,transparent 100%);"></div>
     <div class="sector-hero-content">
       <div class="sector-badge" style="background:rgba(237,233,254,.18);color:#ddd6fe;border:1px solid rgba(237,233,254,.35);">Mission courte · 6 à 18 mois</div>
-      <h1 class="sector-hero-title">Management<br>de Transition</h1>
+      <h2 class="sector-hero-title">Management<br>de Transition</h2>
       <p class="sector-hero-sub">Directeurs opérationnels disponibles rapidement pour mission courte : redressement de site, démarrage de production, remplacement urgent.</p>
     </div>
   </div>
@@ -1632,430 +1628,12 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 <!-- COMMERCE & HORECA — tons rose poudré / crème, style Accor / LVMH careers -->
 
 
-<!-- ═══════ PAGE ACTUALITÉS ═══════ -->
-<div class="page" id="page-actu">
-  <section class="section">
-    <!-- ═══════════════════════════════════════════════════════
-    ACTUALITÉS — GUIDE DE MISE À JOUR MENSUELLE
-    Pour modifier un article du slider :
-      1. Cherchez "SLIDE 1", "SLIDE 2" ou "SLIDE 3" dans ce fichier
-      2. Modifiez le texte entre data-fr="..." et data-en="..."
-      3. Changez l'URL de l'image src="https://images.unsplash.com/..."
-         (trouvez une photo sur unsplash.com et copiez son URL avec ?w=900&q=75)
-      4. Sauvegardez et redéployez sur Netlify (drag & drop du fichier)
-    ═══════════════════════════════════════════════════════ -->
-    <p class="slabel" data-fr="Marché & tendances" data-en="Market & trends">Marché & tendances</p>
-    <h1 class="stitle"><em data-fr="Actualités RH" data-en="HR News">Actualités RH</em><br><span data-fr="& Recrutement" data-en="& Recruitment">& Recrutement</span></h1>
-    <p class="sbody" data-fr="Décryptage des tendances du marché de l'emploi, insights recrutement et actualités RH sélectionnés par Alveris. Mis à jour chaque mois." data-en="Analysis of employment market trends, recruitment insights and HR news selected by Alveris. Updated monthly.">Décryptage des tendances du marché de l'emploi, insights recrutement et actualités RH sélectionnés par Alveris. Mis à jour chaque mois.</p>
-
-    <!-- SLIDER ACTUALITÉS -->
-    <div class="actu-slider" id="actu-slider" style="margin-top:3rem;border:1px solid var(--light);border-radius:6px;overflow:hidden;background:var(--white2);">
-
-  <!-- Wrapper slides -->
-  <div style="position:relative;overflow:hidden;" id="actu-track-wrap">
-
-    <!-- SLIDE 1 -->
-    <div id="aslide-0" style="display:flex;flex-direction:column;">
-      <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1800&q=80&auto=format&fit=crop" style="width:100%;height:260px;object-fit:cover;display:block;flex-shrink:0;" alt="Directeurs usine recrutement France">
-      <div class="actu-content">
-        <div class="actu-tag" data-fr="Recrutement Industrie · Juillet 2026" data-en="Industry Recruitment · July 2026">Recrutement Industrie · Juillet 2026</div>
-        <div class="actu-title" data-fr="Directeurs d'usine : pourquoi les meilleurs profils ne répondent pas à vos annonces" data-en="Plant managers: why the best profiles don't apply to your ads">Directeurs d'usine : pourquoi les meilleurs profils ne répondent pas à vos annonces</div>
-        <div class="actu-excerpt" data-fr="70% des recrutements de cadres industriels se font sans annonce publiée. Les directeurs d'usine expérimentés ne postulent pas — ils attendent d'être approchés. Ce que ça implique pour votre stratégie de recrutement en 2026." data-en="70% of industrial management hires happen without a published ad. Experienced plant managers don't apply — they wait to be approached. What this means for your recruitment strategy.">70% des recrutements de cadres industriels se font sans annonce publiée. Les directeurs d'usine expérimentés ne postulent pas — ils attendent d'être approchés. Ce que ça implique pour votre stratégie de recrutement.</div>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:.75rem;"><div class="actu-date" data-fr="3 juillet 2026 · 4 min" data-en="July 3, 2026 · 4 min">3 juillet 2026 · 4 min</div><a onclick="go('actu-art-1');return false;" href="#" style="font-size:11px;font-weight:500;color:var(--gold);text-decoration:none;" data-fr="Lire en entier →" data-en="Read more →">Lire en entier →</a></div>
-      </div>
-    </div>
-
-    <!-- SLIDE 2 -->
-    <div id="aslide-1" style="display:none;flex-direction:column;">
-      <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1800&q=80&auto=format&fit=crop" style="width:100%;height:260px;object-fit:cover;display:block;flex-shrink:0;" alt="Management de transition industrie">
-      <div class="actu-content">
-        <div class="actu-tag" data-fr="Management de Transition · Juin 2026" data-en="Interim Management · June 2026">Management de Transition · Juin 2026</div>
-        <div class="actu-title" data-fr="Management de transition industriel : quand y recourir et comment choisir le bon profil" data-en="Industrial interim management: when to use it and how to choose the right profile">Management de transition industriel : quand y recourir et comment choisir le bon profil</div>
-        <div class="actu-excerpt" data-fr="Redressement de site, démarrage de production, remplacement urgent d'un directeur d'usine — le management de transition répond à des situations précises. Décryptage des critères de sélection d'un directeur opérationnel en mission." data-en="Site turnaround, production launch, urgent plant manager replacement — interim management addresses specific situations. A breakdown of the criteria for selecting an operational manager for a mission.">Redressement de site, démarrage de production, remplacement urgent d'un directeur d'usine — le management de transition répond à des situations précises. Décryptage des critères de sélection d'un directeur opérationnel en mission.</div>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:.75rem;"><div class="actu-date" data-fr="18 juin 2026 · 4 min" data-en="June 18, 2026 · 4 min">18 juin 2026 · 4 min</div><a onclick="go('actu-art-2');return false;" href="#" style="font-size:11px;font-weight:500;color:var(--gold);text-decoration:none;" data-fr="Lire en entier →" data-en="Read more →">Lire en entier →</a></div>
-      </div>
-    </div>
-
-    <!-- SLIDE 3 -->
-    <div id="aslide-2" style="display:none;flex-direction:column;">
-      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1800&q=80&auto=format&fit=crop" style="width:100%;height:260px;object-fit:cover;display:block;flex-shrink:0;" alt="Salaires cadres industriels 2026">
-      <div class="actu-content">
-        <div class="actu-tag" data-fr="Salaires Industrie · Mai 2026" data-en="Industry Salaries · May 2026">Salaires Industrie · Mai 2026</div>
-        <div class="actu-title" data-fr="Rémunérations des cadres industriels en 2026 : ce qui a vraiment changé" data-en="Industrial management compensation in 2026: what has really changed">Rémunérations des cadres industriels en 2026 : ce qui a vraiment changé</div>
-        <div class="actu-excerpt" data-fr="Les packages des directeurs d'usine et COO industriels ont progressé de +5 à +8% en 2025. Les profils rares en fonderie et métallurgie négocient au-dessus des grilles groupe. État des lieux secteur par secteur en France." data-en="Plant manager and industrial COO packages grew +5 to +8% in 2025. Rare foundry and metallurgy profiles are negotiating above group grids. A sector-by-sector overview in France.">Les packages des directeurs d'usine et COO industriels ont progressé de +5 à +8% en 2025. Les profils rares en fonderie et métallurgie négocient au-dessus des grilles groupe. État des lieux secteur par secteur en France.</div>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:.75rem;"><div class="actu-date" data-fr="25 mai 2026 · 3 min" data-en="May 25, 2026 · 3 min">25 mai 2026 · 3 min</div><a onclick="go('actu-art-3');return false;" href="#" style="font-size:11px;font-weight:500;color:var(--gold);text-decoration:none;" data-fr="Lire en entier →" data-en="Read more →">Lire en entier →</a></div>
-      </div>
-    </div>
-
-  </div><!-- /track-wrap -->
-
-  <!-- Navigation bar -->
-  <div class="actu-nav">
-    <div class="actu-dots">
-      <div class="adot on" onclick="goActu(0)" id="adot-0"></div>
-      <div class="adot" onclick="goActu(1)" id="adot-1"></div>
-      <div class="adot" onclick="goActu(2)" id="adot-2"></div>
-    </div>
-    <div style="font-size:11px;color:var(--mid2);letter-spacing:.06em;" id="actu-counter">1 / 3</div>
-    <div class="actu-arrows">
-      <button class="actu-arr" onclick="prevActu()" aria-label="Précédent">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-      <button class="actu-arr" onclick="nextActu()" aria-label="Suivant">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-    </div>
-  </div>
-
-</div>
-
-<!-- GRILLE ARTICLES SUPPLÉMENTAIRES -->
-    <div class="actu-bottom-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem">
-      <div onclick="go('actu-b1')" style="border:1px solid var(--light);border-radius:4px;overflow:hidden;cursor:pointer;transition:border-color .2s,box-shadow .2s" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.07)'" onmouseout="this.style.borderColor='var(--light)';this.style.boxShadow='none'">
-        <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&q=80&auto=format&fit=crop" alt="Travail de fonderie et métallurgie" style="width:100%;height:140px;object-fit:cover">
-        <div style="padding:1.25rem">
-          <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem" data-fr="Fonderie & Métallurgie · Juillet 2026" data-en="Foundry & Metallurgy · July 2026">Fonderie & Métallurgie · Juillet 2026</div>
-          <div style="font-family:var(--serif);font-size:1rem;font-weight:400;margin-bottom:.5rem;line-height:1.35" data-fr="Fonderie et métallurgie : pourquoi les directeurs de site sont introuvables en 2026" data-en="Foundry and metallurgy: why site directors are impossible to find in 2026">Fonderie et métallurgie : pourquoi les directeurs de site sont introuvables en 2026</div>
-          <div style="font-size:11px;color:var(--mid);line-height:1.6" data-fr="Les groupes de fonderie et de métallurgie peinent à pourvoir leurs postes de direction de site, un déficit de profils qui s'installe durablement." data-en="Foundry and metallurgy groups struggle to fill site management roles, a profile shortage that is becoming structural.">Les groupes de fonderie et de métallurgie peinent à pourvoir leurs postes de direction de site, un déficit de profils qui s'installe durablement.</div>
-          <div style="font-size:10px;color:var(--gold);margin-top:.75rem;font-weight:500" data-fr="Lire en entier →" data-en="Read more →">Lire en entier →</div>
-        </div>
-      </div>
-      <div onclick="go('actu-b2')" style="border:1px solid var(--light);border-radius:4px;overflow:hidden;cursor:pointer;transition:border-color .2s,box-shadow .2s" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.07)'" onmouseout="this.style.borderColor='var(--light)';this.style.boxShadow='none'">
-        <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&q=80&auto=format&fit=crop" alt="DRH industrie en comité de direction" style="width:100%;height:140px;object-fit:cover">
-        <div style="padding:1.25rem">
-          <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem" data-fr="RH Industrie · Juin 2026" data-en="Industry HR · June 2026">RH Industrie · Juin 2026</div>
-          <div style="font-family:var(--serif);font-size:1rem;font-weight:400;margin-bottom:.5rem;line-height:1.35" data-fr="DRH industrie : les nouvelles attentes des directions générales en 2026" data-en="Industrial HR directors: new expectations from general management in 2026">DRH industrie : les nouvelles attentes des directions générales en 2026</div>
-          <div style="font-size:11px;color:var(--mid);line-height:1.6" data-fr="Le rôle du DRH industriel évolue vers un poste plus stratégique, directement associé aux enjeux de production et de compétitivité." data-en="The industrial HR director role is becoming more strategic, directly tied to production and competitiveness challenges.">Le rôle du DRH industriel évolue vers un poste plus stratégique, directement associé aux enjeux de production et de compétitivité.</div>
-          <div style="font-size:10px;color:var(--gold);margin-top:.75rem;font-weight:500" data-fr="Lire en entier →" data-en="Read more →">Lire en entier →</div>
-        </div>
-      </div>
-      <div onclick="go('actu-b3')" style="border:1px solid var(--light);border-radius:4px;overflow:hidden;cursor:pointer;transition:border-color .2s,box-shadow .2s" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.07)'" onmouseout="this.style.borderColor='var(--light)';this.style.boxShadow='none'">
-        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=80&auto=format&fit=crop" alt="Marque employeur d'un groupe industriel" style="width:100%;height:140px;object-fit:cover">
-        <div style="padding:1.25rem">
-          <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem" data-fr="Marque Employeur · Juin 2026" data-en="Employer Brand · June 2026">Marque Employeur · Juin 2026</div>
-          <div style="font-family:var(--serif);font-size:1rem;font-weight:400;margin-bottom:.5rem;line-height:1.35" data-fr="Marque employeur industrielle : comment attirer les meilleurs directeurs de site" data-en="Industrial employer brand: how to attract the best site directors">Marque employeur industrielle : comment attirer les meilleurs directeurs de site</div>
-          <div style="font-size:11px;color:var(--mid);line-height:1.6" data-fr="Une majorité de candidats se renseignent sur la réputation d'un employeur avant de postuler, un enjeu que les groupes industriels ne peuvent plus ignorer." data-en="Most candidates research an employer's reputation before applying, an issue industrial groups can no longer ignore.">Une majorité de candidats se renseignent sur la réputation d'un employeur avant de postuler, un enjeu que les groupes industriels ne peuvent plus ignorer.</div>
-          <div style="font-size:10px;color:var(--gold);margin-top:.75rem;font-weight:500" data-fr="Lire en entier →" data-en="Read more →">Lire en entier →</div>
-        </div>
-      </div>
-          <div onclick="go('actu-nuc')" style="border:1px solid var(--light);border-radius:4px;overflow:hidden;cursor:pointer;transition:border-color .2s,box-shadow .2s" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.07)'" onmouseout="this.style.borderColor='var(--light)';this.style.boxShadow='none'">
-        <img src="https://images.unsplash.com/photo-1630142895963-6996ae6b3a5b?w=800&q=80&auto=format&fit=crop" alt="Tours de refroidissement d'une centrale nucléaire" style="width:100%;height:140px;object-fit:cover">
-        <div style="padding:1.25rem">
-          <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem" data-fr="Nucléaire · Énergie · Juillet 2026" data-en="Nuclear · Energy · July 2026">Nucléaire · Énergie · Juillet 2026</div>
-          <div style="font-family:var(--serif);font-size:1rem;font-weight:400;margin-bottom:.5rem;line-height:1.35" data-fr="Directeur de site nucléaire : un marché sous très forte tension" data-en="Nuclear site director: a market under very high pressure">Directeur de site nucléaire : un marché sous très forte tension</div>
-          <div style="font-size:11px;color:var(--mid);line-height:1.6" data-fr="La filière nucléaire française engage un cycle de recrutement de cadres dirigeants sans précédent depuis plusieurs décennies, porté par la relance de nouveaux projets et le maintien du parc existant, dans un vivier de compétences historiquement restreint." data-en="The French nuclear sector is engaging in an executive recruitment cycle unseen in decades, driven by new project relaunches and the upkeep of the existing fleet, within a historically narrow talent pool.">La filière nucléaire française engage un cycle de recrutement de cadres dirigeants sans précédent depuis plusieurs décennies, porté par la relance de nouveaux projets et le maintien du parc existant, dans un vivier de compétences historiquement restreint.</div>
-        </div>
-      </div>
-      <div onclick="go('actu-cout-cabinet')" style="border:1px solid var(--light);border-radius:4px;overflow:hidden;cursor:pointer;transition:border-color .2s,box-shadow .2s" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.07)'" onmouseout="this.style.borderColor='var(--light)';this.style.boxShadow='none'">
-        <img src="https://images.unsplash.com/photo-1643391448961-621e0b1bc5b1?w=800&q=80&auto=format&fit=crop" alt="Immeuble de bureaux d'un groupe industriel au crépuscule" style="width:100%;height:140px;object-fit:cover">
-        <div style="padding:1.25rem">
-          <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem" data-fr="Executive search · Méthode · Juillet 2026" data-en="Executive search · Method · July 2026">Executive search · Méthode · Juillet 2026</div>
-          <div style="font-family:var(--serif);font-size:1rem;font-weight:400;margin-bottom:.5rem;line-height:1.35" data-fr="Combien coûte un cabinet d'executive search industrie en 2026" data-en="How much does an industrial executive search firm cost in 2026">Combien coûte un cabinet d'executive search industrie en 2026</div>
-          <div style="font-size:11px;color:var(--mid);line-height:1.6" data-fr="Le coût d'un mandat d'executive search reste mal compris par de nombreuses directions générales, alors qu'il conditionne directement le niveau d'engagement et de garantie obtenu sur un recrutement stratégique." data-en="The cost of an executive search mandate remains poorly understood by many executive teams, even though it directly determines the level of commitment and guarantee obtained on a strategic hire.">Le coût d'un mandat d'executive search reste mal compris par de nombreuses directions générales, alors qu'il conditionne directement le niveau d'engagement et de garantie obtenu sur un recrutement stratégique.</div>
-        </div>
-      </div>
-      <div onclick="go('actu-transition-aero')" style="border:1px solid var(--light);border-radius:4px;overflow:hidden;cursor:pointer;transition:border-color .2s,box-shadow .2s" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.07)'" onmouseout="this.style.borderColor='var(--light)';this.style.boxShadow='none'">
-        <img src="https://images.unsplash.com/photo-1784173938177-8a577ba9a50b?w=800&q=80&auto=format&fit=crop" alt="Ligne d'assemblage d'avions sur un site aéronautique" style="width:100%;height:140px;object-fit:cover">
-        <div style="padding:1.25rem">
-          <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem" data-fr="Aéronautique · MRO · Management de transition · Juillet 2026" data-en="Aerospace · MRO · Interim management · July 2026">Aéronautique · MRO · Management de transition · Juillet 2026</div>
-          <div style="font-family:var(--serif);font-size:1rem;font-weight:400;margin-bottom:.5rem;line-height:1.35" data-fr="Management de transition en aéronautique : gérer une montée en cadence sans dérailler" data-en="Interim management in aerospace: managing a production ramp-up without derailing">Management de transition en aéronautique : gérer une montée en cadence sans dérailler</div>
-          <div style="font-size:11px;color:var(--mid);line-height:1.6" data-fr="La filière aéronautique française poursuit sa montée en cadence après plusieurs années de sous-charge, un contexte qui expose les sites de production et de MRO à des tensions opérationnelles nécessitant un pilotage temporaire renforcé." data-en="The French aerospace sector continues its production ramp-up after several years of underload, a context that exposes production and MRO sites to operational strain requiring reinforced temporary leadership.">La filière aéronautique française poursuit sa montée en cadence après plusieurs années de sous-charge, un contexte qui expose les sites de production et de MRO à des tensions opérationnelles nécessitant un pilotage temporaire renforcé.</div>
-        </div>
-      </div>
-      <div onclick="go('actu-chasseur-cabinet')" style="border:1px solid var(--light);border-radius:4px;overflow:hidden;cursor:pointer;transition:border-color .2s,box-shadow .2s" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.07)'" onmouseout="this.style.borderColor='var(--light)';this.style.boxShadow='none'">
-        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80&auto=format&fit=crop" alt="Poignée de main entre deux dirigeants dans un bureau" style="width:100%;height:140px;object-fit:cover">
-        <div style="padding:1.25rem">
-          <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem" data-fr="Executive search · Méthode · Juillet 2026" data-en="Executive search · Method · July 2026">Executive search · Méthode · Juillet 2026</div>
-          <div style="font-family:var(--serif);font-size:1rem;font-weight:400;margin-bottom:.5rem;line-height:1.35" data-fr="Chasseur de tête ou cabinet de recrutement : quelle différence pour un poste de direction industrielle" data-en="Headhunter or recruitment firm: what's the difference for an industrial leadership role">Chasseur de tête ou cabinet de recrutement : quelle différence pour un poste de direction industrielle</div>
-          <div style="font-size:11px;color:var(--mid);line-height:1.6" data-fr="Les deux termes sont souvent confondus, alors qu'ils correspondent à des approches et à des niveaux d'engagement très différents lorsqu'il s'agit de pourvoir un poste de direction industrielle." data-en="The two terms are often confused, yet they correspond to very different approaches and levels of commitment when it comes to filling an industrial leadership role.">Les deux termes sont souvent confondus, alors qu'ils correspondent à des approches et à des niveaux d'engagement très différents lorsqu'il s'agit de pourvoir un poste de direction industrielle.</div>
-        </div>
-      </div>
-      <div onclick="go('actu-daf-precision')" style="border:1px solid var(--light);border-radius:4px;overflow:hidden;cursor:pointer;transition:border-color .2s,box-shadow .2s" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.07)'" onmouseout="this.style.borderColor='var(--light)';this.style.boxShadow='none'">
-        <img src="https://images.unsplash.com/photo-1666634157070-6fd830fb5672?w=800&q=80&auto=format&fit=crop" alt="Usinage de précision sur machine à commande numérique" style="width:100%;height:140px;object-fit:cover">
-        <div style="padding:1.25rem">
-          <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem" data-fr="RH Industrie · Finance · Juillet 2026" data-en="Industry HR · Finance · July 2026">RH Industrie · Finance · Juillet 2026</div>
-          <div style="font-family:var(--serif);font-size:1rem;font-weight:400;margin-bottom:.5rem;line-height:1.35" data-fr="DAF industrie de précision : un profil de plus en plus stratégique" data-en="CFO in precision industry: an increasingly strategic profile">DAF industrie de précision : un profil de plus en plus stratégique</div>
-          <div style="font-size:11px;color:var(--mid);line-height:1.6" data-fr="Dans les entreprises d'ingénierie et d'usinage de précision, la fonction de directeur administratif et financier dépasse le cadre comptable pour devenir un partenaire direct du pilotage industriel." data-en="In precision engineering and machining companies, the chief financial officer role now extends well beyond accounting to become a direct partner in industrial management.">Dans les entreprises d'ingénierie et d'usinage de précision, la fonction de directeur administratif et financier dépasse le cadre comptable pour devenir un partenaire direct du pilotage industriel.</div>
-        </div>
-      </div>
-</div>
-
-  </section>
-</div>
-
-<!-- PAGE ARTICLE B1 — Salaires cadres 2026 -->
-<div class="page" id="page-actu-b1">
-  <section class="section" style="max-width:780px;margin:0 auto">
-    <button onclick="go('actu')" style="background:none;border:none;cursor:pointer;font-size:12px;color:var(--mid);display:flex;align-items:center;gap:.4rem;margin-bottom:2rem;padding:0" data-fr="← Retour aux actualités" data-en="← Back to news">← Retour aux actualités</button>
-    <div style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem" data-fr="Fonderie & Métallurgie · Juillet 2026" data-en="Foundry & Metallurgy · July 2026">Fonderie & Métallurgie · Juillet 2026</div>
-    <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;line-height:1.15;margin-bottom:1rem" data-fr="Fonderie et métallurgie : pourquoi les directeurs de site sont introuvables en 2026" data-en="Foundry and metallurgy: why site directors are impossible to find in 2026">Fonderie et métallurgie : pourquoi les directeurs de site sont introuvables en 2026</h1>
-    <div style="font-size:11px;color:var(--mid2);margin-bottom:2rem" data-fr="10 juillet 2026 · 4 min de lecture · Alveris" data-en="July 10, 2026 · 4 min read · Alveris">10 juillet 2026 · 4 min de lecture · Alveris</div>
-    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1800&q=95&auto=format&fit=crop" alt="Travail de fonderie et métallurgie" style="width:100%;height:280px;object-fit:cover;border-radius:4px;margin-bottom:2rem">
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="La fonderie et la métallurgie françaises font face à une pénurie durable de candidats aux postes de direction de site, un secteur exigeant où l'expérience opérationnelle ne se remplace pas." data-en="French foundry and metallurgy face a lasting shortage of candidates for site management roles, a demanding sector where operational experience cannot be substituted.">La fonderie et la métallurgie françaises font face à une pénurie durable de candidats aux postes de direction de site, un secteur exigeant où l'expérience opérationnelle ne se remplace pas.</p>
-<div style="font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Un vivier de candidats structurellement restreint" data-en="A structurally limited candidate pool">Un vivier de candidats structurellement restreint</div>
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Le nombre de cadres dirigeants ayant une expérience confirmée en fonderie ou en métallurgie diminue plus vite qu'il ne se renouvelle, ce secteur ayant moins recruté de jeunes cadres au cours des quinze dernières années que d'autres filières industrielles." data-en="The number of executives with confirmed foundry or metallurgy experience is shrinking faster than it renews, as the sector has recruited fewer young managers over the past fifteen years than other industrial branches.">Le nombre de cadres dirigeants ayant une expérience confirmée en fonderie ou en métallurgie diminue plus vite qu'il ne se renouvelle, ce secteur ayant moins recruté de jeunes cadres au cours des quinze dernières années que d'autres filières industrielles.</p>
-<div style="font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Des compétences difficiles à transférer d'un autre secteur" data-en="Skills that are hard to transfer from another sector">Des compétences difficiles à transférer d'un autre secteur</div>
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Diriger un site de fonderie ou de métallurgie suppose une connaissance fine de contraintes spécifiques (process thermiques, sécurité, qualité métallurgique) qui ne s'acquièrent pas rapidement dans un autre secteur industriel. Les entreprises qui élargissent leur recherche à des profils issus d'autres filières rencontrent souvent des délais d'intégration plus longs que prévu." data-en="Running a foundry or metallurgy site requires precise knowledge of specific constraints (thermal processes, safety, metallurgical quality) that are not quickly acquired in another industrial sector. Companies that widen their search to profiles from other fields often face longer-than-expected integration times.">Diriger un site de fonderie ou de métallurgie suppose une connaissance fine de contraintes spécifiques (process thermiques, sécurité, qualité métallurgique) qui ne s'acquièrent pas rapidement dans un autre secteur industriel. Les entreprises qui élargissent leur recherche à des profils issus d'autres filières rencontrent souvent des délais d'intégration plus longs que prévu.</p>
-<div style="font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Des leviers pour élargir la recherche sans dégrader le profil" data-en="Ways to widen the search without lowering the bar">Des leviers pour élargir la recherche sans dégrader le profil</div>
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Certains groupes réussissent à élargir leur vivier en ciblant des numéros deux prêts à prendre une direction de site, ou des profils ayant piloté des sites de taille comparable dans des secteurs proches comme l'automobile ou l'équipement industriel. Cette ouverture doit rester encadrée par une évaluation rigoureuse des compétences transférables." data-en="Some groups manage to widen their pool by targeting deputy directors ready to take on site leadership, or profiles who have run comparably sized sites in related sectors such as automotive or industrial equipment. This openness must remain framed by a rigorous assessment of transferable skills.">Certains groupes réussissent à élargir leur vivier en ciblant des numéros deux prêts à prendre une direction de site, ou des profils ayant piloté des sites de taille comparable dans des secteurs proches comme l'automobile ou l'équipement industriel. Cette ouverture doit rester encadrée par une évaluation rigoureuse des compétences transférables.</p>
-    <div style="margin-top:2.5rem;padding:1.5rem;background:var(--sand);border-radius:4px;border-left:3px solid var(--gold)">
-      <div style="font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:.5rem" data-fr="Recrutement d’un directeur de site en fonderie ou en métallurgie" data-en="Recruiting a site director in foundry or metallurgy">Recrutement d’un directeur de site en fonderie ou en métallurgie</div>
-      <div style="font-size:13px;color:var(--mid);margin-bottom:1rem" data-fr="Alveris dispose d’un vivier de profils qualifiés sur ces secteurs en tension." data-en="Alveris has a pool of qualified profiles in these high-tension sectors.">Alveris dispose d’un vivier de profils qualifiés sur ces secteurs en tension.</div>
-      <button onclick="go('contact')" class="btn-dark" style="font-size:11px" data-fr="Déposer un besoin" data-en="Submit a need">Déposer un besoin</button>
-    </div>
-  </section>
-</div>
-
-<!-- PAGE ARTICLE B2 — IA et recrutement -->
-<div class="page" id="page-actu-b2">
-  <section class="section" style="max-width:780px;margin:0 auto">
-    <button onclick="go('actu')" style="background:none;border:none;cursor:pointer;font-size:12px;color:var(--mid);display:flex;align-items:center;gap:.4rem;margin-bottom:2rem;padding:0" data-fr="← Retour aux actualités" data-en="← Back to news">← Retour aux actualités</button>
-    <div style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem" data-fr="RH Industrie · Juin 2026" data-en="Industry HR · June 2026">RH Industrie · Juin 2026</div>
-    <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;line-height:1.15;margin-bottom:1rem" data-fr="DRH industrie : les nouvelles attentes des directions générales en 2026" data-en="Industrial HR directors: new expectations from general management in 2026">DRH industrie : les nouvelles attentes des directions générales en 2026</h1>
-    <div style="font-size:11px;color:var(--mid2);margin-bottom:2rem" data-fr="22 juin 2026 · 4 min de lecture · Alveris" data-en="June 22, 2026 · 4 min read · Alveris">22 juin 2026 · 4 min de lecture · Alveris</div>
-    <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1800&q=95&auto=format&fit=crop" alt="DRH industrie en comité de direction" style="width:100%;height:280px;object-fit:cover;border-radius:4px;margin-bottom:2rem">
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Le poste de DRH industriel évolue : les directions générales attendent désormais un partenaire stratégique, capable de sécuriser les recrutements critiques autant que d'accompagner les transformations de site." data-en="The industrial HR director role is evolving: general management now expects a strategic partner, able to secure critical recruitments as much as support site transformations.">Le poste de DRH industriel évolue : les directions générales attendent désormais un partenaire stratégique, capable de sécuriser les recrutements critiques autant que d'accompagner les transformations de site.</p>
-<div style="font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Un rôle qui dépasse la fonction support" data-en="A role that goes beyond the support function">Un rôle qui dépasse la fonction support</div>
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Dans l'industrie, le DRH est de plus en plus associé aux décisions opérationnelles : dimensionnement des équipes de production, plans de formation liés aux nouvelles lignes, anticipation des départs sur les postes clés. Les directions générales attendent une capacité de projection à deux ou trois ans, pas seulement une gestion administrative." data-en="In industry, the HR director is increasingly involved in operational decisions: sizing production teams, training plans linked to new lines, anticipating departures in key roles. General management expects the ability to plan two to three years ahead, not just administrative management.">Dans l'industrie, le DRH est de plus en plus associé aux décisions opérationnelles : dimensionnement des équipes de production, plans de formation liés aux nouvelles lignes, anticipation des départs sur les postes clés. Les directions générales attendent une capacité de projection à deux ou trois ans, pas seulement une gestion administrative.</p>
-<div style="font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="La pénurie de compétences comme sujet central" data-en="The skills shortage as a central issue">La pénurie de compétences comme sujet central</div>
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Le recrutement des profils techniques et des cadres de production reste une priorité pour la majorité des DRH industriels interrogés dans les enquêtes de branche. Cette tension pousse certaines directions à repenser leur politique de marque employeur et leurs canaux de sourcing." data-en="Recruiting technical profiles and production managers remains a priority for most industrial HR directors surveyed in sector studies. This pressure is pushing some organisations to rethink their employer brand policy and sourcing channels.">Le recrutement des profils techniques et des cadres de production reste une priorité pour la majorité des DRH industriels interrogés dans les enquêtes de branche. Cette tension pousse certaines directions à repenser leur politique de marque employeur et leurs canaux de sourcing.</p>
-<div style="font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Des profils de DRH plus opérationnels recherchés" data-en="A demand for more operational HR director profiles">Des profils de DRH plus opérationnels recherchés</div>
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Les groupes industriels privilégient désormais des DRH ayant une expérience de terrain, idéalement acquise sur un ou plusieurs sites de production, plutôt que des profils uniquement issus de fonctions RH corporate. Cette expérience facilite le dialogue avec les directeurs de site et les équipes opérationnelles." data-en="Industrial groups now favour HR directors with field experience, ideally gained on one or more production sites, rather than profiles solely from corporate HR functions. This experience makes it easier to work with site directors and operational teams.">Les groupes industriels privilégient désormais des DRH ayant une expérience de terrain, idéalement acquise sur un ou plusieurs sites de production, plutôt que des profils uniquement issus de fonctions RH corporate. Cette expérience facilite le dialogue avec les directeurs de site et les équipes opérationnelles.</p>
-    <div style="margin-top:2.5rem;padding:1.5rem;background:var(--sand);border-radius:4px;border-left:3px solid var(--gold)">
-      <div style="font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:.5rem" data-fr="Recrutement d’un DRH industrie" data-en="Recruiting an industrial HR director">Recrutement d’un DRH industrie</div>
-      <div style="font-size:13px;color:var(--mid);margin-bottom:1rem" data-fr="Alveris identifie des profils RH ayant une réelle culture terrain." data-en="Alveris identifies HR profiles with genuine field culture.">Alveris identifie des profils RH ayant une réelle culture terrain.</div>
-      <button onclick="go('contact')" class="btn-dark" style="font-size:11px" data-fr="Déposer un besoin" data-en="Submit a need">Déposer un besoin</button>
-    </div>
-  </section>
-</div>
-
-<!-- PAGE ARTICLE B3 — Marque employeur -->
-<div class="page" id="page-actu-b3">
-  <section class="section" style="max-width:780px;margin:0 auto">
-    <button onclick="go('actu')" style="background:none;border:none;cursor:pointer;font-size:12px;color:var(--mid);display:flex;align-items:center;gap:.4rem;margin-bottom:2rem;padding:0" data-fr="← Retour aux actualités" data-en="← Back to news">← Retour aux actualités</button>
-    <div style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem" data-fr="Marque Employeur · Juin 2026" data-en="Employer Brand · June 2026">Marque Employeur · Juin 2026</div>
-    <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;line-height:1.15;margin-bottom:1rem" data-fr="Marque employeur industrielle : comment attirer les meilleurs directeurs de site" data-en="Industrial employer brand: how to attract the best site directors">Marque employeur industrielle : comment attirer les meilleurs directeurs de site</h1>
-    <div style="font-size:11px;color:var(--mid2);margin-bottom:2rem" data-fr="8 juin 2026 · 4 min de lecture · Alveris" data-en="June 8, 2026 · 4 min read · Alveris">8 juin 2026 · 4 min de lecture · Alveris</div>
-    <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1800&q=95&auto=format&fit=crop" alt="Marque employeur d'un groupe industriel" style="width:100%;height:280px;object-fit:cover;border-radius:4px;margin-bottom:2rem">
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Une large part des candidats aux postes de direction industrielle se renseignent sur la réputation d'un employeur avant même de répondre à une sollicitation. La marque employeur devient un critère de décision à part entière." data-en="A large share of candidates for industrial leadership roles research an employer's reputation before even responding to an approach. Employer brand is becoming a decision criterion in its own right.">Une large part des candidats aux postes de direction industrielle se renseignent sur la réputation d'un employeur avant même de répondre à une sollicitation. La marque employeur devient un critère de décision à part entière.</p>
-<div style="font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Ce que regardent les candidats dirigeants" data-en="What executive candidates look at">Ce que regardent les candidats dirigeants</div>
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Avant d'échanger avec un cabinet ou une entreprise, un candidat à un poste de direction industrielle vérifie généralement la stabilité du groupe, les avis d'anciens salariés et la communication publique de l'entreprise sur ses sites de production." data-en="Before talking to a firm or a company, a candidate for an industrial leadership role generally checks the group's stability, former employees' reviews, and the company's public communication about its production sites.">Avant d'échanger avec un cabinet ou une entreprise, un candidat à un poste de direction industrielle vérifie généralement la stabilité du groupe, les avis d'anciens salariés et la communication publique de l'entreprise sur ses sites de production.</p>
-<div style="font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Investir dans sa marque employeur réduit les délais" data-en="Investing in employer brand shortens timelines">Investir dans sa marque employeur réduit les délais</div>
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Les groupes industriels qui communiquent régulièrement sur leurs sites, leurs projets et leurs équipes de direction rencontrent moins de difficultés à convaincre des candidats en poste ailleurs. À l'inverse, une entreprise peu visible doit souvent compenser par un processus de chasse plus long et plus coûteux." data-en="Industrial groups that communicate regularly about their sites, projects and leadership teams have fewer difficulties convincing candidates employed elsewhere. Conversely, a low-visibility company often has to compensate with a longer, more costly search process.">Les groupes industriels qui communiquent régulièrement sur leurs sites, leurs projets et leurs équipes de direction rencontrent moins de difficultés à convaincre des candidats en poste ailleurs. À l'inverse, une entreprise peu visible doit souvent compenser par un processus de chasse plus long et plus coûteux.</p>
-<div style="font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Des actions concrètes et accessibles" data-en="Concrete, accessible actions">Des actions concrètes et accessibles</div>
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Publier des témoignages de directeurs de site en poste, présenter les projets industriels en cours (investissements, modernisation de lignes) et soigner la présence de l'entreprise sur les plateformes professionnelles sont des leviers simples à mettre en place, sans nécessiter un budget marketing important." data-en="Publishing testimonials from current site directors, presenting ongoing industrial projects (investments, line modernisation) and maintaining the company's presence on professional platforms are simple levers to implement, without requiring a large marketing budget.">Publier des témoignages de directeurs de site en poste, présenter les projets industriels en cours (investissements, modernisation de lignes) et soigner la présence de l'entreprise sur les plateformes professionnelles sont des leviers simples à mettre en place, sans nécessiter un budget marketing important.</p>
-    <div style="margin-top:2.5rem;padding:1.5rem;background:var(--sand);border-radius:4px;border-left:3px solid var(--gold)">
-      <div style="font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:.5rem" data-fr="Marque employeur et recrutement de cadres dirigeants industriels" data-en="Employer brand and recruitment of industrial executives">Marque employeur et recrutement de cadres dirigeants industriels</div>
-      <div style="font-size:13px;color:var(--mid);margin-bottom:1rem" data-fr="Alveris conseille les groupes industriels sur leur attractivité auprès des cadres dirigeants." data-en="Alveris advises industrial groups on their attractiveness to executive candidates.">Alveris conseille les groupes industriels sur leur attractivité auprès des cadres dirigeants.</div>
-      <button onclick="go('contact')" class="btn-dark" style="font-size:11px" data-fr="Déposer un besoin" data-en="Submit a need">Déposer un besoin</button>
-    </div>
-  </section>
-</div>
-
-
-
-<!-- PAGE ARTICLE ACTU-NUC -->
-<div class="page" id="page-actu-nuc">
-  <section class="section" style="max-width:780px;margin:0 auto;">
-    <button onclick="go('actu')" style="background:none;border:none;cursor:pointer;font-size:12px;color:var(--mid);display:flex;align-items:center;gap:.4rem;margin-bottom:2rem;padding:0" data-fr="← Retour aux actualités" data-en="← Back to news">← Retour aux actualités</button>
-    <div style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem" data-fr="Nucléaire · Énergie · Juillet 2026" data-en="Nuclear · Energy · July 2026">Nucléaire · Énergie · Juillet 2026</div>
-    <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;line-height:1.15;margin-bottom:1rem" data-fr="Directeur de site nucléaire : un marché sous très forte tension" data-en="Nuclear site director: a market under very high pressure">Directeur de site nucléaire : un marché sous très forte tension</h1>
-    <div style="font-size:11px;color:var(--mid2);margin-bottom:2rem" data-fr="22 juillet 2026 · 5 min de lecture · Alveris" data-en="July 22, 2026 · 5 min read · Alveris">22 juillet 2026 · 5 min de lecture · Alveris</div>
-    <img src="https://images.unsplash.com/photo-1630142895963-6996ae6b3a5b?w=1800&q=95&auto=format&fit=crop" alt="Tours de refroidissement d'une centrale nucléaire" style="width:100%;height:280px;object-fit:cover;border-radius:4px;margin-bottom:2rem">
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="La filière nucléaire française engage un cycle de recrutement de cadres dirigeants sans précédent depuis plusieurs décennies, porté par la relance de nouveaux projets et le maintien du parc existant, dans un vivier de compétences historiquement restreint." data-en="The French nuclear sector is engaging in an executive recruitment cycle unseen in decades, driven by new project relaunches and the upkeep of the existing fleet, within a historically narrow talent pool.">La filière nucléaire française engage un cycle de recrutement de cadres dirigeants sans précédent depuis plusieurs décennies, porté par la relance de nouveaux projets et le maintien du parc existant, dans un vivier de compétences historiquement restreint.</p>
-    <div style="font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Un besoin de profils dirigeants sans précédent depuis les années 1980" data-en="An unprecedented need for executive profiles since the 1980s">Un besoin de profils dirigeants sans précédent depuis les années 1980</div>
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="La relance de nouveaux réacteurs et la prolongation du parc existant génèrent des besoins simultanés de directeurs de site, de directeurs de projet grands travaux et de responsables sûreté, sur un pas de temps que la filière n'avait plus connu depuis la fin du précédent grand cycle de construction." data-en="The relaunch of new reactors and the extension of the existing fleet are generating simultaneous needs for site directors, major-works project directors and safety officers, at a pace the sector has not seen since the end of its previous major construction cycle.">La relance de nouveaux réacteurs et la prolongation du parc existant génèrent des besoins simultanés de directeurs de site, de directeurs de projet grands travaux et de responsables sûreté, sur un pas de temps que la filière n'avait plus connu depuis la fin du précédent grand cycle de construction.</p>
-    <div style="font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Une pénurie de compétences accumulée sur plusieurs décennies" data-en="A skills shortage built up over several decades">Une pénurie de compétences accumulée sur plusieurs décennies</div>
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Le ralentissement des recrutements dans la filière au cours des années 2000 et 2010 a réduit le nombre de cadres formés en environnement nucléaire, alors qu'EDF, Orano, Framatome et leurs sous-traitants se retrouvent aujourd'hui en concurrence directe pour les mêmes profils expérimentés." data-en="The slowdown in sector hiring during the 2000s and 2010s reduced the number of executives trained in nuclear environments, leaving EDF, Orano, Framatome and their subcontractors now in direct competition for the same experienced profiles.">Le ralentissement des recrutements dans la filière au cours des années 2000 et 2010 a réduit le nombre de cadres formés en environnement nucléaire, alors qu'EDF, Orano, Framatome et leurs sous-traitants se retrouvent aujourd'hui en concurrence directe pour les mêmes profils expérimentés.</p>
-    <div style="font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Des exigences de sûreté qui réduisent encore le vivier disponible" data-en="Safety requirements that further narrow the available pool">Des exigences de sûreté qui réduisent encore le vivier disponible</div>
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Diriger un site nucléaire suppose une culture de sûreté et une connaissance du cadre réglementaire de l'Autorité de sûreté nucléaire qui ne s'acquièrent pas en quelques mois. Cette exigence limite fortement les possibilités de recrutement direct depuis un autre secteur industriel." data-en="Running a nuclear site requires a safety culture and a working knowledge of the Nuclear Safety Authority's regulatory framework that cannot be acquired in a few months. This requirement strongly limits direct recruitment from other industrial sectors.">Diriger un site nucléaire suppose une culture de sûreté et une connaissance du cadre réglementaire de l'Autorité de sûreté nucléaire qui ne s'acquièrent pas en quelques mois. Cette exigence limite fortement les possibilités de recrutement direct depuis un autre secteur industriel.</p>
-    <div style="font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Des parcours hybrides pour élargir prudemment le recrutement" data-en="Hybrid career paths to cautiously widen recruitment">Des parcours hybrides pour élargir prudemment le recrutement</div>
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Certains groupes élargissent leur recherche vers des profils issus de secteurs proches en matière d'exigence de sûreté, comme l'aéronautique, la pétrochimie ou la propulsion navale, à condition d'un accompagnement renforcé et d'une période de montée en compétence encadrée." data-en="Some groups are widening their search toward profiles from sectors with comparable safety standards, such as aerospace, petrochemicals or naval propulsion, provided this comes with strong support and a supervised skills-building period.">Certains groupes élargissent leur recherche vers des profils issus de secteurs proches en matière d'exigence de sûreté, comme l'aéronautique, la pétrochimie ou la propulsion navale, à condition d'un accompagnement renforcé et d'une période de montée en compétence encadrée.</p>
-    <div style="margin-top:2.5rem;padding:1.5rem;background:var(--sand);border-radius:4px;border-left:3px solid var(--gold);">
-      <div style="font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:.5rem" data-fr="Recrutement d'un directeur de site ou de programme dans le nucléaire" data-en="Recruiting a site or programme director in nuclear">Recrutement d'un directeur de site ou de programme dans le nucléaire</div>
-      <div style="font-size:13px;color:var(--mid);margin-bottom:1rem" data-fr="Alveris accompagne les acteurs de la filière sur ces profils rares et réglementés." data-en="Alveris supports sector players on these rare, highly regulated profiles.">Alveris accompagne les acteurs de la filière sur ces profils rares et réglementés.</div>
-      <button onclick="go('contact')" class="btn-dark" style="font-size:11px" data-fr="Déposer un besoin" data-en="Submit a need">Déposer un besoin</button>
-    </div>
-  </section>
-</div>
-
-<!-- PAGE ARTICLE ACTU-COUT-CABINET -->
-<div class="page" id="page-actu-cout-cabinet">
-  <section class="section" style="max-width:780px;margin:0 auto;">
-    <button onclick="go('actu')" style="background:none;border:none;cursor:pointer;font-size:12px;color:var(--mid);display:flex;align-items:center;gap:.4rem;margin-bottom:2rem;padding:0" data-fr="← Retour aux actualités" data-en="← Back to news">← Retour aux actualités</button>
-    <div style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem" data-fr="Executive search · Méthode · Juillet 2026" data-en="Executive search · Method · July 2026">Executive search · Méthode · Juillet 2026</div>
-    <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;line-height:1.15;margin-bottom:1rem" data-fr="Combien coûte un cabinet d'executive search industrie en 2026" data-en="How much does an industrial executive search firm cost in 2026">Combien coûte un cabinet d'executive search industrie en 2026</h1>
-    <div style="font-size:11px;color:var(--mid2);margin-bottom:2rem" data-fr="20 juillet 2026 · 5 min de lecture · Alveris" data-en="July 20, 2026 · 5 min read · Alveris">20 juillet 2026 · 5 min de lecture · Alveris</div>
-    <img src="https://images.unsplash.com/photo-1643391448961-621e0b1bc5b1?w=1800&q=95&auto=format&fit=crop" alt="Immeuble de bureaux d'un groupe industriel au crépuscule" style="width:100%;height:280px;object-fit:cover;border-radius:4px;margin-bottom:2rem">
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Le coût d'un mandat d'executive search reste mal compris par de nombreuses directions générales, alors qu'il conditionne directement le niveau d'engagement et de garantie obtenu sur un recrutement stratégique." data-en="The cost of an executive search mandate remains poorly understood by many executive teams, even though it directly determines the level of commitment and guarantee obtained on a strategic hire.">Le coût d'un mandat d'executive search reste mal compris par de nombreuses directions générales, alors qu'il conditionne directement le niveau d'engagement et de garantie obtenu sur un recrutement stratégique.</p>
-    <div style="font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Un honoraire calculé en pourcentage de la rémunération annuelle" data-en="A fee calculated as a percentage of annual compensation">Un honoraire calculé en pourcentage de la rémunération annuelle</div>
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Le modèle dominant du secteur consiste à facturer un pourcentage de la rémunération brute annuelle totale du poste, fixe et variable compris. La fourchette exacte varie selon les cabinets et la complexité du mandat." data-en="The dominant model in the sector is to charge a percentage of the position's total gross annual compensation, including fixed and variable pay. The exact range varies by firm and mandate complexity.">Le modèle dominant du secteur consiste à facturer un pourcentage de la rémunération brute annuelle totale du poste, fixe et variable compris. La fourchette exacte varie selon les cabinets et la complexité du mandat, et doit être confirmée au cas par cas avant toute communication chiffrée précise.</p>
-    <div style="font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Des honoraires qui varient selon la rareté du profil recherché" data-en="Fees that vary with the scarcity of the profile sought">Des honoraires qui varient selon la rareté du profil recherché</div>
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Un mandat portant sur un poste très spécialisé, comme un directeur de site nucléaire, un DG d'ETI industrielle ou un DAF industrie de précision, demande une cartographie de marché plus large et un temps de mission plus long, ce qui se reflète naturellement dans le niveau d'honoraires." data-en="A mandate for a highly specialised position, such as a nuclear site director, an industrial SME CEO or a precision-industry CFO, requires broader market mapping and a longer mission timeline, which naturally affects fee levels.">Un mandat portant sur un poste très spécialisé, comme un directeur de site nucléaire, un DG d'ETI industrielle ou un DAF industrie de précision, demande une cartographie de marché plus large et un temps de mission plus long, ce qui se reflète naturellement dans le niveau d'honoraires.</p>
-    <div style="font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Un investissement à mettre en regard du coût d'une erreur de recrutement" data-en="An investment to weigh against the cost of a bad hire">Un investissement à mettre en regard du coût d'une erreur de recrutement</div>
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Le coût d'un échec de recrutement à un poste de direction, entre la vacance du poste, la perte de temps des équipes et l'impact sur l'activité, dépasse généralement largement le montant des honoraires d'un cabinet d'executive search. Cet investissement doit être analysé comme une réduction de risque plus que comme une dépense." data-en="The cost of a failed hire at management level, factoring in position vacancy, lost team time and business impact, generally far exceeds an executive search firm's fees. This spend should be viewed as risk reduction rather than simple expense.">Le coût d'un échec de recrutement à un poste de direction, entre la vacance du poste, la perte de temps des équipes et l'impact sur l'activité, dépasse généralement largement le montant des honoraires d'un cabinet d'executive search. Cet investissement doit être analysé comme une réduction de risque plus que comme une dépense.</p>
-    <div style="font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Ce qui distingue un mandat exclusif d'une mission au succès" data-en="What sets an exclusive mandate apart from a contingency mission">Ce qui distingue un mandat exclusif d'une mission au succès</div>
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Un mandat exclusif engage le cabinet sur des moyens et une méthodologie complète, avec une garantie de remplacement en cas d'échec dans une période définie. Une mission au succès, mise en concurrence entre plusieurs cabinets, offre généralement moins de garanties et une implication moindre sur la durée de la recherche." data-en="An exclusive mandate commits the firm to full resources and methodology, with a replacement guarantee within a defined period if the placement fails. A contingency mission, run in competition between several firms, generally offers fewer guarantees and less sustained commitment throughout the search.">Un mandat exclusif engage le cabinet sur des moyens et une méthodologie complète, avec une garantie de remplacement en cas d'échec dans une période définie. Une mission au succès, mise en concurrence entre plusieurs cabinets, offre généralement moins de garanties et une implication moindre sur la durée de la recherche.</p>
-    <div style="margin-top:2.5rem;padding:1.5rem;background:var(--sand);border-radius:4px;border-left:3px solid var(--gold);">
-      <div style="font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:.5rem" data-fr="Un mandat de recrutement de direction à lancer" data-en="An executive search mandate to launch">Un mandat de recrutement de direction à lancer</div>
-      <div style="font-size:13px;color:var(--mid);margin-bottom:1rem" data-fr="Alveris détaille ses conditions d'intervention à l'issue d'un premier échange sur votre besoin." data-en="Alveris details its terms of engagement after an initial discussion of your need.">Alveris détaille ses conditions d'intervention à l'issue d'un premier échange sur votre besoin.</div>
-      <button onclick="go('contact')" class="btn-dark" style="font-size:11px" data-fr="Déposer un besoin" data-en="Submit a need">Déposer un besoin</button>
-    </div>
-  </section>
-</div>
-
-<!-- PAGE ARTICLE ACTU-TRANSITION-AERO -->
-<div class="page" id="page-actu-transition-aero">
-  <section class="section" style="max-width:780px;margin:0 auto;">
-    <button onclick="go('actu')" style="background:none;border:none;cursor:pointer;font-size:12px;color:var(--mid);display:flex;align-items:center;gap:.4rem;margin-bottom:2rem;padding:0" data-fr="← Retour aux actualités" data-en="← Back to news">← Retour aux actualités</button>
-    <div style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem" data-fr="Aéronautique · MRO · Management de transition · Juillet 2026" data-en="Aerospace · MRO · Interim management · July 2026">Aéronautique · MRO · Management de transition · Juillet 2026</div>
-    <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;line-height:1.15;margin-bottom:1rem" data-fr="Management de transition en aéronautique : gérer une montée en cadence sans dérailler" data-en="Interim management in aerospace: managing a production ramp-up without derailing">Management de transition en aéronautique : gérer une montée en cadence sans dérailler</h1>
-    <div style="font-size:11px;color:var(--mid2);margin-bottom:2rem" data-fr="18 juillet 2026 · 4 min de lecture · Alveris" data-en="July 18, 2026 · 4 min read · Alveris">18 juillet 2026 · 4 min de lecture · Alveris</div>
-    <img src="https://images.unsplash.com/photo-1784173938177-8a577ba9a50b?w=1800&q=95&auto=format&fit=crop" alt="Ligne d'assemblage d'avions sur un site aéronautique" style="width:100%;height:280px;object-fit:cover;border-radius:4px;margin-bottom:2rem">
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="La filière aéronautique française poursuit sa montée en cadence après plusieurs années de sous-charge, un contexte qui expose les sites de production et de MRO à des tensions opérationnelles nécessitant un pilotage temporaire renforcé." data-en="The French aerospace sector continues its production ramp-up after several years of underload, a context that exposes production and MRO sites to operational strain requiring reinforced temporary leadership.">La filière aéronautique française poursuit sa montée en cadence après plusieurs années de sous-charge, un contexte qui expose les sites de production et de MRO à des tensions opérationnelles nécessitant un pilotage temporaire renforcé.</p>
-    <div style="font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Une remontée de cadence qui met les organisations sous tension" data-en="A ramp-up that puts organisations under strain">Une remontée de cadence qui met les organisations sous tension</div>
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="La reprise des livraisons d'avions s'accompagne d'un recrutement massif d'opérateurs et de techniciens, ce qui met sous tension l'encadrement intermédiaire et la chaîne d'approvisionnement, sur des sites parfois restés plusieurs années en sous-effectif." data-en="The resumption of aircraft deliveries comes with massive hiring of operators and technicians, straining middle management and the supply chain on sites that in some cases remained understaffed for several years.">La reprise des livraisons d'avions s'accompagne d'un recrutement massif d'opérateurs et de techniciens, ce qui met sous tension l'encadrement intermédiaire et la chaîne d'approvisionnement, sur des sites parfois restés plusieurs années en sous-effectif.</p>
-    <div style="font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Le manager de transition comme réponse à l'urgence opérationnelle" data-en="The interim manager as a response to operational urgency">Le manager de transition comme réponse à l'urgence opérationnelle</div>
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Le recrutement d'un directeur de site permanent prend plusieurs mois. Un manager de transition permet de piloter l'organisation dès la détection d'un point de rupture opérationnel, sans attendre la fin du processus de recrutement classique." data-en="Recruiting a permanent site director takes several months. An interim manager allows the organisation to be steered as soon as an operational breaking point is detected, without waiting for a traditional recruitment process to conclude.">Le recrutement d'un directeur de site permanent prend plusieurs mois. Un manager de transition permet de piloter l'organisation dès la détection d'un point de rupture opérationnel, sans attendre la fin du processus de recrutement classique.</p>
-    <div style="font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Des compétences spécifiques à la filière difficiles à sécuriser rapidement" data-en="Sector-specific skills that are hard to secure quickly">Des compétences spécifiques à la filière difficiles à sécuriser rapidement</div>
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Le management de transition en aéronautique suppose une connaissance des référentiels qualité comme l'EN 9100, des exigences des grands donneurs d'ordre et de la gestion d'une sous-traitance à plusieurs niveaux, des compétences qui ne se délèguent pas à un profil généraliste." data-en="Interim management in aerospace requires knowledge of quality standards such as EN 9100, the requirements of major prime contractors, and multi-tier subcontractor management — skills that cannot be delegated to a generalist profile.">Le management de transition en aéronautique suppose une connaissance des référentiels qualité comme l'EN 9100, des exigences des grands donneurs d'ordre et de la gestion d'une sous-traitance à plusieurs niveaux, des compétences qui ne se délèguent pas à un profil généraliste.</p>
-    <div style="font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Cadrer la mission dès le départ pour éviter les dérives" data-en="Framing the mission from the outset to avoid drift">Cadrer la mission dès le départ pour éviter les dérives</div>
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Une mission de transition efficace repose sur des objectifs mesurables, une durée définie et un plan de transfert de compétences vers l'équipe permanente, afin que les progrès obtenus pendant la mission ne se perdent pas à son terme." data-en="An effective interim mission relies on measurable objectives, a defined duration and a skills-transfer plan to the permanent team, so that progress made during the mission is not lost once it ends.">Une mission de transition efficace repose sur des objectifs mesurables, une durée définie et un plan de transfert de compétences vers l'équipe permanente, afin que les progrès obtenus pendant la mission ne se perdent pas à son terme.</p>
-    <div style="margin-top:2.5rem;padding:1.5rem;background:var(--sand);border-radius:4px;border-left:3px solid var(--gold);">
-      <div style="font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:.5rem" data-fr="Un besoin de management de transition dans l'aéronautique" data-en="An interim management need in aerospace">Un besoin de management de transition dans l'aéronautique</div>
-      <div style="font-size:13px;color:var(--mid);margin-bottom:1rem" data-fr="Alveris dispose d'un vivier de managers de transition expérimentés sur ce secteur." data-en="Alveris has a pool of experienced interim managers in this sector.">Alveris dispose d'un vivier de managers de transition expérimentés sur ce secteur.</div>
-      <button onclick="go('contact')" class="btn-dark" style="font-size:11px" data-fr="Déposer un besoin" data-en="Submit a need">Déposer un besoin</button>
-    </div>
-  </section>
-</div>
-
-<!-- PAGE ARTICLE ACTU-CHASSEUR-CABINET -->
-<div class="page" id="page-actu-chasseur-cabinet">
-  <section class="section" style="max-width:780px;margin:0 auto;">
-    <button onclick="go('actu')" style="background:none;border:none;cursor:pointer;font-size:12px;color:var(--mid);display:flex;align-items:center;gap:.4rem;margin-bottom:2rem;padding:0" data-fr="← Retour aux actualités" data-en="← Back to news">← Retour aux actualités</button>
-    <div style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem" data-fr="Executive search · Méthode · Juillet 2026" data-en="Executive search · Method · July 2026">Executive search · Méthode · Juillet 2026</div>
-    <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;line-height:1.15;margin-bottom:1rem" data-fr="Chasseur de tête ou cabinet de recrutement : quelle différence pour un poste de direction industrielle" data-en="Headhunter or recruitment firm: what's the difference for an industrial leadership role">Chasseur de tête ou cabinet de recrutement : quelle différence pour un poste de direction industrielle</h1>
-    <div style="font-size:11px;color:var(--mid2);margin-bottom:2rem" data-fr="15 juillet 2026 · 4 min de lecture · Alveris" data-en="July 15, 2026 · 4 min read · Alveris">15 juillet 2026 · 4 min de lecture · Alveris</div>
-    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1800&q=95&auto=format&fit=crop" alt="Poignée de main entre deux dirigeants dans un bureau" style="width:100%;height:280px;object-fit:cover;border-radius:4px;margin-bottom:2rem">
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Les deux termes sont souvent confondus, alors qu'ils correspondent à des approches et à des niveaux d'engagement très différents lorsqu'il s'agit de pourvoir un poste de direction industrielle." data-en="The two terms are often confused, yet they correspond to very different approaches and levels of commitment when it comes to filling an industrial leadership role.">Les deux termes sont souvent confondus, alors qu'ils correspondent à des approches et à des niveaux d'engagement très différents lorsqu'il s'agit de pourvoir un poste de direction industrielle.</p>
-    <div style="font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Le cabinet de recrutement traite surtout des candidatures entrantes" data-en="The recruitment firm mainly handles inbound applications">Le cabinet de recrutement traite surtout des candidatures entrantes</div>
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Un cabinet de recrutement généraliste travaille principalement par diffusion d'annonces et gestion de candidatures spontanées. Cette approche convient aux postes pour lesquels des candidats qualifiés sont en recherche active." data-en="A generalist recruitment firm works mainly by posting job ads and managing unsolicited applications. This approach suits positions where qualified candidates are actively job-seeking.">Un cabinet de recrutement généraliste travaille principalement par diffusion d'annonces et gestion de candidatures spontanées. Cette approche convient aux postes pour lesquels des candidats qualifiés sont en recherche active.</p>
-    <div style="font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="L'executive search cible des dirigeants en poste, non candidats" data-en="Executive search targets executives in post, not applicants">L'executive search cible des dirigeants en poste, non candidats</div>
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Pour un poste de direction industrielle, la majorité des profils pertinents ne sont pas en recherche active. L'executive search repose sur une approche directe, une cartographie du marché et une démarche de discrétion vis-à-vis de l'entreprise actuelle du candidat." data-en="For an industrial leadership role, most relevant profiles are not actively job-seeking. Executive search relies on direct approach, market mapping and a discreet process with respect to the candidate's current employer.">Pour un poste de direction industrielle, la majorité des profils pertinents ne sont pas en recherche active. L'executive search repose sur une approche directe, une cartographie du marché et une démarche de discrétion vis-à-vis de l'entreprise actuelle du candidat.</p>
-    <div style="font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Une méthodologie différente, un temps de mission différent" data-en="A different methodology, a different mission timeline">Une méthodologie différente, un temps de mission différent</div>
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Un mandat d'executive search s'appuie sur une cartographie sectorielle complète, des entretiens approfondis et une prise de références poussée. Le délai est plus long qu'une diffusion d'annonce, mais la démarche vise un taux de réussite et de rétention plus élevé sur la durée." data-en="An executive search mandate relies on comprehensive sector mapping, in-depth interviews and thorough reference checks. It takes longer than posting a job ad, but the approach aims for a higher long-term success and retention rate.">Un mandat d'executive search s'appuie sur une cartographie sectorielle complète, des entretiens approfondis et une prise de références poussée. Le délai est plus long qu'une diffusion d'annonce, mais la démarche vise un taux de réussite et de rétention plus élevé sur la durée.</p>
-    <div style="font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Un choix qui dépend avant tout du niveau du poste" data-en="A choice that depends mainly on the seniority of the role">Un choix qui dépend avant tout du niveau du poste</div>
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Pour les postes de direction générale, de direction financière ou de direction des ressources humaines industrielle, l'executive search reste la méthode la plus adaptée, compte tenu de la rareté des profils et du niveau de discrétion requis." data-en="For general management, finance leadership or industrial HR leadership roles, executive search remains the most suitable method, given the scarcity of profiles and the level of discretion required.">Pour les postes de direction générale, de direction financière ou de direction des ressources humaines industrielle, l'executive search reste la méthode la plus adaptée, compte tenu de la rareté des profils et du niveau de discrétion requis.</p>
-    <div style="margin-top:2.5rem;padding:1.5rem;background:var(--sand);border-radius:4px;border-left:3px solid var(--gold);">
-      <div style="font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:.5rem" data-fr="Un poste de direction industrielle à pourvoir" data-en="An industrial leadership role to fill">Un poste de direction industrielle à pourvoir</div>
-      <div style="font-size:13px;color:var(--mid);margin-bottom:1rem" data-fr="Alveris intervient en executive search exclusif sur les postes de direction." data-en="Alveris operates on an exclusive executive search basis for leadership roles.">Alveris intervient en executive search exclusif sur les postes de direction.</div>
-      <button onclick="go('contact')" class="btn-dark" style="font-size:11px" data-fr="Déposer un besoin" data-en="Submit a need">Déposer un besoin</button>
-    </div>
-  </section>
-</div>
-
-<!-- PAGE ARTICLE ACTU-DAF-PRECISION -->
-<div class="page" id="page-actu-daf-precision">
-  <section class="section" style="max-width:780px;margin:0 auto;">
-    <button onclick="go('actu')" style="background:none;border:none;cursor:pointer;font-size:12px;color:var(--mid);display:flex;align-items:center;gap:.4rem;margin-bottom:2rem;padding:0" data-fr="← Retour aux actualités" data-en="← Back to news">← Retour aux actualités</button>
-    <div style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem" data-fr="RH Industrie · Finance · Juillet 2026" data-en="Industry HR · Finance · July 2026">RH Industrie · Finance · Juillet 2026</div>
-    <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;line-height:1.15;margin-bottom:1rem" data-fr="DAF industrie de précision : un profil de plus en plus stratégique" data-en="CFO in precision industry: an increasingly strategic profile">DAF industrie de précision : un profil de plus en plus stratégique</h1>
-    <div style="font-size:11px;color:var(--mid2);margin-bottom:2rem" data-fr="12 juillet 2026 · 4 min de lecture · Alveris" data-en="July 12, 2026 · 4 min read · Alveris">12 juillet 2026 · 4 min de lecture · Alveris</div>
-    <img src="https://images.unsplash.com/photo-1666634157070-6fd830fb5672?w=1800&q=95&auto=format&fit=crop" alt="Usinage de précision sur machine à commande numérique" style="width:100%;height:280px;object-fit:cover;border-radius:4px;margin-bottom:2rem">
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Dans les entreprises d'ingénierie et d'usinage de précision, la fonction de directeur administratif et financier dépasse le cadre comptable pour devenir un partenaire direct du pilotage industriel." data-en="In precision engineering and machining companies, the chief financial officer role now extends well beyond accounting to become a direct partner in industrial management.">Dans les entreprises d'ingénierie et d'usinage de précision, la fonction de directeur administratif et financier dépasse le cadre comptable pour devenir un partenaire direct du pilotage industriel.</p>
-    <div style="font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Une fonction financière de plus en plus liée à l'opérationnel" data-en="A finance function increasingly tied to operations">Une fonction financière de plus en plus liée à l'opérationnel</div>
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Un DAF industrie de précision doit comprendre les cycles de production, le besoin en fonds de roulement lié aux stocks de matière première et aux délais clients, ainsi que les contraintes propres à l'usinage sur machines à commande numérique." data-en="A precision-industry CFO must understand production cycles, the working capital needs tied to raw-material stock and customer payment terms, and the constraints specific to CNC machining.">Un DAF industrie de précision doit comprendre les cycles de production, le besoin en fonds de roulement lié aux stocks de matière première et aux délais clients, ainsi que les contraintes propres à l'usinage sur machines à commande numérique.</p>
-    <div style="font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Le pilotage des investissements, un enjeu central" data-en="Investment steering, a central issue">Le pilotage des investissements, un enjeu central</div>
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Les décisions d'investissement en machines à commande numérique ou en robotisation engagent des montants significatifs sur plusieurs années. Le DAF est associé à ces choix pour en évaluer le retour sur investissement et en structurer le financement." data-en="Investment decisions in CNC machines or robotics commit significant sums over several years. The CFO is involved in these choices to assess return on investment and structure financing.">Les décisions d'investissement en machines à commande numérique ou en robotisation engagent des montants significatifs sur plusieurs années. Le DAF est associé à ces choix pour en évaluer le retour sur investissement et en structurer le financement.</p>
-    <div style="font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Une exposition croissante aux enjeux de financement et de trésorerie" data-en="Growing exposure to financing and cash-flow issues">Une exposition croissante aux enjeux de financement et de trésorerie</div>
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Dans un contexte de tension sur les délais de paiement, le DAF industriel doit sécuriser la trésorerie tout en soutenant la croissance de l'activité, un équilibre d'autant plus sensible pour une entreprise dépendante de quelques donneurs d'ordre." data-en="Amid ongoing pressure on payment terms, the industrial CFO must secure cash flow while supporting business growth, a balance that is especially sensitive for companies dependent on a small number of key clients.">Dans un contexte de tension sur les délais de paiement, le DAF industriel doit sécuriser la trésorerie tout en soutenant la croissance de l'activité, un équilibre d'autant plus sensible pour une entreprise dépendante de quelques donneurs d'ordre.</p>
-    <div style="font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Un profil recherché au-delà des compétences comptables classiques" data-en="A profile sought beyond classic accounting skills">Un profil recherché au-delà des compétences comptables classiques</div>
-    <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Les entreprises recherchent des DAF combinant rigueur financière et compréhension fine des enjeux industriels, capables de dialoguer avec la direction générale et les équipes de production sur un pied d'égalité." data-en="Companies are looking for CFOs who combine financial rigour with a fine understanding of industrial issues, able to engage with general management and production teams on equal footing.">Les entreprises recherchent des DAF combinant rigueur financière et compréhension fine des enjeux industriels, capables de dialoguer avec la direction générale et les équipes de production sur un pied d'égalité.</p>
-    <div style="margin-top:2.5rem;padding:1.5rem;background:var(--sand);border-radius:4px;border-left:3px solid var(--gold);">
-      <div style="font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:.5rem" data-fr="Un DAF industrie de précision à recruter" data-en="A precision-industry CFO to recruit">Un DAF industrie de précision à recruter</div>
-      <div style="font-size:13px;color:var(--mid);margin-bottom:1rem" data-fr="Alveris identifie des profils financiers ayant une réelle culture industrielle." data-en="Alveris identifies financial profiles with a genuine industrial background.">Alveris identifie des profils financiers ayant une réelle culture industrielle.</div>
-      <button onclick="go('contact')" class="btn-dark" style="font-size:11px" data-fr="Déposer un besoin" data-en="Submit a need">Déposer un besoin</button>
-    </div>
-  </section>
-</div>
-
-<!-- ═══════ PAGES ARTICLES ACTUALITÉS ═══════ -->
-<div class="page" id="page-actu-art-1">
-  <section class="section" style="max-width:780px;margin:0 auto">
-    <button onclick="go('actu')" style="background:none;border:none;cursor:pointer;font-size:12px;color:var(--mid);display:flex;align-items:center;gap:.4rem;margin-bottom:2rem;padding:0" data-fr="← Retour aux actualités" data-en="← Back to news">← Retour aux actualités</button>
-    <div style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem" data-fr="Recrutement Industrie · Juillet 2026" data-en="Industry Recruitment · July 2026">Recrutement Industrie · Juillet 2026</div>
-    <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;line-height:1.15;margin-bottom:1rem" data-fr="Directeurs d'usine : pourquoi les meilleurs profils ne répondent pas à vos annonces" data-en="Plant managers: why the best profiles don't apply to your job ads">Directeurs d'usine : pourquoi les meilleurs profils ne répondent pas à vos annonces</h1>
-    <div style="font-size:11px;color:var(--mid2);margin-bottom:2rem" data-fr="3 juillet 2026 · 4 min de lecture · Alveris" data-en="July 3, 2026 · 4 min read · Alveris">3 juillet 2026 · 4 min de lecture · Alveris</div>
-    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1800&q=95&auto=format&fit=crop" alt="Recrutement de directeurs d'usine en France" style="width:100%;height:280px;object-fit:cover;border-radius:4px;margin-bottom:2rem">
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="En 2026, la majorité des directeurs d'usine et directeurs industriels les plus recherchés ne répondent plus aux annonces classiques. Ils sont déjà en poste, sollicités régulièrement, et jugent une offre sur sa forme autant que sur son fond." data-en="In 2026, most of the most sought-after plant managers and industrial directors no longer respond to standard job ads. They are already employed, regularly approached, and judge an offer on its form as much as its substance.">En 2026, la majorité des directeurs d'usine et directeurs industriels les plus recherchés ne répondent plus aux annonces classiques. Ils sont déjà en poste, sollicités régulièrement, et jugent une offre sur sa forme autant que sur son fond.</p>
-<div style="font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Un marché en grande partie invisible" data-en="A largely invisible market">Un marché en grande partie invisible</div>
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Une large part des recrutements de cadres dirigeants industriels se conclut sans jamais passer par une annonce publiée. Les profils expérimentés en direction de site, direction des opérations ou direction industrielle changent rarement de poste par candidature spontanée : ils sont approchés directement, sur recommandation ou via un cabinet spécialisé." data-en="A large share of executive industrial recruitments never go through a published job ad. Experienced plant, operations or industrial directors rarely change jobs through spontaneous applications: they are approached directly, through referral or a specialised firm.">Une large part des recrutements de cadres dirigeants industriels se conclut sans jamais passer par une annonce publiée. Les profils expérimentés en direction de site, direction des opérations ou direction industrielle changent rarement de poste par candidature spontanée : ils sont approchés directement, sur recommandation ou via un cabinet spécialisé.</p>
-<div style="font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Ce qui fait fuir les bons candidats" data-en="What drives good candidates away">Ce qui fait fuir les bons candidats</div>
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Trois éléments reviennent systématiquement dans les retours de candidats dirigeants : un intitulé de poste flou ou générique, l'absence d'information sur le périmètre réel (budget, effectifs, rattachement hiérarchique), et un processus jugé trop long au regard de l'enjeu. Un directeur d'usine en poste n'engage une démarche que si la proposition est claire dès le premier contact." data-en="Three points come up systematically in feedback from executive candidates: a vague or generic job title, lack of information on the real scope (budget, headcount, reporting line), and a process seen as too long given the stakes. A plant manager already in post will only engage if the proposal is clear from the first contact.">Trois éléments reviennent systématiquement dans les retours de candidats dirigeants : un intitulé de poste flou ou générique, l'absence d'information sur le périmètre réel (budget, effectifs, rattachement hiérarchique), et un processus jugé trop long au regard de l'enjeu. Un directeur d'usine en poste n'engage une démarche que si la proposition est claire dès le premier contact.</p>
-<div style="font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="L'approche directe reste la plus efficace" data-en="Direct approach remains the most effective">L'approche directe reste la plus efficace</div>
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Pour les postes de direction industrielle, l'approche directe permet d'identifier des profils qui ne sont pas en recherche active mais ouverts à une opportunité pertinente. Cette méthode suppose une connaissance fine des bassins d'emploi industriels, notamment en Rhône-Alpes et en région lyonnaise, où la concurrence entre groupes industriels sur les profils seniors est particulièrement forte." data-en="For industrial leadership roles, direct approach identifies profiles who are not actively job-hunting but open to a relevant opportunity. This requires precise knowledge of industrial employment areas, particularly in Rhône-Alpes and the Lyon region, where competition between industrial groups for senior profiles is especially strong.">Pour les postes de direction industrielle, l'approche directe permet d'identifier des profils qui ne sont pas en recherche active mais ouverts à une opportunité pertinente. Cette méthode suppose une connaissance fine des bassins d'emploi industriels, notamment en Rhône-Alpes et en région lyonnaise, où la concurrence entre groupes industriels sur les profils seniors est particulièrement forte.</p>
-<div style="font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Ce que font différemment les entreprises qui recrutent vite" data-en="What companies that hire quickly do differently">Ce que font différemment les entreprises qui recrutent vite</div>
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Les groupes industriels qui pourvoient leurs postes de direction dans de bons délais préparent en amont une fiche de poste précise, associent leurs équipes opérationnelles au processus dès le premier entretien, et acceptent de rencontrer des profils en poste ailleurs sans exiger une disponibilité immédiate." data-en="Industrial groups that fill leadership positions quickly prepare a precise job description upfront, involve operational teams from the first interview, and accept meeting candidates currently employed elsewhere without demanding immediate availability.">Les groupes industriels qui pourvoient leurs postes de direction dans de bons délais préparent en amont une fiche de poste précise, associent leurs équipes opérationnelles au processus dès le premier entretien, et acceptent de rencontrer des profils en poste ailleurs sans exiger une disponibilité immédiate.</p>
-    <div style="margin-top:2.5rem;padding:1.5rem;background:var(--sand);border-radius:4px;border-left:3px solid var(--gold)">
-      <div style="font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:.5rem" data-fr="Recrutement d'un directeur d'usine ou d'un cadre dirigeant industriel" data-en="Recruiting a plant manager or industrial executive">Recrutement d'un directeur d'usine ou d'un cadre dirigeant industriel</div>
-      <div style="font-size:13px;color:var(--mid);margin-bottom:1rem" data-fr="Alveris identifie et approche directement les profils qui ne répondent pas aux annonces." data-en="Alveris identifies and directly approaches profiles who do not respond to job ads.">Alveris identifie et approche directement les profils qui ne répondent pas aux annonces.</div>
-      <button onclick="go('contact')" class="btn-dark" style="font-size:11px" data-fr="Déposer un besoin" data-en="Submit a need">Déposer un besoin</button>
-    </div>
-  </section>
-</div>
-
-<div class="page" id="page-actu-art-2">
-  <section class="section" style="max-width:780px;margin:0 auto">
-    <button onclick="go('actu')" style="background:none;border:none;cursor:pointer;font-size:12px;color:var(--mid);display:flex;align-items:center;gap:.4rem;margin-bottom:2rem;padding:0" data-fr="← Retour aux actualités" data-en="← Back to news">← Retour aux actualités</button>
-    <div style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem" data-fr="Management de Transition · Juin 2026" data-en="Interim Management · June 2026">Management de Transition · Juin 2026</div>
-    <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;line-height:1.15;margin-bottom:1rem" data-fr="Management de transition industriel : quand y recourir et comment choisir le bon profil" data-en="Industrial interim management: when to use it and how to choose the right profile">Management de transition industriel : quand y recourir et comment choisir le bon profil</h1>
-    <div style="font-size:11px;color:var(--mid2);margin-bottom:2rem" data-fr="18 juin 2026 · 4 min de lecture · Alveris" data-en="June 18, 2026 · 4 min read · Alveris">18 juin 2026 · 4 min de lecture · Alveris</div>
-    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1800&q=95&auto=format&fit=crop" alt="Manager de transition sur un site industriel" style="width:100%;height:280px;object-fit:cover;border-radius:4px;margin-bottom:2rem">
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Redressement de site, démarrage d'une nouvelle ligne de production, remplacement urgent d'un directeur d'usine : le management de transition répond à des situations précises, à condition de choisir un profil réellement adapté à l'enjeu." data-en="Site turnaround, new production line start-up, urgent replacement of a plant manager: interim management addresses specific situations, provided the profile chosen truly matches the challenge.">Redressement de site, démarrage d'une nouvelle ligne de production, remplacement urgent d'un directeur d'usine : le management de transition répond à des situations précises, à condition de choisir un profil réellement adapté à l'enjeu.</p>
-<div style="font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Trois situations qui justifient un manager de transition" data-en="Three situations that justify an interim manager">Trois situations qui justifient un manager de transition</div>
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Le recours à un manager de transition industriel se justifie principalement dans trois cas : un poste de direction vacant sans successeur identifié, un site en difficulté nécessitant un redressement rapide, ou un projet ponctuel (fusion, démarrage d'usine, réorganisation) demandant une expertise que l'entreprise ne possède pas en interne." data-en="Using an industrial interim manager is mainly justified in three cases: a vacant leadership position with no identified successor, a struggling site needing a rapid turnaround, or a one-off project (merger, plant start-up, reorganisation) requiring expertise the company lacks internally.">Le recours à un manager de transition industriel se justifie principalement dans trois cas : un poste de direction vacant sans successeur identifié, un site en difficulté nécessitant un redressement rapide, ou un projet ponctuel (fusion, démarrage d'usine, réorganisation) demandant une expertise que l'entreprise ne possède pas en interne.</p>
-<div style="font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Ce qui distingue un bon manager de transition" data-en="What sets a good interim manager apart">Ce qui distingue un bon manager de transition</div>
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Un manager de transition industriel efficace combine une expérience opérationnelle solide en direction de site ou direction des opérations, et une capacité à être immédiatement opérationnel, sans période d'adaptation prolongée. Sa mission est bornée dans le temps, avec des objectifs mesurables fixés dès le départ." data-en="An effective industrial interim manager combines solid operational experience in site or operations management with the ability to be immediately operational, without a prolonged adaptation period. The mission is time-bound, with measurable objectives set from the start.">Un manager de transition industriel efficace combine une expérience opérationnelle solide en direction de site ou direction des opérations, et une capacité à être immédiatement opérationnel, sans période d'adaptation prolongée. Sa mission est bornée dans le temps, avec des objectifs mesurables fixés dès le départ.</p>
-<div style="font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Un marché en croissance en France" data-en="A growing market in France">Un marché en croissance en France</div>
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Le nombre de missions de management de transition dans l'industrie française progresse depuis plusieurs années, porté par les enjeux de réindustrialisation et les difficultés de recrutement sur les postes de direction." data-en="The number of interim management assignments in French industry has been growing for several years, driven by reindustrialisation efforts and recruitment difficulties for leadership roles.">Le nombre de missions de management de transition dans l'industrie française progresse depuis plusieurs années, porté par les enjeux de réindustrialisation et les difficultés de recrutement sur les postes de direction.</p>
-<div style="font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Bien choisir son cabinet de management de transition" data-en="Choosing the right interim management firm">Bien choisir son cabinet de management de transition</div>
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Le choix du cabinet est déterminant : il doit connaître précisément le secteur industriel concerné (fonderie, automobile, pharma, énergie) et disposer d'un vivier de profils immédiatement disponibles, plutôt que de lancer une recherche standard sur un poste qui, par définition, ne peut pas attendre." data-en="The choice of firm is decisive: it must have precise knowledge of the industrial sector involved (foundry, automotive, pharma, energy) and a pool of immediately available profiles, rather than launching a standard search for a role that, by definition, cannot wait.">Le choix du cabinet est déterminant : il doit connaître précisément le secteur industriel concerné (fonderie, automobile, pharma, énergie) et disposer d'un vivier de profils immédiatement disponibles, plutôt que de lancer une recherche standard sur un poste qui, par définition, ne peut pas attendre.</p>
-    <div style="margin-top:2.5rem;padding:1.5rem;background:var(--sand);border-radius:4px;border-left:3px solid var(--gold)">
-      <div style="font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:.5rem" data-fr="Besoin d'un manager de transition industriel" data-en="Need for an industrial interim manager">Besoin d'un manager de transition industriel</div>
-      <div style="font-size:13px;color:var(--mid);margin-bottom:1rem" data-fr="Alveris mobilise des profils opérationnels disponibles rapidement, sur l'ensemble du territoire français." data-en="Alveris mobilises operational profiles available quickly, across the whole of France.">Alveris mobilise des profils opérationnels disponibles rapidement, sur l'ensemble du territoire français.</div>
-      <button onclick="go('contact')" class="btn-dark" style="font-size:11px" data-fr="Déposer un besoin" data-en="Submit a need">Déposer un besoin</button>
-    </div>
-  </section>
-</div>
-
-<div class="page" id="page-actu-art-3">
-  <section class="section" style="max-width:780px;margin:0 auto">
-    <button onclick="go('actu')" style="background:none;border:none;cursor:pointer;font-size:12px;color:var(--mid);display:flex;align-items:center;gap:.4rem;margin-bottom:2rem;padding:0" data-fr="← Retour aux actualités" data-en="← Back to news">← Retour aux actualités</button>
-    <div style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem" data-fr="Salaires Industrie · Mai 2026" data-en="Industry Salaries · May 2026">Salaires Industrie · Mai 2026</div>
-    <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;line-height:1.15;margin-bottom:1rem" data-fr="Rémunérations des cadres industriels en 2026 : ce qui a vraiment changé" data-en="Industrial executive compensation in 2026: what has really changed">Rémunérations des cadres industriels en 2026 : ce qui a vraiment changé</h1>
-    <div style="font-size:11px;color:var(--mid2);margin-bottom:2rem" data-fr="25 mai 2026 · 3 min de lecture · Alveris" data-en="May 25, 2026 · 3 min read · Alveris">25 mai 2026 · 3 min de lecture · Alveris</div>
-    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1800&q=95&auto=format&fit=crop" alt="Rémunération des cadres dirigeants industriels" style="width:100%;height:280px;object-fit:cover;border-radius:4px;margin-bottom:2rem">
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Les packages de rémunération des directeurs d'usine et des cadres dirigeants industriels ont évolué en 2025 et 2026, avec des écarts croissants selon les secteurs et les bassins d'emploi." data-en="Compensation packages for plant managers and industrial executives evolved in 2025 and 2026, with growing gaps depending on sector and employment area.">Les packages de rémunération des directeurs d'usine et des cadres dirigeants industriels ont évolué en 2025 et 2026, avec des écarts croissants selon les secteurs et les bassins d'emploi.</p>
-<div style="font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Des écarts marqués selon les secteurs" data-en="Marked differences by sector">Des écarts marqués selon les secteurs</div>
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Les profils rares, notamment en fonderie, métallurgie et aéronautique, négocient au-dessus des grilles habituellement pratiquées par les groupes industriels. À l'inverse, certains secteurs plus consolidés voient leurs grilles évoluer plus lentement." data-en="Rare profiles, particularly in foundry, metallurgy and aerospace, negotiate above the scales usually applied by industrial groups. Conversely, some more consolidated sectors see their scales evolve more slowly.">Les profils rares, notamment en fonderie, métallurgie et aéronautique, négocient au-dessus des grilles habituellement pratiquées par les groupes industriels. À l'inverse, certains secteurs plus consolidés voient leurs grilles évoluer plus lentement.</p>
-<div style="font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="La part variable prend plus de poids" data-en="Variable pay carries more weight">La part variable prend plus de poids</div>
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Au-delà du salaire fixe, la part variable liée à des objectifs opérationnels (sécurité, qualité, productivité) est de plus en plus déterminante dans les propositions faites aux directeurs d'usine et directeurs industriels, en particulier pour les postes rattachés directement à une direction générale." data-en="Beyond fixed salary, variable pay linked to operational targets (safety, quality, productivity) is increasingly decisive in offers made to plant managers and industrial directors, particularly for roles reporting directly to general management.">Au-delà du salaire fixe, la part variable liée à des objectifs opérationnels (sécurité, qualité, productivité) est de plus en plus déterminante dans les propositions faites aux directeurs d'usine et directeurs industriels, en particulier pour les postes rattachés directement à une direction générale.</p>
-<div style="font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:2rem 0 .75rem" data-fr="Lyon et Rhône-Alpes, un marché sous tension" data-en="Lyon and Rhône-Alpes: a market under pressure">Lyon et Rhône-Alpes, un marché sous tension</div>
-<p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:1.1rem" data-fr="Sur le bassin lyonnais et plus largement en Auvergne-Rhône-Alpes, marché prioritaire pour de nombreux groupes industriels, la concurrence entre employeurs sur les profils de direction expérimentés tire les niveaux de rémunération vers le haut, avec un écart parfois significatif par rapport aux régions moins denses en sites industriels." data-en="In the Lyon area and more broadly across Auvergne-Rhône-Alpes, a priority market for many industrial groups, competition between employers for experienced leadership profiles pushes compensation levels upward, sometimes significantly compared to regions with fewer industrial sites.">Sur le bassin lyonnais et plus largement en Auvergne-Rhône-Alpes, marché prioritaire pour de nombreux groupes industriels, la concurrence entre employeurs sur les profils de direction expérimentés tire les niveaux de rémunération vers le haut, avec un écart parfois significatif par rapport aux régions moins denses en sites industriels.</p>
-    <div style="margin-top:2.5rem;padding:1.5rem;background:var(--sand);border-radius:4px;border-left:3px solid var(--gold)">
-      <div style="font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:.5rem" data-fr="Positionnement salarial d’un poste de direction industrielle" data-en="Salary positioning for an industrial leadership role">Positionnement salarial d’un poste de direction industrielle</div>
-      <div style="font-size:13px;color:var(--mid);margin-bottom:1rem" data-fr="Alveris accompagne les groupes industriels dans la définition de packages de rémunération cohérents avec le marché." data-en="Alveris helps industrial groups define compensation packages consistent with the market.">Alveris accompagne les groupes industriels dans la définition de packages de rémunération cohérents avec le marché.</div>
-      <button onclick="go('contact')" class="btn-dark" style="font-size:11px" data-fr="Déposer un besoin" data-en="Submit a need">Déposer un besoin</button>
-    </div>
-  </section>
-</div>
-
-<!-- ═══════ PAGE CV ═══════ -->
+<!-- ═══════ PAGE CV ═══════ --><!-- ═══════ PAGE CV ═══════ -->
 <div class="page" id="page-cv">
   <div class="cv-wrap">
     <div>
       <p class="slabel" data-fr="Candidats" data-en="Candidates">Candidats</p>
-      <h1 class="stitle"><span data-fr="Déposez votre " data-en="Submit your ">Déposez votre </span><em data-fr="candidature" data-en="application">candidature</em></h1>
+      <h2 class="stitle"><span data-fr="Déposez votre " data-en="Submit your ">Déposez votre </span><em data-fr="candidature" data-en="application">candidature</em></h2>
       <p class="sbody" data-fr="Votre profil entre dans notre vivier actif. Nous vous contactons dès qu'une opportunité correspond à vos critères en France. Toutes les candidatures sont traitées avec confidentialité et sérieux." data-en="Your profile enters our active database. We contact you as soon as an opportunity matches your criteria in France. All applications are treated with confidentiality.">Votre profil entre dans notre vivier actif. Nous vous contactons dès qu'une opportunité correspond à vos critères en France.</p>
       <div style="border:2px dashed var(--light);border-radius:6px;padding:2rem;text-align:center;margin-bottom:1.5rem;cursor:pointer;" id="drop-zone" onclick="document.getElementById('cv-file').click()">
         <div style="font-size:2rem;margin-bottom:.75rem;">📄</div>
@@ -2123,7 +1701,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 <div class="page" id="page-contact">
   <div class="contact-wrap">
     <div>
-      <h1 class="ctitle"><span data-fr="Un besoin " data-en="A recruitment ">Un besoin </span><em data-fr="en recrutement ?" data-en="brief?">en recrutement ?</em></h1>
+      <h2 class="ctitle"><span data-fr="Un besoin " data-en="A recruitment ">Un besoin </span><em data-fr="en recrutement ?" data-en="brief?">en recrutement ?</em></h2>
       <p class="csub" data-fr="Prenons 20 minutes pour qualifier votre besoin. Premier échange gratuit, sans engagement. Nous vous présentons notre approche, qualifions votre besoin et vous donnons une vision claire du marché." data-en="Let's take 20 minutes to qualify your brief. Free first call, no commitment. We present our approach, qualify your need and give you a clear market overview.">Prenons 20 minutes pour qualifier votre besoin. Premier échange gratuit, sans engagement. Nous vous présentons notre approche et vous donnons une vision claire du marché.</p>
       <p class="cgeo">France · Lyon · Paris · PACA · Grand Est</p>
       <div class="clinks">
@@ -2177,7 +1755,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 <div class="page" id="page-mentions">
   <section class="section" style="max-width:860px;margin:0 auto;">
     <p class="slabel">Informations légales</p>
-    <h1 class="stitle"><em>Mentions légales</em></h1>
+    <h2 class="stitle"><em>Mentions légales</em></h2>
     <div style="display:flex;flex-direction:column;gap:2rem;margin-top:2rem;">
       <div>
         <div style="font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);margin-bottom:.75rem;">Éditeur du site</div>
@@ -2229,7 +1807,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 <div class="page" id="page-rgpd">
   <section class="section" style="max-width:860px;margin:0 auto;">
     <p class="slabel">Protection des données</p>
-    <h1 class="stitle"><em>Politique de confidentialité</em><br>& RGPD</h1>
+    <h2 class="stitle"><em>Politique de confidentialité</em><br>& RGPD</h2>
     <div style="display:flex;flex-direction:column;gap:2rem;margin-top:2rem;">
       <div>
         <div style="font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);margin-bottom:.75rem;">Responsable du traitement</div>
@@ -2323,19 +1901,19 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     </div>
     <div class="foot-col">
       <div class="foot-col-title" data-fr="Navigation" data-en="Navigation">Navigation</div>
-      <a href="#" onclick="go('jobs');return false;" data-fr="Postes sur lesquels nous intervenons" data-en="Positions we work on">Postes sur lesquels nous intervenons</a>
-      <a href="#" onclick="go('actu');return false;" data-fr="Actualités" data-en="News">Actualités</a>
+      <a href="#page-jobs" onclick="go('jobs');return false;" data-fr="Postes sur lesquels nous intervenons" data-en="Positions we work on">Postes sur lesquels nous intervenons</a>
+      <a href="/actualites/" data-fr="Actualités" data-en="News">Actualités</a>
 
-      <a href="#" onclick="go('cv');return false;" data-fr="Déposer un CV" data-en="Submit CV">Déposer un CV</a>
-      <a href="#" onclick="go('contact');return false;" data-fr="Contact" data-en="Contact">Contact</a>
+      <a href="#page-cv" onclick="go('cv');return false;" data-fr="Déposer un CV" data-en="Submit CV">Déposer un CV</a>
+      <a href="#page-contact" onclick="go('contact');return false;" data-fr="Contact" data-en="Contact">Contact</a>
     </div>
     <div class="foot-col">
       <div class="foot-col-title" data-fr="Contact" data-en="Contact">Contact</div>
       
       <a href="mailto:contact@alveris.fr" data-cfemail="">contact@alveris.fr</a>
       <a href="https://www.linkedin.com/company/112808994" target="_blank" style="display:flex;align-items:center;gap:.4rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#0a66c2" style="width:16px;height:16px;flex-shrink:0;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
-      <a href="#" onclick="go('mentions');return false;" data-fr="Mentions légales" data-en="Legal notice">Mentions légales</a>
-      <a href="#" onclick="go('rgpd');return false;" data-fr="Confidentialité & RGPD" data-en="Privacy & GDPR">Confidentialité & RGPD</a>
+      <a href="#page-mentions" onclick="go('mentions');return false;" data-fr="Mentions légales" data-en="Legal notice">Mentions légales</a>
+      <a href="#page-rgpd" onclick="go('rgpd');return false;" data-fr="Confidentialité & RGPD" data-en="Privacy & GDPR">Confidentialité & RGPD</a>
     </div>
   </div>
   <div class="foot-right">

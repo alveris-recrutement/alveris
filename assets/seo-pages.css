@@ -231,6 +231,11 @@ nav{
 }
 .rc-title{font-family:var(--serif);font-size:19px;color:var(--black);}
 
+/* ============ NEWS / ARTICLE GRID (page Actualités) ============ */
+.news-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;
+}
+
 /* ============ CTA BAR ============ */
 .sector-cta-bar{
   background:var(--black);
@@ -287,6 +292,7 @@ footer{
   .sector-body{grid-template-columns:1fr;gap:36px;padding:48px 28px;}
   .sector-right{position:static;}
   .related-pages{grid-template-columns:1fr 1fr;}
+  .news-grid{grid-template-columns:1fr 1fr;}
   .section{padding:44px 28px;}
   .nav-inner{padding:0 24px;}
   .breadcrumb{padding:16px 24px 0;}
@@ -320,6 +326,7 @@ footer{
 
   .section{padding:36px 20px;}
   .related-pages{grid-template-columns:1fr;}
+  .news-grid{grid-template-columns:1fr;gap:1.25rem;}
 
   .sector-cta-bar{flex-direction:column;align-items:flex-start;padding:32px 20px;}
   .btn-dark{width:100%;text-align:center;}

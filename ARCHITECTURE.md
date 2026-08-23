@@ -14,13 +14,37 @@ classement) est organisé en :
 
 ```
 Accueil
-EXPERTISES   → un métier / une fonction (DG, DRH, DAF, Directeur d'Usine...)
-FILIÈRES     → un secteur industriel (Automobile, demain Aéronautique...)
-RÉGIONS      → une zone géographique (Lyon, Paris, PACA, Grand Est...)
-Postes       → page unique (postes-industrie.html)
-Actualités   → page unique (dossier /actualites/)
-Contact      → page unique (contact.html)
+EXPERTISES    → un métier / une fonction avec page dédiée (DG & COO, Directeur
+                d'Usine, DRH & RH Industrie, DAF & Finance Industrie), plus un
+                lien « Toutes nos expertises → » vers le hub expertises-industrie.html
+NOS SERVICES  → une modalité d'intervention (Executive Search & Chasse de Tête,
+                Management de Transition, Recrutement de Cadres Industriels)
+FILIÈRES      → un secteur industriel (Automobile, Nucléaire, Pharma, Aéronautique...)
+RÉGIONS       → une région (Auvergne-Rhône-Alpes, Île-de-France, PACA, Grand Est...)
+Postes        → page unique (postes-industrie.html)
+Actualités    → page unique (dossier /actualites/)
+Contact       → page unique (contact.html)
 ```
+
+### EXPERTISES vs NOS SERVICES vs hub expertises-industrie.html
+
+- **EXPERTISES** (menu) ne montre que les fonctions qui ont une page dédiée
+  ET qui sont au cœur du métier (direction générale, direction d'usine,
+  RH, finance). Limité à 5 entrées (4 fonctions + le lien hub).
+- **NOS SERVICES** (menu) regroupe les modalités d'intervention plutôt que
+  les fonctions : chasse de tête / executive search, management de
+  transition, recrutement de cadres. 3 entrées.
+- **`expertises-industrie.html`** (hub, hors menu — atteignable uniquement
+  via le lien « Toutes nos expertises → » dans la rubrique EXPERTISES)
+  liste **toutes** les fonctions industrielles, groupées en 4 blocs
+  (Direction Générale ; Direction Industrielle & Opérations ; Qualité,
+  Supply Chain & Achats ; Ressources Humaines & Finance). Seules les
+  fonctions qui ont une page dédiée y sont des liens ; les autres sont de
+  simples mentions en texte, sans description inventée.
+- Une page qui sort du menu (ex. `recrutement-fonctions-support-industrie.html`,
+  retirée du menu principal) reste en ligne, son URL ne change jamais, et
+  elle reste accessible depuis le hub `expertises-industrie.html` (lien en
+  bas de page).
 
 ### Où ajouter une nouvelle page selon son type
 
@@ -87,8 +111,10 @@ Aucune rubrique déroulante n'affiche plus de **8 entrées**. Au-delà :
   pages.
 
 Aujourd'hui (23/08/2026) :
-- **Expertises** : 8 entrées → au maximum de la règle, pas encore de hub
-  requis dans le menu, mais à surveiller à la prochaine addition.
+- **Expertises** : 5 entrées (4 fonctions + lien hub « Toutes nos
+  expertises → »). Le hub `expertises-industrie.html` absorbe toutes les
+  fonctions supplémentaires plutôt que d'allonger le menu.
+- **Nos Services** : 3 entrées.
 - **Filières** : 4 entrées (Automobile Rhône-Alpes, Nucléaire & Énergie,
   Pharma & CDMO, Aéronautique & MRO).
 - **Régions** : 4 entrées, strictement régionales (Auvergne-Rhône-Alpes,

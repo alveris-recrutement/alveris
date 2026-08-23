@@ -28,9 +28,33 @@ Contact      → page unique (contact.html)
 |-------------------------------------------------|------------|-------------------|
 | Un métier / une fonction dirigeante             | Expertises | `recrutement-drh-industrie.html` |
 | Un secteur industriel (filière)                 | Filières   | `cabinet-recrutement-automobile-rhone-alpes.html` |
-| Une zone géographique                           | Régions    | `cabinet-recrutement-industrie-lyon.html` |
+| Une région (zone géographique large)            | Régions    | `cabinet-recrutement-industrie-lyon.html` (libellé menu : « Auvergne-Rhône-Alpes ») |
+| Un département / bassin local (zone infra-régionale) | Aucune — nichée sous sa région sur `regions-industrie.html` uniquement | `cabinet-recrutement-industrie-var-toulon.html` (nichée sous PACA) |
 | Un article de blog / actualité                  | Actualités | fichiers dans `/actualites/` |
 | Contenu utilitaire (contact, CV, mentions...)   | Aucune (lien direct, hors rubrique) | `contact.html`, `mentions-legales.html` |
+
+### Cas particulier : page départementale / locale (infra-régionale)
+
+Une page centrée sur un département ou un bassin d'emploi précis (ex. Var &
+Toulon, rattaché à PACA) **n'entre jamais dans le menu principal**, à
+aucun niveau (desktop, mobile, pied de page). Elle reste accessible
+uniquement par trois chemins :
+
+1. Un lien obligatoire depuis la page de la région parente, posé sur une
+   ancre existante du texte qui mentionne déjà la zone locale (jamais de
+   nouvelle phrase ajoutée pour créer ce lien).
+2. La page hub `regions-industrie.html`, où elle apparaît **nichée** sous
+   le bloc de sa région parente (hub à deux niveaux : un bloc par région,
+   avec ses pages locales imbriquées en dessous, visuellement distinguées
+   par une bordure d'accent).
+3. Le `sitemap.xml`.
+
+Avant de créer une page locale, vérifier qu'elle ne fait pas doublon avec
+la page régionale existante : la page région doit rester généraliste
+(vue d'ensemble, plusieurs villes), la page locale doit rester spécifique
+(un département, un secteur dominant, des chiffres propres à cette zone).
+En cas de chevauchement, c'est la page région qu'il faut alléger — jamais
+la page locale.
 
 Pour ajouter une page à une rubrique (Expertises, Filières ou Régions) :
 
@@ -65,8 +89,12 @@ Aucune rubrique déroulante n'affiche plus de **8 entrées**. Au-delà :
 Aujourd'hui (23/08/2026) :
 - **Expertises** : 8 entrées → au maximum de la règle, pas encore de hub
   requis dans le menu, mais à surveiller à la prochaine addition.
-- **Filières** : 1 entrée (Automobile Rhône-Alpes).
-- **Régions** : 4 entrées.
+- **Filières** : 4 entrées (Automobile Rhône-Alpes, Nucléaire & Énergie,
+  Pharma & CDMO, Aéronautique & MRO).
+- **Régions** : 4 entrées, strictement régionales (Auvergne-Rhône-Alpes,
+  Île-de-France, PACA, Grand Est). Les pages départementales/locales (ex.
+  Var & Toulon) ne comptent pas dans cette rubrique — voir le cas
+  particulier ci-dessus.
 
 Les deux pages hub existent déjà (`filieres-industrie.html`,
 `regions-industrie.html`) et sont dans le sitemap, mais **volontairement
@@ -82,7 +110,9 @@ les intitulés sont raccourcis car la rubrique porte déjà le contexte :
 - Rubrique EXPERTISES → « DG Industrie » (pas « Recrutement DG Industrie »)
 - Rubrique FILIÈRES → « Automobile Rhône-Alpes » (pas « Recrutement
   Automobile Rhône-Alpes »)
-- Rubrique RÉGIONS → « Lyon » (pas « Recrutement Industrie Lyon »)
+- Rubrique RÉGIONS → « Auvergne-Rhône-Alpes » (pas « Recrutement Industrie
+  Lyon ») — le libellé menu porte le nom de la région, pas celui de la
+  ville qui donne son nom au fichier
 
 Le `<title>`, le H1 et le `canonical` de la page elle-même **ne changent
 jamais** : eux gardent l'intitulé complet, optimisé SEO.

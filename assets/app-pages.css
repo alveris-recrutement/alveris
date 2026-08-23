@@ -1,0 +1,102 @@
+/* ============================================================
+   ALVERIS — Styles des pages applicatives (Contact, Dépôt de CV,
+   Postes). Reprise à l'identique des règles déjà utilisées sur
+   index.html pour ces mêmes composants — aucune valeur modifiée.
+   ============================================================ */
+
+.btn-dark{padding:.85rem 1.8rem;background:var(--black);color:var(--white);border:none;font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:opacity .2s;border-radius:2px;display:inline-block;}
+.btn-dark:hover{opacity:.78;}
+.btn-outline{padding:.82rem 1.5rem;background:transparent;color:var(--black);border:1px solid var(--black);font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .2s;border-radius:2px;display:inline-block;}
+.btn-outline:hover{background:var(--black);color:var(--white);}
+
+/* ── Formulaires (CV + Contact) ── */
+.form{display:flex;flex-direction:column;gap:.85rem;}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;}
+.fi{background:transparent;border:none;border-bottom:1px solid var(--light);padding:.7rem 0;font-size:13px;color:var(--black);outline:none;transition:border-color .2s;width:100%;font-family:var(--sans);}
+.fi:focus{border-bottom-color:var(--black);}
+.fi::placeholder{color:#bbb;font-size:12px;}
+.fsel{background:transparent;border:none;border-bottom:1px solid var(--light);padding:.7rem 0;font-size:12px;color:var(--mid);outline:none;width:100%;cursor:pointer;font-family:var(--sans);}
+.contact-wrap .fsel{border-bottom-color:rgba(255,255,255,.2);color:rgba(255,255,255,.75);}
+.contact-wrap .fsel option{background:#1a1a1a;color:var(--white);}
+.fsubmit{margin-top:.5rem;padding:.85rem 1.8rem;background:var(--gold);color:var(--black);border:none;font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;align-self:flex-start;transition:opacity .2s;border-radius:2px;}
+.fsubmit:hover{opacity:.8;}
+.form-success{display:none;padding:1rem 1.25rem;border-left:2px solid #2d8a4e;font-size:13px;color:#2d8a4e;margin-top:.5rem;}
+
+/* ── Page Dépôt de CV ── */
+.cv-wrap{max-width:var(--container);margin:0 auto;padding:5rem 40px;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+.dropz{border:1.5px dashed var(--light);padding:2.5rem 2rem;text-align:center;cursor:pointer;transition:border-color .2s;margin-top:2rem;border-radius:3px;}
+.dropz:hover{border-color:var(--black);}
+.dropz-title{font-family:var(--serif);font-size:1.2rem;font-weight:300;margin-bottom:.4rem;}
+.dropz-sub{font-size:11px;color:var(--mid);margin-bottom:1.25rem;}
+.cv-promise{margin-top:2rem;padding:1rem 1.25rem;border-left:2px solid var(--gold);font-size:12px;color:var(--mid);line-height:1.75;}
+.cv-promise strong{display:block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--black);margin-bottom:.35rem;}
+.cv-status{margin-top:.75rem;font-size:12px;min-height:18px;}
+
+/* ── Page Contact ── */
+.contact-wrap{background:var(--black);color:var(--white);max-width:none;padding:5rem 40px;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;min-height:70vh;}
+.contact-wrap-inner{max-width:var(--container);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;width:100%;}
+.ctitle{font-family:var(--serif);font-size:clamp(2rem,3.5vw,2.8rem);font-weight:300;line-height:1.15;margin-bottom:1rem;color:var(--white);}
+.ctitle em{font-style:italic;}
+.csub{font-size:13px;color:rgba(255,255,255,.7);line-height:1.8;margin-bottom:1.5rem;}
+.cgeo{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);}
+.clinks{margin-top:2rem;display:flex;flex-direction:column;gap:.85rem;}
+.clink{font-size:12px;color:rgba(255,255,255,.6);letter-spacing:.04em;display:flex;align-items:center;gap:.5rem;}
+.clink a{color:rgba(255,255,255,.65);transition:opacity .2s;}
+.clink a:hover{opacity:.8;}
+.di{background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,.2);padding:.75rem 0;font-size:13px;color:rgba(255,255,255,.85);outline:none;transition:border-color .2s;width:100%;font-family:var(--sans);}
+.di::placeholder{color:rgba(255,255,255,.35);font-size:12px;}
+.di:focus{border-bottom-color:var(--gold);}
+.dsel{background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,.2);padding:.75rem 0;font-size:12px;color:rgba(255,255,255,.75);outline:none;width:100%;cursor:pointer;font-family:var(--sans);}
+.dsel option{background:#1a1a1a;color:#fff;}
+.dsel:focus{border-bottom-color:var(--gold);}
+.gold-btn{margin-top:.75rem;padding:.9rem 1.8rem;background:var(--gold);color:var(--black);border:none;font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:opacity .2s;border-radius:2px;}
+.gold-btn:hover{opacity:.85;}
+
+/* ── Page Postes ── */
+.jobs-filters{display:flex;gap:.75rem;margin-bottom:2rem;flex-wrap:wrap;}
+.filter-btn{font-size:11px;font-weight:400;letter-spacing:.06em;padding:.45rem 1rem;border:1px solid var(--light);background:transparent;cursor:pointer;border-radius:2px;transition:all .2s;color:var(--mid);}
+.filter-btn.on,.filter-btn:hover{background:var(--black);color:var(--white);border-color:var(--black);}
+.jobs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;}
+.job-card{background:var(--white);border:1px solid var(--light);padding:1.75rem;cursor:pointer;transition:border-color .2s,box-shadow .2s;border-radius:3px;position:relative;}
+.job-card:hover{border-color:var(--gold);box-shadow:0 4px 20px rgba(0,0,0,.06);}
+.job-badge{display:inline-block;font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .7rem;background:var(--sand);color:var(--mid);border-radius:2px;margin-bottom:.75rem;}
+.job-title{font-family:var(--serif);font-size:1.3rem;font-weight:400;margin-bottom:.4rem;line-height:1.25;}
+.job-company{font-size:12px;color:var(--mid);margin-bottom:.75rem;}
+.job-meta{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem;}
+.job-tag{font-size:10px;letter-spacing:.06em;padding:.2rem .6rem;border:1px solid var(--light);color:var(--mid);border-radius:2px;}
+.job-tag.gold{border-color:var(--gold);color:var(--gold);}
+.job-desc{font-size:12px;color:var(--mid);line-height:1.7;margin-bottom:1.25rem;}
+.job-cta{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--black);display:flex;align-items:center;gap:.4rem;}
+.job-cta::after{content:'→';}
+
+/* Modal offre */
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:600;align-items:center;justify-content:center;}
+.modal-bg.open{display:flex;}
+.modal{background:var(--white);max-width:680px;width:90%;max-height:88vh;overflow-y:auto;border-radius:4px;position:relative;}
+.modal-header{padding:2rem 2rem 1rem;border-bottom:1px solid var(--light);}
+.modal-close{position:absolute;top:1.25rem;right:1.25rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--mid);line-height:1;}
+.modal-body{padding:2rem;}
+.modal-section-title{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:.75rem;margin-top:1.5rem;}
+.modal-section-title:first-child{margin-top:0;}
+.modal-text{font-size:13px;color:var(--mid);line-height:1.8;}
+.modal-list{list-style:none;display:flex;flex-direction:column;gap:.4rem;}
+.modal-list li{font-size:13px;color:var(--mid);padding-left:1rem;position:relative;line-height:1.6;}
+.modal-list li::before{content:'—';position:absolute;left:0;color:var(--gold);}
+.modal-apply-btn{display:block;width:100%;padding:1rem;background:var(--black);color:var(--white);border:none;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;margin-top:1.5rem;transition:opacity .2s;border-radius:2px;}
+.modal-apply-btn:hover{opacity:.8;}
+
+@media (max-width:900px){
+  .cv-wrap{grid-template-columns:1fr;gap:2.5rem;padding:3rem 28px;}
+  .contact-wrap-inner{grid-template-columns:1fr;gap:2.5rem;}
+  .contact-wrap{padding:3rem 28px;min-height:auto;}
+  .jobs-grid{grid-template-columns:1fr;}
+}
+@media (max-width:640px){
+  .cv-wrap{padding:2.5rem 20px;}
+  .contact-wrap{padding:2.5rem 20px;}
+  .jobs-filters{gap:.4rem;}
+  .filter-btn{font-size:9px;padding:.4rem .8rem;}
+  .job-meta{gap:.35rem;}
+  .job-tag{font-size:9px;}
+  .frow{grid-template-columns:1fr;}
+}

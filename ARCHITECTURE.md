@@ -115,18 +115,28 @@ Aujourd'hui (23/08/2026) :
   expertises → »). Le hub `expertises-industrie.html` absorbe toutes les
   fonctions supplémentaires plutôt que d'allonger le menu.
 - **Nos Services** : 3 entrées.
-- **Filières** : 4 entrées (Automobile Rhône-Alpes, Nucléaire & Énergie,
-  Pharma & CDMO, Aéronautique & MRO).
+- **Filières** : 8 entrées au total, dont 7 dans le menu (Automobile
+  Rhône-Alpes, Nucléaire & Énergie, Pharma & CDMO, Aéronautique & MRO,
+  Chimie & Matériaux, Plasturgie & Décolletage, Agroalimentaire) + le lien
+  hub « Toutes les filières → ». La 8ᵉ filière, Fonderie & Métallurgie,
+  applique la règle des 8 : elle n'apparaît plus dans le menu déroulant
+  (desktop, mobile, pied de page) dès l'ajout qui a fait passer la
+  rubrique à 8 entrées, mais reste en ligne, accessible depuis le hub
+  `filieres-industrie.html`, depuis le maillage interne (page automobile)
+  et depuis le sitemap — même logique que les pages départementales/locales
+  décrites au cas particulier ci-dessus, sans changement d'URL ni de
+  fichier.
 - **Régions** : 4 entrées, strictement régionales (Auvergne-Rhône-Alpes,
   Île-de-France, PACA, Grand Est). Les pages départementales/locales (ex.
   Var & Toulon) ne comptent pas dans cette rubrique — voir le cas
   particulier ci-dessus.
 
-Les deux pages hub existent déjà (`filieres-industrie.html`,
-`regions-industrie.html`) et sont dans le sitemap, mais **volontairement
-absentes du menu** tant qu'aucune rubrique ne dépasse 8 entrées — elles se
-rempliront au fil des ajouts et ne seront ajoutées au menu que le jour où
-la règle des 8 est atteinte.
+`regions-industrie.html` reste dans le sitemap mais **volontairement
+absente du menu** tant que Régions ne dépasse pas 8 entrées.
+`filieres-industrie.html`, elle, est désormais **atteignable depuis le
+menu** (lien « Toutes les filières → » en dernière position de la rubrique
+FILIÈRES) depuis que cette rubrique a dépassé 8 entrées avec l'ajout de la
+filière Fonderie & Métallurgie.
 
 ## 3. Libellés courts dans le menu
 
@@ -150,8 +160,9 @@ passe automatiquement sur deux colonnes via la classe CSS `dropdown
 dd-wide` (avec un `<div class="dd-grid">` interne). En dessous de 6
 entrées, le déroulant reste une simple liste verticale (`dropdown` seul).
 
-Concrètement : la rubrique Expertises (8 entrées) utilise `dd-wide`,
-Filières (1 entrée) et Régions (4 entrées) utilisent la liste simple.
+Concrètement : les rubriques Expertises (5 entrées) et Régions (4 entrées)
+utilisent la liste simple ; Nos Services (4 entrées) aussi. Filières
+(8 entrées) utilise `dd-wide`.
 
 ## 5. Menu mobile en accordéon
 

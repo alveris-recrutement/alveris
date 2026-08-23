@@ -72,6 +72,7 @@ nav{
   flex:none;border:.8px solid var(--black);border-radius:2px;
   padding:8px 19px;font-size:10px;letter-spacing:1.2px;text-transform:uppercase;
   font-weight:500;transition:background .2s,color .2s;white-space:nowrap;
+  display:inline-flex;align-items:center;justify-content:center;min-height:44px;box-sizing:border-box;
 }
 .nav-cta:hover{background:var(--black);color:var(--white);}
 
@@ -94,8 +95,8 @@ nav{
 
 /* ============ HAMBURGER / MOBILE ACCORDION ============ */
 .hamburger{
-  display:none;flex-direction:column;gap:5px;background:none;border:none;
-  cursor:pointer;padding:4px;flex:none;
+  display:none;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:none;border:none;
+  cursor:pointer;padding:4px;flex:none;min-width:44px;min-height:44px;box-sizing:border-box;
 }
 .hamburger span{display:block;width:22px;height:1.5px;background:var(--black);transition:transform .25s,opacity .25s;}
 .hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}

@@ -244,6 +244,22 @@ if(cf) cf.addEventListener('submit',function(e){
   var btn = cf.querySelector('button[type="submit"]');
   if(btn){ btn.textContent='Envoi...'; btn.style.opacity='.6'; }
   var formData = new FormData(cf);
+  if(!formData.get('_gotcha')){
+    var alertPayload = {
+      nom: formData.get('nom') || '',
+      societe: formData.get('societe') || '',
+      email: formData.get('email') || '',
+      telephone: formData.get('telephone') || '',
+      secteur: formData.get('secteur') || '',
+      pays: formData.get('pays') || '',
+      besoin: formData.get('besoin') || ''
+    };
+    fetch('https://hook.eu1.make.com/b0g9t9c3ckidmbn9rqk4pn79cf40gw5v', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(alertPayload)
+    }).catch(function(){});
+  }
   fetch('https://api.web3forms.com/submit', {method:'POST', body:formData})
   .then(function(res){ return res.json(); })
   .then(function(data){

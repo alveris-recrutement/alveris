@@ -462,32 +462,6 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 .foot-social{width:32px;height:32px;border:1px solid var(--light);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--mid);transition:all .2s;}
 .foot-social:hover{background:var(--black);color:var(--white);border-color:var(--black);}
 
-/* ── CHATBOT ── */
-.chat-bubble{position:fixed;bottom:1.75rem;right:1.75rem;z-index:500;}
-body.menu-open .chat-bubble{display:none;}
-.chat-toggle{width:56px;height:56px;border-radius:50%;background:var(--black);color:var(--white);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.25);transition:transform .2s,background .2s;}
-.chat-toggle:hover{transform:scale(1.08);background:#222;}
-.chat-toggle svg{width:22px;height:22px;}
-.chat-box{position:absolute;bottom:68px;right:0;width:320px;background:var(--white);border-radius:8px;box-shadow:0 8px 40px rgba(0,0,0,.18);overflow:hidden;display:none;flex-direction:column;}
-.chat-box.open{display:flex;}
-.chat-header{background:var(--black);color:var(--white);padding:1rem 1.25rem;display:flex;align-items:center;gap:.75rem;}
-.chat-avatar{width:32px;height:32px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;color:var(--black);}
-.chat-header-info{}
-.chat-name{font-size:13px;font-weight:500;}
-.chat-status{font-size:10px;opacity:.5;display:flex;align-items:center;gap:.3rem;}
-.chat-status::before{content:'';width:6px;height:6px;border-radius:50%;background:#4caf50;}
-.chat-messages{padding:1rem;flex:1;display:flex;flex-direction:column;gap:.75rem;max-height:280px;overflow-y:auto;background:#f9f9f9;}
-.msg{max-width:85%;padding:.65rem .9rem;border-radius:12px;font-size:12px;line-height:1.6;}
-.msg.bot{background:var(--white);border:1px solid var(--light);align-self:flex-start;border-bottom-left-radius:3px;}
-.msg.user{background:var(--black);color:var(--white);align-self:flex-end;border-bottom-right-radius:3px;}
-.chat-suggestions{padding:.5rem 1rem;display:flex;flex-wrap:wrap;gap:.4rem;border-top:1px solid var(--light);}
-.chat-sug{font-size:10px;padding:.3rem .7rem;border:1px solid var(--light);background:var(--white);border-radius:20px;cursor:pointer;transition:all .15s;color:var(--mid);}
-.chat-sug:hover{background:var(--black);color:var(--white);border-color:var(--black);}
-.chat-input-wrap{display:flex;border-top:1px solid var(--light);}
-.chat-input{flex:1;border:none;padding:.85rem 1rem;font-size:12px;outline:none;background:var(--white);font-family:var(--sans);}
-.chat-send{border:none;background:none;padding:.85rem 1rem;cursor:pointer;color:var(--mid);font-size:16px;transition:color .2s;}
-.chat-send:hover{color:var(--black);}
-
 /* ── RESPONSIVE ── */
 
 /* PAGES SECTEURS */
@@ -595,10 +569,6 @@ body.menu-open .chat-bubble{display:none;}
   .foot-links-wrap{grid-template-columns:1fr 1fr;}
   .foot-right{text-align:left;}
   .foot-socials{justify-content:flex-start;}
-
-  /* Chatbot */
-  .chat-box{width:290px;}
-  .chat-bubble{bottom:1.25rem;right:1.25rem;}
 }
 
 /* ══ MOBILE ≤560px ══ */
@@ -670,10 +640,6 @@ body.menu-open .chat-bubble{display:none;}
   /* Footer */
   .foot-links-wrap{grid-template-columns:1fr;}
 
-  /* Chatbot */
-  .chat-box{width:calc(100vw - 3rem);right:0;}
-  .chat-bubble{right:1rem;bottom:1rem;}
-
   /* Modal */
   .modal{width:95%;max-height:92vh;}
   .modal-header{padding:1.25rem 1.25rem .75rem;}
@@ -692,7 +658,6 @@ body.menu-open .chat-bubble{display:none;}
   .filter-btn{min-height:40px;}
   .hamburger{padding:8px;}
   .actu-arr{width:36px;height:36px;}
-  .chat-toggle{width:52px;height:52px;}
   input,select,textarea{font-size:16px !important;}
 }
 /* ══ HERO PREMIUM SLIDER ══ */
@@ -1264,33 +1229,6 @@ body.menu-open .chat-bubble{display:none;}
   </div>
 </footer>
 
-<!-- ═══════ CHATBOT ═══════ -->
-<div class="chat-bubble">
-  <div class="chat-box" id="chat-box">
-    <div class="chat-header">
-      <div class="chat-avatar">AS</div>
-      <div class="chat-header-info">
-        <div class="chat-name">Alveris</div>
-        <div class="chat-status" data-fr="En ligne · Répond en quelques minutes" data-en="Online · Replies in minutes">En ligne · Répond en quelques minutes</div>
-      </div>
-    </div>
-    <div class="chat-messages" id="chat-messages">
-      <div class="msg bot" data-fr="Bonjour ! 👋 Je suis l'assistant Alveris. Comment puis-je vous aider ?" data-en="Hello! 👋 I'm the Alveris assistant. How can I help you?">Bonjour ! 👋 Je suis l'assistant Alveris. Comment puis-je vous aider ?</div>
-    </div>
-    <div class="chat-suggestions" id="chat-sugs">
-      <button class="chat-sug" onclick="chatSug(this)" data-fr="Déposer un CV" data-en="Submit a CV">Déposer un CV</button>
-      <button class="chat-sug" onclick="chatSug(this)" data-fr="Nos services" data-en="Our services">Nos services</button>
-      <button class="chat-sug" onclick="chatSug(this)" data-fr="Nous contacter" data-en="Contact us">Nous contacter</button>
-    </div>
-    <div class="chat-input-wrap">
-      <input class="chat-input" id="chat-input" type="text" placeholder="Votre message..." data-placeholder-fr="Votre message..." data-placeholder-en="Your message..." onkeydown="if(event.key==='Enter')sendChat()">
-      <button class="chat-send" onclick="sendChat()">➤</button>
-    </div>
-  </div>
-  <button class="chat-toggle" id="chat-toggle" onclick="toggleChat()">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-  </button>
-</div>
 
 <script>
 // ── Navigation ──
@@ -1379,111 +1317,6 @@ function setLang(lang){
   document.querySelectorAll('[data-placeholder-fr]').forEach(el=>{
     el.placeholder=lang==='en'?(el.getAttribute('data-placeholder-en')||''):(el.getAttribute('data-placeholder-fr')||'');
   });
-}
-
-// ── CHATBOT IA — proxifié via Cloudflare Worker (clé sécurisée côté serveur) ──
-let chatOpen = false;
-let chatHistory = [];
-let chatMsgCount = 0;
-const CHAT_MAX = 20;
-
-const SYSTEM_PROMPT = "Tu es l'assistant virtuel d'Alveris, cabinet d'executive search 100% spécialisé industrie & ingénierie fondé par Aurélie Stefanowski.\n\nALVERIS EN BREF :\n- Positionnement : executive search exclusivement industrie & ingénierie, en France\n- 4 expertises : (1) Direction Générale & C-Level (PDG, DG, CEO, COO, EVP Operations, comex) — (2) Direction Industrielle & Opérations (Directeurs d'usine, Plant Managers, Directeurs de production, Directeurs industriels groupe) — (3) RH, Finance & Fonctions Support (DRH groupe, DAF industrie, Directeurs Achats, Supply Chain, Qualité) — (4) Management de Transition (missions 6 à 18 mois)\n- Secteurs : fonderie, métallurgie, automobile, équipement, pharma, CDMO, agroalimentaire, ingénierie de précision\n- Zone : France (Lyon, Paris, PACA, Grand Est, Hauts-de-France, Auvergne-Rhône-Alpes)\n- Fondatrice : Aurélie Stefanowski, 17 ans d'expérience industrie\n- Contact : contact@alveris.fr · alveris.fr\n- Délai : premiers profils qualifiés sous 10 jours ouvrés\n- Méthode : briefing stratégique → approche directe → évaluation comportementale → 3 à 5 profils max → suivi 6 mois post-intégration\n- Honoraires : basés sur le salaire annuel brut, devis sur demande\n\nPOSTES SUR LESQUELS NOUS INTERVENONS ACTUELLEMENT :\nDirection Générale & C-Level : Directeur Général — Aéronautique & MRO, COO/EVP Operations — Industrie, Directeur des Opérations — Pharma CDMO, Directeur de Programme — Systèmes de Défense, Directeur Général — Ingénierie de Précision.\nDirection Industrielle & Opérations : Directeur de Site — Énergie Nucléaire, Directeur d'Usine — Équipement Automobile, Directeur Industriel — Fonderie & Métallurgie, Responsable Production — Agroalimentaire, Directeur Supply Chain — Industrie.\nRH, Finance & Fonctions Support : DRH — Industrie Multi-Sites, DAF — ETI Industrielle.\nManagement de Transition : Directeur d'Usine — Mission de Transition, Directeur Industriel — Mission de Transition Aéronautique.\n\nCOMPORTEMENT : Adopte un ton sobre, distingué et executive search : direct, précis, sans familiarité excessive. Sois professionnel, concis (3-4 phrases max), en texte brut uniquement : jamais de markdown, jamais de dièse (#), jamais d'astérisques (**), jamais de listes à tirets ni d'émojis. Réponds en français par défaut, anglais si on te parle anglais. Quand on te demande un poste, propose ceux qui correspondent, sans jamais communiquer de rémunération ni de lieu précis. Si tu ne sais pas, renvoie vers contact@alveris.fr.";
-
-function toggleChat(){
-  chatOpen = !chatOpen;
-  document.getElementById('chat-box').classList.toggle('open', chatOpen);
-}
-
-function addMsg(text, type){
-  const m = document.createElement('div');
-  m.className = 'msg ' + type;
-  m.style.whiteSpace = 'pre-line';
-  m.textContent = text;
-  const msgs = document.getElementById('chat-messages');
-  msgs.appendChild(m);
-  msgs.scrollTop = msgs.scrollHeight;
-}
-
-function addTypingIndicator(){
-  const m = document.createElement('div');
-  m.className = 'msg bot';
-  m.id = 'typing-ind';
-  m.innerHTML = '<span style="opacity:.4;letter-spacing:3px;font-size:16px;">•••</span>';
-  document.getElementById('chat-messages').appendChild(m);
-  document.getElementById('chat-messages').scrollTop = 99999;
-}
-
-function removeTyping(){
-  const t = document.getElementById('typing-ind');
-  if(t) t.remove();
-}
-
-function chatSug(btn){
-  const text = btn.textContent;
-  addMsg(text, 'user');
-  document.getElementById('chat-sugs').style.display = 'none';
-  sendToClaude(text);
-}
-
-function sendChat(){
-  const inp = document.getElementById('chat-input');
-  let text = inp.value.trim();
-  if(!text) return;
-  // Sanitize : limite 500 chars, retire balises HTML
-  text = text.slice(0, 500).replace(/</g,'&lt;').replace(/>/g,'&gt;');
-  addMsg(text, 'user');
-  inp.value = '';
-  sendToClaude(text);
-}
-
-async function sendToClaude(userMsg){
-  if(chatMsgCount >= CHAT_MAX){
-    addMsg('Limite de session atteinte. Contactez-nous : contact@alveris.fr', 'bot');
-    return;
-  }
-  chatMsgCount++;
-  chatHistory.push({ role: 'user', content: userMsg });
-  addTypingIndicator();
-  try {
-    const res = await fetch('https://alveris-bot.stefanowskia.workers.dev', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        model: 'claude-haiku-4-5-20251001',
-        max_tokens: 300,
-        system: SYSTEM_PROMPT,
-        messages: chatHistory
-      })
-    });
-    const data = await res.json();
-    removeTyping();
-    if(data.content && data.content[0]){
-      const reply = data.content[0].text;
-      chatHistory.push({ role: 'assistant', content: reply });
-      addMsg(reply, 'bot');
-      const low = (reply + userMsg).toLowerCase();
-      const sugsDiv = document.getElementById('chat-sugs');
-      sugsDiv.innerHTML = ''; sugsDiv.style.display = 'flex';
-      if(low.includes('cv')||low.includes('postuler')){
-        const b = document.createElement('button'); b.className='chat-sug';
-        b.textContent='→ Déposer mon CV';
-        b.onclick=function(){go('cv');sugsDiv.style.display='none';};
-        sugsDiv.appendChild(b);
-      } else if(low.includes('contact')||low.includes('joindre')){
-        const b = document.createElement('button'); b.className='chat-sug';
-        b.textContent='→ Nous contacter';
-        b.onclick=function(){go('contact');sugsDiv.style.display='none';};
-        sugsDiv.appendChild(b);
-      }
-    } else {
-      addMsg('Une erreur est survenue. Contactez-nous à contact@alveris.fr', 'bot');
-    }
-  } catch(e){
-    removeTyping();
-    addMsg('Erreur : ' + e.message, 'bot');
-  }
 }
 
 // ── ROTATION OFFRES D'EMPLOI (toutes les 2 semaines) ──

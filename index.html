@@ -61,7 +61,7 @@
   --black:#0a0a0a;
   --white:#fafaf8;
   --white2:#f5f4f0;
-  --gold:#c8a96d;--gold2:#b8935a;--gold-pale:#f0e8d6;
+  --gold:#c8a96d;--gold2:#b8935a;--gold-pale:#f0e8d6;--gold-dark:#7d5f22;
   --sand:#eceae2;--sand2:#e3e0d6;--sand3:#d5d0c5;
   --mid:#5c5854;--mid2:#9a938c;
   --light:#d8d4cb;--light2:#eae8e0;
@@ -189,6 +189,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(250,250,248,
 .btn-outline:hover{background:var(--black);color:var(--white);}
 .founder-line{margin-top:2rem;font-family:var(--serif);font-size:.95rem;font-style:italic;color:var(--mid);display:flex;align-items:center;gap:.75rem;}
 .founder-line::before{content:'';display:inline-block;width:28px;height:1px;background:var(--gold);}
+/* Photo fondatrice provisoire : à retirer (classe + attribut style ci-dessous) dès qu'une nouvelle photo remplace aurelie-linkedin.jpg */
+.founder-photo-temp{filter:grayscale(100%);}
+/* Harmonisation visuelle des vignettes d'actualités (légère désaturation + voile chaud) */
+.actu-img-tone{filter:saturate(.85) sepia(.12) contrast(1.02);}
 .hero-right{background:var(--sand);display:flex;flex-direction:column;position:relative;overflow:hidden;}
 .hero-img{width:100%;height:55%;object-fit:cover;filter:grayscale(15%);}
 .hero-markets{padding:2rem;flex:1;}
@@ -226,7 +230,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(250,250,248,
   position:relative;
   overflow:hidden;
   border-radius:0;
-  padding:2.25rem 2rem 2rem;
+  padding:2.25rem 2rem 1.5rem;
   border:1px solid rgba(0,0,0,.06);
   transition:all .35s cubic-bezier(.4,0,.2,1);
   display:flex;
@@ -251,7 +255,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(250,250,248,
   font-size:10px;font-weight:600;letter-spacing:.14em;
   text-transform:uppercase;
   color:var(--sector-accent,#c8a96d);
-  margin-top:auto;padding-top:1.25rem;
+  margin-top:auto;padding-top:.75rem;
   display:flex;align-items:center;gap:.4rem;
   opacity:0;transform:translateX(-6px);
   transition:all .3s ease;
@@ -320,14 +324,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(250,250,248,
   line-height:1.8;
   flex:1;
 }
-.tags{margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:0;align-items:center;}
+.tags{margin-top:1rem;display:flex;flex-wrap:wrap;gap:0;align-items:center;}
 .tag{
-  font-size:11px;
+  font-size:12px;
   font-family:var(--serif);
   font-style:italic;
   font-weight:300;
   letter-spacing:.02em;
-  color:rgba(255,255,255,.45);
+  color:var(--gold-dark);
   border:none;
   padding:0;
   background:none;
@@ -509,8 +513,9 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 @media(max-width:960px){
   #actu-home-grid{grid-template-columns:1fr;}
   .secteurs-grid{grid-template-columns:1fr;}
-  .founder-section{grid-template-columns:1fr !important;gap:1.5rem !important;text-align:center;}
+  .founder-section{grid-template-columns:1fr !important;gap:1.5rem !important;}
   .founder-section img{max-width:220px;margin:0 auto;}
+  .founder-section .slabel,.founder-section .stitle{text-align:center;}
   .secteurs-wrap-outer{padding:1.5rem 1rem;}
   /* Nav */
   .nav-links,.nav-cta{display:none;}
@@ -668,7 +673,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 .hp-slide.active{opacity:1;pointer-events:auto;z-index:2;}
 .hp-bg{position:absolute;inset:0;}
 .hp-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;}
-.hp-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,10,10,.80) 0%,rgba(10,10,10,.40) 100%);}
+.hp-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.92) 0%,rgba(10,10,10,.55) 35%,rgba(10,10,10,0) 65%),linear-gradient(135deg,rgba(10,10,10,.80) 0%,rgba(10,10,10,.40) 100%);}
 .hp-content{position:absolute;bottom:0;left:0;right:0;padding:0 5vw 6rem;z-index:5;max-width:900px;}
 .hp-eyebrow{font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;opacity:.9;}
 .hp-title{font-family:var(--serif);font-size:clamp(3rem,6vw,5.5rem);font-weight:300;line-height:1.06;color:#fff;margin-bottom:1.25rem;letter-spacing:-.01em;}
@@ -695,6 +700,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 @media(max-width:960px){
   .hero-premium{height:100svh;min-height:520px;}
   .hp-content{padding:0 1.5rem 5rem;}
+  .hp-bg img{object-position:80% 15%;}
   .hp-title{font-size:clamp(2.2rem,8vw,3.2rem);}
   .hp-sub{font-size:13px;max-width:100%;}
   .hp-arrow,.hp-scroll-hint{display:none;}
@@ -793,7 +799,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       <li>
         <a class="has-dd">Filières</a>
         <div class="dropdown dd-wide"><div class="dd-grid">
-          <a href="/cabinet-recrutement-automobile-rhone-alpes.html">Automobile Rhône-Alpes</a>
+          <a href="/cabinet-recrutement-automobile-rhone-alpes.html">Automobile</a>
           <a href="/cabinet-recrutement-nucleaire-energie.html">Nucléaire & Énergie</a>
           <a href="/cabinet-recrutement-pharma-cdmo.html">Pharma & CDMO</a>
           <a href="/cabinet-recrutement-aeronautique-mro.html">Aéronautique & MRO</a>
@@ -849,7 +855,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
   </div>
   <div class="macc-header" onclick="toggleAccordion(this)">Filières <span class="macc-arrow">▾</span></div>
   <div class="macc-panel">
-    <a href="/cabinet-recrutement-automobile-rhone-alpes.html">Automobile Rhône-Alpes</a>
+    <a href="/cabinet-recrutement-automobile-rhone-alpes.html">Automobile</a>
     <a href="/cabinet-recrutement-nucleaire-energie.html">Nucléaire & Énergie</a>
     <a href="/cabinet-recrutement-pharma-cdmo.html">Pharma & CDMO</a>
     <a href="/cabinet-recrutement-aeronautique-mro.html">Aéronautique & MRO</a>
@@ -881,7 +887,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
   <div class="hero-premium" id="hero-premium">
     <div class="hp-slide active" id="hp-0">
       <div class="hp-bg">
-        <img src="/assets/img/hero-accueil.jpg" alt="Inspection qualité sur un site de production industrielle" loading="eager" width="1600" height="900">
+        <img src="/assets/img/hero-accueil.webp" alt="Inspection qualité sur un site de production industrielle" loading="eager" width="1920" height="1080">
         <div class="hp-overlay"></div>
       </div>
       <div class="hp-content">
@@ -904,7 +910,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
   <div class="stats-band">
     <div class="stat-block"><div class="stat-n">+200</div><div class="stat-l" data-fr="Recrutements réalisés" data-en="Placements made">Recrutements réalisés</div></div>
     <div class="stat-block"><div class="stat-n">17</div><div class="stat-l" data-fr="Ans d'expertise industrie" data-en="Years industry expertise">Ans d'expertise industrie</div></div>
-    <div class="stat-block"><div class="stat-n">7</div><div class="stat-l" data-fr="Filières industrielles couvertes" data-en="Industrial sectors covered">Filières industrielles couvertes</div></div>
+    <div class="stat-block"><div class="stat-n">8</div><div class="stat-l" data-fr="Filières industrielles couvertes" data-en="Industrial sectors covered">Filières industrielles couvertes</div></div>
   </div>
 
   <!-- SERVICES -->
@@ -925,10 +931,10 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         <div class="scard-n">Direction Générale &amp; C-Level</div>
         <div class="scard-d">Recrutement des profils les plus stratégiques dans l'industrie. PDG, DG, CEO, COO, EVP Operations, membres de comité de direction. Approche directe, évaluation comportementale, confidentialité garantie.</div>
         <div class="tags">
-          <span class="tag" style="color:var(--gold);">PDG / DG</span>
-          <span class="tag" style="color:var(--gold);">COO / EVP</span>
-          <span class="tag" style="color:var(--gold);">Comex</span>
-          <span class="tag" style="color:var(--gold);">Approche directe</span>
+          <span class="tag">PDG / DG</span>
+          <span class="tag">COO / EVP</span>
+          <span class="tag">Comex</span>
+          <span class="tag">Approche directe</span>
         </div>
         <span class="scard-arrow">Découvrir →</span>
       </div>
@@ -946,10 +952,10 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         <div class="scard-n">Direction Industrielle &amp; Opérations</div>
         <div class="scard-d">Directeurs d'usine, Directeurs de site, Plant Managers, Directeurs de production, Directeurs industriels groupe. Tous secteurs industriels : fonderie, métallurgie, automobile, pharma, agroalimentaire.</div>
         <div class="tags">
-          <span class="tag" style="color:var(--gold);">Directeur d'Usine</span>
-          <span class="tag" style="color:var(--gold);">Plant Manager</span>
-          <span class="tag" style="color:var(--gold);">Dir. Industriel</span>
-          <span class="tag" style="color:var(--gold);">Dir. Production</span>
+          <span class="tag">Directeur d'Usine</span>
+          <span class="tag">Plant Manager</span>
+          <span class="tag">Dir. Industriel</span>
+          <span class="tag">Dir. Production</span>
         </div>
         <span class="scard-arrow">Découvrir →</span>
       </div>
@@ -967,10 +973,10 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         <div class="scard-n">RH, Finance &amp; Fonctions Support</div>
         <div class="scard-d">DRH de groupe industriel, RRH de site, DAF industrie, Directeur Achats, Directeur Supply Chain, Directeur Qualité. Profils fonctionnels pour groupes industriels français et internationaux.</div>
         <div class="tags">
-          <span class="tag" style="color:var(--gold);">DRH Groupe</span>
-          <span class="tag" style="color:var(--gold);">RRH Site</span>
-          <span class="tag" style="color:var(--gold);">DAF Industrie</span>
-          <span class="tag" style="color:var(--gold);">Dir. Supply Chain</span>
+          <span class="tag">DRH Groupe</span>
+          <span class="tag">RRH Site</span>
+          <span class="tag">DAF Industrie</span>
+          <span class="tag">Dir. Supply Chain</span>
         </div>
         <span class="scard-arrow">Découvrir →</span>
       </div>
@@ -985,10 +991,10 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         <div class="scard-n">Management de Transition</div>
         <div class="scard-d">Placement de directeurs opérationnels en mission courte dans l'industrie. Redressement de site, démarrage de production, remplacement urgent. Profil opérationnel disponible rapidement.</div>
         <div class="tags">
-          <span class="tag" style="color:var(--gold);">Transition</span>
-          <span class="tag" style="color:var(--gold);">Redressement</span>
-          <span class="tag" style="color:var(--gold);">Dir. Usine</span>
-          <span class="tag" style="color:var(--gold);">Mission 6-18 mois</span>
+          <span class="tag">Transition</span>
+          <span class="tag">Redressement</span>
+          <span class="tag">Dir. Usine</span>
+          <span class="tag">Mission 6-18 mois</span>
         </div>
         <span class="scard-arrow">Découvrir →</span>
       </div>
@@ -1004,10 +1010,10 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         <div class="scard-n" data-fr="Direction Commerciale &amp; Ventes" data-en="Commercial &amp; Sales Leadership">Direction Commerciale &amp; Ventes</div>
         <div class="scard-d" data-fr="Directeurs commerciaux, Directeurs des ventes, Sales Managers, responsables grands comptes. Des profils capables de porter la croissance d'un site ou d'une division industrielle." data-en="Sales Directors, Heads of Sales, Sales Managers, Key Account leads. Profiles able to drive growth for an industrial site or division.">Directeurs commerciaux, Directeurs des ventes, Sales Managers, responsables grands comptes. Des profils capables de porter la croissance d'un site ou d'une division industrielle.</div>
         <div class="tags">
-          <span class="tag" style="color:var(--gold);" data-fr="Directeur commercial" data-en="Sales Director">Directeur commercial</span>
-          <span class="tag" style="color:var(--gold);" data-fr="Directeur des ventes" data-en="Head of Sales">Directeur des ventes</span>
-          <span class="tag" style="color:var(--gold);">Sales Manager</span>
-          <span class="tag" style="color:var(--gold);" data-fr="Grands comptes" data-en="Key Accounts">Grands comptes</span>
+          <span class="tag" data-fr="Directeur commercial" data-en="Sales Director">Directeur commercial</span>
+          <span class="tag" data-fr="Directeur des ventes" data-en="Head of Sales">Directeur des ventes</span>
+          <span class="tag">Sales Manager</span>
+          <span class="tag" data-fr="Grands comptes" data-en="Key Accounts">Grands comptes</span>
         </div>
         <span class="scard-arrow" data-fr="Découvrir →" data-en="Discover →">Découvrir →</span>
       </div>
@@ -1040,7 +1046,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 
   <!-- LA FONDATRICE -->
   <section class="section founder-section" style="display:grid;grid-template-columns:280px 1fr;gap:3.5rem;align-items:center;max-width:900px;">
-    <img src="/assets/img/aurelie-linkedin.jpg" alt="Aurélie Stefanowski, fondatrice d'Alveris" width="280" height="280" loading="lazy" style="width:100%;aspect-ratio:1/1;border-radius:4px;object-fit:cover;border:1px solid var(--light);">
+    <img class="founder-photo-temp" src="/assets/img/aurelie-linkedin.jpg" alt="Aurélie Stefanowski, fondatrice d'Alveris" width="280" height="280" loading="lazy" style="width:100%;aspect-ratio:1/1;border-radius:4px;object-fit:cover;border:1px solid var(--light);">
     <div>
       <p class="slabel" data-fr="La fondatrice" data-en="The founder">La fondatrice</p>
       <h2 class="stitle" style="margin-bottom:1.25rem;">Aurélie Stefanowski</h2>
@@ -1057,7 +1063,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     <h2 class="stitle"><em>Actualités RH</em> &amp; Industrie</h2>
     <div id="actu-home-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem;">
   <a href="/actualites/directeur-site-nucleaire-marche-tension.html" style="display:block;text-decoration:none;color:inherit;border:1px solid var(--light);border-radius:4px;overflow:hidden;background:var(--white);transition:border-color .2s,box-shadow .2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.07)'" onmouseout="this.style.borderColor='var(--light)';this.style.boxShadow='none'">
-    <img alt="Tours de refroidissement d'une centrale nucléaire" src="https://images.unsplash.com/photo-1630142895963-6996ae6b3a5b?w=800&amp;q=80&amp;auto=format&amp;fit=crop" width="800" height="160" loading="lazy" style="width:100%;height:160px;object-fit:cover;display:block;">
+    <img alt="Tours de refroidissement d'une centrale nucléaire" src="https://images.unsplash.com/photo-1630142895963-6996ae6b3a5b?w=800&amp;q=80&amp;auto=format&amp;fit=crop" width="800" height="160" loading="lazy" class="actu-img-tone" style="width:100%;height:160px;object-fit:cover;display:block;">
     <div style="padding:1.25rem;">
       <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;">Nucléaire · Énergie · Juillet 2026</div>
       <h3 style="font-family:var(--serif);font-size:1rem;font-weight:400;margin:0 0 .5rem;line-height:1.35;">Directeur de site nucléaire : un marché sous très forte tension</h3>
@@ -1066,7 +1072,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     </div>
   </a>
   <a href="/actualites/cout-cabinet-executive-search-industrie.html" style="display:block;text-decoration:none;color:inherit;border:1px solid var(--light);border-radius:4px;overflow:hidden;background:var(--white);transition:border-color .2s,box-shadow .2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.07)'" onmouseout="this.style.borderColor='var(--light)';this.style.boxShadow='none'">
-    <img alt="Immeuble de bureaux d'un groupe industriel au crépuscule" src="https://images.unsplash.com/photo-1643391448961-621e0b1bc5b1?w=800&amp;q=80&amp;auto=format&amp;fit=crop" width="800" height="160" loading="lazy" style="width:100%;height:160px;object-fit:cover;display:block;">
+    <img alt="Immeuble de bureaux d'un groupe industriel au crépuscule" src="https://images.unsplash.com/photo-1643391448961-621e0b1bc5b1?w=800&amp;q=80&amp;auto=format&amp;fit=crop" width="800" height="160" loading="lazy" class="actu-img-tone" style="width:100%;height:160px;object-fit:cover;display:block;">
     <div style="padding:1.25rem;">
       <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;">Executive search · Méthode · Juillet 2026</div>
       <h3 style="font-family:var(--serif);font-size:1rem;font-weight:400;margin:0 0 .5rem;line-height:1.35;">Combien coûte un cabinet d'executive search industrie en 2026</h3>
@@ -1075,7 +1081,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     </div>
   </a>
   <a href="/actualites/management-transition-aeronautique-cadence.html" style="display:block;text-decoration:none;color:inherit;border:1px solid var(--light);border-radius:4px;overflow:hidden;background:var(--white);transition:border-color .2s,box-shadow .2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.07)'" onmouseout="this.style.borderColor='var(--light)';this.style.boxShadow='none'">
-    <img alt="Ligne d'assemblage d'avions sur un site aéronautique" src="https://images.unsplash.com/photo-1784173938177-8a577ba9a50b?w=800&amp;q=80&amp;auto=format&amp;fit=crop" width="800" height="160" loading="lazy" style="width:100%;height:160px;object-fit:cover;display:block;">
+    <img alt="Ligne d'assemblage d'avions sur un site aéronautique" src="https://images.unsplash.com/photo-1784173938177-8a577ba9a50b?w=800&amp;q=80&amp;auto=format&amp;fit=crop" width="800" height="160" loading="lazy" class="actu-img-tone" style="width:100%;height:160px;object-fit:cover;display:block;">
     <div style="padding:1.25rem;">
       <div style="font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;">Aéronautique · MRO · Juillet 2026</div>
       <h3 style="font-family:var(--serif);font-size:1rem;font-weight:400;margin:0 0 .5rem;line-height:1.35;">Management de transition en aéronautique : gérer une montée en cadence sans dérailler</h3>
@@ -1090,7 +1096,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
   </section>
 
   <!-- CTA BANDE --><!-- CTA BANDE -->
-  <section style="background:var(--blue2);padding:4rem;text-align:center;color:var(--white);">
+  <section class="section bg-dark" style="padding:4rem;text-align:center;">
     <h2 style="font-family:var(--serif);font-size:2.5rem;font-weight:300;margin-bottom:1rem;" data-fr="Prêt à recruter le bon profil ?" data-en="Ready to hire the right profile?">Prêt à recruter le bon profil ?</h2>
     <p style="font-size:14px;opacity:.6;margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto;" data-fr="Premier échange gratuit et sans engagement. Nous qualifions votre besoin en 20 minutes." data-en="Free first call, no commitment. We qualify your brief in 20 minutes.">Premier échange gratuit et sans engagement. Nous qualifions votre besoin en 20 minutes.</p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;width:100%;">
@@ -1130,7 +1136,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     </div>
     <div class="foot-col">
       <div class="foot-col-title">Filières</div>
-      <a href="/cabinet-recrutement-automobile-rhone-alpes.html">Automobile Rhône-Alpes</a>
+      <a href="/cabinet-recrutement-automobile-rhone-alpes.html">Automobile</a>
       <a href="/cabinet-recrutement-nucleaire-energie.html">Nucléaire & Énergie</a>
       <a href="/cabinet-recrutement-pharma-cdmo.html">Pharma & CDMO</a>
       <a href="/cabinet-recrutement-aeronautique-mro.html">Aéronautique & MRO</a>

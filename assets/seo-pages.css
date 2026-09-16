@@ -385,3 +385,6 @@ footer{
   .logo-name{font-size:19px;letter-spacing:4px;}
   .sector-hero-title{font-size:24px;}
 }
+
+/* ============ HARMONISATION VIGNETTES ACTUALITÉS (désaturation légère + voile chaud) ============ */
+.actu-img-tone{filter:saturate(.85) sepia(.12) contrast(1.02);}

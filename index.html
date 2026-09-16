@@ -200,7 +200,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(250,250,248,
 .mbox-d{font-size:10px;color:var(--mid);margin-top:.15rem;}
 
 /* ── STATS BAND ── */
-.stats-band{background:var(--black);color:var(--white);padding:3rem;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background-image:linear-gradient(var(--black),var(--black));}
+.stats-band{background:var(--black);color:var(--white);padding:3rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background-image:linear-gradient(var(--black),var(--black));}
 .stat-block{padding:2rem;text-align:center;border-right:1px solid #1e1e1e;}
 .stat-block:last-child{border-right:none;}
 .stat-n{font-family:var(--serif);font-size:2rem;font-weight:300;line-height:1;color:var(--gold);letter-spacing:.02em;}
@@ -509,6 +509,8 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 @media(max-width:960px){
   #actu-home-grid{grid-template-columns:1fr;}
   .secteurs-grid{grid-template-columns:1fr;}
+  .founder-section{grid-template-columns:1fr !important;gap:1.5rem !important;text-align:center;}
+  .founder-section img{max-width:220px;margin:0 auto;}
   .secteurs-wrap-outer{padding:1.5rem 1rem;}
   /* Nav */
   .nav-links,.nav-cta{display:none;}
@@ -527,8 +529,8 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
   .founder-line{font-size:.9rem;}
 
   /* Stats */
-  .stats-band{grid-template-columns:1fr 1fr;padding:2rem 1.5rem;}
-  .stat-block{padding:1.5rem;}
+  .stats-band{grid-template-columns:repeat(3,1fr);padding:2rem 1.5rem;}
+  .stat-block{padding:1.5rem .5rem;}
 
   /* Services */
   .services-wrap{grid-template-columns:1fr 1fr;}
@@ -609,8 +611,8 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
   .btn-dark,.btn-outline{width:100%;text-align:center;padding:.9rem 1rem;}
 
   /* Stats */
-  .stats-band{grid-template-columns:1fr 1fr;padding:1.5rem 1rem;}
-  .stat-n{font-size:1.6rem;}
+  .stats-band{grid-template-columns:repeat(3,1fr);padding:1.5rem .5rem;}
+  .stat-n{font-size:1.3rem;}
   .stat-l{font-size:9px;}
 
   /* Services */
@@ -875,93 +877,34 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 <!-- ═══════ PAGE ACCUEIL ═══════ -->
 <div class="page active" id="page-home">
 
-  <!-- HERO SLIDER PREMIUM -->
+  <!-- BANDEAU FIXE — plus de carrousel -->
   <div class="hero-premium" id="hero-premium">
-
-    <!-- SLIDE 1 — Vision/Positionnement -->
     <div class="hp-slide active" id="hp-0">
       <div class="hp-bg">
-        <img src="/assets/img/hero-accueil.jpg" alt="Recrutement de dirigeants Alveris" loading="eager" width="1600" height="900">
+        <img src="/assets/img/hero-accueil.jpg" alt="Inspection qualité sur un site de production industrielle" loading="eager" width="1600" height="900">
         <div class="hp-overlay"></div>
       </div>
       <div class="hp-content">
         <div class="hp-eyebrow">Executive Search · Industrie &amp; Ingénierie · France</div>
         <h1 class="hp-title">Cabinet de recrutement industrie &amp; executive search<br><em>pour ETI et groupes industriels</em></h1>
-        <p class="hp-sub">Cabinet de recrutement industrie et executive search : Directeurs Généraux, COO, Directeurs d'usine, cadres clés. Approche directe, profils qualifiés sous 10 jours.</p>
+        <p class="hp-sub" data-fr="Directeurs Généraux, COO, Directeurs d'usine, cadres clés de l'industrie : une sélection resserrée de 3 à 5 profils qualifiés, jamais une liste de candidatures." data-en="Managing Directors, COOs, Plant Managers, key industry executives: a tight shortlist of 3 to 5 qualified profiles, never a list of applications.">Directeurs Généraux, COO, Directeurs d'usine, cadres clés de l'industrie : une sélection resserrée de 3 à 5 profils qualifiés, jamais une liste de candidatures.</p>
         <div class="hp-actions">
-          <button class="hp-btn-primary" onclick="go('contact')">Déposer un besoin</button>
-          <button class="hp-btn-ghost" onclick="go('jobs')">Voir les missions →</button>
+          <button class="hp-btn-primary" onclick="go('contact')" data-fr="Déposer un besoin" data-en="Submit a brief">Déposer un besoin</button>
+          <button class="hp-btn-ghost" onclick="go('jobs')" data-fr="Voir les missions →" data-en="See our roles →">Voir les missions →</button>
         </div>
       </div>
       <div class="hp-scroll-hint">
-        <span>Défiler</span>
+        <span data-fr="Défiler" data-en="Scroll">Défiler</span>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
       </div>
     </div>
-
-    <!-- SLIDE 2 — Secteurs / Expertise -->
-    <div class="hp-slide" id="hp-1">
-      <div class="hp-bg">
-        <img src="/assets/img/hero-approche-directe.jpg" alt="Poignée de main entre dirigeants lors d'une mise en relation exécutive" loading="lazy" width="1600" height="900">
-        <div class="hp-overlay" style="background:linear-gradient(135deg,rgba(10,10,10,.82) 0%,rgba(10,10,10,.45) 100%);"></div>
-      </div>
-      <div class="hp-content">
-        <div class="hp-eyebrow">Industrie · Ingénierie · Une expertise réelle</div>
-        <h2 class="hp-title">Pas de généralisme.<br><em>L'industrie, uniquement.</em></h2>
-        <p class="hp-sub">Fonderie, métallurgie, automobile, pharma, ingénierie de précision, agroalimentaire. Dirigeants et cadres clés uniquement.</p>
-        <div class="hp-sectors-row">
-          <button class="hp-sector-pill" onclick="go('s-industrie')">Fonderie &amp; Métallurgie</button>
-          <button class="hp-sector-pill" onclick="go('s-industrie')">Automobile &amp; Équipement</button>
-          <button class="hp-sector-pill" onclick="go('s-industrie')">Pharma &amp; CDMO</button>
-          <button class="hp-sector-pill" onclick="go('s-industrie')">Ingénierie de précision</button>
-          <button class="hp-sector-pill" onclick="go('s-industrie')">Agroalimentaire</button>
-          <button class="hp-sector-pill" onclick="go('s-industrie')">Management de transition</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- SLIDE 3 — Salaires industrie -->
-    <div class="hp-slide" id="hp-2">
-      <div class="hp-bg">
-        <img src="/assets/img/hero-cadre-industriel.jpg" alt="Dirigeante en visite d'un site industriel, approche directe Alveris" loading="lazy" width="1600" height="900">
-        <div class="hp-overlay" style="background:linear-gradient(135deg,rgba(10,10,10,.78) 0%,rgba(10,10,10,.35) 100%);"></div>
-      </div>
-      <div class="hp-content">
-        <div class="hp-eyebrow">17 ans d'expérience · Approche directe · France</div>
-        <h2 class="hp-title">Le recrutement industriel<br><em>qui va chercher les profils.</em></h2>
-        <p class="hp-sub">70% des recrutements industriels se font sans annonce publiée. Alveris va chercher les profils là où ils sont, pas sur les jobboards.</p>
-        <div class="hp-actions">
-          <button class="hp-btn-primary" onclick="go('s-industrie')">Notre expertise industrie</button>
-          <button class="hp-btn-ghost" onclick="go('contact')">Nous contacter</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Controls -->
-    <div class="hp-controls">
-      <div class="hp-dots">
-        <button class="hp-dot active" onclick="goHp(0)" aria-label="Slide 1"></button>
-        <button class="hp-dot" onclick="goHp(1)" aria-label="Slide 2"></button>
-        <button class="hp-dot" onclick="goHp(2)" aria-label="Slide 3"></button>
-      </div>
-      <div class="hp-progress-bar"><div class="hp-progress-fill" id="hp-progress"></div></div>
-    </div>
-
-    <button class="hp-arrow hp-prev" onclick="prevHp()" aria-label="Précédent">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15 18 9 12 15 6"/></svg>
-    </button>
-    <button class="hp-arrow hp-next" onclick="nextHp()" aria-label="Suivant">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 18 15 12 9 6"/></svg>
-    </button>
-
   </div>
 
   <!-- STATS BAND -->
   <div class="stats-band">
     <div class="stat-block"><div class="stat-n">+200</div><div class="stat-l" data-fr="Recrutements réalisés" data-en="Placements made">Recrutements réalisés</div></div>
-    
     <div class="stat-block"><div class="stat-n">17</div><div class="stat-l" data-fr="Ans d'expertise industrie" data-en="Years industry expertise">Ans d'expertise industrie</div></div>
-    
+    <div class="stat-block"><div class="stat-n">7</div><div class="stat-l" data-fr="Filières industrielles couvertes" data-en="Industrial sectors covered">Filières industrielles couvertes</div></div>
   </div>
 
   <!-- SERVICES -->
@@ -1050,6 +993,25 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         <span class="scard-arrow">Découvrir →</span>
       </div>
 
+      <!-- CARD 5 : Direction Commerciale & Ventes -->
+      <div class="scard" style="cursor:pointer;" onclick="location.href='/chasseur-de-tete-industrie.html'" role="link" tabindex="0">
+        <div class="scard-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 17L9 11L13 15L21 7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 7H21V13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="scard-n" data-fr="Direction Commerciale &amp; Ventes" data-en="Commercial &amp; Sales Leadership">Direction Commerciale &amp; Ventes</div>
+        <div class="scard-d" data-fr="Directeurs commerciaux, Directeurs des ventes, Sales Managers, responsables grands comptes. Des profils capables de porter la croissance d'un site ou d'une division industrielle." data-en="Sales Directors, Heads of Sales, Sales Managers, Key Account leads. Profiles able to drive growth for an industrial site or division.">Directeurs commerciaux, Directeurs des ventes, Sales Managers, responsables grands comptes. Des profils capables de porter la croissance d'un site ou d'une division industrielle.</div>
+        <div class="tags">
+          <span class="tag" style="color:var(--gold);" data-fr="Directeur commercial" data-en="Sales Director">Directeur commercial</span>
+          <span class="tag" style="color:var(--gold);" data-fr="Directeur des ventes" data-en="Head of Sales">Directeur des ventes</span>
+          <span class="tag" style="color:var(--gold);">Sales Manager</span>
+          <span class="tag" style="color:var(--gold);" data-fr="Grands comptes" data-en="Key Accounts">Grands comptes</span>
+        </div>
+        <span class="scard-arrow" data-fr="Découvrir →" data-en="Discover →">Découvrir →</span>
+      </div>
+
     </div>
     </section>
 
@@ -1070,11 +1032,24 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
         <div class="pillar"><div class="pnum">01</div><div><div class="pname" data-fr="Briefing approfondi" data-en="In-depth briefing">Briefing approfondi</div><div class="pdesc" data-fr="Avant de sourcer, nous prenons le temps de comprendre votre culture, vos enjeux et le profil exact que vous recherchez. Un briefing bien fait, c'est 50% du recrutement réussi." data-en="Before sourcing, we take time to understand your culture, challenges and the exact profile you seek. A thorough brief is 50% of a successful hire.">Avant de sourcer, nous prenons le temps de comprendre votre culture, vos enjeux et le profil exact que vous recherchez.</div></div></div>
         <div class="pillar"><div class="pnum">02</div><div><div class="pname" data-fr="Sourcing ciblé & chasse" data-en="Targeted sourcing & headhunting">Sourcing ciblé & chasse</div><div class="pdesc" data-fr="Approche directe des profils actifs et passifs via notre réseau, LinkedIn et nos bases sectorielles. Pas de diffusion de masse." data-en="Direct approach of active and passive profiles via our network, LinkedIn and sector databases. No mass broadcasting.">Approche directe des profils actifs et passifs via notre réseau, LinkedIn et nos bases sectorielles.</div></div></div>
         <div class="pillar"><div class="pnum">03</div><div><div class="pname" data-fr="Évaluation & validation" data-en="Assessment & validation">Évaluation & validation</div><div class="pdesc" data-fr="Entretiens structurés, analyse des compétences, vérification des références. Vous ne rencontrez que des profils réellement qualifiés." data-en="Structured interviews, skills analysis, reference checks. You only meet genuinely qualified profiles.">Entretiens structurés, analyse des compétences, vérification des références. Vous ne rencontrez que des profils réellement qualifiés.</div></div></div>
-        <div class="pillar"><div class="pnum">04</div><div><div class="pname" data-fr="Présentation & suivi" data-en="Presentation & follow-up">Présentation & suivi</div><div class="pdesc" data-fr="3 à 5 profils maximum, présentés avec un rapport détaillé. Suivi hebdomadaire de la mission, transparence totale à chaque étape." data-en="3 to 5 profiles maximum, presented with a detailed report. Weekly mission follow-up, full transparency at every step.">3 à 5 profils maximum présentés avec un rapport détaillé. Suivi hebdomadaire, transparence totale.</div></div></div>
+        <div class="pillar"><div class="pnum">04</div><div><div class="pname" data-fr="Présentation & suivi" data-en="Presentation & follow-up">Présentation & suivi</div><div class="pdesc" data-fr="3 à 5 profils maximum, présentés avec un dossier Alveris détaillé, jamais un CV brut. Suivi hebdomadaire de la mission, transparence totale à chaque étape." data-en="3 to 5 profiles maximum, presented with a detailed Alveris file, never a raw CV. Weekly mission follow-up, full transparency at every step.">3 à 5 profils maximum présentés avec un dossier Alveris détaillé, jamais un CV brut. Suivi hebdomadaire, transparence totale.</div></div></div>
         <div class="pillar"><div class="pnum">05</div><div><div class="pname" data-fr="Accompagnement post-recrutement" data-en="Post-recruitment support">Accompagnement post-recrutement</div><div class="pdesc" data-fr="Notre mission ne s'arrête pas à la signature du contrat. Nous assurons un suivi pendant la période d'intégration pour garantir la réussite de la prise de poste." data-en="Our mission doesn't end at contract signing. We follow up during the onboarding period to ensure a successful start.">Notre mission ne s'arrête pas à la signature du contrat. Suivi pendant la période d'intégration.</div></div></div>
       </div>
     </div>
   </div>
+
+  <!-- LA FONDATRICE -->
+  <section class="section founder-section" style="display:grid;grid-template-columns:280px 1fr;gap:3.5rem;align-items:center;max-width:900px;">
+    <img src="/assets/img/aurelie-linkedin.jpg" alt="Aurélie Stefanowski, fondatrice d'Alveris" width="280" height="280" loading="lazy" style="width:100%;aspect-ratio:1/1;border-radius:4px;object-fit:cover;border:1px solid var(--light);">
+    <div>
+      <p class="slabel" data-fr="La fondatrice" data-en="The founder">La fondatrice</p>
+      <h2 class="stitle" style="margin-bottom:1.25rem;">Aurélie Stefanowski</h2>
+      <p class="sbody" data-fr="Aurélie Stefanowski a fondé Alveris après 17 ans dans le recrutement et les ressources humaines en industrie." data-en="Aurélie Stefanowski founded Alveris after 17 years in industrial recruitment and HR.">Aurélie Stefanowski a fondé Alveris après 17 ans dans le recrutement et les ressources humaines en industrie.</p>
+      <p class="sbody" data-fr="Un parcours mené de l'automobile à l'agroalimentaire, en passant par les matériaux réfractaires et l'énergie, avec une expérience de DRH au sein d'une holding multi-sociétés." data-en="A career spanning automotive to food industry, refractory materials and energy, including a role as HR Director within a multi-company holding.">Un parcours mené de l'automobile à l'agroalimentaire, en passant par les matériaux réfractaires et l'énergie, avec une expérience de DRH au sein d'une holding multi-sociétés.</p>
+      <p class="sbody" data-fr="Cette connaissance du terrain, acquise de l'intérieur, est au cœur de la méthode Alveris." data-en="This first-hand knowledge of the field is at the heart of the Alveris method.">Cette connaissance du terrain, acquise de l'intérieur, est au cœur de la méthode Alveris.</p>
+      <a href="/pourquoi-alveris.html" style="display:inline-block;margin-top:.5rem;font-size:12px;font-weight:500;letter-spacing:.05em;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px;" data-fr="Découvrir le cabinet →" data-en="Discover the firm →">Découvrir le cabinet →</a>
+    </div>
+  </section>
 
   <!-- ACTUALITÉS HOME — 3 articles -->
   <section class="section" style="background:var(--white2);">
@@ -1120,51 +1095,16 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     <p style="font-size:14px;opacity:.6;margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto;" data-fr="Premier échange gratuit et sans engagement. Nous qualifions votre besoin en 20 minutes." data-en="Free first call, no commitment. We qualify your brief in 20 minutes.">Premier échange gratuit et sans engagement. Nous qualifions votre besoin en 20 minutes.</p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;width:100%;">
       <button class="btn-dark" style="background:var(--gold);color:var(--black);" onclick="go('contact')" data-fr="Déposer un besoin" data-en="Submit a brief">Déposer un besoin</button>
-      
+    </div>
+    <div style="margin-top:1.75rem;font-size:13px;opacity:.75;display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;">
+      <a href="mailto:contact@alveris.fr" style="color:var(--white);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:1px;">contact@alveris.fr</a>
+      <span aria-hidden="true">·</span>
+      <a href="tel:+33763032183" style="color:var(--white);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:1px;">+33 7 63 03 21 83</a>
     </div>
   </section>
 
 </div><!-- /page-home -->
 
-
-<!-- ═══════ NOS EXPERTISES EN DÉTAIL (teasers → pages dédiées) ═══════ -->
-<section class="section bg-sand">
-  <p class="slabel">NOS EXPERTISES</p>
-  <h2 class="stitle">Une spécialité par métier industriel.</h2>
-  <div class="secteurs-grid">
-
-    <a href="/recrutement-directeur-general-industrie.html" style="display:block;text-decoration:none;color:inherit;background:var(--white);padding:2rem;border-top:3px solid var(--gold);transition:box-shadow .2s;">
-      <div style="font-family:var(--serif);font-size:1.2rem;font-weight:300;margin-bottom:.75rem;color:var(--black);">Direction Générale &amp; C-Level Industrie</div>
-      <div style="font-size:12.5px;color:var(--mid);line-height:1.7;margin-bottom:1rem;">Le recrutement d'un dirigeant, c'est avant tout une décision stratégique. Elle engage l'entreprise pour plusieurs années.</div>
-      <div style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);">En savoir plus →</div>
-    </a>
-
-    <a href="/recrutement-cadres-industriels.html" style="display:block;text-decoration:none;color:inherit;background:var(--white);padding:2rem;border-top:3px solid var(--gold);transition:box-shadow .2s;">
-      <div style="font-family:var(--serif);font-size:1.2rem;font-weight:300;margin-bottom:.75rem;color:var(--black);">Executive Search Industrie</div>
-      <div style="font-size:12.5px;color:var(--mid);line-height:1.7;margin-bottom:1rem;">Alveris intervient exclusivement dans l'industrie. 17 ans d'expérience, réseau terrain, connaissance fine des profils et des rémunérations.</div>
-      <div style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);">En savoir plus →</div>
-    </a>
-
-    <a href="/recrutement-directeur-usine-industrie.html" style="display:block;text-decoration:none;color:inherit;background:var(--white);padding:2rem;border-top:3px solid var(--gold);transition:box-shadow .2s;">
-      <div style="font-family:var(--serif);font-size:1.2rem;font-weight:300;margin-bottom:.75rem;color:var(--black);">Direction Industrielle &amp; Opérations</div>
-      <div style="font-size:12.5px;color:var(--mid);line-height:1.7;margin-bottom:1rem;">Le pilotage opérationnel d'un site industriel ne supporte pas l'à-peu-près. Le bon profil change la trajectoire d'une usine.</div>
-      <div style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);">En savoir plus →</div>
-    </a>
-
-    <a href="/recrutement-fonctions-support-industrie.html" style="display:block;text-decoration:none;color:inherit;background:var(--white);padding:2rem;border-top:3px solid var(--gold);transition:box-shadow .2s;">
-      <div style="font-family:var(--serif);font-size:1.2rem;font-weight:300;margin-bottom:.75rem;color:var(--black);">RH, Finance &amp; Fonctions Support</div>
-      <div style="font-size:12.5px;color:var(--mid);line-height:1.7;margin-bottom:1rem;">Les fonctions support sont la colonne vertébrale d'un groupe industriel. Recruter le bon profil, c'est sécuriser plusieurs années de structuration.</div>
-      <div style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);">En savoir plus →</div>
-    </a>
-
-    <a href="/management-transition-industrie.html" style="display:block;text-decoration:none;color:inherit;background:var(--white);padding:2rem;border-top:3px solid var(--gold);transition:box-shadow .2s;">
-      <div style="font-family:var(--serif);font-size:1.2rem;font-weight:300;margin-bottom:.75rem;color:var(--black);">Management de Transition</div>
-      <div style="font-size:12.5px;color:var(--mid);line-height:1.7;margin-bottom:1rem;">Quand l'urgence opérationnelle ne peut pas attendre 4 mois de recrutement, le management de transition apporte une réponse immédiate. Alveris place des dirigeants opérationnels expérimentés sur des missions de 6 à 18 mois dans l'industrie : redressement de site en difficulté, démarrage d'une nouvelle ligne de production, remplacement d'un directeur d'usine, accompagnement post-acquisition, transformation industrielle.</div>
-      <div style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);">En savoir plus →</div>
-    </a>
-
-  </div>
-</section>
 
 <!-- ═══════ FOOTER ═══════ -->
 <footer>
@@ -1210,6 +1150,7 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
       <div class="foot-col-title" data-fr="Navigation" data-en="Navigation">Navigation</div>
       <a href="/" onclick="go('home');return false;" data-fr="Accueil" data-en="Home">Accueil</a>
       <a href="/postes-industrie.html">Postes</a>
+      <a href="/deposer-cv.html" data-fr="Déposer un CV" data-en="Submit a CV">Déposer un CV</a>
       <a href="/pourquoi-alveris.html" data-fr="Pourquoi Alveris" data-en="Why Alveris">Pourquoi Alveris</a>
       <a href="/actualites/" data-fr="Actualités" data-en="News">Actualités</a>
       <a href="/contact.html" data-fr="Contact" data-en="Contact">Contact</a>
@@ -1228,7 +1169,6 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
     <div class="foot-copy">© 2026 Alveris · Tous droits réservés</div>
   </div>
 </footer>
-
 
 <script>
 // ── Navigation ──
@@ -1319,6 +1259,7 @@ function setLang(lang){
   });
 }
 
+
 // ── ROTATION OFFRES D'EMPLOI (toutes les 2 semaines) ──
 (function rotateJobs(){
   const grid = document.getElementById('jobs-grid');
@@ -1373,53 +1314,7 @@ function setLang(lang){
 })();
 
 
-// ══ HERO PREMIUM SLIDER ══
-let hpCurrent = 0;
-const hpTotal = 3;
-let hpTimer = null;
-let hpProgress = 0;
-let hpProgressInterval = null;
-const HP_DURATION = 6000;
-
-function goHp(idx) {
-  const slides = document.querySelectorAll('.hp-slide');
-  const dots = document.querySelectorAll('.hp-dot');
-  slides[hpCurrent].classList.remove('active');
-  dots[hpCurrent].classList.remove('active');
-  hpCurrent = idx;
-  slides[hpCurrent].classList.add('active');
-  dots[hpCurrent].classList.add('active');
-  resetHpProgress();
-}
-function nextHp(){ goHp((hpCurrent + 1) % hpTotal); }
-function prevHp(){ goHp((hpCurrent + hpTotal - 1) % hpTotal); }
-
-function resetHpProgress(){
-  clearTimeout(hpTimer);
-  clearInterval(hpProgressInterval);
-  hpProgress = 0;
-  const bar = document.getElementById('hp-progress');
-  if(bar){ bar.style.transition = 'none'; bar.style.width = '0%'; }
-  setTimeout(()=>{
-    if(bar){ bar.style.transition = 'width ' + HP_DURATION + 'ms linear'; bar.style.width = '100%'; }
-  }, 50);
-  hpTimer = setTimeout(nextHp, HP_DURATION);
-}
-
-// Touch swipe
-(function(){
-  var el = document.getElementById('hero-premium');
-  if(!el) return;
-  let tx = 0;
-  el.addEventListener('touchstart', e=>{ tx=e.touches[0].clientX; },{passive:true});
-  el.addEventListener('touchend', e=>{
-    const dx = e.changedTouches[0].clientX - tx;
-    if(Math.abs(dx)>50){ dx<0?nextHp():prevHp(); }
-  },{passive:true});
-})();
-
-// Start
-resetHpProgress();
+// ══ BANDEAU FIXE — plus de carrousel, plus de JS de rotation ══
 
 // ── ACTUALITÉS SLIDER ──
 let currentActu = 0;

@@ -273,6 +273,7 @@ if(cf) cf.addEventListener('submit',function(e){
       if(btn) btn.style.display='none';
       var succ = document.getElementById('contact-success');
       if(succ){ succ.style.display='block'; }
+      if(window.AlverisCookies){ window.AlverisCookies.trackConversion('contact_form_submit'); }
     } else {
       if(btn){ btn.textContent='Erreur, réessayez'; btn.style.opacity='1'; }
     }
@@ -282,5 +283,7 @@ if(cf) cf.addEventListener('submit',function(e){
   });
 });
 </script>
+<script src="/assets/tracking-config.js"></script>
+<script src="/assets/cookie-consent.js"></script>
 </body>
 </html>

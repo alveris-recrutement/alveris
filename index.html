@@ -487,7 +487,6 @@ body.menu-open .chat-bubble{display:none;}
 .chat-input{flex:1;border:none;padding:.85rem 1rem;font-size:12px;outline:none;background:var(--white);font-family:var(--sans);}
 .chat-send{border:none;background:none;padding:.85rem 1rem;cursor:pointer;color:var(--mid);font-size:16px;transition:color .2s;}
 .chat-send:hover{color:var(--black);}
-.chat-notif{position:absolute;top:-4px;right:-4px;width:16px;height:16px;border-radius:50%;background:#e53935;color:var(--white);font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;}
 
 /* ── RESPONSIVE ── */
 
@@ -1290,7 +1289,6 @@ body.menu-open .chat-bubble{display:none;}
   </div>
   <button class="chat-toggle" id="chat-toggle" onclick="toggleChat()">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-    <div class="chat-notif" id="chat-notif">1</div>
   </button>
 </div>
 
@@ -1394,7 +1392,6 @@ const SYSTEM_PROMPT = "Tu es l'assistant virtuel d'Alveris, cabinet d'executive 
 function toggleChat(){
   chatOpen = !chatOpen;
   document.getElementById('chat-box').classList.toggle('open', chatOpen);
-  document.getElementById('chat-notif').style.display = 'none';
 }
 
 function addMsg(text, type){
@@ -1488,9 +1485,6 @@ async function sendToClaude(userMsg){
     addMsg('Erreur : ' + e.message, 'bot');
   }
 }
-
-// Notification après 4s
-setTimeout(()=>{ if(!chatOpen) document.getElementById('chat-notif').style.display='flex'; }, 4000);
 
 // ── ROTATION OFFRES D'EMPLOI (toutes les 2 semaines) ──
 (function rotateJobs(){

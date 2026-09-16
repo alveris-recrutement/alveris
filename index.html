@@ -189,8 +189,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(250,250,248,
 .btn-outline:hover{background:var(--black);color:var(--white);}
 .founder-line{margin-top:2rem;font-family:var(--serif);font-size:.95rem;font-style:italic;color:var(--mid);display:flex;align-items:center;gap:.75rem;}
 .founder-line::before{content:'';display:inline-block;width:28px;height:1px;background:var(--gold);}
-/* Photo fondatrice provisoire : à retirer (classe + attribut style ci-dessous) dès qu'une nouvelle photo remplace aurelie-linkedin.jpg */
-.founder-photo-temp{}
+.section.founder-mini-section{padding:2.25rem 4rem;}
+.founder-mini{display:flex;align-items:center;gap:1.25rem;max-width:900px;}
+.founder-mini-photo{width:120px;height:120px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);flex-shrink:0;}
+.founder-mini-id{display:flex;flex-direction:column;justify-content:center;}
+.founder-mini-name{font-family:var(--serif);font-size:1.4rem;font-weight:400;margin:0;}
+.founder-mini-text{margin-top:1.25rem;text-align:left;}
+.founder-mini-link{display:inline-block;margin-top:.85rem;font-size:12px;font-weight:500;letter-spacing:.05em;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px;}
 /* Harmonisation visuelle des vignettes d'actualités (légère désaturation + voile chaud) */
 .actu-img-tone{filter:saturate(.85) sepia(.12) contrast(1.02);}
 .hero-right{background:var(--sand);display:flex;flex-direction:column;position:relative;overflow:hidden;}
@@ -513,9 +518,8 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
 @media(max-width:960px){
   #actu-home-grid{grid-template-columns:1fr;}
   .secteurs-grid{grid-template-columns:1fr;}
-  .founder-section{grid-template-columns:1fr !important;gap:1.5rem !important;}
-  .founder-section img{max-width:220px;margin:0 auto;}
-  .founder-section .slabel,.founder-section .stitle{text-align:center;}
+  .section.founder-mini-section{padding:1.75rem 1.5rem;}
+  .founder-mini-photo{width:96px;height:96px;}
   .secteurs-wrap-outer{padding:1.5rem 1rem;}
   /* Nav */
   .nav-links,.nav-cta{display:none;}
@@ -1045,16 +1049,16 @@ footer{padding:3rem 4rem;border-top:1px solid var(--light);background:var(--sand
   </div>
 
   <!-- LA FONDATRICE -->
-  <section class="section founder-section" style="display:grid;grid-template-columns:280px 1fr;gap:3.5rem;align-items:center;max-width:900px;">
-    <img class="founder-photo-temp" src="/assets/img/aurelie-linkedin.jpg" alt="Aurélie Stefanowski, fondatrice d'Alveris" width="280" height="280" loading="lazy" style="width:100%;aspect-ratio:1/1;border-radius:4px;object-fit:cover;border:1px solid var(--light);">
-    <div>
-      <p class="slabel" data-fr="La fondatrice" data-en="The founder">La fondatrice</p>
-      <h2 class="stitle" style="margin-bottom:1.25rem;">Aurélie Stefanowski</h2>
-      <p class="sbody" data-fr="Aurélie Stefanowski a fondé Alveris après 17 ans dans le recrutement et les ressources humaines en industrie." data-en="Aurélie Stefanowski founded Alveris after 17 years in industrial recruitment and HR.">Aurélie Stefanowski a fondé Alveris après 17 ans dans le recrutement et les ressources humaines en industrie.</p>
-      <p class="sbody" data-fr="Un parcours mené de l'automobile à l'agroalimentaire, en passant par les matériaux réfractaires et l'énergie, avec une expérience de DRH au sein d'une holding multi-sociétés." data-en="A career spanning automotive to food industry, refractory materials and energy, including a role as HR Director within a multi-company holding.">Un parcours mené de l'automobile à l'agroalimentaire, en passant par les matériaux réfractaires et l'énergie, avec une expérience de DRH au sein d'une holding multi-sociétés.</p>
-      <p class="sbody" data-fr="Cette connaissance du terrain, acquise de l'intérieur, est au cœur de la méthode Alveris." data-en="This first-hand knowledge of the field is at the heart of the Alveris method.">Cette connaissance du terrain, acquise de l'intérieur, est au cœur de la méthode Alveris.</p>
-      <a href="/pourquoi-alveris.html" style="display:inline-block;margin-top:.5rem;font-size:12px;font-weight:500;letter-spacing:.05em;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px;" data-fr="Découvrir le cabinet →" data-en="Discover the firm →">Découvrir le cabinet →</a>
+  <section class="section founder-mini-section">
+    <div class="founder-mini">
+      <img class="founder-mini-photo" src="/assets/img/aurelie-linkedin.jpg" alt="Aurélie Stefanowski, fondatrice d'Alveris" width="120" height="120" loading="lazy">
+      <div class="founder-mini-id">
+        <p class="slabel" data-fr="La fondatrice" data-en="The founder">La fondatrice</p>
+        <h2 class="founder-mini-name">Aurélie Stefanowski</h2>
+      </div>
     </div>
+    <p class="sbody founder-mini-text" data-fr="17 ans de recrutement et de ressources humaines dans l'industrie, de l'automobile à l'énergie, dont un poste de DRH au sein d'une holding multi-sociétés. Une connaissance du terrain acquise de l'intérieur, au cœur de la méthode Alveris." data-en="17 years in industrial recruitment and HR, from automotive to energy, including a role as HR Director within a multi-company holding. First-hand field knowledge at the heart of the Alveris method.">17 ans de recrutement et de ressources humaines dans l'industrie, de l'automobile à l'énergie, dont un poste de DRH au sein d'une holding multi-sociétés. Une connaissance du terrain acquise de l'intérieur, au cœur de la méthode Alveris.</p>
+    <a class="founder-mini-link" href="/pourquoi-alveris.html" data-fr="Découvrir le parcours →" data-en="Discover her background →">Découvrir le parcours →</a>
   </section>
 
   <!-- ACTUALITÉS HOME — 3 articles -->

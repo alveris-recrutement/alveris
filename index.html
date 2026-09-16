@@ -1279,7 +1279,6 @@ body.menu-open .chat-bubble{display:none;}
       <div class="msg bot" data-fr="Bonjour ! 👋 Je suis l'assistant Alveris. Comment puis-je vous aider ?" data-en="Hello! 👋 I'm the Alveris assistant. How can I help you?">Bonjour ! 👋 Je suis l'assistant Alveris. Comment puis-je vous aider ?</div>
     </div>
     <div class="chat-suggestions" id="chat-sugs">
-      <button class="chat-sug" onclick="chatSug(this)" data-fr="Voir les offres" data-en="See job offers">Voir les offres</button>
       <button class="chat-sug" onclick="chatSug(this)" data-fr="Déposer un CV" data-en="Submit a CV">Déposer un CV</button>
       <button class="chat-sug" onclick="chatSug(this)" data-fr="Nos services" data-en="Our services">Nos services</button>
       <button class="chat-sug" onclick="chatSug(this)" data-fr="Nous contacter" data-en="Contact us">Nous contacter</button>
@@ -1470,12 +1469,7 @@ async function sendToClaude(userMsg){
       const low = (reply + userMsg).toLowerCase();
       const sugsDiv = document.getElementById('chat-sugs');
       sugsDiv.innerHTML = ''; sugsDiv.style.display = 'flex';
-      if(low.includes('offre')||low.includes('emploi')){
-        const b = document.createElement('button'); b.className='chat-sug';
-        b.textContent='→ Voir les offres';
-        b.onclick=function(){go('jobs');sugsDiv.style.display='none';};
-        sugsDiv.appendChild(b);
-      } else if(low.includes('cv')||low.includes('postuler')){
+      if(low.includes('cv')||low.includes('postuler')){
         const b = document.createElement('button'); b.className='chat-sug';
         b.textContent='→ Déposer mon CV';
         b.onclick=function(){go('cv');sugsDiv.style.display='none';};

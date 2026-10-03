@@ -388,3 +388,29 @@ footer{
 
 /* ============ HARMONISATION VIGNETTES ACTUALITÉS (désaturation légère + voile chaud) ============ */
 .actu-img-tone{filter:saturate(.85) sepia(.12) contrast(1.02);}
+
+/* ============ CONTENU ÉDITORIAL (H3, encadrés, auteur, études de cas) ============ */
+.section .sector-text{margin-bottom:14px;}
+.section .sector-text:last-child{margin-bottom:0;}
+.sh3{font-family:var(--sans);font-size:17px;font-weight:500;color:var(--black);margin:28px 0 10px;}
+.section .stitle + .sh3{margin-top:0;}
+.prose-list{margin:0 0 16px;}
+.prose-list li{font-size:15px;line-height:1.7;color:var(--mid);padding-left:18px;position:relative;margin-bottom:8px;}
+.prose-list li::before{content:'';position:absolute;left:0;top:12px;width:6px;height:1px;background:var(--gold2);}
+.cta-inline{margin:32px 0;padding:24px 26px;background:var(--white2);border:1px solid var(--light2);border-left:3px solid var(--gold);border-radius:4px;}
+.cta-inline-title{font-family:var(--serif);font-size:22px;color:var(--black);margin-bottom:6px;}
+.cta-inline p{font-size:14px;color:var(--mid);line-height:1.7;margin-bottom:14px;}
+.author-box{display:flex;gap:16px;align-items:center;margin:32px 0 0;padding:18px 20px;border:1px solid var(--light2);border-radius:4px;background:var(--white2);}
+.author-box img{width:64px;height:64px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);flex-shrink:0;}
+.author-box .ab-name{font-weight:500;font-size:14px;color:var(--black);}
+.author-box .ab-role{font-size:13px;color:var(--mid);line-height:1.6;}
+.hub-item{padding:22px 0;border-top:1px solid var(--sand3);}
+.hub-item:last-child{border-bottom:1px solid var(--sand3);}
+.hub-item h3{font-family:var(--sans);font-size:17px;font-weight:500;margin-bottom:6px;}
+.hub-item h3 a{color:var(--black);border-bottom:1px solid var(--gold);}
+.hub-item p{font-size:14.5px;line-height:1.7;color:var(--mid);}
+.case-card{border:1px dashed var(--sand3);border-radius:4px;padding:24px;margin-bottom:24px;background:var(--white);}
+.case-card dl{display:grid;grid-template-columns:180px 1fr;gap:8px 16px;font-size:14px;}
+.case-card dt{color:var(--black);font-weight:500;}
+.case-card dd{color:var(--mid);}
+@media (max-width:640px){.case-card dl{grid-template-columns:1fr;}.author-box{align-items:flex-start;}}

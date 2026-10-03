@@ -209,3 +209,26 @@ Certaines pages ne font partie d'aucune des 3 rubriques déroulantes :
   `noindex`, non listées au sitemap, accessibles uniquement via le pied de
   page (ligne de copyright), jamais dans le menu principal ni les
   rubriques déroulantes.
+
+## 8. Évolutions SEO d'octobre 2026 (branche seo-mandats)
+
+- **Fils d'Ariane par hub** : les pages de fonction passent par
+  `expertises-industrie.html`, les pages de filière par
+  `filieres-industrie.html`, les pages de région par `regions-industrie.html`
+  (et la page Var par la page PACA). Le HTML et le `BreadcrumbList` doivent
+  rester identiques.
+- **Hubs** : `expertises-industrie.html`, `filieres-industrie.html` et
+  `regions-industrie.html` sont des pages piliers (900 mots et plus) : un
+  paragraphe et un lien contextuel par sous-page (classe `.hub-item`).
+  Toute nouvelle page de la famille doit y être ajoutée.
+- **Articles** : signature « Par Aurélie Stefanowski » et encadré
+  `.author-box` liés à `pourquoi-alveris.html` ; données `Article` et, pour
+  les nouveaux articles, `FAQPage` ; un appel à l'action en milieu
+  (`.cta-inline`) et en fin d'article, sans promesse de délai non validée.
+- **Études de cas** : `etudes-de-cas.html` est un gabarit en `noindex`,
+  hors sitemap et hors menu, tant que des cas réels validés n'y sont pas.
+- **Balises** : title de 55 à 60 caractères et meta description de 150 à
+  160 caractères, repris à l'identique dans `og:*` et `twitter:*`. La
+  requête principale de chaque page est listée dans
+  `docs/seo/suivi-requetes.md` : ne pas la réutiliser sur une autre page.
+- Documentation de la mission : `docs/seo/`.

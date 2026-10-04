@@ -1,31 +1,62 @@
 # À faire manuellement dans Google Search Console
 
-Aucun accès API authentifié à Google Search Console n'existe dans cet
-environnement (pas de jeton OAuth, pas de compte de service). La soumission
-et la demande d'indexation doivent donc se faire à la main, comme prévu.
+Aucun accès authentifié à la Search Console n'existe depuis l'environnement de
+Claude : ces actions sont à faire à la main, une fois la branche `seo-mandats`
+fusionnée sur `main` et le site republié par GitHub Pages.
 
-## Pages à soumettre à l'inspection d'URL
+## 1. Vérifier la mise en ligne
 
-Coller chaque URL ci-dessous dans l'outil d'inspection d'URL de la Search
-Console (propriété alveris.fr), attendre le résultat, puis cliquer sur
-« Demander une indexation ».
+Ouvrir https://alveris.fr/actualites/recruter-directeur-site-industriel.html :
+si la page s'affiche, la nouvelle version est en ligne.
 
-- [ ] https://alveris.fr/cabinet-recrutement-automobile-rhone-alpes.html *(mise en ligne le 2026-08-23)*
-- [ ] https://alveris.fr/cabinet-recrutement-nucleaire-energie.html *(session suivante)*
-- [ ] https://alveris.fr/cabinet-recrutement-pharma-cdmo.html *(session suivante)*
-- [ ] https://alveris.fr/cabinet-recrutement-aeronautique-mro.html *(session suivante)*
+## 2. Resoumettre le sitemap
 
-## Sitemap à (re)soumettre
+Search Console > Sitemaps > saisir `sitemap.xml` > Envoyer
+(https://alveris.fr/sitemap.xml, 50 URL).
 
-Menu de gauche → Sitemaps → saisir `sitemap.xml` et envoyer. Si déjà déclaré,
-le supprimer puis le renvoyer force une relecture par Google.
+## 3. Demander l'indexation
 
-- URL du sitemap : https://alveris.fr/sitemap.xml
+Inspection de l'URL > coller l'URL > Demander une indexation.
+Google limite le nombre de demandes par jour : étaler sur deux ou trois jours.
 
-## Suivi
+### Jour 1 : nouvelles pages
+- [ ] https://alveris.fr/actualites/recruter-directeur-site-industriel.html
+- [ ] https://alveris.fr/actualites/choisir-cabinet-recrutement-industriel.html
+- [ ] https://alveris.fr/actualites/recruter-directeur-qhse-industrie.html
+- [ ] https://alveris.fr/actualites/recruter-directeur-usine-periode-crise.html
 
-À vérifier environ une semaine après chaque soumission : la page doit
-apparaître « Indexée » dans le rapport de couverture. Si elle reste en
-« Détectée, actuellement non indexée », c'est souvent un signal de contenu
-jugé trop proche d'une autre page — à surveiller notamment pour les 4 pages
-sectorielles, qui partagent beaucoup de structure entre elles.
+### Jour 1 ou 2 : pages prioritaires
+- [ ] https://alveris.fr/recrutement-directeur-general-industrie.html
+- [ ] https://alveris.fr/expertises-industrie.html
+- [ ] https://alveris.fr/cabinet-recrutement-industrie-paca.html
+- [ ] https://alveris.fr/recrutement-daf-industrie.html
+- [ ] https://alveris.fr/chasseur-de-tete-industrie.html
+- [ ] https://alveris.fr/cabinet-recrutement-agroalimentaire.html
+- [ ] https://alveris.fr/en/hiring-executives-in-france.html
+
+### Jour 2 ou 3 : autres pages réécrites
+- [ ] https://alveris.fr/cabinet-recrutement-industrie-lyon.html
+- [ ] https://alveris.fr/management-transition-industrie.html
+- [ ] https://alveris.fr/recrutement-directeur-usine-industrie.html
+- [ ] https://alveris.fr/recrutement-directeur-qualite-industrie.html
+- [ ] https://alveris.fr/regions-industrie.html
+- [ ] https://alveris.fr/filieres-industrie.html
+- [ ] https://alveris.fr/cabinet-recrutement-industrie-grand-est.html
+- [ ] https://alveris.fr/cabinet-recrutement-industrie-paris.html
+- [ ] https://alveris.fr/pourquoi-alveris.html
+- [ ] https://alveris.fr/postes-industrie.html
+- [ ] https://alveris.fr/actualites/remunerations-cadres-industriels-2026.html
+- [ ] https://alveris.fr/actualites/
+- [ ] https://alveris.fr/
+
+## 4. Suivi
+
+- Relever dès maintenant les positions et clics actuels dans
+  `docs/seo/suivi-requetes.md` (colonne « Relevé avant »), puis à 4 et 8 semaines.
+- Une semaine après : vérifier que les nouvelles pages sont « Indexées »
+  (rapport Pages).
+
+## 5. Ménage GitHub
+
+Après fusion, supprimer les branches `seo-mandats` et
+`claude/new-session-6ax34l` (GitHub > Branches > icône corbeille).

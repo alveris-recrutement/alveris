@@ -152,20 +152,19 @@ Nombre de mots visibles hors menu et pied de page (même méthode que l'audit in
 | `contact.html` | Balises / maillage | 114 | 114 |
 | `en/executive-search-france.html` | Balises / maillage | 704 | 704 |
 
-## 5. Mentions [À VALIDER], page par page
+## 5. Mentions [À VALIDER] : arbitrages du 4 octobre 2026
 
-À confirmer, corriger ou supprimer avant fusion. Une fois validée, retirer simplement la mention `[À VALIDER]` du texte (et des données structurées FAQ quand elle y figure).
+Toutes les mentions ont été traitées selon vos consignes ; il ne reste **aucune** mention `[À VALIDER]` sur le site.
 
-| Page | Mention | Ce qu'il faut confirmer |
+| Sujet | Décision | Ce qui a été fait |
 |---|---|---|
-| `recrutement-directeur-general-industrie.html`, `recrutement-directeur-usine-industrie.html`, `recrutement-directeur-qualite-industrie.html`, `recrutement-directeur-industriel.html`, `recrutement-directeur-supply-chain-industrie.html`, `recrutement-daf-industrie.html`, `recrutement-drh-industrie.html` (FAQ visible et données FAQPage) | « les premiers profils qualifiés sont présentés sous environ 10 jours après le briefing, avec une mission complète généralement finalisée en 6 à 10 semaines » | Texte déjà en ligne avant la mission. Délai réel à confirmer, ou phrase à remplacer par « calendrier fixé lors du cadrage ». |
-| `management-transition-industrie.html` (FAQ) | Délai de prise de fonction d'un manager de transition | Souhaitez-vous annoncer un délai indicatif ? Les anciennes mentions « en quelques jours » ont été retirées. |
-| `management-transition-industrie.html` (engagements et FAQ) | Modèle tarifaire du management de transition | Taux journalier, frais, commission, modalités. |
-| `pourquoi-alveris.html` | Entreprises ou cabinets précédents, dates, intitulés de poste | À préciser seulement si vous souhaitez les publier. |
-| `pourquoi-alveris.html` | Secteur de la holding, nombre de sociétés et d'effectifs, durée du poste de DRH | Idem. |
-| `pourquoi-alveris.html` | Formation initiale et certifications | Idem, ou supprimer le paragraphe « Formation ». |
-| `actualites/remunerations-cadres-industriels-2026.html` | 63 k€ (production industrielle et maintenance), 66 k€ et 46 à 105 k€ (pilotage de la production), 75 k€ (direction générale), « environ deux tiers » des cadres de production avec variable | Chiffres de l'étude Apec 2025 relevés dans sa présentation publique : le PDF Apec était inaccessible depuis l'environnement de travail. À recouper dans le document (https://corporate.apec.fr, « Les rémunérations des cadres dans 111 familles de métiers », édition 2025). La médiane globale (55 k€, 80 % entre 38 et 95 k€, 50 % avec part variable) est donnée sans marqueur car elle est reprise de façon concordante par plusieurs sources ; à recouper également. |
-| `etudes-de-cas.html` | Tous les champs `[À COMPLÉTER]` | Voir section 8. |
+| Délais « premiers profils sous environ 10 jours, mission en 6 à 10 semaines » (7 pages de fonction, FAQ et données structurées) | Pas de délai chiffré | Remplacé par : « Le calendrier dépend du besoin, de son urgence et des résultats de la chasse. Il est fixé avec vous lors du cadrage de la mission. » |
+| Management de transition : délai de prise de fonction et modèle tarifaire | Rien en ligne | Questions de FAQ correspondantes, paragraphe tarifaire et ligne « prise de fonction » du tableau comparatif supprimés. |
+| Pourquoi Alveris : employeurs précédents, holding, formation | Rien en ligne | Mentions et paragraphe « Formation » supprimés. Le parcours reste : 17 ans de recrutement et RH en industrie, DRH d'une holding multi-sociétés, secteurs automobile, agroalimentaire, matériaux réfractaires, énergie. |
+| Chiffres Apec par fonction | Chiffres certifiés uniquement | Tous les chiffres Apec retirés de l'article rémunérations (voir 7.2). L'article cite l'étude Apec comme source de référence, sans chiffre. |
+| « Honoraires au succès », 40 % au lancement, solde à la signature | Ne pas détailler en ligne | Retirés de toutes les pages, y compris de la page Honoraires existante (échéancier, « grille au succès ») et de l'article sur le choix d'un cabinet. Seuls restent : à partir de 18 % du package annuel brut, garantie de remplacement de 6 mois, non-sollicitation de 24 mois. |
+| Réponse sous 24 h (formulaire de contact) | Validé | Conservé sur `contact.html`. |
+| `etudes-de-cas.html` | En attente | Champs `[À COMPLÉTER]`, page en noindex (voir section 8). |
 
 ## 6. Affirmations déjà en ligne qui mériteraient votre confirmation
 
@@ -173,9 +172,9 @@ Je ne les ai pas modifiées (sauf mention contraire), car elles existaient avant
 
 | Page | Affirmation | Action |
 |---|---|---|
-| `contact.html` | « Réponse sous 24h » (meta remplacée, encadré et message de confirmation conservés) | Engagement à confirmer, sinon à retirer. |
+| `contact.html` | « Réponse sous 24h » au formulaire | **Validé le 4 octobre 2026.** |
 | `index.html` | « Nous qualifions votre besoin en 20 minutes » | À confirmer. Mes appels à l'action parlent de « quinze minutes » pour exposer un besoin, ce qui n'est pas une promesse de délai ; à harmoniser si vous préférez 20. |
-| `actualites/cout-cabinet-executive-search-industrie.html` | Garantie 6 mois « quand le standard du marché est de trois mois » ; « suivi hebdomadaire jusqu'à l'intégration » ; « grille d'honoraires au succès » avec 40 % au lancement | La garantie, la non-sollicitation de 24 mois, la short-list de 3 à 5 profils et la grille 18 à 25 % ont été reprises sur les autres pages comme engagements publiés. Le terme « au succès » est contradictoire avec un acompte de 40 % : voir décision 7.3. |
+| `actualites/cout-cabinet-executive-search-industrie.html` | Garantie 6 mois « quand le standard du marché est de trois mois » ; « suivi hebdomadaire jusqu'à l'intégration » | Conservés. « Grille au succès » et échéancier 40/60 **retirés** le 4 octobre 2026. |
 | `cabinet-recrutement-industrie-var-toulon.html` | « Briefing sur site, systématiquement », « nous nous déplaçons sur site », « suivi hebdomadaire », rencontres en face à face | Cohérent avec votre implantation dans le Var ; à confirmer. |
 | Pages filières (aéronautique, nucléaire, pharma, chimie, plasturgie) et Var | Chiffres de marché sourcés en bas de page | Non modifiés. Les sources citées sont à jour à la date de rédaction de ces pages. |
 | `index.html` (données FAQ) | « 70 % des profils expérimentés ne répondent pas aux annonces publiées » (non sourcé) | **Retiré.** La FAQ de l'accueil est désormais visible et alignée sur ses données structurées. |
@@ -188,13 +187,13 @@ Je ne les ai pas modifiées (sauf mention contraire), car elles existaient avant
 
 Le travail a été fait sur la branche `seo-mandats`, comme demandé. L'environnement de travail impose aussi une branche technique, `claude/new-session-6ax34l`, sur laquelle les mêmes commits ont été poussés. Les deux branches sont identiques ; `main` n'a pas été touchée. La branche technique peut être supprimée après validation.
 
-### 7.2 Sources inaccessibles
+### 7.2 Chiffres Apec retirés
 
-Le site de l'Apec (corporate.apec.fr) est bloqué par le réseau de l'environnement : les chiffres de rémunération par famille de métiers ont été relevés via les communications publiques de l'étude et marqués `[À VALIDER]`. Aucune autre source chiffrée nouvelle n'a été introduite ; les pages régionales réécrites sont volontairement qualitatives (noms de bassins, de pôles et de sites industriels publics) pour ne pas avancer de chiffres non sourcés.
+Les chiffres de rémunération par famille de métiers (63 k€, 66 k€, 46 à 105 k€, 75 k€) et la médiane globale (55 k€) provenaient de résumés de recherche web reprenant la présentation publique de l'étude Apec 2025 et des articles de presse qui la citent, et non du document Apec lui-même, inaccessible depuis l'environnement de travail. Faute de pouvoir les certifier, ils ont tous été retirés. Si vous me transmettez le PDF de l'étude (ou une autre source officielle), je pourrai réintégrer des fourchettes certifiées avec la page exacte citée.
 
-### 7.3 « Honoraires au succès »
+### 7.3 Honoraires
 
-Le cahier des charges demande de faire apparaître « honoraires au succès » dans les titres. Or votre page Honoraires prévoit 40 % au lancement et 60 % à la signature, ce qui correspond à un mandat avec acompte, pas à un paiement au succès pur. Pour ne pas publier une information inexacte, j'ai écrit dans les H3 « Garantie de remplacement et honoraires » et précisé dans le texte que « le solde n'est dû qu'à la signature du contrat de travail ». L'article `choisir-cabinet-recrutement-industriel.html` explique la différence entre paiement au succès et mandat avec acompte. Si votre modèle est réellement au succès (ou si vous souhaitez le proposer), dites-le moi et j'ajusterai les titres.
+Sur votre demande, aucune page ne détaille plus le mode de paiement : ni « au succès », ni acompte, ni solde. L'article `choisir-cabinet-recrutement-industriel.html` présente de façon générale la différence entre mandat exclusif et mise en concurrence de plusieurs cabinets, sans parler du modèle d'Alveris. Il conserve la fourchette de marché de 12 % à 30 % citée sur votre page Honoraires (source : enquête Adeis RH) ; dites-moi si vous préférez la retirer aussi.
 
 ### 7.4 Données factuelles sur les bassins industriels
 
@@ -218,14 +217,15 @@ Les pages régionales citent des sites et organismes publics (raffinerie de Feyz
 - **LinkedIn Insight Tag** : l'identifiant est vide dans `assets/tracking-config.js`, le tag ne se déclenche donc jamais. GA4 fonctionne et ne se charge qu'après consentement (testé).
 - **Performance mobile** : contrôlée en 375 px (aucun débordement horizontal sur les 53 pages), sans mesure Lighthouse, non disponible dans l'environnement.
 
-### 7.7 Formulations de conversion proposées, non publiées
+### 7.7 Responsive et charte graphique
+
+Contrôle automatique de toutes les pages (53) à 375 px (mobile), 768 px (tablette) et 1 280 px (ordinateur) : aucun débordement horizontal. Les nouveaux éléments (titres H3, encadrés d'appel à l'action, encadré auteur, blocs des hubs, études de cas) utilisent uniquement les variables de couleur et de police de la feuille de style commune : noir, crème, sable et or, Cormorant Garamond pour les titres, DM Sans pour le texte, comme le reste du site.
+
+### 7.8 Formulations de conversion proposées, non publiées
 
 Conformément à la règle 3, ces formulations ne sont pas en ligne. À valider si elles correspondent à votre fonctionnement :
 
-- « Première short-list présentée sous [X] semaines après le cadrage. »
-- « Rappel sous 24 h ouvrées après votre demande. »
-- « Un manager de transition présenté sous [X] jours pour une direction de site. »
-- « Échange de cadrage sur votre site sous une semaine en Rhône-Alpes et en PACA. »
+- « Réponse sous 24 h à votre demande » à côté des boutons de contact, puisque cet engagement est validé pour le formulaire.
 - Bouton de contact unique sur toutes les pages : « Exposer votre besoin en 15 minutes ».
 
 ## 8. Études de cas : informations attendues

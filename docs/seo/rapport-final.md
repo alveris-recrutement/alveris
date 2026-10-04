@@ -158,11 +158,11 @@ Toutes les mentions ont été traitées selon vos consignes ; il ne reste **aucu
 
 | Sujet | Décision | Ce qui a été fait |
 |---|---|---|
-| Délais « premiers profils sous environ 10 jours, mission en 6 à 10 semaines » (7 pages de fonction, FAQ et données structurées) | Pas de délai chiffré | Remplacé par : « Le calendrier dépend du besoin, de son urgence et des résultats de la chasse. Il est fixé avec vous lors du cadrage de la mission. » |
+| Délais « premiers profils sous environ 10 jours, mission en 6 à 10 semaines » (7 pages de fonction, FAQ et données structurées) | Pas de délai chiffré | Remplacé par : « Le calendrier est fixé avec vous lors du cadrage de la mission. » |
 | Management de transition : délai de prise de fonction et modèle tarifaire | Rien en ligne | Questions de FAQ correspondantes, paragraphe tarifaire et ligne « prise de fonction » du tableau comparatif supprimés. |
 | Pourquoi Alveris : employeurs précédents, holding, formation | Rien en ligne | Mentions et paragraphe « Formation » supprimés. Le parcours reste : 17 ans de recrutement et RH en industrie, DRH d'une holding multi-sociétés, secteurs automobile, agroalimentaire, matériaux réfractaires, énergie. |
-| Chiffres Apec par fonction | Chiffres certifiés uniquement | Tous les chiffres Apec retirés de l'article rémunérations (voir 7.2). L'article cite l'étude Apec comme source de référence, sans chiffre. |
-| « Honoraires au succès », 40 % au lancement, solde à la signature | Ne pas détailler en ligne | Retirés de toutes les pages, y compris de la page Honoraires existante (échéancier, « grille au succès ») et de l'article sur le choix d'un cabinet. Seuls restent : à partir de 18 % du package annuel brut, garantie de remplacement de 6 mois, non-sollicitation de 24 mois. |
+| Chiffres Apec par fonction | Chiffres certifiés uniquement | Réintégrés le 4 octobre 2026 à partir du relevé fourni (étude Apec 2025 et baromètre 2025), avec la page de chaque chiffre (voir 7.2). |
+| « Honoraires au succès », 40 % au lancement, solde à la signature | Ne pas détailler sur les pages créées ou enrichies ; page Honoraires existante inchangée | Retirés des pages de service, hubs, accueil et articles. La page `actualites/cout-cabinet-executive-search-industrie.html` a été restaurée à l'identique (grille au succès, échéancier 40 % / 60 %). |
 | Réponse sous 24 h (formulaire de contact) | Validé | Conservé sur `contact.html`. |
 | `etudes-de-cas.html` | En attente | Champs `[À COMPLÉTER]`, page en noindex (voir section 8). |
 
@@ -187,13 +187,19 @@ Je ne les ai pas modifiées (sauf mention contraire), car elles existaient avant
 
 Le travail a été fait sur la branche `seo-mandats`, comme demandé. L'environnement de travail impose aussi une branche technique, `claude/new-session-6ax34l`, sur laquelle les mêmes commits ont été poussés. Les deux branches sont identiques ; `main` n'a pas été touchée. La branche technique peut être supprimée après validation.
 
-### 7.2 Chiffres Apec retirés
+### 7.2 Chiffres Apec
 
-Les chiffres de rémunération par famille de métiers (63 k€, 66 k€, 46 à 105 k€, 75 k€) et la médiane globale (55 k€) provenaient de résumés de recherche web reprenant la présentation publique de l'étude Apec 2025 et des articles de presse qui la citent, et non du document Apec lui-même, inaccessible depuis l'environnement de travail. Faute de pouvoir les certifier, ils ont tous été retirés. Si vous me transmettez le PDF de l'étude (ou une autre source officielle), je pourrai réintégrer des fourchettes certifiées avec la page exacte citée.
+Les premiers chiffres Apec venaient de résumés de recherche web et non du document de l'Apec ; ils ont été retirés. Le relevé que vous avez fourni le 4 octobre 2026 a d'ailleurs montré qu'ils étaient faux : « 66 k€, 46 à 105 k€ » correspond à la direction des achats, pas au pilotage de la production.
+
+Les chiffres désormais en ligne viennent exclusivement de ce relevé, avec la page du document Apec :
+
+- `actualites/remunerations-cadres-industriels-2026.html` : tableau de 11 familles (médiane, fourchette des 80 %, part avec variable, médiane dans le secteur Industrie), étude « Les rémunérations des cadres dans 111 familles de métiers », édition 2025, pp. 1, 6, 42, 45, 83, 97, 99, 100, 102, 103, 106 ; baromètre 2025, pp. 1, 6 et 11.
+- `actualites/recruter-directeur-site-industriel.html` : direction industrielle, p. 97.
+- `actualites/recruter-directeur-qhse-industrie.html` : HSE, p. 103.
 
 ### 7.3 Honoraires
 
-Sur votre demande, aucune page ne détaille plus le mode de paiement : ni « au succès », ni acompte, ni solde. L'article `choisir-cabinet-recrutement-industriel.html` présente de façon générale la différence entre mandat exclusif et mise en concurrence de plusieurs cabinets, sans parler du modèle d'Alveris. Il conserve la fourchette de marché de 12 % à 30 % citée sur votre page Honoraires (source : enquête Adeis RH) ; dites-moi si vous préférez la retirer aussi.
+La page Honoraires existante est restaurée telle qu'elle était, avec la grille au succès et l'échéancier 40 % au lancement, 60 % à la signature. Les autres pages ne détaillent pas le mode de paiement et renvoient vers elle. L'article `choisir-cabinet-recrutement-industriel.html` présente de façon générale la différence entre mandat exclusif et mise en concurrence de plusieurs cabinets, et cite la fourchette de marché de 12 % à 30 % déjà présente sur la page Honoraires (source : enquête Adeis RH).
 
 ### 7.4 Données factuelles sur les bassins industriels
 

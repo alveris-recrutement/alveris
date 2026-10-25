@@ -190,6 +190,14 @@
 <option>PACA</option>
 <option>Autre région de France</option>
 </select>
+<select class="dsel" name="source" aria-label="Comment avez-vous connu Alveris ?">
+<option value="">Comment avez-vous connu Alveris ?</option>
+<option>Recherche Google</option>
+<option>ChatGPT ou autre IA</option>
+<option>LinkedIn</option>
+<option>Recommandation</option>
+<option>Autre</option>
+</select>
 <input class="di" type="text" name="besoin" placeholder="Votre besoin en quelques mots...">
 <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
 <button type="submit" class="gold-btn">Envoyer la demande →</button>
@@ -280,7 +288,8 @@ if(cf) cf.addEventListener('submit',function(e){
       telephone: formData.get('telephone') || '',
       secteur: formData.get('secteur') || '',
       pays: formData.get('pays') || '',
-      besoin: formData.get('besoin') || ''
+      besoin: formData.get('besoin') || '',
+      source: formData.get('source') || ''
     };
     fetch('https://hook.eu1.make.com/b0g9t9c3ckidmbn9rqk4pn79cf40gw5v', {
       method: 'POST',

@@ -1,0 +1,48 @@
+name: Actualités automatiques
+
+# À chaque mise en ligne d'un article (ou de toute page), met à jour :
+# - le bloc « Actualités » de la page d'accueil (3 articles les plus récents),
+# - la liste complète de /actualites/,
+# - les dates du sitemap.xml.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "actualites/**"
+      - "**.html"
+      - ".github/scripts/maj_actualites.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: actualites-auto
+  cancel-in-progress: false
+
+jobs:
+  maj:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Mettre à jour accueil, liste des actualités et sitemap
+        run: python3 .github/scripts/maj_actualites.py
+
+      - name: Enregistrer les changements
+        run: |
+          if git diff --quiet; then
+            echo "Rien à mettre à jour."
+            exit 0
+          fi
+          git config user.name "alveris-bot"
+          git config user.email "alveris-bot@users.noreply.github.com"
+          git add index.html actualites/index.html sitemap.xml
+          git commit -m "Actualités : mise à jour automatique de l'accueil et du sitemap"
+          git push
